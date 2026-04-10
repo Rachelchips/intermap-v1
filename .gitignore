@@ -1,8 +1,6 @@
 node_modules/
-dist/
 .tanstack/
 tsconfig.tsbuildinfo
-package-lock.json
 
 .DS_Store
 Thumbs.db

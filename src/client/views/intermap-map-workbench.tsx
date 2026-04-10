@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
-import { ZoomIn, ZoomOut, Maximize2, PenLine, Trash2, X, Check, Tags, List, Download, Share2, Flag } from "lucide-react";
+import { ZoomIn, ZoomOut, Maximize2, PenLine, Trash2, X, Check, Tags, List, Download, Share2, Flag, ChevronDown, ChevronUp, MapPin, SlidersHorizontal } from "lucide-react";
 import { useIntermap } from "../store/intermap-store";
 import { TagIconRenderer } from "../components/tag-icon-renderer";
 import { LocationEditor } from "../components/location-editor";
@@ -10,7 +10,7 @@ import type { IntermapFilterState } from "../components/intermap-filter-panel";
 import { LocationManagerPanel } from "../components/location-manager-panel";
 import { EventManagerPanel } from "../components/event-manager-panel";
 import type { MapEvent, MapLocation, MapTheme, MapViewState, TagCategory, TagValue } from "../types/intermap-types";
-import { EVENT_LOCATION_CATEGORY_ID, NONE_TAG_VALUE_ID } from "@/lib/intermap-helpers";
+import { EVENT_LOCATION_CATEGORY_ID, NONE_TAG_VALUE_ID, formatEventTime } from "@/lib/intermap-helpers";
 
 const MIN_SCALE = 0.3;
 const MAX_SCALE = 5;
@@ -37,6 +37,11 @@ type PanelRoute =
   | EventDetailRoute;
 
 type RepositionTarget = null | { kind: "location" | "event"; id: string };
+type LegendPanelKey = "location" | "event";
+type LegendPanelState = {
+  position: { x: number; y: number } | null;
+  collapsed: boolean;
+};
 
 function getTouchDist(t1: TouchPoint, t2: TouchPoint): number {
   const dx = t1.clientX - t2.clientX;
@@ -72,6 +77,7 @@ function Marker({
   legendCategory,
   isSelected,
   isRepositioning,
+  scalePercent = 100,
   onClick,
   onDoubleClick,
   badgeCount,
@@ -81,6 +87,7 @@ function Marker({
   legendCategory: TagCategory | null;
   isSelected: boolean;
   isRepositioning: boolean;
+  scalePercent?: number;
   onClick: () => void;
   onDoubleClick?: () => void;
   badgeCount?: number;
@@ -89,7 +96,8 @@ function Marker({
   const tagValueId = legendCategory ? entity.tags[legendCategory.id] : undefined;
   const tagValue: TagValue | undefined = legendCategory?.values.find((value) => value.id === tagValueId);
   const icon = tagValue?.icon ?? { kind: "none" as const };
-  const size = isSelected ? 22 : 15;
+  const sizeFactor = Math.max(0.4, scalePercent / 100);
+  const size = (isSelected ? 22 : 15) * sizeFactor;
 
   const isShape = icon.kind === "shape";
   const shapeIcon = isShape ? (icon as Extract<typeof icon, { kind: "shape" }>) : null;
@@ -192,29 +200,95 @@ function SelectionHint({ color }: { color: string }) {
   );
 }
 
-function LegendCard({ title, category, theme }: { title: string; category: TagCategory; theme: MapTheme }) {
+function LegendCard({
+  title,
+  category,
+  theme,
+  collapsed,
+  onToggleCollapse,
+  onMouseDown,
+  legendRef,
+}: {
+  title: string;
+  category: TagCategory;
+  theme: MapTheme;
+  collapsed: boolean;
+  onToggleCollapse: () => void;
+  onMouseDown: (e: React.MouseEvent) => void;
+  legendRef: (node: HTMLDivElement | null) => void;
+}) {
   return (
-    <div style={{
-      background: `${theme.bg}EE`,
-      border: `1px solid ${theme.accent}`,
-      borderRadius: 8,
-      padding: "8px 12px",
-      fontSize: 11,
-      color: theme.muted,
-      maxWidth: 180,
-    }}>
-      <div style={{ fontWeight: "bold", color: theme.heading, fontSize: 12, marginBottom: 4 }}>
-        {title}
-      </div>
-      <div style={{ color: theme.muted, fontSize: 10, marginBottom: 6 }}>
-        {category.label}
-      </div>
-      {category.values.map((value) => (
-        <div key={value.id} style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-          <TagIconRenderer icon={value.icon} size={10} />
-          <span style={{ color: theme.heading, opacity: 0.8 }}>{value.label}</span>
+    <div
+      ref={legendRef}
+      style={{
+        background: `${theme.bg}EE`,
+        border: `1px solid ${theme.accent}`,
+        borderRadius: 8,
+        fontSize: 11,
+        color: theme.muted,
+        maxWidth: 180,
+        boxShadow: "0 8px 18px rgba(0,0,0,0.28)",
+        overflow: "hidden",
+        pointerEvents: "auto",
+      }}
+    >
+      <div
+        onMouseDown={onMouseDown}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          padding: collapsed ? "8px 10px" : "8px 12px 6px",
+          cursor: "grab",
+          userSelect: "none",
+        }}
+      >
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontWeight: "bold", color: theme.heading, fontSize: 12, whiteSpace: "nowrap" }}>
+            {title}
+          </div>
         </div>
-      ))}
+        <button
+          type="button"
+          data-legend-toggle="true"
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleCollapse();
+          }}
+          style={{
+            width: 20,
+            height: 20,
+            borderRadius: 999,
+            border: `1px solid ${theme.accent}`,
+            background: `${theme.primary}14`,
+            color: theme.primary,
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 0,
+            flexShrink: 0,
+          }}
+          aria-label={collapsed ? `展开${title}` : `折叠${title}`}
+          title={collapsed ? "展开图例" : "折叠图例"}
+        >
+          {collapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
+        </button>
+      </div>
+
+      {!collapsed && (
+        <div style={{ padding: "0 12px 10px" }}>
+          <div style={{ color: theme.muted, fontSize: 10, marginBottom: 6 }}>
+            {category.label}
+          </div>
+          {category.values.map((value) => (
+            <div key={value.id} style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
+              <TagIconRenderer icon={value.icon} size={10} />
+              <span style={{ color: theme.heading, opacity: 0.8 }}>{value.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -236,6 +310,23 @@ function detailButtonStyle(color: string): React.CSSProperties {
   };
 }
 
+function scaleTinyButton(theme: MapTheme): React.CSSProperties {
+  return {
+    height: 22,
+    padding: "0 7px",
+    borderRadius: 6,
+    border: `1px solid ${theme.accent}`,
+    background: `${theme.primary}14`,
+    color: theme.primary,
+    cursor: "pointer",
+    fontSize: 11,
+    fontFamily: "Georgia, serif",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+}
+
 function EntityDetailPanel({
   entity,
   categories,
@@ -248,6 +339,7 @@ function EntityDetailPanel({
   onConfirmReposition,
   deleteLabel,
   extraSection,
+  headerMeta,
 }: {
   entity: MapLocation | MapEvent;
   categories: TagCategory[];
@@ -260,6 +352,7 @@ function EntityDetailPanel({
   onConfirmReposition: () => void;
   deleteLabel: string;
   extraSection?: React.ReactNode;
+  headerMeta?: string | null;
 }) {
   const divider = (
     <div style={{ height: 1, background: theme.accent, margin: "0 -16px", opacity: 0.5, flexShrink: 0 }} />
@@ -286,6 +379,15 @@ function EntityDetailPanel({
           <X size={16} />
         </button>
 
+        {headerMeta && (
+          <>
+            <div style={{ fontSize: 12, color: theme.muted, marginBottom: 8, fontStyle: "normal", letterSpacing: "0.02em" }}>
+              {headerMeta}
+            </div>
+            <div style={{ height: 1, background: theme.accent, margin: "0 -16px 10px", opacity: 0.5 }} />
+          </>
+        )}
+
         <div style={{ fontSize: 17, fontWeight: "bold", color: theme.heading, marginBottom: 2 }}>
           {entity.name}
         </div>
@@ -308,11 +410,11 @@ function EntityDetailPanel({
       </div>
 
       {entity.imageUrl && (
-        <div style={{ flexShrink: 0, overflow: "hidden", maxHeight: 180 }}>
+        <div style={{ flexShrink: 0, overflow: "hidden", maxHeight: 220, background: "rgba(0,0,0,0.22)", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <img
             src={entity.imageUrl}
             alt={entity.name}
-            style={{ width: "100%", maxHeight: 180, objectFit: "cover", display: "block" }}
+            style={{ width: "100%", height: "auto", maxHeight: 220, objectFit: "contain", display: "block" }}
           />
         </div>
       )}
@@ -378,9 +480,22 @@ export function IntermapMapView() {
   const [expandedEventLocationId, setExpandedEventLocationId] = useState<string | null>(null);
   const [temporaryFocusedEventId, setTemporaryFocusedEventId] = useState<string | null>(null);
   const [isSharing, setIsSharing] = useState(false);
+  const [legendPanels, setLegendPanels] = useState<Record<LegendPanelKey, LegendPanelState>>({
+    location: { position: null, collapsed: false },
+    event: { position: null, collapsed: false },
+  });
+  const [iconScale, setIconScale] = useState<{ location: number; event: number }>({
+    location: activeMap?.markerScale?.location ?? 100,
+    event: activeMap?.markerScale?.event ?? 100,
+  });
+  const [iconScalePanelOpen, setIconScalePanelOpen] = useState(false);
 
+  const mapAreaRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
+  const legendRefs = useRef<Record<LegendPanelKey, HTMLDivElement | null>>({ location: null, event: null });
+  const draggingLegendKey = useRef<LegendPanelKey | null>(null);
+  const legendDragStart = useRef({ mx: 0, my: 0, lx: 0, ly: 0 });
   const isPanning = useRef(false);
   const panStart = useRef({ x: 0, y: 0 });
   const viewAtPanStart = useRef({ translateX: 0, translateY: 0 });
@@ -408,6 +523,14 @@ export function IntermapMapView() {
     setExpandedEventLocationId(null);
     setTemporaryFocusedEventId(null);
     setFilter(buildDefaultIntermapFilter(activeMap.tagCategories, activeMap.eventTagCategories));
+    setLegendPanels({
+      location: { position: null, collapsed: false },
+      event: { position: null, collapsed: false },
+    });
+    setIconScale({
+      location: activeMap.markerScale?.location ?? 100,
+      event: activeMap.markerScale?.event ?? 100,
+    });
   }, [activeMap?.id]);
 
   const locationCatSignature = activeMap?.tagCategories.map((cat) => `${cat.id}:${cat.values.map((value) => value.id).join(",")}`).join("|") ?? "";
@@ -451,6 +574,69 @@ export function IntermapMapView() {
     };
   }, []);
 
+  const startLegendDrag = useCallback((key: LegendPanelKey, clientX: number, clientY: number) => {
+    const mapAreaEl = mapAreaRef.current;
+    const legendEl = legendRefs.current[key];
+    if (!mapAreaEl || !legendEl) return;
+
+    const mapRect = mapAreaEl.getBoundingClientRect();
+    const legendRect = legendEl.getBoundingClientRect();
+    draggingLegendKey.current = key;
+    legendDragStart.current = {
+      mx: clientX,
+      my: clientY,
+      lx: legendRect.left - mapRect.left,
+      ly: legendRect.top - mapRect.top,
+    };
+  }, []);
+
+  const handleLegendMouseDown = useCallback((key: LegendPanelKey) => (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("[data-legend-toggle='true']")) return;
+    e.stopPropagation();
+    e.preventDefault();
+    startLegendDrag(key, e.clientX, e.clientY);
+  }, [startLegendDrag]);
+
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      const key = draggingLegendKey.current;
+      if (!key) return;
+
+      const mapAreaEl = mapAreaRef.current;
+      const legendEl = legendRefs.current[key];
+      if (!mapAreaEl || !legendEl) return;
+
+      const dx = e.clientX - legendDragStart.current.mx;
+      const dy = e.clientY - legendDragStart.current.my;
+      if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+
+      const mapRect = mapAreaEl.getBoundingClientRect();
+      const legendRect = legendEl.getBoundingClientRect();
+      const nextX = Math.max(0, Math.min(mapRect.width - legendRect.width, legendDragStart.current.lx + dx));
+      const nextY = Math.max(0, Math.min(mapRect.height - legendRect.height, legendDragStart.current.ly + dy));
+
+      setLegendPanels((prev) => ({
+        ...prev,
+        [key]: {
+          ...prev[key],
+          position: { x: nextX, y: nextY },
+        },
+      }));
+    };
+
+    const onMouseUp = () => {
+      draggingLegendKey.current = null;
+    };
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+    };
+  }, []);
+
   if (!activeMap || !theme) {
     return (
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", background: "#0e0b06", color: "#8A7050", fontFamily: "Georgia, serif", fontSize: 16 }}>
@@ -489,8 +675,6 @@ export function IntermapMapView() {
   const selectedEvent = currentEventDetail
     ? activeMap.events.find((eventItem) => eventItem.id === currentEventDetail.eventId) ?? null
     : null;
-
-  const eventFilterEnabled = eventDisplayMode === "expanded" || visibleEvents.length >= 2;
 
   const zoomBy = useCallback((delta: number, originX?: number, originY?: number) => {
     setView((prev) => {
@@ -710,7 +894,11 @@ export function IntermapMapView() {
   }, []);
 
   const handleExport = useCallback(() => {
-    const json = JSON.stringify(activeMap, null, 2);
+    const mapForExport = {
+      ...activeMap,
+      markerScale: { location: iconScale.location, event: iconScale.event },
+    };
+    const json = JSON.stringify(mapForExport, null, 2);
     const blob = new Blob([json], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -720,7 +908,7 @@ export function IntermapMapView() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  }, [activeMap]);
+  }, [activeMap, iconScale.event, iconScale.location]);
 
   const handleShare = useCallback(async () => {
     if (isSharing) return;
@@ -752,12 +940,17 @@ export function IntermapMapView() {
         })
       );
 
-      const mapForShare = { ...activeMap, locations: compressedLocations, events: compressedEvents };
+      const mapForShare = {
+        ...activeMap,
+        markerScale: { location: iconScale.location, event: iconScale.event },
+        locations: compressedLocations,
+        events: compressedEvents,
+      };
       const json = JSON.stringify(mapForShare);
       const encoded = btoa(unescape(encodeURIComponent(json)));
       const url = `${window.location.origin}/share#data=${encoded}`;
       const hasImages = activeMap.locations.some((item) => !!item.imageUrl) || activeMap.events.some((item) => !!item.imageUrl);
-      const imageNote = hasImages ? "\n\n配图已自动压缩以缩小链接大小（本地存储的原图不受影响）。" : "";
+      const imageNote = hasImages ? "\n\n地点/事件配图已自动压缩以缩小链接大小（本地存储的原图不受影响）。" : "";
 
       navigator.clipboard.writeText(url).then(() => {
         alert(`分享链接已复制到剪贴板！\n\n对方打开链接后可以只读浏览这张地图。${imageNote}`);
@@ -769,11 +962,53 @@ export function IntermapMapView() {
     } finally {
       setIsSharing(false);
     }
-  }, [activeMap, compressImage, isSharing]);
+  }, [activeMap, compressImage, iconScale.event, iconScale.location, isSharing]);
 
   const relatedEvents = selectedLocation
     ? activeMap.events.filter((eventItem) => getEventLocationId(eventItem) === selectedLocation.id)
     : [];
+
+  const renderLegend = (key: LegendPanelKey, title: string, category: TagCategory) => {
+    const card = (
+      <LegendCard
+        title={title}
+        category={category}
+        theme={theme}
+        collapsed={legendPanels[key].collapsed}
+        onToggleCollapse={() => {
+          setLegendPanels((prev) => ({
+            ...prev,
+            [key]: {
+              ...prev[key],
+              collapsed: !prev[key].collapsed,
+            },
+          }));
+        }}
+        onMouseDown={handleLegendMouseDown(key)}
+        legendRef={(node) => {
+          legendRefs.current[key] = node;
+        }}
+      />
+    );
+
+    if (legendPanels[key].position) {
+      return (
+        <div
+          key={key}
+          style={{
+            position: "absolute",
+            left: legendPanels[key].position!.x,
+            top: legendPanels[key].position!.y,
+            zIndex: 40,
+          }}
+        >
+          {card}
+        </div>
+      );
+    }
+
+    return <div key={key}>{card}</div>;
+  };
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", background: theme.bg, position: "relative", touchAction: "none" }}>
@@ -815,7 +1050,7 @@ export function IntermapMapView() {
         </button>
       </div>
 
-      <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
+      <div ref={mapAreaRef} style={{ flex: 1, position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: 12, left: 44, zIndex: 40, display: "flex", flexDirection: "column", gap: 4 }}>
           {[
             { icon: <ZoomIn size={14} />, fn: () => zoomBy(1.3), title: "放大" },
@@ -827,12 +1062,133 @@ export function IntermapMapView() {
               {icon}
             </button>
           ))}
+          <button
+            onClick={() => setIconScalePanelOpen((prev) => !prev)}
+            title="图标大小设置"
+            style={{
+              width: 34,
+              height: 34,
+              background: `${theme.bg}DD`,
+              border: `1px solid ${theme.accent}`,
+              borderRadius: 6,
+              color: theme.primary,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              touchAction: "manipulation",
+            }}
+          >
+            <SlidersHorizontal size={14} />
+          </button>
+          {iconScalePanelOpen && (
+            <div
+              style={{
+                width: 248,
+                marginTop: 4,
+                background: `${theme.bg}F2`,
+                border: `1px solid ${theme.accent}`,
+                borderRadius: 8,
+                padding: "10px 10px 8px",
+                boxShadow: "0 8px 18px rgba(0,0,0,0.35)",
+              }}
+            >
+              {([
+                { key: "location" as const, label: "地点图标", icon: <MapPin size={11} /> },
+                { key: "event" as const, label: "事件图标", icon: <Flag size={11} /> },
+              ]).map((item) => (
+                <div key={item.key} style={{ marginBottom: item.key === "event" ? 0 : 10 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
+                    <span style={{ color: theme.primary, display: "flex", alignItems: "center" }}>{item.icon}</span>
+                    <span style={{ fontSize: 11, color: theme.heading, flex: 1 }}>{item.label}</span>
+                    <button
+                      onClick={() =>
+                        setIconScale((prev) => ({
+                          ...prev,
+                          [item.key]: Math.max(40, prev[item.key] - 5),
+                        }))
+                      }
+                      style={scaleTinyButton(theme)}
+                      title="缩小"
+                    >
+                      -
+                    </button>
+                    <button
+                      onClick={() =>
+                        setIconScale((prev) => ({
+                          ...prev,
+                          [item.key]: Math.min(260, prev[item.key] + 5),
+                        }))
+                      }
+                      style={scaleTinyButton(theme)}
+                      title="放大"
+                    >
+                      +
+                    </button>
+                    <button
+                      onClick={() =>
+                        setIconScale((prev) => ({
+                          ...prev,
+                          [item.key]: 100,
+                        }))
+                      }
+                      style={scaleTinyButton(theme)}
+                      title="还原"
+                    >
+                      还原
+                    </button>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input
+                      type="range"
+                      min={40}
+                      max={260}
+                      step={1}
+                      value={iconScale[item.key]}
+                      onChange={(e) => {
+                        const next = Number(e.target.value);
+                        setIconScale((prev) => ({ ...prev, [item.key]: next }));
+                      }}
+                      style={{ flex: 1, accentColor: theme.primary }}
+                    />
+                    <input
+                      type="number"
+                      min={40}
+                      max={260}
+                      value={iconScale[item.key]}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
+                        if (Number.isNaN(value)) return;
+                        const next = Math.max(40, Math.min(260, value));
+                        setIconScale((prev) => ({ ...prev, [item.key]: next }));
+                      }}
+                      style={{
+                        width: 60,
+                        padding: "3px 6px",
+                        background: "rgba(255,255,255,0.05)",
+                        border: `1px solid ${theme.accent}`,
+                        borderRadius: 6,
+                        color: theme.heading,
+                        fontSize: 11,
+                        outline: "none",
+                        fontFamily: "Georgia, serif",
+                      }}
+                    />
+                    <span style={{ color: theme.muted, fontSize: 11 }}>%</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div style={{ position: "absolute", bottom: 12, left: 44, zIndex: 40, display: "flex", flexDirection: "column", gap: 8 }}>
-          {locationLegendCategory && <LegendCard title="地点图例" category={locationLegendCategory} theme={theme} />}
-          {activeMap.events.length > 0 && eventLegendCategory && <LegendCard title="事件图例" category={eventLegendCategory} theme={theme} />}
+          {locationLegendCategory && !legendPanels.location.position && renderLegend("location", "地点图例", locationLegendCategory)}
+          {activeMap.events.length > 0 && eventLegendCategory && !legendPanels.event.position && renderLegend("event", "事件图例", eventLegendCategory)}
         </div>
+
+        {locationLegendCategory && legendPanels.location.position && renderLegend("location", "地点图例", locationLegendCategory)}
+        {activeMap.events.length > 0 && eventLegendCategory && legendPanels.event.position && renderLegend("event", "事件图例", eventLegendCategory)}
 
         {repositioning && <SelectionHint color={theme.primary} />}
 
@@ -888,6 +1244,7 @@ export function IntermapMapView() {
                   legendCategory={locationLegendCategory}
                   isSelected={selectedLocation?.id === location.id}
                   isRepositioning={!!repositioning}
+                  scalePercent={iconScale.location}
                   badgeCount={eventDisplayMode === "collapsed" ? eventCountByLocation.get(location.id) : undefined}
                   onClick={() => openLocationDetail(location.id, null)}
                   onDoubleClick={() => toggleCollapsedEventsForLocation(location.id)}
@@ -901,6 +1258,7 @@ export function IntermapMapView() {
                   legendCategory={eventLegendCategory}
                   isSelected={selectedEvent?.id === eventItem.id}
                   isRepositioning={!!repositioning}
+                  scalePercent={iconScale.event}
                   baseZIndex={20}
                   onClick={() => openEventDetail(eventItem.id, null)}
                 />
@@ -916,7 +1274,6 @@ export function IntermapMapView() {
           totalLocationCount={activeMap.locations.length}
           visibleEventCount={visibleEvents.length}
           totalEventCount={activeMap.events.length}
-          eventFilterEnabled={eventFilterEnabled}
           themeColor={theme.primary}
           themeHeading={theme.heading}
           themeBg={theme.bg}
@@ -1007,6 +1364,7 @@ export function IntermapMapView() {
             }}
             onReposition={() => setRepositioning({ kind: "event", id: selectedEvent.id })}
             repositioning={repositioning?.kind === "event" && repositioning.id === selectedEvent.id}
+            headerMeta={formatEventTime(selectedEvent.time)}
             onConfirmReposition={() => setRepositioning(null)}
             deleteLabel="删除事件"
           />

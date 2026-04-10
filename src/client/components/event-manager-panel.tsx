@@ -1,5 +1,6 @@
-import { useState, useMemo } from "react";
-import { X, Plus, Trash2, Check, Search, ChevronDown, ChevronRight, Flag } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Check, ChevronDown, ChevronRight, Flag, Plus, Search, Trash2, X } from "lucide-react";
+import { compareEventSortTime, formatEventTime, normalizeEventSortTime } from "@/lib/intermap-helpers";
 import { useIntermap } from "../store/intermap-store";
 import { TagIconRenderer } from "./tag-icon-renderer";
 import type { MapEvent, MapTheme } from "../types/intermap-types";
@@ -12,6 +13,8 @@ interface EventManagerPanelProps {
   displayMode: "expanded" | "collapsed";
   onDisplayModeChange: (mode: "expanded" | "collapsed") => void;
 }
+
+type SortOrder = "default" | "time-asc" | "time-desc";
 
 export function EventManagerPanel({
   theme,
@@ -27,6 +30,7 @@ export function EventManagerPanel({
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [tagFilter, setTagFilter] = useState<Record<string, Set<string>>>({});
   const [collapsedCats, setCollapsedCats] = useState<Set<string>>(new Set());
+  const [sortOrder, setSortOrder] = useState<SortOrder>("default");
 
   if (!activeMap) return null;
 
@@ -34,24 +38,43 @@ export function EventManagerPanel({
   const cats = activeMap.eventTagCategories;
 
   const filteredEvents = useMemo(() => {
-    return events.filter((eventItem) => {
-      if (search.trim()) {
-        const q = search.trim().toLowerCase();
-        const nameMatch = eventItem.name.toLowerCase().includes(q);
-        const nameEnMatch = (eventItem.nameEn ?? "").toLowerCase().includes(q);
-        if (!nameMatch && !nameEnMatch) return false;
-      }
+    const next = events
+      .map((eventItem, index) => ({ eventItem, index }))
+      .filter(({ eventItem }) => {
+        if (search.trim()) {
+          const q = search.trim().toLowerCase();
+          const nameMatch = eventItem.name.toLowerCase().includes(q);
+          const nameEnMatch = (eventItem.nameEn ?? "").toLowerCase().includes(q);
+          if (!nameMatch && !nameEnMatch) return false;
+        }
 
-      for (const cat of cats) {
-        const allowed = tagFilter[cat.id];
-        if (!allowed || allowed.size === 0) continue;
-        const tagVal = eventItem.tags[cat.id] ?? "none";
-        if (!allowed.has(tagVal)) return false;
-      }
+        for (const cat of cats) {
+          const allowed = tagFilter[cat.id];
+          if (!allowed || allowed.size === 0) continue;
+          const tagVal = eventItem.tags[cat.id] ?? "none";
+          if (!allowed.has(tagVal)) return false;
+        }
 
-      return true;
-    });
-  }, [events, search, tagFilter, cats]);
+        return true;
+      });
+
+    if (sortOrder !== "default") {
+      next.sort((a, b) => {
+        const left = normalizeEventSortTime(a.eventItem.sortTime);
+        const right = normalizeEventSortTime(b.eventItem.sortTime);
+
+        if (!left && !right) return a.index - b.index;
+        if (!left) return 1;
+        if (!right) return -1;
+
+        const cmp = compareEventSortTime(left, right);
+        if (cmp !== 0) return sortOrder === "time-desc" ? -cmp : cmp;
+        return a.index - b.index;
+      });
+    }
+
+    return next.map((item) => item.eventItem);
+  }, [cats, events, search, sortOrder, tagFilter]);
 
   const toggleTagFilter = (catId: string, valueId: string) => {
     setTagFilter((prev) => {
@@ -82,10 +105,12 @@ export function EventManagerPanel({
 
   const handleBatchDelete = () => {
     if (selected.size === 0) return;
-    if (!confirm(`确定删除选中的 ${selected.size} 个事件？此操作不可恢复。`)) return;
+    if (!confirm(`确定删除选中的 ${selected.size} 个事件吗？此操作不可恢复。`)) return;
+
     selected.forEach((id) => {
       dispatch({ type: "DELETE_EVENT", mapId: activeMap.id, eventId: id });
     });
+
     setSelected(new Set());
     setBatchMode(false);
   };
@@ -138,7 +163,10 @@ export function EventManagerPanel({
             <Plus size={12} /> 添加事件
           </button>
           <button
-            onClick={() => { setBatchMode((b) => !b); setSelected(new Set()); }}
+            onClick={() => {
+              setBatchMode((prev) => !prev);
+              setSelected(new Set());
+            }}
             style={chip(batchMode ? "#C86060" : p, batchMode)}
           >
             {batchMode ? <X size={12} /> : <Trash2 size={12} />}
@@ -147,16 +175,10 @@ export function EventManagerPanel({
         </div>
 
         <div style={{ display: "flex", gap: 6 }}>
-          <button
-            onClick={() => onDisplayModeChange("expanded")}
-            style={chip(p, displayMode === "expanded")}
-          >
+          <button onClick={() => onDisplayModeChange("expanded")} style={chip(p, displayMode === "expanded")}>
             事件展开显示
           </button>
-          <button
-            onClick={() => onDisplayModeChange("collapsed")}
-            style={chip(p, displayMode === "collapsed")}
-          >
+          <button onClick={() => onDisplayModeChange("collapsed")} style={chip(p, displayMode === "collapsed")}>
             事件收缩显示
           </button>
         </div>
@@ -178,7 +200,7 @@ export function EventManagerPanel({
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="搜索事件名称…"
+            placeholder="搜索事件名称..."
             style={{
               flex: 1,
               background: "none",
@@ -198,6 +220,21 @@ export function EventManagerPanel({
             </button>
           )}
         </div>
+
+        <div style={{ marginTop: 8 }}>
+          <div style={{ fontSize: 11, color: muted, marginBottom: 6 }}>排序方式</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <button onClick={() => setSortOrder("default")} style={chip(p, sortOrder === "default")}>
+              默认顺序
+            </button>
+            <button onClick={() => setSortOrder("time-asc")} style={chip(p, sortOrder === "time-asc")}>
+              时间升序
+            </button>
+            <button onClick={() => setSortOrder("time-desc")} style={chip(p, sortOrder === "time-desc")}>
+              时间降序
+            </button>
+          </div>
+        </div>
       </div>
 
       {cats.length > 0 && (
@@ -213,6 +250,7 @@ export function EventManagerPanel({
             const isCollapsed = collapsedCats.has(cat.id);
             const activeCatFilter = tagFilter[cat.id];
             const hasActiveFilter = activeCatFilter && activeCatFilter.size > 0;
+
             return (
               <div key={cat.id}>
                 <div
@@ -244,13 +282,17 @@ export function EventManagerPanel({
                   )}
                   {hasActiveFilter && (
                     <button
-                      onClick={(e) => { e.stopPropagation(); setTagFilter((prev) => ({ ...prev, [cat.id]: new Set() })); }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setTagFilter((prev) => ({ ...prev, [cat.id]: new Set() }));
+                      }}
                       style={{ background: "none", border: "none", color: muted, cursor: "pointer", fontSize: 9, padding: "0 2px" }}
                     >
                       清除
                     </button>
                   )}
                 </div>
+
                 {!isCollapsed && (
                   <div style={{ padding: "6px 14px 8px", display: "flex", flexWrap: "wrap", gap: 5 }}>
                     {cat.values.map((val) => {
@@ -278,6 +320,7 @@ export function EventManagerPanel({
                         </button>
                       );
                     })}
+
                     {cat.values.length === 0 && (
                       <span style={{ fontSize: 11, color: muted, opacity: 0.5 }}>暂无标签</span>
                     )}
@@ -300,21 +343,22 @@ export function EventManagerPanel({
               fontSize: 13,
             }}
           >
-            {events.length === 0 ? "还没有事件，点击「添加事件」开始" : "没有匹配的事件"}
+            {events.length === 0 ? "还没有事件，点击“添加事件”开始" : "没有匹配的事件"}
           </div>
         ) : (
           filteredEvents.map((eventItem) => {
             const isChecked = selected.has(eventItem.id);
-            const legendCat = cats.find((c) => c.isLegend);
+            const legendCat = cats.find((cat) => cat.isLegend);
             const tagValId = legendCat ? eventItem.tags[legendCat.id] : undefined;
-            const tagVal = legendCat?.values.find((v) => v.id === tagValId);
+            const tagVal = legendCat?.values.find((value) => value.id === tagValId);
+            const timeLabel = formatEventTime(eventItem.time);
 
             return (
               <div
                 key={eventItem.id}
                 onClick={() => {
-                  if (batchMode) { toggleSelect(eventItem.id); }
-                  else { onSelectEvent(eventItem); }
+                  if (batchMode) toggleSelect(eventItem.id);
+                  else onSelectEvent(eventItem);
                 }}
                 style={{
                   display: "flex",
@@ -355,7 +399,7 @@ export function EventManagerPanel({
                         height: 10,
                         borderRadius: "50%",
                         background: "rgba(150,130,100,0.3)",
-                        border: `1px solid rgba(150,130,100,0.4)`,
+                        border: "1px solid rgba(150,130,100,0.4)",
                       }}
                     />
                   )}
@@ -373,6 +417,22 @@ export function EventManagerPanel({
                   >
                     {eventItem.name}
                   </div>
+
+                  {timeLabel && (
+                    <div
+                      style={{
+                        fontSize: 10,
+                        color: muted,
+                        opacity: 0.85,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {timeLabel}
+                    </div>
+                  )}
+
                   {eventItem.nameEn && (
                     <div
                       style={{
@@ -403,14 +463,14 @@ export function EventManagerPanel({
           style={{
             padding: "10px 14px",
             borderTop: `1px solid ${accent}`,
-            background: `${bg}`,
+            background: bg,
             display: "flex",
             alignItems: "center",
             gap: 8,
             flexShrink: 0,
           }}
         >
-          <span style={{ fontSize: 12, color: muted, flex: 1 }}>已选 {selected.size} 个</span>
+          <span style={{ fontSize: 12, color: muted, flex: 1 }}>已选 {selected.size} 项</span>
           <button
             onClick={() => setSelected(new Set(filteredEvents.map((eventItem) => eventItem.id)))}
             style={chip(p, false)}
@@ -443,9 +503,9 @@ function chip(color: string, active: boolean): React.CSSProperties {
     alignItems: "center",
     gap: 4,
     cursor: "pointer",
-    border: `1px solid ${active ? color : color + "66"}`,
+    border: `1px solid ${active ? color : `${color}66`}`,
     background: active ? `${color}22` : "transparent",
-    color: active ? color : color + "CC",
+    color: active ? color : `${color}CC`,
     fontFamily: "Georgia, serif",
     transition: "all 0.15s",
   };

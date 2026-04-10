@@ -53,10 +53,23 @@ export interface MapLocation {
 }
 
 /** A single event pin on the map */
+export type EventTime =
+  | { kind: "point"; value: string }
+  | { kind: "range"; start: string; end: string };
+
+export interface EventSortTime {
+  era: "bce" | "ce";
+  year: number;
+  month: number;
+  day: number;
+}
+
 export interface MapEvent {
   id: string;
   name: string;           // Chinese name
   nameEn?: string;        // English name (optional)
+  time?: EventTime;       // Optional for backward compatibility with older saved maps
+  sortTime?: EventSortTime;
   description: string;    // Max 250 chars
   x: number;              // 0–100% of map width
   y: number;              // 0–100% of map height (0=south, 100=north)
@@ -102,6 +115,10 @@ export interface MapProject {
   nameEn?: string;        // English name (optional)
   imageUrl: string;       // Background map image URL or data URL
   themeId: string;        // References MAP_THEMES[].id
+  markerScale?: {         // Marker size scale for map/share preview
+    location: number;     // Percentage, default 100
+    event: number;        // Percentage, default 100
+  };
   tagCategories: TagCategory[];
   locations: MapLocation[];
   eventTagCategories: TagCategory[];

@@ -16,6 +16,7 @@ import { createContext, useContext, useReducer, useEffect, useRef } from "react"
 import type { IntermapState, MapProject, MapLocation, MapEvent, TagCategory, TagValue, HistoryEntry } from "../types/intermap-types";
 import { MAP_THEMES } from "../types/intermap-types";
 import { INITIAL_LOCATIONS } from "../data/locations-data";
+import { createBuiltInTramireMap } from "../data/tramire-map";
 import { createDefaultEventTagCategories, normalizeMapProject } from "@/lib/intermap-helpers";
 
 // ── Default Tramire map ────────────────────────────────────────────────────────
@@ -102,9 +103,15 @@ const TRAMIRE_MAP: MapProject = {
   updatedAt: Date.now(),
 };
 
+function getBuiltInTramireMap(): MapProject {
+  return normalizeMapProject(createBuiltInTramireMap());
+}
+
+const BUILT_IN_TRAMIRE_MAP: MapProject = getBuiltInTramireMap();
+
 const INITIAL_STATE: IntermapState = {
-  maps: [TRAMIRE_MAP],
-  activeMapId: "tramire",
+  maps: [BUILT_IN_TRAMIRE_MAP],
+  activeMapId: BUILT_IN_TRAMIRE_MAP.id,
 };
 
 // ── Reducer ───────────────────────────────────────────────────────────────────
@@ -310,18 +317,80 @@ function reducer(state: IntermapState, action: IntermapAction): IntermapState {
 
 // ── Persistence ───────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "intermap_v2";
+const STORAGE_KEY = "intermap_v3";
+const LEGACY_STORAGE_KEYS = ["intermap_v2", "intermap_v1"] as const;
 /** The canonical image URL for the built-in Tramire map — always kept in sync. */
-const TRAMIRE_IMAGE_URL = "https://static.step1.dev/30f593e11fbf22b47a0cf60b4e3696e3";
+const TRAMIRE_MAP_ID = BUILT_IN_TRAMIRE_MAP.id;
+const TRAMIRE_IMAGE_URL = BUILT_IN_TRAMIRE_MAP.imageUrl;
+
+function migrateRemovedShapeIcons(map: MapProject): MapProject {
+  return normalizeMapProject({
+    ...map,
+    tagCategories: map.tagCategories.map((cat) => ({
+      ...cat,
+      values: cat.values.map((v) => {
+        if (v.icon.kind === "shape" && ((v.icon.shape as string) === "triangle" || (v.icon.shape as string) === "star")) {
+          return { ...v, icon: { ...v.icon, shape: "square" as const } };
+        }
+        return v;
+      }),
+    })),
+  } as MapProject);
+}
+
+function coerceActiveMapId(savedActiveMapId: string | null, maps: MapProject[]): string | null {
+  if (savedActiveMapId && maps.some((map) => map.id === savedActiveMapId)) {
+    return savedActiveMapId;
+  }
+
+  return maps[0]?.id ?? null;
+}
+
+function migrateCurrentState(saved: IntermapState): IntermapState {
+  const savedMaps = Array.isArray(saved.maps) ? saved.maps : [];
+  const maps = savedMaps.length > 0
+    ? savedMaps.map((map) => {
+        const patched = map.id === TRAMIRE_MAP_ID ? { ...map, imageUrl: TRAMIRE_IMAGE_URL } : map;
+        return migrateRemovedShapeIcons(patched as MapProject);
+      })
+    : [getBuiltInTramireMap()];
+
+  return {
+    maps,
+    activeMapId: coerceActiveMapId(saved.activeMapId, maps),
+  };
+}
+
+function migrateLegacyState(saved: IntermapState): IntermapState {
+  const legacyMaps = Array.isArray(saved.maps) ? saved.maps : [];
+  const maps = [
+    getBuiltInTramireMap(),
+    ...legacyMaps
+      .filter((map) => map.id !== TRAMIRE_MAP_ID)
+      .map((map) => migrateRemovedShapeIcons(map as MapProject)),
+  ];
+
+  return {
+    maps,
+    activeMapId: coerceActiveMapId(saved.activeMapId, maps),
+  };
+}
 
 function loadState(): IntermapState {
   if (typeof window === "undefined") return INITIAL_STATE;
   try {
-    // Clear old storage keys to avoid stale cache from previous versions
-    localStorage.removeItem("intermap_v1");
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return INITIAL_STATE;
-    const saved = JSON.parse(raw) as IntermapState;
+    if (raw) {
+      return migrateCurrentState(JSON.parse(raw) as IntermapState);
+    }
+
+    const legacyRaw = localStorage.getItem("intermap_v2");
+    if (legacyRaw) {
+      return migrateLegacyState(JSON.parse(legacyRaw) as IntermapState);
+    }
+
+    localStorage.removeItem("intermap_v1");
+    return INITIAL_STATE; /*
     // Always patch the built-in Tramire map's imageUrl so stale cache doesn't show broken image
     // Also migrate: triangle/star shapes → square (these shapes were removed)
     const migrated = {
@@ -342,7 +411,7 @@ function loadState(): IntermapState {
         } as MapProject);
       }),
     };
-    return migrated;
+    return migrated; */
   } catch {
     return INITIAL_STATE;
   }
@@ -352,6 +421,7 @@ function saveState(state: IntermapState): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    LEGACY_STORAGE_KEYS.forEach((key) => localStorage.removeItem(key));
   } catch { /* quota exceeded — ignore */ }
 }
 

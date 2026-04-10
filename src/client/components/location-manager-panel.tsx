@@ -1,24 +1,8 @@
-/**
- * @file location-manager-panel.tsx
- * @description Right-side Location Manager panel for the Intermap system.
- *
- * How it works:
- * 1. Shows a scrollable list of all locations in the active map
- * 2. Supports search by Chinese or English name
- * 3. Tag filter chips (one section per tag category) — filters are local to this panel,
- *    independent of the map's global display filter
- * 4. "添加地点" button at top triggers the LocationEditor modal
- * 5. "编辑" toggle enters batch-select mode with checkboxes; a bottom bar shows
- *    selected count + batch-delete button
- * 6. Clicking a location row calls onSelectLocation → parent switches to DetailPanel
- *    and highlights the marker on the map
- */
-
-import { useState, useMemo } from "react";
-import { X, Plus, Trash2, Check, Search, ChevronDown, ChevronRight, MapPin } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Check, ChevronDown, ChevronRight, MapPin, Plus, Search, Trash2, X } from "lucide-react";
 import { useIntermap } from "../store/intermap-store";
 import { TagIconRenderer } from "./tag-icon-renderer";
-import type { MapLocation, MapTheme } from "../types/intermap-types";
+import type { MapLocation, MapTheme, TagCategory, TagIcon } from "../types/intermap-types";
 
 interface LocationManagerPanelProps {
   theme: MapTheme;
@@ -27,49 +11,107 @@ interface LocationManagerPanelProps {
   onAddLocation: () => void;
 }
 
-/**
- * Location Manager Panel.
- * Renders a fixed-width right-side panel with search, tag filters, and location list.
- */
+interface LocationGroup {
+  key: string;
+  label: string;
+  icon: TagIcon;
+  items: MapLocation[];
+}
+
 export function LocationManagerPanel({
-  theme, onClose, onSelectLocation, onAddLocation,
+  theme,
+  onClose,
+  onSelectLocation,
+  onAddLocation,
 }: LocationManagerPanelProps) {
   const { activeMap, dispatch } = useIntermap();
   const [search, setSearch] = useState("");
   const [batchMode, setBatchMode] = useState(false);
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  // Tag filter: catId → Set of allowed valueIds (empty Set = show all)
   const [tagFilter, setTagFilter] = useState<Record<string, Set<string>>>({});
-  // Which filter sections are collapsed
   const [collapsedCats, setCollapsedCats] = useState<Set<string>>(new Set());
+  const [groupByTagId, setGroupByTagId] = useState("");
 
   if (!activeMap) return null;
 
   const locations = activeMap.locations;
   const cats = activeMap.tagCategories;
 
-  // ── Filter logic ─────────────────────────────────────────────────────────
   const filteredLocations = useMemo(() => {
     return locations.filter((loc) => {
-      // Search filter
       if (search.trim()) {
         const q = search.trim().toLowerCase();
         const nameMatch = loc.name.toLowerCase().includes(q);
         const nameEnMatch = (loc.nameEn ?? "").toLowerCase().includes(q);
         if (!nameMatch && !nameEnMatch) return false;
       }
-      // Tag filter (only categories that have active filters)
+
       for (const cat of cats) {
         const allowed = tagFilter[cat.id];
-        if (!allowed || allowed.size === 0) continue; // no filter = show all
+        if (!allowed || allowed.size === 0) continue;
         const tagVal = loc.tags[cat.id] ?? "none";
         if (!allowed.has(tagVal)) return false;
       }
+
       return true;
     });
-  }, [locations, search, tagFilter, cats]);
+  }, [cats, locations, search, tagFilter]);
 
-  // ── Tag filter helpers ────────────────────────────────────────────────────
+  const groupedLocations = useMemo<LocationGroup[]>(() => {
+    if (!groupByTagId) {
+      return [
+        {
+          key: "all",
+          label: "全部地点",
+          icon: { kind: "none" },
+          items: filteredLocations,
+        },
+      ];
+    }
+
+    const category = cats.find((cat) => cat.id === groupByTagId);
+    if (!category) {
+      return [
+        {
+          key: "all",
+          label: "全部地点",
+          icon: { kind: "none" },
+          items: filteredLocations,
+        },
+      ];
+    }
+
+    const itemsByValue = new Map<string, MapLocation[]>();
+    filteredLocations.forEach((location) => {
+      const valueId = location.tags[category.id] ?? "";
+      const list = itemsByValue.get(valueId) ?? [];
+      list.push(location);
+      itemsByValue.set(valueId, list);
+    });
+
+    const groups = category.values
+      .map((value) => ({
+        key: value.id,
+        label: value.label,
+        icon: value.icon,
+        items: itemsByValue.get(value.id) ?? [],
+      }))
+      .filter((group) => group.items.length > 0);
+
+    const knownIds = new Set(category.values.map((value) => value.id));
+    const uncategorized = filteredLocations.filter((location) => !knownIds.has(location.tags[category.id] ?? ""));
+    if (uncategorized.length > 0) {
+      groups.push({
+        key: "uncategorized",
+        label: "未分类",
+        icon: { kind: "none" },
+        items: uncategorized,
+      });
+    }
+
+    return groups;
+  }, [cats, filteredLocations, groupByTagId]);
+
   const toggleTagFilter = (catId: string, valueId: string) => {
     setTagFilter((prev) => {
       const cur = new Set(prev[catId] ?? []);
@@ -88,7 +130,6 @@ export function LocationManagerPanel({
     });
   };
 
-  // ── Batch selection helpers ───────────────────────────────────────────────
   const toggleSelect = (id: string) => {
     setSelected((prev) => {
       const next = new Set(prev);
@@ -100,7 +141,7 @@ export function LocationManagerPanel({
 
   const handleBatchDelete = () => {
     if (selected.size === 0) return;
-    if (!confirm(`确定删除选中的 ${selected.size} 个地点？此操作不可恢复。`)) return;
+    if (!confirm(`确定删除选中的 ${selected.size} 个地点吗？此操作不可恢复。`)) return;
     selected.forEach((id) => {
       dispatch({ type: "DELETE_LOCATION", mapId: activeMap.id, locationId: id });
     });
@@ -132,7 +173,6 @@ export function LocationManagerPanel({
         overflow: "hidden",
       }}
     >
-      {/* ── Header ─────────────────────────────────────── */}
       <div
         style={{
           padding: "12px 14px 10px",
@@ -144,7 +184,6 @@ export function LocationManagerPanel({
           <MapPin size={15} color={p} />
           <span style={{ fontSize: 15, fontWeight: "bold", color: heading, flex: 1 }}>地点管理</span>
           <span style={{ fontSize: 11, color: muted, opacity: 0.7 }}>{locations.length} 个地点</span>
-          {/* Close */}
           <button
             onClick={onClose}
             style={{ background: "none", border: "none", color: muted, cursor: "pointer", padding: 4, marginLeft: 2 }}
@@ -153,16 +192,15 @@ export function LocationManagerPanel({
           </button>
         </div>
 
-        {/* Action row */}
         <div style={{ display: "flex", gap: 6 }}>
-          <button
-            onClick={onAddLocation}
-            style={chip(p, true)}
-          >
+          <button onClick={onAddLocation} style={chip(p, true)}>
             <Plus size={12} /> 添加地点
           </button>
           <button
-            onClick={() => { setBatchMode((b) => !b); setSelected(new Set()); }}
+            onClick={() => {
+              setBatchMode((prev) => !prev);
+              setSelected(new Set());
+            }}
             style={chip(batchMode ? "#C86060" : p, batchMode)}
           >
             {batchMode ? <X size={12} /> : <Trash2 size={12} />}
@@ -171,7 +209,6 @@ export function LocationManagerPanel({
         </div>
       </div>
 
-      {/* ── Search ─────────────────────────────────────── */}
       <div style={{ padding: "8px 14px", borderBottom: `1px solid ${accent}`, flexShrink: 0 }}>
         <div
           style={{
@@ -188,7 +225,7 @@ export function LocationManagerPanel({
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="搜索地点名称…"
+            placeholder="搜索地点名称..."
             style={{
               flex: 1,
               background: "none",
@@ -208,9 +245,34 @@ export function LocationManagerPanel({
             </button>
           )}
         </div>
+
+        <div style={{ marginTop: 8 }}>
+          <div style={{ fontSize: 11, color: muted, marginBottom: 6 }}>按标签分类显示</div>
+          <select
+            value={groupByTagId}
+            onChange={(e) => setGroupByTagId(e.target.value)}
+            style={{
+              width: "100%",
+              padding: "7px 9px",
+              background: "rgba(255,255,255,0.05)",
+              border: `1px solid ${accent}`,
+              borderRadius: 6,
+              color: heading,
+              fontSize: 12,
+              fontFamily: "Georgia, serif",
+              outline: "none",
+            }}
+          >
+            <option value="">默认顺序</option>
+            {cats.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
-      {/* ── Tag filters ────────────────────────────────── */}
       {cats.length > 0 && (
         <div
           style={{
@@ -224,9 +286,9 @@ export function LocationManagerPanel({
             const isCollapsed = collapsedCats.has(cat.id);
             const activeCatFilter = tagFilter[cat.id];
             const hasActiveFilter = activeCatFilter && activeCatFilter.size > 0;
+
             return (
               <div key={cat.id}>
-                {/* Category header */}
                 <div
                   onClick={() => toggleCatCollapse(cat.id)}
                   style={{
@@ -256,14 +318,17 @@ export function LocationManagerPanel({
                   )}
                   {hasActiveFilter && (
                     <button
-                      onClick={(e) => { e.stopPropagation(); setTagFilter((prev) => ({ ...prev, [cat.id]: new Set() })); }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setTagFilter((prev) => ({ ...prev, [cat.id]: new Set() }));
+                      }}
                       style={{ background: "none", border: "none", color: muted, cursor: "pointer", fontSize: 9, padding: "0 2px" }}
                     >
                       清除
                     </button>
                   )}
                 </div>
-                {/* Value chips */}
+
                 {!isCollapsed && (
                   <div style={{ padding: "6px 14px 8px", display: "flex", flexWrap: "wrap", gap: 5 }}>
                     {cat.values.map((val) => {
@@ -302,7 +367,6 @@ export function LocationManagerPanel({
         </div>
       )}
 
-      {/* ── Location list ───────────────────────────────── */}
       <div style={{ flex: 1, overflowY: "auto" }}>
         {filteredLocations.length === 0 ? (
           <div
@@ -314,125 +378,143 @@ export function LocationManagerPanel({
               fontSize: 13,
             }}
           >
-            {locations.length === 0 ? "还没有地点，点击「添加地点」开始" : "没有匹配的地点"}
+            {locations.length === 0 ? "还没有地点，点击“添加地点”开始" : "没有匹配的地点"}
           </div>
         ) : (
-          filteredLocations.map((loc) => {
-            const isChecked = selected.has(loc.id);
-            // Find legend tag value for the icon
-            const legendCat = cats.find((c) => c.isLegend);
-            const tagValId = legendCat ? loc.tags[legendCat.id] : undefined;
-            const tagVal = legendCat?.values.find((v) => v.id === tagValId);
+          groupedLocations.map((group) => (
+            <div key={group.key}>
+              {groupByTagId && (
+                <div
+                  style={{
+                    padding: "7px 14px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    borderBottom: `1px solid ${accent}44`,
+                    background: "rgba(255,255,255,0.04)",
+                    position: "sticky",
+                    top: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <TagIconRenderer icon={group.icon} size={10} />
+                  <span style={{ fontSize: 11, color: heading, flex: 1, opacity: 0.9 }}>{group.label}</span>
+                  <span style={{ fontSize: 10, color: muted }}>{group.items.length}</span>
+                </div>
+              )}
 
-            return (
-              <div
-                key={loc.id}
-                onClick={() => {
-                  if (batchMode) { toggleSelect(loc.id); }
-                  else { onSelectLocation(loc); }
-                }}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "9px 14px",
-                  cursor: "pointer",
-                  borderBottom: `1px solid ${accent}33`,
-                  background: isChecked ? `${p}10` : "transparent",
-                  transition: "background 0.1s",
-                }}
-              >
-                {/* Batch checkbox */}
-                {batchMode && (
+              {group.items.map((loc) => {
+                const isChecked = selected.has(loc.id);
+                const legendCat = cats.find((cat) => cat.isLegend);
+                const tagValId = legendCat ? loc.tags[legendCat.id] : undefined;
+                const tagVal = legendCat?.values.find((value) => value.id === tagValId);
+
+                return (
                   <div
+                    key={loc.id}
+                    onClick={() => {
+                      if (batchMode) toggleSelect(loc.id);
+                      else onSelectLocation(loc);
+                    }}
                     style={{
-                      width: 14,
-                      height: 14,
-                      borderRadius: 3,
-                      border: `1.5px solid ${isChecked ? p : "rgba(180,140,60,0.4)"}`,
-                      background: isChecked ? `${p}33` : "transparent",
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
+                      gap: 10,
+                      padding: "9px 14px",
+                      cursor: "pointer",
+                      borderBottom: `1px solid ${accent}33`,
+                      background: isChecked ? `${p}10` : "transparent",
+                      transition: "background 0.1s",
                     }}
                   >
-                    {isChecked && <Check size={9} color={p} />}
-                  </div>
-                )}
+                    {batchMode && (
+                      <div
+                        style={{
+                          width: 14,
+                          height: 14,
+                          borderRadius: 3,
+                          border: `1.5px solid ${isChecked ? p : "rgba(180,140,60,0.4)"}`,
+                          background: isChecked ? `${p}33` : "transparent",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        {isChecked && <Check size={9} color={p} />}
+                      </div>
+                    )}
 
-                {/* Legend icon */}
-                <div style={{ flexShrink: 0 }}>
-                  {tagVal ? (
-                    <TagIconRenderer icon={tagVal.icon} size={12} />
-                  ) : (
-                    <div
-                      style={{
-                        width: 10,
-                        height: 10,
-                        borderRadius: "50%",
-                        background: "rgba(150,130,100,0.3)",
-                        border: `1px solid rgba(150,130,100,0.4)`,
-                      }}
-                    />
-                  )}
-                </div>
-
-                {/* Name */}
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div
-                    style={{
-                      fontSize: 13,
-                      color: heading,
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                    }}
-                  >
-                    {loc.name}
-                  </div>
-                  {loc.nameEn && (
-                    <div
-                      style={{
-                        fontSize: 10,
-                        color: muted,
-                        fontStyle: "italic",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                      }}
-                    >
-                      {loc.nameEn}
+                    <div style={{ flexShrink: 0 }}>
+                      {tagVal ? (
+                        <TagIconRenderer icon={tagVal.icon} size={12} />
+                      ) : (
+                        <div
+                          style={{
+                            width: 10,
+                            height: 10,
+                            borderRadius: "50%",
+                            background: "rgba(150,130,100,0.3)",
+                            border: "1px solid rgba(150,130,100,0.4)",
+                          }}
+                        />
+                      )}
                     </div>
-                  )}
-                </div>
 
-                {/* Arrow if not batch mode */}
-                {!batchMode && (
-                  <ChevronRight size={13} color={muted} style={{ flexShrink: 0, opacity: 0.5 }} />
-                )}
-              </div>
-            );
-          })
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div
+                        style={{
+                          fontSize: 13,
+                          color: heading,
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                        }}
+                      >
+                        {loc.name}
+                      </div>
+                      {loc.nameEn && (
+                        <div
+                          style={{
+                            fontSize: 10,
+                            color: muted,
+                            fontStyle: "italic",
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                          }}
+                        >
+                          {loc.nameEn}
+                        </div>
+                      )}
+                    </div>
+
+                    {!batchMode && (
+                      <ChevronRight size={13} color={muted} style={{ flexShrink: 0, opacity: 0.5 }} />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ))
         )}
       </div>
 
-      {/* ── Batch action bar ────────────────────────────── */}
       {batchMode && (
         <div
           style={{
             padding: "10px 14px",
             borderTop: `1px solid ${accent}`,
-            background: `${bg}`,
+            background: bg,
             display: "flex",
             alignItems: "center",
             gap: 8,
             flexShrink: 0,
           }}
         >
-          <span style={{ fontSize: 12, color: muted, flex: 1 }}>已选 {selected.size} 个</span>
+          <span style={{ fontSize: 12, color: muted, flex: 1 }}>已选 {selected.size} 项</span>
           <button
-            onClick={() => setSelected(new Set(filteredLocations.map((l) => l.id)))}
+            onClick={() => setSelected(new Set(filteredLocations.map((location) => location.id)))}
             style={chip(p, false)}
           >
             全选
@@ -454,7 +536,6 @@ export function LocationManagerPanel({
   );
 }
 
-/** Inline style helper for small action chips/buttons */
 function chip(color: string, active: boolean): React.CSSProperties {
   return {
     padding: "4px 10px",
@@ -464,9 +545,9 @@ function chip(color: string, active: boolean): React.CSSProperties {
     alignItems: "center",
     gap: 4,
     cursor: "pointer",
-    border: `1px solid ${active ? color : color + "66"}`,
+    border: `1px solid ${active ? color : `${color}66`}`,
     background: active ? `${color}22` : "transparent",
-    color: active ? color : color + "CC",
+    color: active ? color : `${color}CC`,
     fontFamily: "Georgia, serif",
     transition: "all 0.15s",
   };

@@ -12,7 +12,7 @@
  */
 
 import { useState, useRef } from "react";
-import { X, Check, ImagePlus, Trash2, Crop } from "lucide-react";
+import { X, Check, ImagePlus, Trash2, Crop, RotateCcw } from "lucide-react";
 import type { MapLocation, TagCategory } from "../types/intermap-types";
 import { TagIconRenderer } from "./tag-icon-renderer";
 import { ImageCropModal } from "./image-crop-modal";
@@ -60,6 +60,7 @@ export function LocationEditor({
   const [nameEn, setNameEn] = useState(existing?.nameEn ?? "");
   const [description, setDescription] = useState(existing?.description ?? "");
   const [imageUrl, setImageUrl] = useState<string | undefined>(existing?.imageUrl);
+  const [originalImageUrl, setOriginalImageUrl] = useState<string | undefined>(existing?.imageUrl);
   const [cropOpen, setCropOpen] = useState(false);
   const [x, setX] = useState(existing?.x ?? Math.round(30 + Math.random() * 40));
   const [y, setY] = useState(existing?.y ?? Math.round(30 + Math.random() * 40));
@@ -73,7 +74,10 @@ export function LocationEditor({
     const reader = new FileReader();
     reader.onload = (evt) => {
       const result = evt.target?.result;
-      if (typeof result === "string") setImageUrl(result);
+      if (typeof result === "string") {
+        setImageUrl(result);
+        setOriginalImageUrl(result);
+      }
     };
     reader.readAsDataURL(file);
     // Reset input so re-selecting the same file fires onChange again
@@ -199,8 +203,29 @@ export function LocationEditor({
                 >
                   <Crop size={12} /> 裁剪
                 </button>
+                {originalImageUrl && imageUrl !== originalImageUrl && (
+                  <button
+                    onClick={() => setImageUrl(originalImageUrl)}
+                    title="恢复原图"
+                    style={{
+                      background: "rgba(0,0,0,0.65)",
+                      border: `1px solid ${themeAccent}`,
+                      borderRadius: 6,
+                      color: "#E8DCC8",
+                      cursor: "pointer",
+                      padding: "3px 6px",
+                      display: "flex", alignItems: "center", gap: 4,
+                      fontSize: 11,
+                    }}
+                  >
+                    <RotateCcw size={12} /> 恢复
+                  </button>
+                )}
                 <button
-                  onClick={() => setImageUrl(undefined)}
+                  onClick={() => {
+                    setImageUrl(undefined);
+                    setOriginalImageUrl(undefined);
+                  }}
                   title="移除配图"
                   style={{
                     background: "rgba(0,0,0,0.65)",

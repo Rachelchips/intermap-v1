@@ -15,7 +15,7 @@
  */
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { X, Check, Crop } from "lucide-react";
+import { X, Check, Crop, RotateCcw } from "lucide-react";
 
 interface Rect { x: number; y: number; w: number; h: number }
 type Handle = "tl" | "tc" | "tr" | "ml" | "mr" | "bl" | "bc" | "br" | "move"
@@ -34,6 +34,11 @@ interface ImageCropModalProps {
 const PREVIEW_W = 480;
 const PREVIEW_H = 320;
 const MIN_SIZE = 20;
+const RATIO_OPTIONS = [
+  { id: "16:9", label: "16:9", value: 16 / 9 },
+  { id: "4:3", label: "4:3", value: 4 / 3 },
+  { id: "1:1", label: "1:1", value: 1 },
+] as const;
 
 /** Map a handle name to its x/y anchor in [0..1] relative to the rect */
 const HANDLE_ANCHORS: Record<Handle, [number, number]> = {
@@ -59,6 +64,23 @@ function normalizeRect(r: Rect): Rect {
   return { x, y, w: Math.abs(r.w), h: Math.abs(r.h) };
 }
 
+function fitRectToAspect(bounds: Rect, aspect: number): Rect {
+  const maxW = bounds.w;
+  const maxH = bounds.h;
+  let w = maxW;
+  let h = w / aspect;
+  if (h > maxH) {
+    h = maxH;
+    w = h * aspect;
+  }
+  return {
+    x: bounds.x + (maxW - w) / 2,
+    y: bounds.y + (maxH - h) / 2,
+    w,
+    h,
+  };
+}
+
 export function ImageCropModal({
   src,
   onCrop,
@@ -75,6 +97,7 @@ export function ImageCropModal({
   const [imgRect, setImgRect] = useState({ x: 0, y: 0, w: PREVIEW_W, h: PREVIEW_H });
   // Crop selection in preview coordinates (relative to the preview box)
   const [crop, setCrop] = useState<Rect>({ x: 20, y: 20, w: PREVIEW_W - 40, h: PREVIEW_H - 40 });
+  const [aspect, setAspect] = useState<number>(RATIO_OPTIONS[0].value);
 
   const previewRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -99,11 +122,11 @@ export function ImageCropModal({
       const rx = (PREVIEW_W - rw) / 2;
       const ry = (PREVIEW_H - rh) / 2;
       setImgRect({ x: rx, y: ry, w: rw, h: rh });
-      // Default crop = full image area
-      setCrop({ x: rx, y: ry, w: rw, h: rh });
+      // Default crop = best fit with current fixed aspect ratio
+      setCrop(fitRectToAspect({ x: rx, y: ry, w: rw, h: rh }, aspect));
     };
     img.src = src;
-  }, [src]);
+  }, [src, aspect]);
 
   // ── Mouse pointer events ─────────────────────────────────────────────────
   const getPreviewCoords = useCallback((e: React.MouseEvent | MouseEvent) => {
@@ -116,7 +139,7 @@ export function ImageCropModal({
   /** Determine which handle (or 'move' for inside, null for outside) the pointer is on */
   const hitTestHandle = useCallback((px: number, py: number, c: Rect): Handle | null => {
     const norm = normalizeRect(c);
-    const handles: Handle[] = ["tl", "tc", "tr", "ml", "mr", "bl", "bc", "br"];
+    const handles: Handle[] = ["tl", "tr", "bl", "br"];
     for (const h of handles) {
       const [ax, ay] = HANDLE_ANCHORS[h];
       const hx = norm.x + ax * norm.w;
@@ -161,30 +184,36 @@ export function ImageCropModal({
 
       const handle = dragging.current?.handle ?? "br";
 
-      // Horizontal adjustments
-      if (handle === "tl" || handle === "ml" || handle === "bl") {
-        const newX = clamp(sc.x + dx, imgX, sc.x + sc.w - MIN_SIZE);
-        w = sc.x + sc.w - newX;
-        x = newX;
-      }
-      if (handle === "tr" || handle === "mr" || handle === "br") {
-        w = clamp(sc.w + dx, MIN_SIZE, imgX + imgW - sc.x);
+      const anchoredRight = handle === "tl" || handle === "bl";
+      const anchoredBottom = handle === "tl" || handle === "tr";
+      const baseX = anchoredRight ? sc.x + sc.w : sc.x;
+      const baseY = anchoredBottom ? sc.y + sc.h : sc.y;
+
+      let intendedW = sc.w + (anchoredRight ? -dx : dx);
+      let intendedH = sc.h + (anchoredBottom ? -dy : dy);
+      intendedW = Math.max(MIN_SIZE, intendedW);
+      intendedH = Math.max(MIN_SIZE, intendedH);
+
+      if (Math.abs(intendedW / aspect - intendedH) > 0.001) {
+        if (Math.abs(dx) >= Math.abs(dy)) intendedH = intendedW / aspect;
+        else intendedW = intendedH * aspect;
       }
 
-      // Vertical adjustments
-      if (handle === "tl" || handle === "tc" || handle === "tr") {
-        const newY = clamp(sc.y + dy, imgY, sc.y + sc.h - MIN_SIZE);
-        h = sc.y + sc.h - newY;
-        y = newY;
-      }
-      if (handle === "bl" || handle === "bc" || handle === "br") {
-        h = clamp(sc.h + dy, MIN_SIZE, imgY + imgH - sc.y);
-      }
+      const maxWByBounds = anchoredRight ? baseX - imgX : imgX + imgW - baseX;
+      const maxHByBounds = anchoredBottom ? baseY - imgY : imgY + imgH - baseY;
+      let scale = 1;
+      if (intendedW > maxWByBounds) scale = Math.min(scale, maxWByBounds / intendedW);
+      if (intendedH > maxHByBounds) scale = Math.min(scale, maxHByBounds / intendedH);
+      w = intendedW * scale;
+      h = intendedH * scale;
 
-      return { x, y, w, h };
+      x = anchoredRight ? baseX - w : baseX;
+      y = anchoredBottom ? baseY - h : baseY;
+
+      return normalizeRect({ x, y, w, h });
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getPreviewCoords, imgRect]);
+  }, [aspect, getPreviewCoords, imgRect]);
 
   const handleMouseUp = useCallback(() => { dragging.current = null; }, []);
 
@@ -227,7 +256,7 @@ export function ImageCropModal({
 
   // ── Render ───────────────────────────────────────────────────────────────
   const norm = normalizeRect(crop);
-  const handles: Handle[] = ["tl", "tc", "tr", "ml", "mr", "bl", "bc", "br"];
+  const handles: Handle[] = ["tl", "tr", "bl", "br"];
 
   return (
     <div
@@ -266,7 +295,33 @@ export function ImageCropModal({
         </div>
 
         <div style={{ fontSize: 11, color: themeMuted, marginBottom: 12, opacity: 0.8 }}>
-          拖拽选框来选择保留区域，也可拖动边角和边缘调整大小
+          选择固定比例裁剪；可拖动选框移动，或拖动四角调整大小。
+        </div>
+        <div style={{ display: "flex", gap: 6, marginBottom: 10, flexWrap: "wrap" }}>
+          {RATIO_OPTIONS.map((option) => {
+            const active = Math.abs(aspect - option.value) < 0.0001;
+            return (
+              <button
+                key={option.id}
+                onClick={() => {
+                  setAspect(option.value);
+                  setCrop(fitRectToAspect(imgRect, option.value));
+                }}
+                style={{
+                  padding: "4px 10px",
+                  borderRadius: 999,
+                  border: `1px solid ${active ? themeColor : themeAccent}`,
+                  background: active ? `${themeColor}22` : "transparent",
+                  color: active ? themeHeading : themeMuted,
+                  fontSize: 11,
+                  cursor: "pointer",
+                  fontFamily: "Georgia, serif",
+                }}
+              >
+                {option.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Preview box with crop overlay */}
@@ -376,6 +431,26 @@ export function ImageCropModal({
 
         {/* Action buttons */}
         <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
+          <button
+            onClick={() => setCrop(fitRectToAspect(imgRect, aspect))}
+            style={{
+              flex: 1.1,
+              padding: "9px",
+              borderRadius: 8,
+              border: `1px solid ${themeAccent}`,
+              background: "transparent",
+              color: themeMuted,
+              cursor: "pointer",
+              fontSize: 13,
+              fontFamily: "Georgia, serif",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 6,
+            }}
+          >
+            <RotateCcw size={13} /> 恢复选框
+          </button>
           <button
             onClick={onClose}
             style={{

@@ -1,0 +1,1710 @@
+{
+  "id": "tramire",
+  "name": "特兰米尔大洲",
+  "nameEn": "Tramire Continent",
+  "imageUrl": "https://static.step1.dev/30f593e11fbf22b47a0cf60b4e3696e3",
+  "themeId": "parchment",
+  "tagCategories": [
+    {
+      "id": "type",
+      "label": "地点类型",
+      "isLegend": true,
+      "isBuiltIn": true,
+      "values": [
+        {
+          "id": "city",
+          "label": "城镇",
+          "icon": {
+            "kind": "shape",
+            "shape": "square",
+            "color": "#8B4513",
+            "opacity": 1
+          }
+        },
+        {
+          "id": "natural",
+          "label": "自然地貌",
+          "icon": {
+            "kind": "shape",
+            "shape": "circle",
+            "color": "#2D6A2D"
+          }
+        },
+        {
+          "id": "sacred",
+          "label": "圣地",
+          "icon": {
+            "kind": "shape",
+            "shape": "circle",
+            "color": "#6B21A8",
+            "opacity": 1
+          }
+        },
+        {
+          "id": "ruin",
+          "label": "废墟遗迹",
+          "icon": {
+            "kind": "shape",
+            "shape": "circle",
+            "color": "#5C4033",
+            "opacity": 1,
+            "borderColor": "#a89367"
+          }
+        },
+        {
+          "id": "landmark",
+          "label": "地标建筑",
+          "icon": {
+            "kind": "shape",
+            "shape": "square",
+            "color": "#1E40AF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "faction",
+      "label": "所属势力",
+      "isLegend": false,
+      "isBuiltIn": true,
+      "values": [
+        {
+          "id": "human",
+          "label": "人类",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "👑"
+          }
+        },
+        {
+          "id": "treant",
+          "label": "树精",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "🌳"
+          }
+        },
+        {
+          "id": "elvenbranch",
+          "label": "枝裔族",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "🌿"
+          }
+        },
+        {
+          "id": "orc",
+          "label": "兽人",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "⚔️"
+          }
+        },
+        {
+          "id": "clawkin",
+          "label": "裂爪族",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "🦅"
+          }
+        },
+        {
+          "id": "none",
+          "label": "无归属",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "❓️"
+          }
+        }
+      ]
+    },
+    {
+      "id": "zone",
+      "label": "所属区域",
+      "isLegend": false,
+      "isBuiltIn": true,
+      "values": [
+        {
+          "id": "central_world_root_zone",
+          "label": "中部 - 神树地带",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "central_ancient_battlefield_zone",
+          "label": "中部 - 古战场区",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "southern_aurelen_zone",
+          "label": "南部 - 奥蕊岚",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "southwestern_sanlar_kingdom",
+          "label": "西南部 - 圣岚王国",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "northwestern_merton_kingdom",
+          "label": "西北部 - 梅顿王国",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "canal_zone_lando_duchy",
+          "label": "运河地带 - 兰多公国",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "extreme_northwestern_wasteland",
+          "label": "极西北部 - 西部荒原",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "northwestern_offshore_islands",
+          "label": "西北部海面 - 铁礁群岛",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "lunar_creek_zone",
+          "label": "沿神树区 - 月神溪地带",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "southeastern_forest_zone",
+          "label": "东南部 - 密林地带",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "northeastern_marsh_zone",
+          "label": "东北部 - 沼泽地带",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "eastern_coast_abandoned_zone",
+          "label": "东部沿海 - 废弃海岸地带",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "forest_and_marsh_boundary_great_rift",
+          "label": "密林和沼泽分界线 - 大裂隙",
+          "icon": {
+            "kind": "none"
+          }
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": "illorien-spine",
+      "name": "伊洛希恩山脉",
+      "nameEn": "The Illorien Spine",
+      "description": "特兰米尔大洲中部纵贯南北的巨大山脉，山脊如脊骨般层叠挺立，覆盖常青林。",
+      "x": 59.1,
+      "y": 62.6,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "aelfen-alp",
+      "name": "艾尔芬峰",
+      "nameEn": "Aelfen Alp",
+      "description": "伊洛希恩山脉的最高峰之一，神树所在之巅，岩壁陡峭，树根盘错，云气不散。",
+      "x": 67.3,
+      "y": 55.5,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "aelfen-floating-isles",
+      "name": "艾尔芬浮空岛链",
+      "nameEn": "The Aelfen Floating Isles",
+      "description": "位于艾尔芬峰火山口上空的悬浮岛屿群，三大圣河的源头瀑布由此倾泻而下。",
+      "x": 69.9,
+      "y": 54.7,
+      "tags": {
+        "type": "natural",
+        "faction": "treant",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "tree-of-illoriel",
+      "name": "伊洛瑞尔神树",
+      "nameEn": "The Tree of Illoriel",
+      "description": "主干如山般粗壮，枝冠遮天蔽日，树根伸出三条河流。扎根于浮空岛链最大的主岛正中央。",
+      "x": 68.2,
+      "y": 58.5,
+      "tags": {
+        "type": "sacred",
+        "faction": "none",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "wulinda-ring",
+      "name": "乌林达林环",
+      "nameEn": "Wulinda Primeval Ring",
+      "description": "古林密布、灵气浓郁的原始林海，树木高耸入云，遮天蔽日，是兽人与根之脉树精的原初圣地。",
+      "x": 53.2,
+      "y": 57.6,
+      "tags": {
+        "type": "natural",
+        "faction": "orc",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "tree-sanix",
+      "name": "叶之树撒尼克斯",
+      "nameEn": "Tree of Sanix",
+      "description": "封印黑巫撒尼克斯的古木，直插云霄，枝繁叶茂，生机勃勃。位于艾尔芬峰山脚下、乌林达林环的边缘地带。",
+      "x": 59.3,
+      "y": 44,
+      "tags": {
+        "type": "sacred",
+        "faction": "none",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "aelfen-town",
+      "name": "艾尔芬镇",
+      "nameEn": "Aelfen",
+      "description": "特兰米尔最热闹、最繁华的非王都聚落之一。镇中心的灵泉广场终年人潮涌动。整座城镇围绕着古老的根之树同心环状展开。",
+      "x": 58.2,
+      "y": 42.4,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "central_world_root_zone"
+      }
+    },
+    {
+      "id": "elarath",
+      "name": "艾拉拉斯",
+      "nameEn": "Elarath",
+      "description": "圣岚古都，曾是魔法纪元时期文化与魔法中心，见证了禁咒魔法的施放，现为废墟遗迹。",
+      "x": 48.6,
+      "y": 48.2,
+      "tags": {
+        "type": "ruin",
+        "faction": "none",
+        "zone": "central_ancient_battlefield_zone"
+      }
+    },
+    {
+      "id": "orindar",
+      "name": "奥林达尔",
+      "nameEn": "Orindar",
+      "description": "梅顿古都，城墙厚重、堡垒森严，曾是军国主义与兽人部族融合的起点，如今仅余断壁残垣。",
+      "x": 46.5,
+      "y": 64.6,
+      "tags": {
+        "type": "ruin",
+        "faction": "none",
+        "zone": "central_ancient_battlefield_zone"
+      }
+    },
+    {
+      "id": "aurelen-valley",
+      "name": "奥蕊岚山谷",
+      "nameEn": "Aurelen Valley",
+      "description": "由三座环山包围的灵谷，泉水清澈，花藤交垂，气候四季如春。",
+      "x": 69.8,
+      "y": 34.2,
+      "tags": {
+        "type": "natural",
+        "faction": "elvenbranch",
+        "zone": "southern_aurelen_zone"
+      }
+    },
+    {
+      "id": "tree-valsir",
+      "name": "花之树瓦尔瑟尔",
+      "nameEn": "Tree of Valsir",
+      "description": "银干紫花，全年盛开，散发致幻孢子，封印着风/幻术黑巫瓦尔瑟尔的永恒梦境牢笼。",
+      "x": 71.1,
+      "y": 36.9,
+      "tags": {
+        "type": "sacred",
+        "faction": "none",
+        "zone": "southern_aurelen_zone"
+      }
+    },
+    {
+      "id": "thalanthir",
+      "name": "萨兰希尔",
+      "nameEn": "Thalanthir",
+      "description": "枝裔族都城，宛如自然幻境，建筑与山林共生，是魔法与艺术的交响之都。",
+      "x": 69.9,
+      "y": 37.5,
+      "tags": {
+        "type": "city",
+        "faction": "elvenbranch",
+        "zone": "southern_aurelen_zone"
+      }
+    },
+    {
+      "id": "sanlar-river",
+      "name": "圣岚河",
+      "nameEn": "Sanlar River",
+      "description": "水势平稳、清澈见底，沿岸肥沃，是圣岚文明的母亲河。发源于神树南侧悬崖，蜿蜒穿越西南平原。",
+      "x": 45.7,
+      "y": 41.8,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "southwestern_sanlar_kingdom"
+      }
+    },
+    {
+      "id": "glass-mangrove",
+      "name": "琉璃红树林海",
+      "nameEn": "Crystal Mangrove Sea",
+      "description": "植物因魔力过载而结晶化的巨型湿地，枝叶如半透明的翡翠琉璃。",
+      "x": 30.2,
+      "y": 23.3,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "southwestern_sanlar_kingdom"
+      }
+    },
+    {
+      "id": "veyra-port",
+      "name": "维罗港",
+      "nameEn": "Veyra Port",
+      "description": "圣岚王国的新都，拥有海上浮都之称的魔法重镇。城内以灰石塔楼与翠铜圆顶交错点缀，高塔林立的王宫伫立于峭壁之巅。",
+      "x": 33.1,
+      "y": 28.8,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "southwestern_sanlar_kingdom"
+      }
+    },
+    {
+      "id": "sanlar-academy",
+      "name": "圣岚魔法学院",
+      "nameEn": "Sanlar Magic Academy",
+      "description": "全大陆最具影响力的魔法教育中心，培养博学、优雅的术士与法师。建于维罗港城市内部。",
+      "x": 32.2,
+      "y": 26.1,
+      "tags": {
+        "type": "landmark",
+        "faction": "human",
+        "zone": "southwestern_sanlar_kingdom"
+      }
+    },
+    {
+      "id": "silvaran",
+      "name": "西瓦兰港",
+      "nameEn": "Silvaran",
+      "description": "绿植环绕、港区高效，是圣岚最重要的外贸中转站。位于维岚运河的最南端出口，圣岚河的中游交汇处。",
+      "x": 42.4,
+      "y": 38.2,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "southwestern_sanlar_kingdom"
+      }
+    },
+    {
+      "id": "merton-river",
+      "name": "梅顿河",
+      "nameEn": "Merton River",
+      "description": "水流湍急，岩石嶙峋，沿岸多丘陵与矿脉。发源于神树西北侧，流经莱瑟顿后向西渗入静寂荒原地下。",
+      "x": 37.9,
+      "y": 64.9,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "northwestern_merton_kingdom"
+      }
+    },
+    {
+      "id": "black-sap-taiga",
+      "name": "黑脂泰加林",
+      "nameEn": "Black-Sap Taiga",
+      "description": "干燥北境的黑色针叶林，树木流淌着极易燃的黑色燃油，是工业命脉。",
+      "x": 35.4,
+      "y": 57.1,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "northwestern_merton_kingdom"
+      }
+    },
+    {
+      "id": "lesserden",
+      "name": "莱瑟顿",
+      "nameEn": "Lesserden",
+      "description": "梅顿王国的新都，分为地上工业城与地下熔炉城两层结构，有钢铁之穴的称号。",
+      "x": 33.6,
+      "y": 67.8,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "northwestern_merton_kingdom"
+      }
+    },
+    {
+      "id": "greymire",
+      "name": "灰泽镇",
+      "nameEn": "Greymire",
+      "description": "靠近沼泽地带，建筑简朴坚固，是防范南部入侵的军事要镇。",
+      "x": 41.5,
+      "y": 63.8,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "northwestern_merton_kingdom"
+      }
+    },
+    {
+      "id": "veilrun-canal",
+      "name": "维岚运河",
+      "nameEn": "The Veilrun Canal",
+      "description": "连接南北的商贸之脉，建于空根水道之上，河床是远古巨型气生根留下的木质外壳。",
+      "x": 40.2,
+      "y": 55.9,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "canal_zone_lando_duchy"
+      }
+    },
+    {
+      "id": "meselia",
+      "name": "梅瑟利亚",
+      "nameEn": "Meselia",
+      "description": "兰多公国的核心城邦。完全悬建在空根水道两壁探出的巨型板状真菌之上。夜间荧光孢子充当路灯，充满繁华与生机。",
+      "x": 42.4,
+      "y": 48.4,
+      "tags": {
+        "type": "city",
+        "faction": "human",
+        "zone": "canal_zone_lando_duchy"
+      }
+    },
+    {
+      "id": "ashes-thorns",
+      "name": "灰棘山脉",
+      "nameEn": "The Ashes Thorns",
+      "description": "山如刺背、灰黑嶙峋，火山灰终年飘洒，岩浆地缝纵横，阻挡了海风。",
+      "x": 28.4,
+      "y": 55.2,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "extreme_northwestern_wasteland"
+      }
+    },
+    {
+      "id": "mount-seren",
+      "name": "瑟芮恩火山",
+      "nameEn": "Mount Seren",
+      "description": "山腹仍有赤焰燃动，火山口已成硫磺湖泊的沉睡火山。",
+      "x": 29.5,
+      "y": 65.8,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "extreme_northwestern_wasteland"
+      }
+    },
+    {
+      "id": "tree-seren",
+      "name": "果之树瑟芮恩",
+      "nameEn": "Tree of Seren",
+      "description": "焦黑树干流淌着岩浆树脂，结出爆炸炎果，封印着火巫。生长于瑟芮恩火山顶部的硫磺湖泊正中心。",
+      "x": 30.2,
+      "y": 63.9,
+      "tags": {
+        "type": "sacred",
+        "faction": "none",
+        "zone": "extreme_northwestern_wasteland"
+      }
+    },
+    {
+      "id": "varkhaz",
+      "name": "瓦尔卡兹",
+      "nameEn": "Varkhaz",
+      "description": "由裂爪族建立，隐于山脉深处，地形崎岖，布满黑铁锻造工坊，是一座由力量意志筑成的山城。",
+      "x": 26.1,
+      "y": 58.1,
+      "tags": {
+        "type": "city",
+        "faction": "clawkin",
+        "zone": "extreme_northwestern_wasteland"
+      }
+    },
+    {
+      "id": "iron-reef-archipelago",
+      "name": "铁礁群岛",
+      "nameEn": "Iron-Reef Archipelago",
+      "description": "由无数含铁量极高的黑色岩石岛屿组成，磁场混乱，是走私犯与海盗的天然迷宫。",
+      "x": 17.4,
+      "y": 76.3,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "northwestern_offshore_islands"
+      }
+    },
+    {
+      "id": "lunareth",
+      "name": "月神溪",
+      "nameEn": "Lunareth",
+      "description": "细细如绢的溪流，自神树之巅南麓泻下，曲折东行，在凯拉韦节点后一分为二。",
+      "x": 64.9,
+      "y": 67.4,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "lunar_creek_zone"
+      }
+    },
+    {
+      "id": "caelave",
+      "name": "凯拉韦",
+      "nameEn": "Caelave",
+      "description": "溪流绕村而过，枝裔族风格的藤蔓吊楼与石砌屋舍交错分布，是文化融合的象征。位于月神溪的中游分叉点。",
+      "x": 69.8,
+      "y": 64.9,
+      "tags": {
+        "type": "city",
+        "faction": "elvenbranch",
+        "zone": "lunar_creek_zone"
+      }
+    },
+    {
+      "id": "greenveil-wood",
+      "name": "格林威尔林地",
+      "nameEn": "Greenveil Wood",
+      "description": "藤蔓交错，灵花遍地的灵性密林。占据整个东南大陆的大部分区域。",
+      "x": 77.5,
+      "y": 62.6,
+      "tags": {
+        "type": "natural",
+        "faction": "treant",
+        "zone": "southeastern_forest_zone"
+      }
+    },
+    {
+      "id": "moonfall-lake",
+      "name": "落月湖",
+      "nameEn": "Moonfall Lake",
+      "description": "湖水如镜，常有蓝白光华沉于湖底，每逢满月湖心会显神秘光圈。",
+      "x": 82.5,
+      "y": 51.8,
+      "tags": {
+        "type": "natural",
+        "faction": "treant",
+        "zone": "southeastern_forest_zone"
+      }
+    },
+    {
+      "id": "golden-mist-fens",
+      "name": "黄金雾沼",
+      "nameEn": "Golden Mist Fens",
+      "description": "植被全为金黄色的湿地，水面漂浮金色落叶陷阱。",
+      "x": 74.1,
+      "y": 74.9,
+      "tags": {
+        "type": "natural",
+        "faction": "treant",
+        "zone": "northeastern_marsh_zone"
+      }
+    },
+    {
+      "id": "kaedros-mire",
+      "name": "凯德罗斯之泽",
+      "nameEn": "Kaedros Mire",
+      "description": "瘴气沉沉的黑沼泽，泥水中常有亡魂啼哭，是特兰米尔最为诡异之地。",
+      "x": 74.8,
+      "y": 78,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "northeastern_marsh_zone"
+      }
+    },
+    {
+      "id": "black-tower",
+      "name": "黑塔",
+      "nameEn": "The Black Tower",
+      "description": "塔身嵌满黑曜石，塔顶常年被雷霆包围，是禁忌之地。矗立于凯德罗斯之泽的正中央。",
+      "x": 77.4,
+      "y": 80.9,
+      "tags": {
+        "type": "landmark",
+        "faction": "none",
+        "zone": "northeastern_marsh_zone"
+      }
+    },
+    {
+      "id": "root-bound-cliffs",
+      "name": "盘根断崖",
+      "nameEn": "Root-Bound Cliffs",
+      "description": "高达数百米的灰白色木质悬崖，神树的一条巨型主根在此探入大海，海面下是沉船墓场。",
+      "x": 90.6,
+      "y": 74.8,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "eastern_coast_abandoned_zone"
+      }
+    },
+    {
+      "id": "pale-strand",
+      "name": "白滩",
+      "nameEn": "The Pale Strand",
+      "description": "没有沙子，铺满海滩的是白化的树精遗骸与神树枯枝，肃杀苍凉。",
+      "x": 90.7,
+      "y": 35.1,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "eastern_coast_abandoned_zone"
+      }
+    },
+    {
+      "id": "rift-val-kareth",
+      "name": "瓦尔卡雷斯裂隙",
+      "nameEn": "The Rift of Val'Kareth",
+      "description": "宽达数公里的无底深渊，两侧崖壁布满横跨的神树根系。呈正西-正东走向横贯东部。",
+      "x": 80.6,
+      "y": 69.4,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "forest_and_marsh_boundary_great_rift"
+      }
+    },
+    {
+      "id": "river-aetheria",
+      "name": "以太利亚河",
+      "nameEn": "River Aetheria",
+      "description": "流淌着液态星光与极光的生命原液，触之即化为水晶。流淌于瓦尔卡雷斯裂隙的极深谷底。",
+      "x": 82.7,
+      "y": 68.9,
+      "tags": {
+        "type": "natural",
+        "faction": "none",
+        "zone": "forest_and_marsh_boundary_great_rift"
+      }
+    },
+    {
+      "id": "hanging-hives",
+      "name": "悬巢部落",
+      "nameEn": "Hanging Hives",
+      "description": "流亡兽人与变异树精在崖壁根系上挖掘洞穴、搭建吊脚楼组成的垂直村落，以打捞底部的原液为生。",
+      "x": 84.6,
+      "y": 68.6,
+      "tags": {
+        "type": "city",
+        "faction": "orc",
+        "zone": "forest_and_marsh_boundary_great_rift"
+      }
+    },
+    {
+      "id": "loc_1775797451466_i2ot",
+      "name": "大平原",
+      "nameEn": "The great plain",
+      "description": "位于梅顿与圣岚古都之间的平原，第二次双城之战的发生地。由于神树的诅咒而植被稀少、人迹罕至。",
+      "x": 45.2,
+      "y": 48.1,
+      "tags": {
+        "type": "natural",
+        "faction": "human",
+        "zone": "central_ancient_battlefield_zone"
+      }
+    }
+  ],
+  "eventTagCategories": [
+    {
+      "id": "event_type",
+      "label": "历史时期",
+      "isLegend": true,
+      "isBuiltIn": true,
+      "values": [
+        {
+          "id": "val_1775809778797",
+          "label": "神树纪元（Era of the Worldroot）",
+          "icon": {
+            "kind": "shape",
+            "shape": "diamond",
+            "color": "#eadfc8",
+            "opacity": 1,
+            "borderColor": "#f7f7f7"
+          }
+        },
+        {
+          "id": "default_event",
+          "label": "魔法纪元（Arcane Era）",
+          "icon": {
+            "kind": "shape",
+            "shape": "diamond",
+            "color": "#C8A860",
+            "borderColor": "#FFE066",
+            "opacity": 0.85
+          }
+        },
+        {
+          "id": "val_1775794433160",
+          "label": "震慑纪元（Era of Dreadbinding）",
+          "icon": {
+            "kind": "shape",
+            "shape": "diamond",
+            "color": "#8B4513",
+            "opacity": 0.85,
+            "borderColor": "#c8b292"
+          }
+        },
+        {
+          "id": "val_1775794446614",
+          "label": "混乱纪元（Era of the Shattered）",
+          "icon": {
+            "kind": "shape",
+            "shape": "diamond",
+            "color": "#5C4033",
+            "opacity": 0.85,
+            "borderColor": "#c8b29d"
+          }
+        },
+        {
+          "id": "val_1775794458553",
+          "label": "后魔法纪元（Post-Arcane Age）",
+          "icon": {
+            "kind": "shape",
+            "shape": "diamond",
+            "color": "#6B21A8",
+            "opacity": 0.85,
+            "borderColor": "#d9bbf7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "event_location",
+      "label": "归属地点",
+      "isLegend": false,
+      "isBuiltIn": true,
+      "values": [
+        {
+          "id": "none",
+          "label": "无归属",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "illorien-spine",
+          "label": "伊洛希恩山脉",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "aelfen-alp",
+          "label": "艾尔芬峰",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "aelfen-floating-isles",
+          "label": "艾尔芬浮空岛链",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "tree-of-illoriel",
+          "label": "伊洛瑞尔神树",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "wulinda-ring",
+          "label": "乌林达林环",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "tree-sanix",
+          "label": "叶之树撒尼克斯",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "aelfen-town",
+          "label": "艾尔芬镇",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "elarath",
+          "label": "艾拉拉斯",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "orindar",
+          "label": "奥林达尔",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "aurelen-valley",
+          "label": "奥蕊岚山谷",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "tree-valsir",
+          "label": "花之树瓦尔瑟尔",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "thalanthir",
+          "label": "萨兰希尔",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "sanlar-river",
+          "label": "圣岚河",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "glass-mangrove",
+          "label": "琉璃红树林海",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "veyra-port",
+          "label": "维罗港",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "sanlar-academy",
+          "label": "圣岚魔法学院",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "silvaran",
+          "label": "西瓦兰港",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "merton-river",
+          "label": "梅顿河",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "black-sap-taiga",
+          "label": "黑脂泰加林",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "lesserden",
+          "label": "莱瑟顿",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "greymire",
+          "label": "灰泽镇",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "veilrun-canal",
+          "label": "维岚运河",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "meselia",
+          "label": "梅瑟利亚",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "ashes-thorns",
+          "label": "灰棘山脉",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "mount-seren",
+          "label": "瑟芮恩火山",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "tree-seren",
+          "label": "果之树瑟芮恩",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "varkhaz",
+          "label": "瓦尔卡兹",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "iron-reef-archipelago",
+          "label": "铁礁群岛",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "lunareth",
+          "label": "月神溪",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "caelave",
+          "label": "凯拉韦",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "greenveil-wood",
+          "label": "格林威尔林地",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "moonfall-lake",
+          "label": "落月湖",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "golden-mist-fens",
+          "label": "黄金雾沼",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "kaedros-mire",
+          "label": "凯德罗斯之泽",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "black-tower",
+          "label": "黑塔",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "root-bound-cliffs",
+          "label": "盘根断崖",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "pale-strand",
+          "label": "白滩",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "rift-val-kareth",
+          "label": "瓦尔卡雷斯裂隙",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "river-aetheria",
+          "label": "以太利亚河",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "hanging-hives",
+          "label": "悬巢部落",
+          "icon": {
+            "kind": "none"
+          }
+        },
+        {
+          "id": "loc_1775797451466_i2ot",
+          "label": "大平原",
+          "icon": {
+            "kind": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cat_1775809132917",
+      "label": "事件类型",
+      "isLegend": false,
+      "isBuiltIn": false,
+      "values": [
+        {
+          "id": "none",
+          "label": "其他",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "⭐"
+          }
+        },
+        {
+          "id": "val_1775809395229",
+          "label": "战争",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "⚔️"
+          }
+        },
+        {
+          "id": "val_1775809408408",
+          "label": "会议",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "📜"
+          }
+        },
+        {
+          "id": "val_1775809424517",
+          "label": "灾难",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "💀"
+          }
+        },
+        {
+          "id": "val_1775809559120",
+          "label": "圣事",
+          "icon": {
+            "kind": "emoji",
+            "emoji": "🔆"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_1775793837778_65nx",
+      "name": "艾尔芬二世第一次东征",
+      "nameEn": "The First Eastern Expedition of Aelfen II",
+      "time": {
+        "kind": "point",
+        "value": "纪元971年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 971,
+        "month": 1,
+        "day": 1
+      },
+      "description": "纪元971年，圣岚的年轻国王艾尔芬二世（Aelfen II）率军沿圣岚河逆流而上，意图占领伊洛希恩山脉，却遭遇原住民树精族的激烈抵抗。面对自然魔法的神秘力量，装备冷兵器的王国军几近覆灭。艾尔芬带着残兵狼狈撤退，却也意外将魔法之火带回了人类世界。",
+      "x": 51.9,
+      "y": 63.5,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "illorien-spine",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775794284352_kkw6",
+      "name": "艾尔芬二世第二次东征",
+      "nameEn": "The Second Eastern Expedition of Aelfen II",
+      "time": {
+        "kind": "point",
+        "value": "纪元1050年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1050,
+        "month": 1,
+        "day": 1
+      },
+      "description": "纪元1050年，110岁高龄的艾尔芬二世再度举兵东进，这一次，圣岚的魔法大军势如破竹，打得毫无戒备的树精族节节败退，最终登顶神树所在山峰。为纪念这场胜利，人们将神树之峰命名为艾尔芬峰（Aelfen Alp）。",
+      "x": 65.2,
+      "y": 58.5,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "aelfen-alp",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775797630660_60tk",
+      "name": "第一次双城之战",
+      "nameEn": "The First Twin Cities War",
+      "time": {
+        "kind": "range",
+        "start": "纪元680年",
+        "end": "纪元698年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 680,
+        "month": 1,
+        "day": 1
+      },
+      "description": "人类的好胜与野心引发两国持续数十年的征战，彼此消耗惨重，为后续的魔法引入和权力更迭埋下伏笔。",
+      "x": 44.9,
+      "y": 52.2,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "loc_1775797451466_i2ot",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775797718721_wiab",
+      "name": "圣岚建国",
+      "nameEn": "Founding of Sanlar",
+      "time": {
+        "kind": "point",
+        "value": "纪元1年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1,
+        "month": 1,
+        "day": 1
+      },
+      "description": "人族在西南圣岚河中游建立农业文明，形成古国圣岚，定都艾拉拉斯。",
+      "x": 48.7,
+      "y": 44.7,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "elarath",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775797925757_au6t",
+      "name": "梅顿建国",
+      "nameEn": "Founding of Merton",
+      "time": {
+        "kind": "point",
+        "value": "纪元102年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 102,
+        "month": 1,
+        "day": 1
+      },
+      "description": "人族在西北梅顿河中游建立农业文明，形成古国梅顿，定都奥林达尔。",
+      "x": 45,
+      "y": 62.3,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "orindar",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775798063640_97n6",
+      "name": "圣岚魔法议会成立",
+      "nameEn": "Establishment of the Sanlar Arcane Council",
+      "time": {
+        "kind": "point",
+        "value": "纪元972年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 972,
+        "month": 1,
+        "day": 1
+      },
+      "description": "艾尔芬二世举全国之力发展魔法，组建由五位天才大法师（伊洛瑞尔、凯德罗斯、瑟芮恩、撒尼克斯、瓦尔瑟尔）构成的魔法议会。在这五位大法师长达八十年的共同推动下，一整套系统化、标准化的魔法体系应运而生，并迅速渗透至圣岚王国的军事、生产、医疗、教育等诸多领域。魔法的普及带来了前所未有的文明飞跃，极大增强了圣岚的国力。",
+      "x": 50.3,
+      "y": 46.5,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "elarath",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775798337831_wbtd",
+      "name": "莱瑟顿一世东征",
+      "nameEn": "Eastern Expedition of Lesserden I",
+      "time": {
+        "kind": "point",
+        "value": "纪元991年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 991,
+        "month": 1,
+        "day": 1
+      },
+      "description": "在南方圣岚王国大力发展魔法的同时，北境的强国梅顿亦不甘示弱。梅顿国王莱瑟顿一世率领重兵开启东征，大军穿越梅顿河进入伊洛希恩山脉寻找魔法力量。与南方不同，他们并未遇到树精，反而遭到了粗犷勇猛的兽人部落的顽强抵抗。经过三天三夜极其惨烈的血战，梅顿军队艰难取得险胜。虽然未能如圣岚一般获得自然魔法，但梅顿军发现兽人天生耐魔且肉体强悍无匹。于是，他们改变策略，将俘虏的兽人集中训练为重甲战士，组建了一支令人生畏的兽人士兵团，使梅顿的军事实质发生了蜕变。",
+      "x": 49,
+      "y": 64,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "wulinda-ring",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775798601137_gubh",
+      "name": "第二次双城之战",
+      "nameEn": "The Second Twin Cities War",
+      "time": {
+        "kind": "range",
+        "start": "纪元1065年",
+        "end": "纪元1068年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1065,
+        "month": 1,
+        "day": 1
+      },
+      "description": "随着南北两大人类王国的军事力量分别因魔法和重甲兽人兵团而达到顶峰，两国为了争夺大陆霸权爆发了全面战争。战争一方是圣岚的魔法军团与被奴役的树精协军，另一方则是梅顿的兽人战骑与冷钢步兵。最终的大决战在艾拉拉斯与奥林达尔之间的辽阔平原上展开。这场战火持续了三年之久，双方死伤无数，战局陷入僵持，难分胜负。长期的消耗战不仅严重破坏了大陆的生态与经济，也让重伤濒死的圣岚国王艾尔芬二世彻底陷入绝望与疯狂，为后续引发世纪级别的大灾难埋下了伏笔。",
+      "x": 44,
+      "y": 46.5,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "loc_1775797451466_i2ot",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775798659230_bb6g",
+      "name": "神树之怒",
+      "nameEn": "Wrath of the Worldroot",
+      "time": {
+        "kind": "point",
+        "value": "纪元1068年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1068,
+        "month": 1,
+        "day": 1
+      },
+      "description": "在南北双城决战陷入绝望的僵局之际，重伤濒死的艾尔芬二世彻底失去理智，强令凯德罗斯、瑟芮恩、撒尼克斯与瓦尔瑟尔四位大法师动用极度危险的禁忌神树魔法。禁咒释放瞬间，天幕暗沉，灵风倒灌，整个北方战场瞬间化为尸山血海，生灵涂炭。这场毁灭性的打击虽然让南方圣岚惨烈地取得了战争胜利，却也彻底触怒了古老的神树。作为惩罚，神树降下恐怖的诅咒，将参与施放禁咒的四位大法师化为“虚魂四王”。他们虽然获得了不死之体，却永远失去了灵魂，成为后世混乱的祸端。",
+      "x": 45.9,
+      "y": 46,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "loc_1775797451466_i2ot",
+        "cat_1775809132917": "val_1775809424517"
+      }
+    },
+    {
+      "id": "evt_1775798732202_j9yi",
+      "name": "第一次封印之战",
+      "nameEn": "Battle of the First Seal",
+      "time": {
+        "kind": "point",
+        "value": "纪元1069年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1069,
+        "month": 1,
+        "day": 1
+      },
+      "description": "神树降下诅咒之后，大陆面临被虚魂怪物毁灭的危机。正义法师伊洛瑞尔从奥蕊岚山谷的隐居之地毅然挺身而出，与刚刚异化为“虚魂四王”的昔日同僚展开了空前绝后的生死斗法。在这场惊天动地的交锋中，瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫被伊洛瑞尔逐一击败，并被成功封印于神树根系的三重灵印之中。然而，最为强大且狡诈的土之法师凯德罗斯遁入了大陆东北的荒泽，在黑塔之巅继续修炼幽咒，潜伏于迷雾之中。这场战役暂时平息了神树暴走带来的灭世危机，标志着震慑纪元正式开端。",
+      "x": 68.5,
+      "y": 54.4,
+      "tags": {
+        "event_type": "val_1775794433160",
+        "event_location": "tree-of-illoriel",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775798911340_lpfm",
+      "name": "第一次魔法公约会议",
+      "nameEn": "The First Tramire Accord Conference",
+      "time": {
+        "kind": "point",
+        "value": "纪元1070年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1070,
+        "month": 1,
+        "day": 1
+      },
+      "description": "为了防止魔法再次沦为毁天灭地的战争工具并重蹈覆辙，正义法师伊洛瑞尔在平息了三位虚魂王的危机后，主动联合当时大陆上的三族首领，于奥蕊岚召开第一次魔法公约会议，共同探讨未来的和平之道。会议各方达成共识，最终制订了《特兰米尔大洲魔法公约》的初稿。该公约初步确立了魔法的教学规范、研究边界以及严格的军用限制制度，意图用律法将魔法重新关入理性的笼子。虽然公约在当时维持了五百年的表面和平，但由于虚魂王凯德罗斯仍然在逃，这把悬在大陆头顶的达摩克利斯之剑并未真正被移除。",
+      "x": 71.4,
+      "y": 34.2,
+      "tags": {
+        "event_type": "val_1775794433160",
+        "event_location": "thalanthir",
+        "cat_1775809132917": "val_1775809408408"
+      }
+    },
+    {
+      "id": "evt_1775798984305_v8bs",
+      "name": "圣曦节之变",
+      "nameEn": "The Holy Dawn Incident",
+      "time": {
+        "kind": "point",
+        "value": "纪元1570年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1570,
+        "month": 1,
+        "day": 1
+      },
+      "description": "纪元1570年春，在象征着光明与新生的圣曦节前夜，长达五百年的和平封印被无情打破。潜伏在东北荒泽长达五个世纪的最后一位虚魂王凯德罗斯，发动了蓄谋已久的暗咒仪式。他强行抽离了神树封印根系中的庞大魔力，导致被封印的瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫王随之苏醒，并重返世间建立邪恶势力。瑟芮恩在灰棘山脉唤醒火山筑起地狱堡垒，撒尼克斯污染了艾尔芬峰的灵脉建立邪能祭坛，瓦尔瑟尔则将奥蕊岚谷地化作恐怖的黑森林。这一事件宣告了震慑纪元的终结，拉开了漫长的混乱纪元序幕。",
+      "x": 66.9,
+      "y": 61.1,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "tree-of-illoriel",
+        "cat_1775809132917": "val_1775809424517"
+      }
+    },
+    {
+      "id": "evt_1775799061684_iqhg",
+      "name": "维岚运河工程",
+      "nameEn": "Construction of the Veilrun Canal",
+      "time": {
+        "kind": "range",
+        "start": "纪元1760年",
+        "end": "纪元1765年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1760,
+        "month": 1,
+        "day": 1
+      },
+      "description": "第二次封印之战期间，为了在战争中保持武器物资和军队的快速调配，两国联合开启了浩大的基础设施建设。连通两个新王国的维岚运河于纪元1760年破土动工，并在短短五年后的1765年宣告完工。运河的建成不仅催生了西瓦兰港和灰泽镇这两座新兴大城市，更带动了沿岸多个以运输、商业和服务业为主的城邦崛起。这些城邦吸收了大量流亡难民和混血种族，逐渐发展为独立的权力真空地带。",
+      "x": 41,
+      "y": 44.3,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "veilrun-canal",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775799180748_m7zk",
+      "name": "圣岚西迁",
+      "nameEn": "Sanlar‘s Western Relocation",
+      "time": {
+        "kind": "point",
+        "value": "纪元1580年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1580,
+        "month": 1,
+        "day": 1
+      },
+      "description": "大陆动荡，圣岚被迫放弃艾拉拉斯，大举西迁，建都维罗港。",
+      "x": 34.6,
+      "y": 27.2,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "veyra-port",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775799248835_5xqn",
+      "name": "梅顿西迁",
+      "nameEn": "Merton’s Western Relocation",
+      "time": {
+        "kind": "point",
+        "value": "纪元1589年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1589,
+        "month": 1,
+        "day": 1
+      },
+      "description": "大陆动荡，梅顿放弃旧都，西迁莱瑟顿，专注于武器制造与附魔工程。",
+      "x": 34.6,
+      "y": 65.9,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "lesserden",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775799396626_drho",
+      "name": "第二次封印之战",
+      "nameEn": "The Second War of the Seals",
+      "time": {
+        "kind": "range",
+        "start": "纪元1570年",
+        "end": "纪元2330年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1570,
+        "month": 1,
+        "day": 1
+      },
+      "description": "这是特兰米尔历史上持续时间最长、波及范围最广的全面战争，跨越了近八百年。在伊洛瑞尔的号召下，人族、树精与兽人三族史无前例地结成大联军。在战火与流亡中，更是催生了枝裔族（人与树精混血）与裂爪族（人与兽人混血）这两支强大的新锐力量。联军在各地分头对抗虚魂四王的黑暗势力。经过艰苦卓绝的漫长奋战，伊洛瑞尔运用神树的力量，先后将撒尼克斯封印于叶之树，将瓦尔瑟尔封印于花之树，将瑟芮恩封印于果之树，为最终决战扫清了外围障碍。",
+      "x": 35.9,
+      "y": 45.6,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "none",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775799493825_a8ae",
+      "name": "黑塔决战",
+      "nameEn": "Battle of the Black Tower",
+      "time": {
+        "kind": "point",
+        "value": "纪元2330年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2330,
+        "month": 1,
+        "day": 1
+      },
+      "description": "在成功封印三位黑巫王之后，正义法师伊洛瑞尔亲率残余的三族精锐联军，直捣最后一位虚魂王凯德罗斯的老巢——黑塔。两位同源的绝世法师在黑塔之巅展开了三天三夜的生死对决。最终，力竭的两人双双坠入充斥着黑魔法的凯德罗斯之泽，永世无归。与此同时，伊洛瑞尔所带领的整支联军也被暴走的沼泽彻底吞噬，无一人生还。虽然联军付出了全军覆没的惨烈代价，但凯德罗斯的陨落标志着漫长的“封印之战”正式结束。后人为了纪念这位牺牲的白巫，将神树正式命名为“伊洛瑞尔神树”。",
+      "x": 74.8,
+      "y": 79.3,
+      "tags": {
+        "event_type": "val_1775794446614",
+        "event_location": "kaedros-mire",
+        "cat_1775809132917": "val_1775809395229"
+      }
+    },
+    {
+      "id": "evt_1775799583369_q3bz",
+      "name": "第一次特兰米尔会议",
+      "nameEn": "First Convention of Tramire",
+      "time": {
+        "kind": "point",
+        "value": "纪元2331年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2331,
+        "month": 1,
+        "day": 1
+      },
+      "description": "封印之战宣告结束后，伤痕累累的各族代表召开了最后一次联军会议，共同确立了战后的新世界秩序。会议正式宣告废除一切形式的军用魔法研究，并全面颁布落实了由伊洛瑞尔生前起草的《特兰米尔大洲魔法公约》。公约不仅严禁魔法用于大规模战争、取缔自然魔法与黑魔法研究，还从律法层面确立了种族平等的原则，严禁对战功赫赫的枝裔族与裂爪族进行歧视与驱逐。此次会议直接促成了战后大陆五大势力（圣岚、梅顿、兰多、枝裔族、裂爪族）的重组分立，为后魔法纪元奠定了长久的和平基石。",
+      "x": 72.8,
+      "y": 35.9,
+      "tags": {
+        "event_type": "val_1775794458553",
+        "event_location": "thalanthir",
+        "cat_1775809132917": "val_1775809408408"
+      }
+    },
+    {
+      "id": "evt_1775799683588_pgd5",
+      "name": "兰多公国建立",
+      "nameEn": "Establishment of the Grand Duchy of Lando",
+      "time": {
+        "kind": "point",
+        "value": "纪元2350年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2350,
+        "month": 1,
+        "day": 1
+      },
+      "description": "维岚运河沿岸七个港口城邦组成兰多公国，主导运河贸易。",
+      "x": 40.4,
+      "y": 48.3,
+      "tags": {
+        "event_type": "val_1775794458553",
+        "event_location": "meselia",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775799834954_sagq",
+      "name": "萨兰希尔建都",
+      "nameEn": "Founding of Thalanthir",
+      "time": {
+        "kind": "point",
+        "value": "纪元2360年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2360,
+        "month": 1,
+        "day": 1
+      },
+      "description": "新兴的枝裔族聚集到自然魔法传统悠久的奥蕊岚谷，重建家园，建都萨兰希尔。",
+      "x": 74.4,
+      "y": 34.9,
+      "tags": {
+        "event_type": "val_1775794458553",
+        "event_location": "thalanthir",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775799932410_muca",
+      "name": "瓦尔卡兹立国",
+      "nameEn": "Founding of Varkhaz",
+      "time": {
+        "kind": "point",
+        "value": "纪元2368年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2368,
+        "month": 1,
+        "day": 1
+      },
+      "description": "部分对人类政权不满或仍追随黑巫力量的裂爪族在西部瓦尔卡兹山城自立为王，建都瓦尔卡兹。",
+      "x": 26,
+      "y": 55.1,
+      "tags": {
+        "event_type": "val_1775794458553",
+        "event_location": "varkhaz",
+        "cat_1775809132917": "none"
+      }
+    },
+    {
+      "id": "evt_1775800148159_76ol",
+      "name": "第一次枝疫大流行",
+      "nameEn": "First Great Verdurge Outbreak",
+      "time": {
+        "kind": "range",
+        "start": "纪元1066年",
+        "end": "纪元1070年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 1066,
+        "month": 1,
+        "day": 1
+      },
+      "description": "圣岚与梅顿全面战争期间，自然魔法的频繁使用导致神树魔力过盛、自然失衡，引发史上首次枝疫大规模爆发，从平原战场逐渐扩散至圣岚全境，首都艾拉拉斯尤为严重。感染者从吐出叶子和花瓣开始，躯体逐渐出现植物化症状，最后丧失生命，变成一棵完全的植物。后方营地与平民区陷入恐慌，进一步加剧了战争混乱。",
+      "x": 50.3,
+      "y": 44.1,
+      "tags": {
+        "event_type": "default_event",
+        "event_location": "elarath",
+        "cat_1775809132917": "val_1775809424517"
+      }
+    },
+    {
+      "id": "evt_1775800426553_qixn",
+      "name": "第二次枝疫大流行",
+      "nameEn": "Second Great Verdurge Outbreak",
+      "time": {
+        "kind": "range",
+        "start": "纪元2500年",
+        "end": "纪元2650年"
+      },
+      "sortTime": {
+        "era": "ce",
+        "year": 2500,
+        "month": 1,
+        "day": 1
+      },
+      "description": "神树魔力迎来过盛，引发了长达一百五十年的第二轮枝疫大流行，波及范围扩展到整个特兰米尔大陆，造成三分之一的人口减少。此后每隔一两百年，枝疫都会迎来一次大规模爆发，学者研究表明其于神树的力量周期相关。",
+      "x": 48.3,
+      "y": 37.9,
+      "tags": {
+        "event_type": "val_1775794458553",
+        "event_location": "none",
+        "cat_1775809132917": "val_1775809424517"
+      }
+    }
+  ],
+  "createdAt": 1775793513573,
+  "updatedAt": 1775809823032
+}

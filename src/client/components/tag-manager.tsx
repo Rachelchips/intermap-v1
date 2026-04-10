@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, type DragEvent } from "react";
 import { X, Plus, Tag, Star, Check, Trash2, Pencil, AlertTriangle } from "lucide-react";
 import { useIntermap } from "../store/intermap-store";
 import type { MapEvent, MapLocation, TagCategory, TagValue, TagIcon } from "../types/intermap-types";
@@ -24,6 +24,17 @@ const PRESET_COLORS = [
   "#1E40AF", "#C86060", "#60C880", "#60A8C8", "#A860C8",
   "#F87171", "#FB923C", "#4ADE80", "#FBBF24", "#E879F9",
 ];
+
+function reorderValues(values: TagValue[], fromIndex: number, toIndex: number): TagValue[] {
+  if (fromIndex === toIndex || fromIndex < 0 || toIndex < 0 || fromIndex >= values.length || toIndex >= values.length) {
+    return values;
+  }
+  const next = [...values];
+  const [moved] = next.splice(fromIndex, 1);
+  if (!moved) return values;
+  next.splice(toIndex, 0, moved);
+  return next;
+}
 
 function IconPicker({ icon, onChange, themeColor }: {
   icon: TagIcon;
@@ -350,6 +361,9 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
   const [newValueName, setNewValueName] = useState("");
   const [editingCatLabel, setEditingCatLabel] = useState<string | null>(null);
   const [catLabelInput, setCatLabelInput] = useState("");
+  const [draggingValueId, setDraggingValueId] = useState<string | null>(null);
+  const [dragOverValueId, setDragOverValueId] = useState<string | null>(null);
+  const [dragOverPosition, setDragOverPosition] = useState<"above" | "below">("below");
 
   useEffect(() => {
     setSelectedCatIds({
@@ -357,6 +371,11 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
       events: activeMap?.eventTagCategories[0]?.id ?? null,
     });
   }, [activeMap?.id]);
+
+  useEffect(() => {
+    setDraggingValueId(null);
+    setDragOverValueId(null);
+  }, [mode, selectedCatIds.locations, selectedCatIds.events]);
 
   if (!activeMap) return null;
 
@@ -486,6 +505,48 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
     } else {
       dispatch({ type: "DELETE_EVENT_TAG_VALUE", mapId: activeMap.id, categoryId: selectedCat.id, valueId: value.id });
     }
+  };
+
+  const clearDragState = () => {
+    setDraggingValueId(null);
+    setDragOverValueId(null);
+  };
+
+  const handleDropValue = (targetId: string, position: "above" | "below") => {
+    if (!selectedCat || !draggingValueId || draggingValueId === targetId) {
+      clearDragState();
+      return;
+    }
+
+    const fromIndex = selectedCat.values.findIndex((value) => value.id === draggingValueId);
+    const targetIndex = selectedCat.values.findIndex((value) => value.id === targetId);
+    if (fromIndex < 0 || targetIndex < 0) {
+      clearDragState();
+      return;
+    }
+
+    const insertIndexRaw = position === "above" ? targetIndex : targetIndex + 1;
+    const insertIndex = fromIndex < insertIndexRaw ? insertIndexRaw - 1 : insertIndexRaw;
+    const nextValues = reorderValues(selectedCat.values, fromIndex, insertIndex);
+    if (nextValues === selectedCat.values) {
+      clearDragState();
+      return;
+    }
+
+    if (mode === "locations") {
+      dispatch({
+        type: "UPDATE_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: { ...selectedCat, values: nextValues },
+      });
+    } else {
+      dispatch({
+        type: "UPDATE_EVENT_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: { ...selectedCat, values: nextValues },
+      });
+    }
+    clearDragState();
   };
 
   return (
@@ -663,10 +724,45 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
                       const assignmentCount = entities.filter((entity) => entity.tags[selectedCat.id] === value.id).length;
                       const lockedValue = mode === "events" && selectedCat.id === EVENT_LOCATION_CATEGORY_ID;
                       const canDelete = !lockedValue && value.id !== NONE_TAG_VALUE_ID && assignmentCount === 0;
+                      const showTopDropLine = draggingValueId && dragOverValueId === value.id && dragOverPosition === "above";
+                      const showBottomDropLine = draggingValueId && dragOverValueId === value.id && dragOverPosition === "below";
 
                       return (
                         <div key={value.id}
-                          style={{ padding: "8px 16px", borderBottom: `1px solid ${themeAccent}22`, display: "flex", alignItems: "center", gap: 8 }}>
+                          draggable={!lockedValue}
+                          onDragStart={(event: DragEvent<HTMLDivElement>) => {
+                            if (lockedValue) return;
+                            setDraggingValueId(value.id);
+                            event.dataTransfer.effectAllowed = "move";
+                            event.dataTransfer.setData("text/plain", value.id);
+                          }}
+                          onDragOver={(event: DragEvent<HTMLDivElement>) => {
+                            if (!draggingValueId || draggingValueId === value.id) return;
+                            event.preventDefault();
+                            const rect = event.currentTarget.getBoundingClientRect();
+                            const position = event.clientY < rect.top + rect.height / 2 ? "above" : "below";
+                            setDragOverValueId(value.id);
+                            setDragOverPosition(position);
+                            event.dataTransfer.dropEffect = "move";
+                          }}
+                          onDrop={(event: DragEvent<HTMLDivElement>) => {
+                            event.preventDefault();
+                            const rect = event.currentTarget.getBoundingClientRect();
+                            const position = event.clientY < rect.top + rect.height / 2 ? "above" : "below";
+                            handleDropValue(value.id, position);
+                          }}
+                          onDragEnd={clearDragState}
+                          style={{
+                            padding: "8px 16px",
+                            borderBottom: `1px solid ${themeAccent}22`,
+                            borderTop: showTopDropLine ? `2px solid ${themeColor}` : undefined,
+                            boxShadow: showBottomDropLine ? `inset 0 -2px 0 ${themeColor}` : undefined,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 8,
+                            cursor: lockedValue ? "default" : "grab",
+                            opacity: draggingValueId === value.id ? 0.45 : 1,
+                          }}>
                           <TagIconRenderer icon={value.icon} size={14} />
                           <span style={{ flex: 1, fontSize: 13, color: "#C8B898" }}>{value.label}</span>
                           <span style={{ fontSize: 10, color: themeMuted }}>{assignmentCount} 个{targetLabel}</span>

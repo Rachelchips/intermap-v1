@@ -74,6 +74,7 @@ function matchesTagFilter(entity: { tags: Record<string, string> }, categories: 
 
 function Marker({
   entity,
+  theme,
   legendCategory,
   isSelected,
   isRepositioning,
@@ -84,6 +85,7 @@ function Marker({
   baseZIndex = 10,
 }: {
   entity: MapLocation | MapEvent;
+  theme: MapTheme;
   legendCategory: TagCategory | null;
   isSelected: boolean;
   isRepositioning: boolean;
@@ -118,6 +120,25 @@ function Marker({
   const glowColor = customBorderColor ?? baseColor;
   const borderRadius = shape === "square" ? 3 : shape === "diamond" ? 0 : size / 2;
   const transform = shape === "diamond" ? "translate(-50%, -50%) rotate(45deg)" : "translate(-50%, -50%)";
+  const emojiIcon = icon.kind === "emoji" ? icon : null;
+  const emojiOpacity = emojiIcon?.bgOpacity ?? 1;
+  const emojiBgColor = emojiIcon?.bgColor === null
+    ? "transparent"
+    : emojiIcon?.bgColor
+      ? hexToRgba(emojiIcon.bgColor, emojiOpacity)
+      : theme.primary;
+  const emojiBorderColor = emojiIcon?.bgColor === null
+    ? "transparent"
+    : emojiIcon?.borderColor ?? emojiIcon?.bgColor ?? theme.primary;
+  const markerBackground = isShape ? bgColor : emojiBgColor;
+  const markerBorder = isShape ? activeBorder : (isSelected ? "#ffffff" : emojiBorderColor);
+  const markerShadow = isShape
+    ? (isSelected
+      ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}`
+      : (customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : `0 1px 5px rgba(0,0,0,0.8)`))
+    : (isSelected
+      ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${emojiBorderColor}`
+      : "0 1px 5px rgba(0,0,0,0.55)");
 
   return (
     <button
@@ -129,12 +150,10 @@ function Marker({
         width: size,
         height: size,
         borderRadius,
-        backgroundColor: bgColor,
-        border: `${isSelected ? 2.5 : 1.5}px solid ${activeBorder}`,
+        backgroundColor: markerBackground,
+        border: `${isSelected ? 2.5 : 1.5}px solid ${markerBorder}`,
         cursor: isRepositioning ? "crosshair" : "pointer",
-        boxShadow: isSelected
-          ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}`
-          : (customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : `0 1px 5px rgba(0,0,0,0.8)`),
+        boxShadow: markerShadow,
         zIndex: isSelected ? baseZIndex + 10 : baseZIndex,
         display: "flex",
         alignItems: "center",
@@ -283,7 +302,7 @@ function LegendCard({
           </div>
           {category.values.map((value) => (
             <div key={value.id} style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-              <TagIconRenderer icon={value.icon} size={10} />
+              <TagIconRenderer icon={value.icon} size={10} themeColor={theme.primary} />
               <span style={{ color: theme.heading, opacity: 0.8 }}>{value.label}</span>
             </div>
           ))}
@@ -327,11 +346,30 @@ function scaleTinyButton(theme: MapTheme): React.CSSProperties {
   };
 }
 
+function topBarStyle(theme: MapTheme): React.CSSProperties {
+  const isLight = theme.bg === theme.modes.light.bg;
+  return {
+    padding: "8px 14px",
+    background: isLight ? theme.bg : `${theme.bg}F2`,
+    borderBottom: `1px solid ${theme.accent}`,
+    boxShadow: isLight ? `0 1px 0 ${theme.accent}55` : "0 8px 20px rgba(0,0,0,0.18)",
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    flexShrink: 0,
+    minHeight: 44,
+  };
+}
+
 function EntityDetailPanel({
   entity,
   categories,
   theme,
   onClose,
+  onPrevious,
+  onNext,
+  canGoPrevious,
+  canGoNext,
   onEdit,
   onDelete,
   onReposition,
@@ -345,6 +383,10 @@ function EntityDetailPanel({
   categories: TagCategory[];
   theme: MapTheme;
   onClose: () => void;
+  onPrevious?: () => void;
+  onNext?: () => void;
+  canGoPrevious?: boolean;
+  canGoNext?: boolean;
   onEdit: () => void;
   onDelete: () => void;
   onReposition: () => void;
@@ -374,7 +416,21 @@ function EntityDetailPanel({
       overflow: "hidden",
       fontFamily: "Georgia, serif",
     }}>
-      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 36 }}>
+      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 96 }}>
+        <button
+          onClick={onPrevious}
+          disabled={!canGoPrevious}
+          style={{ position: "absolute", top: 10, right: 58, background: "none", border: "none", color: canGoPrevious ? theme.muted : `${theme.muted}66`, cursor: canGoPrevious ? "pointer" : "not-allowed", padding: 4 }}
+        >
+          ↑
+        </button>
+        <button
+          onClick={onNext}
+          disabled={!canGoNext}
+          style={{ position: "absolute", top: 10, right: 34, background: "none", border: "none", color: canGoNext ? theme.muted : `${theme.muted}66`, cursor: canGoNext ? "pointer" : "not-allowed", padding: 4 }}
+        >
+          ↓
+        </button>
         <button onClick={onClose} style={{ position: "absolute", top: 10, right: 10, background: "none", border: "none", color: theme.muted, cursor: "pointer", padding: 4 }}>
           <X size={16} />
         </button>
@@ -401,7 +457,7 @@ function EntityDetailPanel({
             if (!value || value.id === NONE_TAG_VALUE_ID) return null;
             return (
               <div key={cat.id} style={{ display: "flex", alignItems: "center", gap: 4, background: cat.isLegend ? `${theme.primary}18` : "rgba(255,255,255,0.05)", borderRadius: 20, padding: "2px 8px", border: `1px solid ${cat.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}` }}>
-                <TagIconRenderer icon={value.icon} size={10} />
+                <TagIconRenderer icon={value.icon} size={10} themeColor={theme.primary} />
                 <span style={{ fontSize: 11, color: cat.isLegend ? theme.primary : theme.muted }}>{value.label}</span>
               </div>
             );
@@ -476,6 +532,8 @@ export function IntermapMapView() {
   const [eventEditorOpen, setEventEditorOpen] = useState(false);
   const [editingLocation, setEditingLocation] = useState<MapLocation | undefined>(undefined);
   const [editingEvent, setEditingEvent] = useState<MapEvent | undefined>(undefined);
+  const [visibleLocationManagerIds, setVisibleLocationManagerIds] = useState<string[]>([]);
+  const [visibleEventManagerIds, setVisibleEventManagerIds] = useState<string[]>([]);
   const [eventDisplayMode, setEventDisplayMode] = useState<"expanded" | "collapsed">("expanded");
   const [expandedEventLocationId, setExpandedEventLocationId] = useState<string | null>(null);
   const [temporaryFocusedEventId, setTemporaryFocusedEventId] = useState<string | null>(null);
@@ -519,6 +577,8 @@ export function IntermapMapView() {
     setEventEditorOpen(false);
     setEditingLocation(undefined);
     setEditingEvent(undefined);
+    setVisibleLocationManagerIds([]);
+    setVisibleEventManagerIds([]);
     setEventDisplayMode("expanded");
     setExpandedEventLocationId(null);
     setTemporaryFocusedEventId(null);
@@ -532,6 +592,21 @@ export function IntermapMapView() {
       event: activeMap.markerScale?.event ?? 100,
     });
   }, [activeMap?.id]);
+
+  useEffect(() => {
+    if (!activeMap) return;
+    const currentLocationScale = activeMap.markerScale?.location ?? 100;
+    const currentEventScale = activeMap.markerScale?.event ?? 100;
+    if (currentLocationScale === iconScale.location && currentEventScale === iconScale.event) return;
+    dispatch({
+      type: "UPDATE_MARKER_SCALE",
+      mapId: activeMap.id,
+      markerScale: {
+        location: iconScale.location,
+        event: iconScale.event,
+      },
+    });
+  }, [activeMap, dispatch, iconScale.event, iconScale.location]);
 
   const locationCatSignature = activeMap?.tagCategories.map((cat) => `${cat.id}:${cat.values.map((value) => value.id).join(",")}`).join("|") ?? "";
   const eventCatSignature = activeMap?.eventTagCategories.map((cat) => `${cat.id}:${cat.values.map((value) => value.id).join(",")}`).join("|") ?? "";
@@ -968,6 +1043,22 @@ export function IntermapMapView() {
     ? activeMap.events.filter((eventItem) => getEventLocationId(eventItem) === selectedLocation.id)
     : [];
 
+  const locationManagerIndex = currentLocationDetail?.backTo === "location-manager" && selectedLocation
+    ? visibleLocationManagerIds.indexOf(selectedLocation.id)
+    : -1;
+  const previousLocationId = locationManagerIndex > 0 ? visibleLocationManagerIds[locationManagerIndex - 1] ?? null : null;
+  const nextLocationId = locationManagerIndex >= 0 && locationManagerIndex < visibleLocationManagerIds.length - 1
+    ? visibleLocationManagerIds[locationManagerIndex + 1] ?? null
+    : null;
+
+  const eventManagerIndex = currentEventDetail?.backTo === "event-manager" && selectedEvent
+    ? visibleEventManagerIds.indexOf(selectedEvent.id)
+    : -1;
+  const previousEventId = eventManagerIndex > 0 ? visibleEventManagerIds[eventManagerIndex - 1] ?? null : null;
+  const nextEventId = eventManagerIndex >= 0 && eventManagerIndex < visibleEventManagerIds.length - 1
+    ? visibleEventManagerIds[eventManagerIndex + 1] ?? null
+    : null;
+
   const renderLegend = (key: LegendPanelKey, title: string, category: TagCategory) => {
     const card = (
       <LegendCard
@@ -1012,7 +1103,7 @@ export function IntermapMapView() {
 
   return (
     <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", background: theme.bg, position: "relative", touchAction: "none" }}>
-      <div style={{ padding: "8px 14px", background: "rgba(0,0,0,0.5)", borderBottom: `1px solid ${theme.accent}`, display: "flex", alignItems: "center", gap: 10, flexShrink: 0, minHeight: 44 }}>
+      <div style={topBarStyle(theme)}>
         <div style={{ fontSize: 15, fontWeight: "bold", color: theme.heading, letterSpacing: 1 }}>
           {activeMap.name}
         </div>
@@ -1241,6 +1332,7 @@ export function IntermapMapView() {
                 <Marker
                   key={location.id}
                   entity={location}
+                  theme={theme}
                   legendCategory={locationLegendCategory}
                   isSelected={selectedLocation?.id === location.id}
                   isRepositioning={!!repositioning}
@@ -1255,6 +1347,7 @@ export function IntermapMapView() {
                 <Marker
                   key={eventItem.id}
                   entity={eventItem}
+                  theme={theme}
                   legendCategory={eventLegendCategory}
                   isSelected={selectedEvent?.id === eventItem.id}
                   isRepositioning={!!repositioning}
@@ -1281,7 +1374,7 @@ export function IntermapMapView() {
           themeMuted={theme.muted}
         />
 
-        {panelRoute?.kind === "location-manager" && (
+        {(panelRoute?.kind === "location-manager" || (currentLocationDetail?.backTo === "location-manager")) && (
           <LocationManagerPanel
             theme={theme}
             onClose={() => setPanelRoute(null)}
@@ -1290,10 +1383,11 @@ export function IntermapMapView() {
               setEditingLocation(undefined);
               setLocationEditorOpen(true);
             }}
+            onVisibleLocationsChange={(locations) => setVisibleLocationManagerIds(locations.map((location) => location.id))}
           />
         )}
 
-        {panelRoute?.kind === "event-manager" && (
+        {(panelRoute?.kind === "event-manager" || (currentEventDetail?.backTo === "event-manager")) && (
           <EventManagerPanel
             theme={theme}
             onClose={() => setPanelRoute(null)}
@@ -1307,6 +1401,7 @@ export function IntermapMapView() {
               setEventDisplayMode(mode);
               if (mode === "expanded") setTemporaryFocusedEventId(null);
             }}
+            onVisibleEventsChange={(events) => setVisibleEventManagerIds(events.map((eventItem) => eventItem.id))}
           />
         )}
 
@@ -1316,6 +1411,10 @@ export function IntermapMapView() {
             categories={activeMap.tagCategories}
             theme={theme}
             onClose={closePanel}
+            onPrevious={previousLocationId ? () => openLocationDetail(previousLocationId, "location-manager") : undefined}
+            onNext={nextLocationId ? () => openLocationDetail(nextLocationId, "location-manager") : undefined}
+            canGoPrevious={!!previousLocationId}
+            canGoNext={!!nextLocationId}
             onEdit={() => { setEditingLocation(selectedLocation); setLocationEditorOpen(true); }}
             onDelete={() => {
               if (!confirm(`确定删除「${selectedLocation.name}」？`)) return;
@@ -1337,7 +1436,7 @@ export function IntermapMapView() {
                         onClick={() => handleLocationEventClick(eventItem)}
                         style={{ padding: "4px 10px", borderRadius: 20, border: `1px solid ${theme.primary}44`, background: `${theme.primary}14`, color: theme.heading, cursor: "pointer", fontSize: 11, display: "flex", alignItems: "center", gap: 5 }}
                       >
-                        <TagIconRenderer icon={(eventLegendCategory?.values.find((value) => value.id === eventItem.tags[eventLegendCategory?.id ?? ""])?.icon) ?? { kind: "none" }} size={10} />
+                        <TagIconRenderer icon={(eventLegendCategory?.values.find((value) => value.id === eventItem.tags[eventLegendCategory?.id ?? ""])?.icon) ?? { kind: "none" }} size={10} themeColor={theme.primary} />
                         {eventItem.name}
                       </button>
                     ))}
@@ -1356,6 +1455,10 @@ export function IntermapMapView() {
             categories={activeMap.eventTagCategories}
             theme={theme}
             onClose={closePanel}
+            onPrevious={previousEventId ? () => openEventDetail(previousEventId, "event-manager") : undefined}
+            onNext={nextEventId ? () => openEventDetail(nextEventId, "event-manager") : undefined}
+            canGoPrevious={!!previousEventId}
+            canGoNext={!!nextEventId}
             onEdit={() => { setEditingEvent(selectedEvent); setEventEditorOpen(true); }}
             onDelete={() => {
               if (!confirm(`确定删除「${selectedEvent.name}」？`)) return;

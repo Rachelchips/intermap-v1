@@ -36,6 +36,50 @@ function reorderValues(values: TagValue[], fromIndex: number, toIndex: number): 
   return next;
 }
 
+function clampUnitOpacity(value: number | undefined): number {
+  if (!Number.isFinite(value)) return 1;
+  return Math.max(0, Math.min(1, value ?? 1));
+}
+
+function buildBatchStyledIcon(sourceIcon: TagIcon, currentIcon: TagIcon, themeColor: string): TagIcon {
+  if (sourceIcon.kind === "emoji") {
+    const defaultEmoji = currentIcon.kind === "emoji" ? currentIcon.emoji : "⭐";
+
+    if (sourceIcon.bgColor === undefined) {
+      return {
+        kind: "emoji",
+        emoji: defaultEmoji,
+        bgColor: undefined,
+        bgOpacity: 1,
+        borderColor: undefined,
+      };
+    }
+
+    if (sourceIcon.bgColor === null) {
+      return {
+        kind: "emoji",
+        emoji: defaultEmoji,
+        bgColor: null,
+        bgOpacity: 1,
+        borderColor: undefined,
+      };
+    }
+
+    const opacity = clampUnitOpacity(sourceIcon.bgOpacity);
+    const borderColor = sourceIcon.borderColor;
+
+    return {
+      kind: "emoji",
+      emoji: defaultEmoji,
+      bgColor: sourceIcon.bgColor,
+      bgOpacity: opacity,
+      borderColor,
+    };
+  }
+
+  return currentIcon;
+}
+
 function IconPicker({ icon, onChange, themeColor }: {
   icon: TagIcon;
   onChange: (icon: TagIcon) => void;
@@ -44,14 +88,47 @@ function IconPicker({ icon, onChange, themeColor }: {
   const [emojiInput, setEmojiInput] = useState(icon.kind === "emoji" ? icon.emoji : "");
   const [colorInput, setColorInput] = useState(icon.kind === "shape" ? icon.color : "#C8A860");
   const [opacity, setOpacity] = useState(icon.kind === "shape" ? (icon.opacity ?? 1) : 1);
+  const [emojiBgInput, setEmojiBgInput] = useState(
+    icon.kind === "emoji" && typeof icon.bgColor === "string" ? icon.bgColor : "#C8A860"
+  );
+  const [emojiBgOpacity, setEmojiBgOpacity] = useState(
+    icon.kind === "emoji" ? (icon.bgOpacity ?? 1) : 1
+  );
+  const [emojiBorderColor, setEmojiBorderColor] = useState<string | undefined>(
+    icon.kind === "emoji" ? icon.borderColor : undefined
+  );
+  const [emojiBorderColorInput, setEmojiBorderColorInput] = useState(
+    icon.kind === "emoji" && icon.borderColor ? icon.borderColor : "#FFD700"
+  );
   const [borderColor, setBorderColor] = useState<string | undefined>(
     icon.kind === "shape" ? icon.borderColor : undefined
   );
   const [borderColorInput, setBorderColorInput] = useState(
     icon.kind === "shape" && icon.borderColor ? icon.borderColor : "#FFD700"
   );
+  const [emojiBgChoice, setEmojiBgChoice] = useState<string | null | undefined>(
+    icon.kind === "emoji" ? icon.bgColor : undefined
+  );
 
   const kind = icon.kind;
+
+  useEffect(() => {
+    setEmojiBgInput(icon.kind === "emoji" && typeof icon.bgColor === "string" ? icon.bgColor : "#C8A860");
+    setEmojiBgOpacity(icon.kind === "emoji" ? (icon.bgOpacity ?? 1) : 1);
+    setEmojiBgChoice(icon.kind === "emoji" ? icon.bgColor : undefined);
+    setEmojiBorderColor(icon.kind === "emoji" ? icon.borderColor : undefined);
+    setEmojiBorderColorInput(icon.kind === "emoji" && icon.borderColor ? icon.borderColor : "#FFD700");
+  }, [icon]);
+
+  useEffect(() => {
+    if (icon.kind !== "emoji") return;
+    if (
+      icon.bgColor === emojiBgChoice
+      && (icon.bgOpacity ?? 1) === emojiBgOpacity
+      && icon.borderColor === emojiBorderColor
+    ) return;
+    onChange({ ...icon, bgColor: emojiBgChoice, bgOpacity: emojiBgOpacity, borderColor: emojiBorderColor });
+  }, [emojiBgChoice, emojiBgOpacity, emojiBorderColor, icon, onChange]);
 
   return (
     <div style={{ marginTop: 8 }}>
@@ -87,7 +164,7 @@ function IconPicker({ icon, onChange, themeColor }: {
                   borderRadius: 6, background: "rgba(255,255,255,0.04)",
                   cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
-                <TagIconRenderer icon={{ kind: "shape", shape, color: colorInput }} size={14} />
+                <TagIconRenderer icon={{ kind: "shape", shape, color: colorInput }} size={14} themeColor={themeColor} />
               </button>
             ))}
           </div>
@@ -199,7 +276,13 @@ function IconPicker({ icon, onChange, themeColor }: {
             value={emojiInput}
             onChange={(e) => {
               setEmojiInput(e.target.value);
-              if (e.target.value) onChange({ kind: "emoji", emoji: e.target.value });
+              if (e.target.value) onChange({
+                kind: "emoji",
+                emoji: e.target.value,
+                bgColor: emojiBgChoice,
+                bgOpacity: emojiBgOpacity,
+                borderColor: emojiBorderColor,
+              });
             }}
             placeholder="粘贴或输入 emoji…"
             maxLength={4}
@@ -211,13 +294,167 @@ function IconPicker({ icon, onChange, themeColor }: {
           />
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {["⭐", "🌟", "🏰", "🌊", "🌳", "⚔️", "🛡️", "👑", "🌿", "🦅", "🔮", "💀", "🗺️", "⛰️", "🏔️"].map((emoji) => (
-              <button key={emoji} onClick={() => { setEmojiInput(emoji); onChange({ kind: "emoji", emoji }); }}
+              <button key={emoji} onClick={() => { setEmojiInput(emoji); onChange({ kind: "emoji", emoji, bgColor: emojiBgChoice, bgOpacity: emojiBgOpacity, borderColor: emojiBorderColor }); }}
                 style={{
                   width: 28, height: 28, borderRadius: 6, fontSize: 16,
                   border: `1px solid ${emojiInput === emoji ? themeColor : "rgba(180,140,60,0.2)"}`,
                   background: "rgba(255,255,255,0.04)", cursor: "pointer",
                 }}>{emoji}</button>
             ))}
+          </div>
+        </div>
+      )}
+
+      {kind === "emoji" && (
+        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid rgba(180,140,60,0.15)" }}>
+          <div style={{ fontSize: 11, color: "#8A7050", marginBottom: 8 }}>底色</div>
+          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
+            <button
+              onClick={() => setEmojiBgChoice(undefined)}
+              style={{
+                padding: "3px 10px",
+                borderRadius: 6,
+                fontSize: 11,
+                cursor: "pointer",
+                border: `1px solid ${emojiBgChoice === undefined ? themeColor : "rgba(180,140,60,0.25)"}`,
+                background: emojiBgChoice === undefined ? `${themeColor}22` : "transparent",
+                color: emojiBgChoice === undefined ? themeColor : "#9A8060",
+              }}
+            >
+              默认
+            </button>
+            <button
+              onClick={() => setEmojiBgChoice(null)}
+              style={{
+                padding: "3px 10px",
+                borderRadius: 6,
+                fontSize: 11,
+                cursor: "pointer",
+                border: `1px solid ${emojiBgChoice === null ? themeColor : "rgba(180,140,60,0.25)"}`,
+                background: emojiBgChoice === null ? `${themeColor}22` : "transparent",
+                color: emojiBgChoice === null ? themeColor : "#9A8060",
+              }}
+            >
+              透明
+            </button>
+          </div>
+
+          <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginBottom: 8 }}>
+            {PRESET_COLORS.map((color) => (
+              <button
+                key={`emoji-bg-${color}`}
+                onClick={() => {
+                  setEmojiBgInput(color);
+                  setEmojiBgChoice(color);
+                }}
+                style={{
+                  width: 20,
+                  height: 20,
+                  borderRadius: "50%",
+                  background: color,
+                  border: `2px solid ${emojiBgChoice === color ? "#fff" : "transparent"}`,
+                  cursor: "pointer",
+                  padding: 0,
+                }}
+              />
+            ))}
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ fontSize: 11, color: "#8A7050" }}>自定义底色：</span>
+            <input
+              type="color"
+              value={emojiBgInput}
+              onChange={(e) => {
+                setEmojiBgInput(e.target.value);
+                setEmojiBgChoice(e.target.value);
+              }}
+              style={{ width: 28, height: 22, border: "none", background: "none", cursor: "pointer", padding: 0 }}
+            />
+            <span style={{ fontSize: 11, color: "#8A7050" }}>透明度：</span>
+            <input
+              type="range"
+              min={0.1}
+              max={1}
+              step={0.05}
+              value={emojiBgOpacity}
+              onChange={(e) => setEmojiBgOpacity(parseFloat(e.target.value))}
+              style={{ flex: 1, accentColor: themeColor }}
+            />
+            <span style={{ fontSize: 11, color: "#9A8060", width: 28 }}>{Math.round(emojiBgOpacity * 100)}%</span>
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 8, marginBottom: 8 }}>
+            <span style={{ fontSize: 11, color: "#8A7050", minWidth: 40 }}>外边框：</span>
+            <button
+              onClick={() => setEmojiBorderColor(undefined)}
+              style={{
+                padding: "3px 10px",
+                borderRadius: 6,
+                fontSize: 11,
+                cursor: "pointer",
+                border: `1px solid ${emojiBorderColor === undefined ? themeColor : "rgba(180,140,60,0.25)"}`,
+                background: emojiBorderColor === undefined ? `${themeColor}22` : "transparent",
+                color: emojiBorderColor === undefined ? themeColor : "#9A8060",
+              }}
+            >
+              默认
+            </button>
+            <button
+              onClick={() => setEmojiBorderColor(emojiBorderColorInput)}
+              style={{
+                padding: "3px 10px",
+                borderRadius: 6,
+                fontSize: 11,
+                cursor: "pointer",
+                border: `1px solid ${emojiBorderColor !== undefined ? themeColor : "rgba(180,140,60,0.25)"}`,
+                background: emojiBorderColor !== undefined ? `${themeColor}22` : "transparent",
+                color: emojiBorderColor !== undefined ? themeColor : "#9A8060",
+              }}
+            >
+              自定义
+            </button>
+          </div>
+
+          {emojiBorderColor !== undefined && (
+            <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8 }}>
+              {["#FFD700", "#FFE066", "#FFFFFF", "#A0E0FF", "#80FF80", "#FF8888", "#D8B4FE"].map((color) => (
+                <button
+                  key={`emoji-border-${color}`}
+                  onClick={() => {
+                    setEmojiBorderColorInput(color);
+                    setEmojiBorderColor(color);
+                  }}
+                  style={{
+                    width: 20,
+                    height: 20,
+                    borderRadius: "50%",
+                    background: color,
+                    border: `2px solid ${emojiBorderColorInput === color ? "#fff" : "transparent"}`,
+                    cursor: "pointer",
+                    padding: 0,
+                    boxShadow: `0 0 4px ${color}88`,
+                  }}
+                />
+              ))}
+              <input
+                type="color"
+                value={emojiBorderColorInput}
+                onChange={(e) => {
+                  setEmojiBorderColorInput(e.target.value);
+                  setEmojiBorderColor(e.target.value);
+                }}
+                style={{ width: 28, height: 22, border: "none", background: "none", cursor: "pointer", padding: 0 }}
+              />
+            </div>
+          )}
+
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <TagIconRenderer
+              icon={{ kind: "emoji", emoji: emojiInput || "⭐", bgColor: emojiBgChoice }}
+              size={16}
+              themeColor={themeColor}
+            />
           </div>
         </div>
       )}
@@ -229,22 +466,26 @@ function ValueEditor({
   value,
   categoryId,
   mapId,
+  categoryValues,
   entities,
   themeColor,
   themeHeading,
   targetMode,
   onClose,
   lockLabel,
+  onApplyIconToCategory,
 }: {
   value: TagValue;
   categoryId: string;
   mapId: string;
+  categoryValues: TagValue[];
   entities: AssignableEntity[];
   themeColor: string;
   themeHeading: string;
   targetMode: TargetMode;
   onClose: () => void;
   lockLabel?: boolean;
+  onApplyIconToCategory: (sourceIcon: TagIcon) => void;
 }) {
   const { dispatch } = useIntermap();
   const [label, setLabel] = useState(value.label);
@@ -312,6 +553,24 @@ function ValueEditor({
       <div style={{ marginBottom: 10 }}>
         <label style={{ fontSize: 11, color: "#8A7050", display: "block", marginBottom: 4 }}>图标</label>
         <IconPicker icon={icon} onChange={setIcon} themeColor={themeColor} />
+        {icon.kind === "emoji" && (
+          <button
+            onClick={() => onApplyIconToCategory(icon)}
+            style={{
+              marginTop: 10,
+              width: "100%",
+              padding: "7px 10px",
+              borderRadius: 7,
+              border: `1px solid ${themeColor}66`,
+              background: `${themeColor}14`,
+              color: themeHeading,
+              cursor: "pointer",
+              fontSize: 12,
+            }}
+          >
+            将当前样式一键应用到本标签全部 {categoryValues.length} 个小分类
+          </button>
+        )}
       </div>
 
       {entities.length > 0 && (
@@ -504,6 +763,29 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
       dispatch({ type: "DELETE_TAG_VALUE", mapId: activeMap.id, categoryId: selectedCat.id, valueId: value.id });
     } else {
       dispatch({ type: "DELETE_EVENT_TAG_VALUE", mapId: activeMap.id, categoryId: selectedCat.id, valueId: value.id });
+    }
+  };
+
+  const handleApplyIconToCategory = (sourceIcon: TagIcon) => {
+    if (!selectedCat) return;
+
+    const nextValues = selectedCat.values.map((tagValue) => ({
+      ...tagValue,
+      icon: buildBatchStyledIcon(sourceIcon, tagValue.icon, themeColor),
+    }));
+
+    if (mode === "locations") {
+      dispatch({
+        type: "UPDATE_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: { ...selectedCat, values: nextValues },
+      });
+    } else {
+      dispatch({
+        type: "UPDATE_EVENT_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: { ...selectedCat, values: nextValues },
+      });
     }
   };
 
@@ -710,11 +992,13 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
                       value={editingValue}
                       categoryId={selectedCat.id}
                       mapId={activeMap.id}
+                      categoryValues={selectedCat.values}
                       entities={entities}
                       themeColor={themeColor}
                       themeHeading={themeHeading}
                       targetMode={mode}
                       lockLabel={mode === "events" && selectedCat.id === EVENT_LOCATION_CATEGORY_ID && editingValue.id !== NONE_TAG_VALUE_ID}
+                      onApplyIconToCategory={handleApplyIconToCategory}
                       onClose={() => setEditingValueId(null)}
                     />
                   </div>
@@ -763,7 +1047,7 @@ export function TagManager({ onClose, themeColor, themeHeading, themeBg, themeAc
                             cursor: lockedValue ? "default" : "grab",
                             opacity: draggingValueId === value.id ? 0.45 : 1,
                           }}>
-                          <TagIconRenderer icon={value.icon} size={14} />
+                          <TagIconRenderer icon={value.icon} size={14} themeColor={themeColor} />
                           <span style={{ flex: 1, fontSize: 13, color: "#C8B898" }}>{value.label}</span>
                           <span style={{ fontSize: 10, color: themeMuted }}>{assignmentCount} 个{targetLabel}</span>
                           <button onClick={() => setEditingValueId(value.id)}

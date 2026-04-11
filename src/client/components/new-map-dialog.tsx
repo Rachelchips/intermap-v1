@@ -1,17 +1,16 @@
 /**
  * @file new-map-dialog.tsx
  * @description Modal dialog for creating a new map project.
- * Steps:
- * 1. Enter map name (Chinese required, English optional)
- * 2. Upload or paste a background image URL
- * 3. Choose a theme color preset
- * 4. Submit to create the map
  */
 
-import { useState, useRef } from "react";
-import { X, Upload, Check } from "lucide-react";
-import { MAP_THEMES } from "../types/intermap-types";
-import type { MapProject, TagCategory } from "../types/intermap-types";
+import { useRef, useState } from "react";
+import { Check, Upload, X } from "lucide-react";
+import {
+  DEFAULT_MAP_THEME_MODE,
+  getMapTheme,
+  MAP_THEMES,
+} from "../types/intermap-types";
+import type { MapProject, MapThemeMode, TagCategory } from "../types/intermap-types";
 import { createDefaultEventTagCategories } from "@/lib/intermap-helpers";
 
 interface NewMapDialogProps {
@@ -26,9 +25,9 @@ const DEFAULT_TAG_CATEGORIES: TagCategory[] = [
     isLegend: true,
     isBuiltIn: true,
     values: [
-      { id: "settlement", label: "居民点",   icon: { kind: "shape", shape: "square",  color: "#8B4513" } },
-      { id: "natural",    label: "自然地貌", icon: { kind: "shape", shape: "circle",  color: "#2D6A2D" } },
-      { id: "landmark",   label: "地标",   icon: { kind: "shape", shape: "square",  color: "#1E40AF" } },
+      { id: "settlement", label: "居民点", icon: { kind: "shape", shape: "square", color: "#8B4513" } },
+      { id: "natural", label: "自然地貌", icon: { kind: "shape", shape: "circle", color: "#2D6A2D" } },
+      { id: "landmark", label: "地标", icon: { kind: "shape", shape: "square", color: "#1E40AF" } },
     ],
   },
   {
@@ -40,18 +39,22 @@ const DEFAULT_TAG_CATEGORIES: TagCategory[] = [
   },
 ];
 
-/**
- * Full-screen modal for new map creation.
- * Handles file input via FileReader to convert uploaded images to data URLs.
- */
+const APPEARANCE_OPTIONS: { value: MapThemeMode; label: string }[] = [
+  { value: "dark", label: "深色背景" },
+  { value: "light", label: "浅色背景" },
+];
+
 export function NewMapDialog({ onClose, onCreate }: NewMapDialogProps) {
   const [name, setName] = useState("");
   const [nameEn, setNameEn] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [imagePreview, setImagePreview] = useState("");
   const [themeId, setThemeId] = useState("parchment");
+  const [themeMode, setThemeMode] = useState<MapThemeMode>(DEFAULT_MAP_THEME_MODE);
   const [imageTab, setImageTab] = useState<"url" | "upload">("url");
   const fileRef = useRef<HTMLInputElement>(null);
+
+  const selectedTheme = getMapTheme(themeId, themeMode);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -72,13 +75,14 @@ export function NewMapDialog({ onClose, onCreate }: NewMapDialogProps) {
 
   const handleCreate = () => {
     if (!name.trim()) return;
-    const theme = MAP_THEMES.find((t) => t.id === themeId) ?? MAP_THEMES[0]!;
+
     const newMap: MapProject = {
       id: `map_${Date.now()}`,
       name: name.trim(),
       nameEn: nameEn.trim() || undefined,
       imageUrl,
       themeId,
+      themeMode,
       tagCategories: DEFAULT_TAG_CATEGORIES,
       locations: [],
       eventTagCategories: createDefaultEventTagCategories([]),
@@ -86,169 +90,146 @@ export function NewMapDialog({ onClose, onCreate }: NewMapDialogProps) {
       createdAt: Date.now(),
       updatedAt: Date.now(),
     };
-    void theme;
+
     onCreate(newMap);
   };
 
-  const selectedTheme = MAP_THEMES.find((t) => t.id === themeId) ?? MAP_THEMES[0]!;
-
   return (
     <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 200,
-        background: "rgba(0,0,0,0.75)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 16,
+      style={overlayStyle}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
       }}
-      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
         style={{
-          width: "100%",
-          maxWidth: 480,
-          background: "#1a1208",
-          border: "1px solid rgba(180,140,60,0.4)",
-          borderRadius: 12,
-          padding: "20px 24px",
-          color: "#E8DCC8",
-          fontFamily: "Georgia, serif",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.7)",
+          ...dialogStyle(selectedTheme),
+          color: selectedTheme.heading,
         }}
       >
-        {/* Header */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-          <div style={{ fontSize: 18, fontWeight: "bold", color: "#F0E0B0" }}>新建地图</div>
-          <button onClick={onClose} style={{ background: "none", border: "none", color: "#A89060", cursor: "pointer", padding: 4 }}>
+          <div style={{ fontSize: 18, fontWeight: "bold", color: selectedTheme.heading }}>新建地图</div>
+          <button onClick={onClose} style={iconButtonStyle(selectedTheme)}>
             <X size={18} />
           </button>
         </div>
 
-        {/* Name fields */}
         <div style={{ marginBottom: 14 }}>
-          <label style={{ fontSize: 12, color: "#8A7050", display: "block", marginBottom: 5 }}>地图名称（必填）</label>
+          <label style={labelStyle(selectedTheme)}>地图名称（必填）</label>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="输入地图名称..."
             maxLength={40}
-            style={inputStyle}
+            style={inputStyle(selectedTheme)}
           />
         </div>
+
         <div style={{ marginBottom: 14 }}>
-          <label style={{ fontSize: 12, color: "#8A7050", display: "block", marginBottom: 5 }}>English Name（可选）</label>
+          <label style={labelStyle(selectedTheme)}>English Name（可选）</label>
           <input
             value={nameEn}
             onChange={(e) => setNameEn(e.target.value)}
             placeholder="Optional English name..."
             maxLength={60}
-            style={inputStyle}
+            style={inputStyle(selectedTheme)}
           />
         </div>
 
-        {/* Image input */}
         <div style={{ marginBottom: 16 }}>
-          <label style={{ fontSize: 12, color: "#8A7050", display: "block", marginBottom: 6 }}>底图</label>
+          <label style={labelStyle(selectedTheme)}>底图</label>
           <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
             {(["url", "upload"] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setImageTab(tab)}
-                style={{
-                  padding: "4px 12px",
-                  borderRadius: 6,
-                  border: `1px solid ${imageTab === tab ? "rgba(180,140,60,0.6)" : "rgba(180,140,60,0.2)"}`,
-                  background: imageTab === tab ? "rgba(180,140,60,0.15)" : "transparent",
-                  color: imageTab === tab ? "#C8A860" : "#7A6040",
-                  cursor: "pointer",
-                  fontSize: 12,
-                }}
+                style={segmentedButtonStyle(selectedTheme, imageTab === tab)}
               >
                 {tab === "url" ? "输入 URL" : "上传图片"}
               </button>
             ))}
           </div>
+
           {imageTab === "url" ? (
             <input
               value={imageUrl.startsWith("data:") ? "" : imageUrl}
               onChange={(e) => handleUrlChange(e.target.value)}
               placeholder="https://..."
-              style={inputStyle}
+              style={inputStyle(selectedTheme)}
             />
           ) : (
             <div>
               <input ref={fileRef} type="file" accept="image/*" onChange={handleFileChange} style={{ display: "none" }} />
-              <button
-                onClick={() => fileRef.current?.click()}
-                style={{
-                  width: "100%",
-                  padding: "10px",
-                  border: "1.5px dashed rgba(180,140,60,0.35)",
-                  borderRadius: 6,
-                  background: "transparent",
-                  color: "#8A7050",
-                  cursor: "pointer",
-                  fontSize: 13,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 6,
-                }}
-              >
+              <button onClick={() => fileRef.current?.click()} style={uploadButtonStyle(selectedTheme)}>
                 <Upload size={14} />
-                {imageUrl && imageUrl.startsWith("data:") ? "已选择图片 ✓" : "点击选择图片"}
+                {imageUrl && imageUrl.startsWith("data:") ? "已选择图片" : "点击选择图片"}
               </button>
             </div>
           )}
+
           {imagePreview && (
             <img
               src={imagePreview}
               alt="preview"
-              style={{ marginTop: 8, width: "100%", height: 80, objectFit: "cover", borderRadius: 6, opacity: 0.7 }}
+              style={{ marginTop: 8, width: "100%", height: 84, objectFit: "cover", borderRadius: 8, border: `1px solid ${selectedTheme.accent}`, opacity: 0.85 }}
             />
           )}
         </div>
 
-        {/* Theme picker */}
-        <div style={{ marginBottom: 20 }}>
-          <label style={{ fontSize: 12, color: "#8A7050", display: "block", marginBottom: 8 }}>主题风格</label>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {MAP_THEMES.map((t) => (
+        <div style={{ marginBottom: 16 }}>
+          <label style={labelStyle(selectedTheme)}>背景风格</label>
+          <div style={{ display: "flex", gap: 8 }}>
+            {APPEARANCE_OPTIONS.map((option) => (
               <button
-                key={t.id}
-                onClick={() => setThemeId(t.id)}
-                title={t.label}
-                style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  border: themeId === t.id ? `3px solid ${t.primary}` : "2px solid rgba(180,140,60,0.2)",
-                  background: t.bg,
-                  cursor: "pointer",
-                  position: "relative",
-                  boxShadow: themeId === t.id ? `0 0 8px ${t.primary}88` : "none",
-                  transition: "all 0.15s",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+                key={option.value}
+                onClick={() => setThemeMode(option.value)}
+                style={segmentedButtonStyle(selectedTheme, themeMode === option.value)}
               >
-                <span style={{ width: 16, height: 16, borderRadius: "50%", background: t.primary, display: "block" }} />
-                {themeId === t.id && (
-                  <div style={{ position: "absolute", bottom: -16, left: "50%", transform: "translateX(-50%)", fontSize: 9, color: t.primary, whiteSpace: "nowrap" }}>
-                    {t.label}
-                  </div>
-                )}
+                {option.label}
               </button>
             ))}
           </div>
-          <div style={{ height: 18 }} />
         </div>
 
-        {/* Submit */}
+        <div style={{ marginBottom: 20 }}>
+          <label style={labelStyle(selectedTheme)}>主题风格</label>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {MAP_THEMES.map((themeOption) => {
+              const previewTheme = getMapTheme(themeOption.id, themeMode);
+              const isActive = themeId === themeOption.id;
+              return (
+                <button
+                  key={themeOption.id}
+                  onClick={() => setThemeId(themeOption.id)}
+                  title={themeOption.label}
+                  style={{
+                    width: 42,
+                    height: 42,
+                    borderRadius: "50%",
+                    border: isActive ? `3px solid ${previewTheme.primary}` : `2px solid ${previewTheme.accent}`,
+                    background: previewTheme.bg,
+                    cursor: "pointer",
+                    position: "relative",
+                    boxShadow: isActive ? `0 0 0 3px ${previewTheme.primary}22` : "none",
+                    transition: "all 0.15s",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span style={{ width: 17, height: 17, borderRadius: "50%", background: previewTheme.primary, display: "block" }} />
+                  {isActive && (
+                    <div style={{ position: "absolute", bottom: -18, left: "50%", transform: "translateX(-50%)", fontSize: 9, color: previewTheme.primary, whiteSpace: "nowrap" }}>
+                      {previewTheme.label}
+                    </div>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+          <div style={{ height: 20 }} />
+        </div>
+
         <button
           onClick={handleCreate}
           disabled={!name.trim()}
@@ -267,7 +248,6 @@ export function NewMapDialog({ onClose, onCreate }: NewMapDialogProps) {
             justifyContent: "center",
             gap: 6,
             opacity: name.trim() ? 1 : 0.5,
-            transition: "all 0.2s",
           }}
         >
           <Check size={15} />
@@ -278,15 +258,92 @@ export function NewMapDialog({ onClose, onCreate }: NewMapDialogProps) {
   );
 }
 
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "8px 10px",
-  background: "rgba(255,255,255,0.05)",
-  border: "1px solid rgba(180,140,60,0.3)",
-  borderRadius: 6,
-  color: "#E8DCC8",
-  fontSize: 13,
-  outline: "none",
-  fontFamily: "Georgia, serif",
-  boxSizing: "border-box",
+const overlayStyle: React.CSSProperties = {
+  position: "fixed",
+  inset: 0,
+  zIndex: 200,
+  background: "rgba(0,0,0,0.72)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 16,
 };
+
+function dialogStyle(theme: ReturnType<typeof getMapTheme>): React.CSSProperties {
+  return {
+    width: "100%",
+    maxWidth: 500,
+    background: theme.bg,
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 14,
+    padding: "20px 24px",
+    fontFamily: "Georgia, serif",
+    boxShadow: "0 10px 40px rgba(0,0,0,0.45)",
+  };
+}
+
+function labelStyle(theme: ReturnType<typeof getMapTheme>): React.CSSProperties {
+  return {
+    fontSize: 12,
+    color: theme.muted,
+    display: "block",
+    marginBottom: 6,
+  };
+}
+
+function inputStyle(theme: ReturnType<typeof getMapTheme>): React.CSSProperties {
+  const isLightMode = theme.bg === theme.modes.light.bg;
+  return {
+    width: "100%",
+    padding: "8px 10px",
+    background: isLightMode ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.05)",
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 8,
+    color: theme.heading,
+    fontSize: 13,
+    outline: "none",
+    fontFamily: "Georgia, serif",
+    boxSizing: "border-box",
+  };
+}
+
+function segmentedButtonStyle(theme: ReturnType<typeof getMapTheme>, active: boolean): React.CSSProperties {
+  return {
+    padding: "6px 12px",
+    borderRadius: 7,
+    border: `1px solid ${active ? theme.primary : theme.accent}`,
+    background: active ? `${theme.primary}22` : "transparent",
+    color: active ? theme.primary : theme.muted,
+    cursor: "pointer",
+    fontSize: 12,
+    fontFamily: "Georgia, serif",
+  };
+}
+
+function uploadButtonStyle(theme: ReturnType<typeof getMapTheme>): React.CSSProperties {
+  return {
+    width: "100%",
+    padding: "10px",
+    border: `1.5px dashed ${theme.accent}`,
+    borderRadius: 8,
+    background: "transparent",
+    color: theme.muted,
+    cursor: "pointer",
+    fontSize: 13,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    fontFamily: "Georgia, serif",
+  };
+}
+
+function iconButtonStyle(theme: ReturnType<typeof getMapTheme>): React.CSSProperties {
+  return {
+    background: "none",
+    border: "none",
+    color: theme.muted,
+    cursor: "pointer",
+    padding: 4,
+  };
+}

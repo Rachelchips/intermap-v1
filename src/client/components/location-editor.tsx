@@ -319,7 +319,7 @@ export function LocationEditor({
                       transition: "all 0.15s",
                     }}
                   >
-                    <TagIconRenderer icon={val.icon} size={10} />
+                    <TagIconRenderer icon={val.icon} size={10} themeColor={themeColor} />
                     {val.label}
                   </button>
                 );

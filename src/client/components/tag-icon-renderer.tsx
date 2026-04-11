@@ -11,6 +11,8 @@ interface TagIconRendererProps {
   size?: number;
   /** Override border color */
   borderColor?: string;
+  /** Used as the default emoji background when icon.bgColor is not set */
+  themeColor?: string;
 }
 
 /**
@@ -19,10 +21,32 @@ interface TagIconRendererProps {
  * - emoji: rendered as text
  * - none: small muted dot
  */
-export function TagIconRenderer({ icon, size = 12, borderColor }: TagIconRendererProps) {
+export function TagIconRenderer({ icon, size = 12, borderColor, themeColor = "#C8A860" }: TagIconRendererProps) {
   if (icon.kind === "emoji") {
+    const defaultBackground = themeColor;
+    const baseBackground = icon.bgColor === null ? "transparent" : icon.bgColor ?? defaultBackground;
+    const background = icon.bgColor && icon.bgOpacity !== undefined
+      ? withAlpha(icon.bgColor, icon.bgOpacity)
+      : baseBackground;
+    const border = icon.bgColor === null
+      ? "transparent"
+      : borderColor ?? icon.borderColor ?? lighten(icon.bgColor ?? themeColor, 0.2);
     return (
-      <span style={{ fontSize: size * 1.1, lineHeight: 1, display: "inline-flex", alignItems: "center" }}>
+      <span
+        style={{
+          fontSize: size * 0.95,
+          lineHeight: 1,
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: size * 1.45,
+          height: size * 1.45,
+          borderRadius: "50%",
+          background,
+          border: `1px solid ${border}`,
+          flexShrink: 0,
+        }}
+      >
         {icon.emoji}
       </span>
     );
@@ -113,6 +137,17 @@ function lighten(hex: string, amount: number): string {
     const lg = Math.min(255, Math.round(g + (255 - g) * amount));
     const lb = Math.min(255, Math.round(b + (255 - b) * amount));
     return `rgb(${lr},${lg},${lb})`;
+  } catch {
+    return hex;
+  }
+}
+
+function withAlpha(hex: string, alpha: number): string {
+  try {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
   } catch {
     return hex;
   }

@@ -12,7 +12,7 @@
 import { useState, useRef } from "react";
 import { Plus, Globe, Map as MapIcon, FolderOpen } from "lucide-react";
 import { useIntermap } from "../store/intermap-store";
-import { MAP_THEMES } from "../types/intermap-types";
+import { getMapTheme } from "../types/intermap-types";
 import type { MapProject } from "../types/intermap-types";
 
 interface MapSidebarProps {
@@ -28,6 +28,13 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
   const { state, dispatch, activeMap } = useIntermap();
   const [hovered, setHovered] = useState<string | null>(null);
   const importInputRef = useRef<HTMLInputElement>(null);
+  const shellTheme = getMapTheme(activeMap?.themeId, activeMap?.themeMode);
+  const isLightShell = shellTheme.bg === shellTheme.modes.light.bg;
+  const sidebarBg = isLightShell ? shellTheme.bg : `${shellTheme.bg}F2`;
+  const sidebarBorder = shellTheme.accent;
+  const tooltipBg = isLightShell ? "#FFFFFF" : `${shellTheme.bg}F7`;
+  const tooltipShadow = isLightShell ? "0 6px 18px rgba(80,60,30,0.12)" : "0 2px 12px rgba(0,0,0,0.6)";
+  const chromeMuted = isLightShell ? shellTheme.muted : "rgba(180,140,60,0.7)";
 
   /** Read a JSON file and import it as a new MapProject */
   const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,8 +73,8 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
       style={{
         width: 56,
         height: "100%",
-        background: "rgba(10,8,4,0.95)",
-        borderRight: "1px solid rgba(180,140,60,0.2)",
+        background: sidebarBg,
+        borderRight: `1px solid ${sidebarBorder}`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -88,7 +95,7 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "rgba(180,140,60,0.7)",
+          color: chromeMuted,
           marginBottom: 6,
         }}
       >
@@ -96,11 +103,11 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
       </div>
 
       {/* Divider */}
-      <div style={{ width: 28, height: 1, background: "rgba(180,140,60,0.2)", flexShrink: 0 }} />
+      <div style={{ width: 28, height: 1, background: `${shellTheme.accent}AA`, flexShrink: 0 }} />
 
       {/* Map list */}
       {state.maps.map((map) => {
-        const theme = MAP_THEMES.find((t) => t.id === map.themeId) ?? MAP_THEMES[0]!;
+        const theme = getMapTheme(map.themeId, map.themeMode);
         const isActive = map.id === activeMap?.id;
         const isHovered = hovered === map.id;
 
@@ -114,7 +121,7 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
                   left: 46,
                   top: "50%",
                   transform: "translateY(-50%)",
-                  background: "rgba(10,8,4,0.95)",
+                  background: tooltipBg,
                   border: `1px solid ${theme.accent}`,
                   borderRadius: 6,
                   padding: "4px 10px",
@@ -123,7 +130,7 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
                   fontSize: 12,
                   pointerEvents: "none",
                   zIndex: 100,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.6)",
+                  boxShadow: tooltipShadow,
                 }}
               >
                 {map.name}
@@ -145,16 +152,22 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
                 borderRadius: "50%",
                 border: isActive
                   ? `2.5px solid ${theme.primary}`
-                  : "2px solid rgba(180,140,60,0.25)",
+                  : `2px solid ${shellTheme.accent}`,
                 background: isActive
                   ? `${theme.accent}`
-                  : "rgba(30,24,12,0.8)",
+                  : isLightShell
+                    ? "rgba(255,255,255,0.82)"
+                    : "rgba(30,24,12,0.8)",
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 transition: "all 0.2s",
-                boxShadow: isActive ? `0 0 10px ${theme.primary}66` : "none",
+                boxShadow: isActive
+                  ? `0 0 10px ${theme.primary}44`
+                  : isLightShell
+                    ? "0 2px 6px rgba(80,60,30,0.08)"
+                    : "none",
                 overflow: "hidden",
                 padding: 0,
               }}
@@ -171,7 +184,7 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
                   }}
                 />
               ) : (
-                <MapIcon size={16} style={{ color: isActive ? theme.primary : "rgba(180,140,60,0.5)" }} />
+                <MapIcon size={16} style={{ color: isActive ? theme.primary : shellTheme.muted }} />
               )}
             </button>
           </div>
@@ -200,13 +213,13 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
           width: 38,
           height: 38,
           borderRadius: "50%",
-          border: "1.5px dashed rgba(180,140,60,0.3)",
+          border: `1.5px dashed ${shellTheme.accent}`,
           background: "transparent",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "rgba(180,140,60,0.5)",
+          color: shellTheme.muted,
           transition: "all 0.2s",
           position: "relative",
           flexShrink: 0,
@@ -220,15 +233,16 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
               left: 46,
               top: "50%",
               transform: "translateY(-50%)",
-              background: "rgba(10,8,4,0.95)",
-              border: "1px solid rgba(180,140,60,0.3)",
+              background: tooltipBg,
+              border: `1px solid ${shellTheme.accent}`,
               borderRadius: 6,
               padding: "4px 10px",
               whiteSpace: "nowrap",
-              color: "rgba(220,190,100,0.9)",
+              color: shellTheme.heading,
               fontSize: 12,
               pointerEvents: "none",
               zIndex: 100,
+              boxShadow: tooltipShadow,
             }}
           >
             导入地图 JSON
@@ -246,13 +260,13 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
           width: 38,
           height: 38,
           borderRadius: "50%",
-          border: "1.5px dashed rgba(180,140,60,0.4)",
+          border: `1.5px dashed ${shellTheme.accent}`,
           background: "transparent",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "rgba(180,140,60,0.6)",
+          color: shellTheme.primary,
           transition: "all 0.2s",
           position: "relative",
           flexShrink: 0,
@@ -266,15 +280,16 @@ export function MapSidebar({ onCreateNew, onEditMap }: MapSidebarProps) {
               left: 46,
               top: "50%",
               transform: "translateY(-50%)",
-              background: "rgba(10,8,4,0.95)",
-              border: "1px solid rgba(180,140,60,0.3)",
+              background: tooltipBg,
+              border: `1px solid ${shellTheme.accent}`,
               borderRadius: 6,
               padding: "4px 10px",
               whiteSpace: "nowrap",
-              color: "rgba(220,190,100,0.9)",
+              color: shellTheme.heading,
               fontSize: 12,
               pointerEvents: "none",
               zIndex: 100,
+              boxShadow: tooltipShadow,
             }}
           >
             新建地图

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Check, ChevronDown, ChevronRight, ChevronUp, Eye, EyeOff, Filter, Flag, MapPin, Maximize2, Search, Tags, X, ZoomIn, ZoomOut } from "lucide-react";
-import { MAP_THEMES } from "../types/intermap-types";
+import { getMapTheme } from "../types/intermap-types";
 import { TagIconRenderer } from "../components/tag-icon-renderer";
 import type {
   MapEvent,
@@ -109,6 +109,7 @@ function matchesTagFilter(
 
 function Marker({
   entity,
+  theme,
   legendCategory,
   isSelected,
   scalePercent = 100,
@@ -118,6 +119,7 @@ function Marker({
   baseZIndex = 10,
 }: {
   entity: MapLocation | MapEvent;
+  theme: MapTheme;
   legendCategory: TagCategory | null;
   isSelected: boolean;
   scalePercent?: number;
@@ -150,6 +152,27 @@ function Marker({
   const glowColor = customBorderColor ?? baseColor;
   const borderRadius = shape === "square" ? 3 : shape === "diamond" ? 0 : size / 2;
   const transform = shape === "diamond" ? "translate(-50%, -50%) rotate(45deg)" : "translate(-50%, -50%)";
+  const emojiIcon = icon.kind === "emoji" ? icon : null;
+  const emojiOpacity = emojiIcon?.bgOpacity ?? 1;
+  const emojiBgColor = emojiIcon?.bgColor === null
+    ? "transparent"
+    : emojiIcon?.bgColor
+      ? hexToRgba(emojiIcon.bgColor, emojiOpacity)
+      : theme.primary;
+  const emojiBorderColor = emojiIcon?.bgColor === null
+    ? "transparent"
+    : emojiIcon?.borderColor ?? emojiIcon?.bgColor ?? theme.primary;
+  const markerBackground = isShape ? background : emojiBgColor;
+  const markerBorder = isShape ? activeBorder : (isSelected ? "#ffffff" : emojiBorderColor);
+  const markerShadow = isShape
+    ? (isSelected
+      ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}`
+      : (customBorderColor
+          ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)`
+          : "0 1px 5px rgba(0,0,0,0.8)"))
+    : (isSelected
+      ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${emojiBorderColor}`
+      : "0 1px 5px rgba(0,0,0,0.55)");
 
   return (
     <button
@@ -161,14 +184,10 @@ function Marker({
         width: size,
         height: size,
         borderRadius,
-        backgroundColor: background,
-        border: `${isSelected ? 2.5 : 1.5}px solid ${activeBorder}`,
+        backgroundColor: markerBackground,
+        border: `${isSelected ? 2.5 : 1.5}px solid ${markerBorder}`,
         cursor: "pointer",
-        boxShadow: isSelected
-          ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}`
-          : (customBorderColor
-              ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)`
-              : "0 1px 5px rgba(0,0,0,0.8)"),
+        boxShadow: markerShadow,
         zIndex: isSelected ? baseZIndex + 10 : baseZIndex,
         display: "flex",
         alignItems: "center",
@@ -236,18 +255,35 @@ function managerChip(color: string, active: boolean): React.CSSProperties {
   };
 }
 
+function topBarStyle(theme: MapTheme): React.CSSProperties {
+  const isLight = theme.bg === theme.modes.light.bg;
+  return {
+    padding: "8px 14px",
+    background: isLight ? theme.bg : `${theme.bg}F2`,
+    borderBottom: `1px solid ${theme.accent}`,
+    boxShadow: isLight ? `0 1px 0 ${theme.accent}55` : "0 8px 20px rgba(0,0,0,0.18)",
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    flexShrink: 0,
+    minHeight: 44,
+  };
+}
+
 function ShareLocationManagerPanel({
   theme,
   locations,
   categories,
   onClose,
   onSelectLocation,
+  onVisibleLocationsChange,
 }: {
   theme: MapTheme;
   locations: MapLocation[];
   categories: TagCategory[];
   onClose: () => void;
   onSelectLocation: (location: MapLocation) => void;
+  onVisibleLocationsChange?: (locations: MapLocation[]) => void;
 }) {
   const [search, setSearch] = useState("");
   const [tagFilter, setTagFilter] = useState<Record<string, Set<string>>>({});
@@ -309,6 +345,10 @@ function ShareLocationManagerPanel({
 
     return groups;
   }, [categories, filteredLocations, groupByTagId]);
+
+  useEffect(() => {
+    onVisibleLocationsChange?.(groupedLocations.flatMap((group) => group.items));
+  }, [groupedLocations, onVisibleLocationsChange]);
 
   const toggleTagFilter = (categoryId: string, valueId: string) => {
     setTagFilter((prev) => {
@@ -408,7 +448,7 @@ function ShareLocationManagerPanel({
                       const isOn = activeCategoryFilter?.has(value.id) ?? false;
                       return (
                         <button key={value.id} onClick={() => toggleTagFilter(category.id, value.id)} style={{ padding: "3px 8px", borderRadius: 20, fontSize: 11, display: "flex", alignItems: "center", gap: 4, cursor: "pointer", border: `1px solid ${isOn ? theme.primary : "rgba(180,140,60,0.25)"}`, background: isOn ? `${theme.primary}22` : "transparent", color: isOn ? theme.primary : theme.muted, transition: "all 0.15s" }}>
-                          <TagIconRenderer icon={value.icon} size={9} />
+                          <TagIconRenderer icon={value.icon} size={9} themeColor={theme.primary} />
                           {value.label}
                         </button>
                       );
@@ -431,7 +471,7 @@ function ShareLocationManagerPanel({
             <div key={group.key}>
               {groupByTagId && (
                 <div style={{ padding: "7px 14px", display: "flex", alignItems: "center", gap: 6, borderBottom: `1px solid ${theme.accent}44`, background: "rgba(255,255,255,0.04)", position: "sticky", top: 0, zIndex: 1 }}>
-                  <TagIconRenderer icon={group.icon} size={10} />
+                  <TagIconRenderer icon={group.icon} size={10} themeColor={theme.primary} />
                   <span style={{ fontSize: 11, color: theme.heading, flex: 1, opacity: 0.9 }}>{group.label}</span>
                   <span style={{ fontSize: 10, color: theme.muted }}>{group.items.length}</span>
                 </div>
@@ -444,7 +484,7 @@ function ShareLocationManagerPanel({
                 return (
                   <div key={location.id} onClick={() => onSelectLocation(location)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 14px", cursor: "pointer", borderBottom: `1px solid ${theme.accent}33`, transition: "background 0.1s" }}>
                     <div style={{ flexShrink: 0 }}>
-                      {tagValue ? <TagIconRenderer icon={tagValue.icon} size={12} /> : <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(150,130,100,0.3)", border: "1px solid rgba(150,130,100,0.4)" }} />}
+                      {tagValue ? <TagIconRenderer icon={tagValue.icon} size={12} themeColor={theme.primary} /> : <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(150,130,100,0.3)", border: "1px solid rgba(150,130,100,0.4)" }} />}
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontSize: 13, color: theme.heading, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{location.name}</div>
@@ -472,6 +512,7 @@ function ShareEventManagerPanel({
   onSelectEvent,
   displayMode,
   onDisplayModeChange,
+  onVisibleEventsChange,
 }: {
   theme: MapTheme;
   events: MapEvent[];
@@ -480,6 +521,7 @@ function ShareEventManagerPanel({
   onSelectEvent: (eventItem: MapEvent) => void;
   displayMode: EventDisplayMode;
   onDisplayModeChange: (mode: EventDisplayMode) => void;
+  onVisibleEventsChange?: (events: MapEvent[]) => void;
 }) {
   const [search, setSearch] = useState("");
   const [tagFilter, setTagFilter] = useState<Record<string, Set<string>>>({});
@@ -524,6 +566,10 @@ function ShareEventManagerPanel({
 
     return next.map((item) => item.eventItem);
   }, [categories, events, search, sortOrder, tagFilter]);
+
+  useEffect(() => {
+    onVisibleEventsChange?.(filteredEvents);
+  }, [filteredEvents, onVisibleEventsChange]);
 
   const toggleTagFilter = (categoryId: string, valueId: string) => {
     setTagFilter((prev) => {
@@ -627,7 +673,7 @@ function ShareEventManagerPanel({
                       const isOn = activeCategoryFilter?.has(value.id) ?? false;
                       return (
                         <button key={value.id} onClick={() => toggleTagFilter(category.id, value.id)} style={{ padding: "3px 8px", borderRadius: 20, fontSize: 11, display: "flex", alignItems: "center", gap: 4, cursor: "pointer", border: `1px solid ${isOn ? theme.primary : "rgba(180,140,60,0.25)"}`, background: isOn ? `${theme.primary}22` : "transparent", color: isOn ? theme.primary : theme.muted, transition: "all 0.15s" }}>
-                          <TagIconRenderer icon={value.icon} size={9} />
+                          <TagIconRenderer icon={value.icon} size={9} themeColor={theme.primary} />
                           {value.label}
                         </button>
                       );
@@ -654,7 +700,7 @@ function ShareEventManagerPanel({
             return (
               <div key={eventItem.id} onClick={() => onSelectEvent(eventItem)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 14px", cursor: "pointer", borderBottom: `1px solid ${theme.accent}33`, transition: "background 0.1s" }}>
                 <div style={{ flexShrink: 0 }}>
-                  {tagValue ? <TagIconRenderer icon={tagValue.icon} size={12} /> : <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(150,130,100,0.3)", border: "1px solid rgba(150,130,100,0.4)" }} />}
+                  {tagValue ? <TagIconRenderer icon={tagValue.icon} size={12} themeColor={theme.primary} /> : <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(150,130,100,0.3)", border: "1px solid rgba(150,130,100,0.4)" }} />}
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: 13, color: theme.heading, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{eventItem.name}</div>
@@ -753,7 +799,7 @@ function LegendCard({
           </div>
           {category.values.map((value) => (
             <div key={value.id} style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-              <TagIconRenderer icon={value.icon} size={10} />
+              <TagIconRenderer icon={value.icon} size={10} themeColor={theme.primary} />
               <span style={{ color: theme.heading, opacity: 0.8 }}>{value.label}</span>
             </div>
           ))}
@@ -770,6 +816,10 @@ function ReadOnlyDetailPanel({
   onClose,
   headerMeta,
   extraSection,
+  onPrevious,
+  onNext,
+  canGoPrevious = false,
+  canGoNext = false,
 }: {
   entity: MapLocation | MapEvent;
   categories: TagCategory[];
@@ -777,6 +827,10 @@ function ReadOnlyDetailPanel({
   onClose: () => void;
   headerMeta?: string | null;
   extraSection?: React.ReactNode;
+  onPrevious?: () => void;
+  onNext?: () => void;
+  canGoPrevious?: boolean;
+  canGoNext?: boolean;
 }) {
   const divider = (
     <div style={{ height: 1, background: theme.accent, margin: "0 -16px", opacity: 0.5, flexShrink: 0 }} />
@@ -800,7 +854,39 @@ function ReadOnlyDetailPanel({
         fontFamily: "Georgia, serif",
       }}
     >
-      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 36 }}>
+      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 96 }}>
+        <button
+          onClick={onPrevious}
+          disabled={!canGoPrevious}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 58,
+            background: "none",
+            border: "none",
+            color: canGoPrevious ? theme.muted : `${theme.muted}66`,
+            cursor: canGoPrevious ? "pointer" : "not-allowed",
+            padding: 4,
+          }}
+        >
+          ↑
+        </button>
+        <button
+          onClick={onNext}
+          disabled={!canGoNext}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 34,
+            background: "none",
+            border: "none",
+            color: canGoNext ? theme.muted : `${theme.muted}66`,
+            cursor: canGoNext ? "pointer" : "not-allowed",
+            padding: 4,
+          }}
+        >
+          ↓
+        </button>
         <button
           onClick={onClose}
           style={{
@@ -852,7 +938,7 @@ function ReadOnlyDetailPanel({
                   border: `1px solid ${category.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}`,
                 }}
               >
-                <TagIconRenderer icon={value.icon} size={10} />
+                <TagIconRenderer icon={value.icon} size={10} themeColor={theme.primary} />
                 <span style={{ fontSize: 11, color: category.isLegend ? theme.primary : theme.muted }}>
                   {value.label}
                 </span>
@@ -915,6 +1001,10 @@ function ReadOnlyLocationDetailPanel({
   relatedEvents,
   eventLegendCategory,
   onSelectEvent,
+  onPrevious,
+  onNext,
+  canGoPrevious = false,
+  canGoNext = false,
 }: {
   location: MapLocation;
   categories: TagCategory[];
@@ -923,6 +1013,10 @@ function ReadOnlyLocationDetailPanel({
   relatedEvents: MapEvent[];
   eventLegendCategory: TagCategory | null;
   onSelectEvent: (eventItem: MapEvent) => void;
+  onPrevious?: () => void;
+  onNext?: () => void;
+  canGoPrevious?: boolean;
+  canGoNext?: boolean;
 }) {
   const divider = (
     <div style={{ height: 1, background: theme.accent, margin: "0 -16px", opacity: 0.5, flexShrink: 0 }} />
@@ -946,7 +1040,39 @@ function ReadOnlyLocationDetailPanel({
         fontFamily: "Georgia, serif",
       }}
     >
-      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 36 }}>
+      <div style={{ padding: "14px 16px 12px", flexShrink: 0, paddingRight: 96 }}>
+        <button
+          onClick={onPrevious}
+          disabled={!canGoPrevious}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 58,
+            background: "none",
+            border: "none",
+            color: canGoPrevious ? theme.muted : `${theme.muted}66`,
+            cursor: canGoPrevious ? "pointer" : "not-allowed",
+            padding: 4,
+          }}
+        >
+          ↑
+        </button>
+        <button
+          onClick={onNext}
+          disabled={!canGoNext}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 34,
+            background: "none",
+            border: "none",
+            color: canGoNext ? theme.muted : `${theme.muted}66`,
+            cursor: canGoNext ? "pointer" : "not-allowed",
+            padding: 4,
+          }}
+        >
+          ↓
+        </button>
         <button
           onClick={onClose}
           style={{
@@ -989,7 +1115,7 @@ function ReadOnlyLocationDetailPanel({
                   border: `1px solid ${category.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}`,
                 }}
               >
-                <TagIconRenderer icon={value.icon} size={10} />
+                <TagIconRenderer icon={value.icon} size={10} themeColor={theme.primary} />
                 <span style={{ fontSize: 11, color: category.isLegend ? theme.primary : theme.muted }}>
                   {value.label}
                 </span>
@@ -1202,7 +1328,7 @@ function ShareTagManagerPanel({
                   <div style={{ padding: "0 14px 10px 32px", display: "flex", flexDirection: "column", gap: 6 }}>
                     {category.values.map((value) => (
                       <div key={value.id} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                        <TagIconRenderer icon={value.icon} size={11} />
+                        <TagIconRenderer icon={value.icon} size={11} themeColor={theme.primary} />
                         <span style={{ color: theme.heading, fontSize: 12, opacity: 0.88 }}>{value.label}</span>
                       </div>
                     ))}
@@ -1491,7 +1617,7 @@ function ShareFilterPanel({
                               </svg>
                             )}
                           </div>
-                          <TagIconRenderer icon={value.icon} size={11} />
+                          <TagIconRenderer icon={value.icon} size={11} themeColor={theme.primary} />
                           <span style={{ color: theme.heading, fontSize: 12, opacity: 0.85, lineHeight: 1.3 }}>
                             {value.label}
                           </span>
@@ -1580,13 +1706,15 @@ function decodeMapFromHash(): MapProject | null {
 
 export function ShareMapView() {
   const [map, setMap] = useState<MapProject | null>(() => decodeMapFromHash());
-  const theme = map ? (MAP_THEMES.find((item) => item.id === map.themeId) ?? MAP_THEMES[0]!) : MAP_THEMES[0]!;
+  const theme = getMapTheme(map?.themeId, map?.themeMode);
   const [panelRoute, setPanelRoute] = useState<PanelRoute>(null);
   const [tagManagerOpen, setTagManagerOpen] = useState(false);
   const [tagManagerTab, setTagManagerTab] = useState<FilterTab>("locations");
   const [eventDisplayMode, setEventDisplayMode] = useState<EventDisplayMode>("expanded");
   const [expandedEventLocationId, setExpandedEventLocationId] = useState<string | null>(null);
   const [temporaryFocusedEventId, setTemporaryFocusedEventId] = useState<string | null>(null);
+  const [visibleLocationManagerIds, setVisibleLocationManagerIds] = useState<string[]>([]);
+  const [visibleEventManagerIds, setVisibleEventManagerIds] = useState<string[]>([]);
   const [view, setView] = useState<MapViewState>({ scale: 1, translateX: 0, translateY: 0 });
   const [filter, setFilter] = useState<ShareFilterState>(() => buildDefaultFilter(map?.tagCategories ?? [], map?.eventTagCategories ?? []));
   const [legendPanels, setLegendPanels] = useState<Record<LegendPanelKey, LegendPanelState>>({
@@ -1651,6 +1779,20 @@ export function ShareMapView() {
   const relatedEvents = selectedLocation
     ? (map?.events.filter((eventItem) => getEventLocationId(eventItem) === selectedLocation.id) ?? [])
     : [];
+  const locationManagerIndex = currentLocationDetail?.backTo === "location-manager"
+    ? visibleLocationManagerIds.indexOf(currentLocationDetail.locationId)
+    : -1;
+  const previousLocationId = locationManagerIndex > 0 ? visibleLocationManagerIds[locationManagerIndex - 1] ?? null : null;
+  const nextLocationId = locationManagerIndex >= 0 && locationManagerIndex < visibleLocationManagerIds.length - 1
+    ? visibleLocationManagerIds[locationManagerIndex + 1] ?? null
+    : null;
+  const eventManagerIndex = currentEventDetail?.backTo === "event-manager"
+    ? visibleEventManagerIds.indexOf(currentEventDetail.eventId)
+    : -1;
+  const previousEventId = eventManagerIndex > 0 ? visibleEventManagerIds[eventManagerIndex - 1] ?? null : null;
+  const nextEventId = eventManagerIndex >= 0 && eventManagerIndex < visibleEventManagerIds.length - 1
+    ? visibleEventManagerIds[eventManagerIndex + 1] ?? null
+    : null;
   const markerScale = {
     location: map?.markerScale?.location ?? 100,
     event: map?.markerScale?.event ?? 100,
@@ -2003,18 +2145,7 @@ export function ShareMapView() {
         touchAction: "none",
       }}
     >
-      <div
-        style={{
-          padding: "8px 14px",
-          background: "rgba(0,0,0,0.5)",
-          borderBottom: `1px solid ${theme.accent}`,
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          flexShrink: 0,
-          minHeight: 44,
-        }}
-      >
+      <div style={topBarStyle(theme)}>
         <div style={{ fontSize: 15, fontWeight: "bold", color: theme.heading, letterSpacing: 1 }}>
           {map.name}
         </div>
@@ -2188,6 +2319,7 @@ export function ShareMapView() {
                 <Marker
                   key={location.id}
                   entity={location}
+                  theme={theme}
                   legendCategory={locationLegendCategory}
                   isSelected={selectedLocation?.id === location.id}
                   scalePercent={markerScale.location}
@@ -2204,6 +2336,7 @@ export function ShareMapView() {
                 <Marker
                   key={eventItem.id}
                   entity={eventItem}
+                  theme={theme}
                   legendCategory={eventLegendCategory}
                   isSelected={selectedEvent?.id === eventItem.id}
                   scalePercent={markerScale.event}
@@ -2217,7 +2350,7 @@ export function ShareMapView() {
           </div>
         </div>
 
-        {panelRoute?.kind === "location-manager" && (
+        {(panelRoute?.kind === "location-manager" || currentLocationDetail?.backTo === "location-manager") && (
           <ShareLocationManagerPanel
             theme={theme}
             locations={map.locations}
@@ -2226,10 +2359,13 @@ export function ShareMapView() {
             onSelectLocation={(location) => {
               openLocationDetail(location.id, "location-manager");
             }}
+            onVisibleLocationsChange={(locations) => {
+              setVisibleLocationManagerIds(locations.map((location) => location.id));
+            }}
           />
         )}
 
-        {panelRoute?.kind === "event-manager" && (
+        {(panelRoute?.kind === "event-manager" || currentEventDetail?.backTo === "event-manager") && (
           <ShareEventManagerPanel
             theme={theme}
             events={map.events}
@@ -2245,6 +2381,9 @@ export function ShareMapView() {
                 setTemporaryFocusedEventId(null);
                 setExpandedEventLocationId(null);
               }
+            }}
+            onVisibleEventsChange={(events) => {
+              setVisibleEventManagerIds(events.map((eventItem) => eventItem.id));
             }}
           />
         )}
@@ -2271,6 +2410,10 @@ export function ShareMapView() {
             relatedEvents={relatedEvents}
             eventLegendCategory={eventLegendCategory}
             onSelectEvent={handleLocationEventClick}
+            onPrevious={previousLocationId ? () => openLocationDetail(previousLocationId, "location-manager") : undefined}
+            onNext={nextLocationId ? () => openLocationDetail(nextLocationId, "location-manager") : undefined}
+            canGoPrevious={Boolean(previousLocationId)}
+            canGoNext={Boolean(nextLocationId)}
           />
         )}
 
@@ -2281,6 +2424,10 @@ export function ShareMapView() {
             theme={theme}
             onClose={closePanel}
             headerMeta={formatEventTime(selectedEvent.time)}
+            onPrevious={previousEventId ? () => openEventDetail(previousEventId, "event-manager") : undefined}
+            onNext={nextEventId ? () => openEventDetail(nextEventId, "event-manager") : undefined}
+            canGoPrevious={Boolean(previousEventId)}
+            canGoNext={Boolean(nextEventId)}
           />
         )}
       </div>

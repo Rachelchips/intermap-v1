@@ -13,8 +13,8 @@
  */
 
 import { createContext, useContext, useReducer, useEffect, useRef } from "react";
-import type { IntermapState, MapProject, MapLocation, MapEvent, TagCategory, TagValue, HistoryEntry } from "../types/intermap-types";
-import { MAP_THEMES } from "../types/intermap-types";
+import type { IntermapState, MapProject, MapLocation, MapEvent, TagCategory, TagValue, HistoryEntry, MapThemeMode } from "../types/intermap-types";
+import { DEFAULT_MAP_THEME_MODE, getMapTheme } from "../types/intermap-types";
 import { INITIAL_LOCATIONS } from "../data/locations-data";
 import { createBuiltInTramireMap } from "../data/tramire-map";
 import { createDefaultEventTagCategories, normalizeMapProject } from "@/lib/intermap-helpers";
@@ -95,6 +95,7 @@ const TRAMIRE_MAP: MapProject = {
   nameEn: "Tramire Continent",
   imageUrl: "https://static.step1.dev/30f593e11fbf22b47a0cf60b4e3696e3",
   themeId: "parchment",
+  themeMode: DEFAULT_MAP_THEME_MODE,
   tagCategories: DEFAULT_TAG_CATEGORIES,
   locations: buildInitialLocations(),
   eventTagCategories: createDefaultEventTagCategories(buildInitialLocations()),
@@ -103,8 +104,17 @@ const TRAMIRE_MAP: MapProject = {
   updatedAt: Date.now(),
 };
 
+function patchBuiltInTramireMap(map: MapProject): MapProject {
+  if (map.id !== "tramire") return map;
+  return {
+    ...map,
+    themeId: "parchment",
+    themeMode: DEFAULT_MAP_THEME_MODE,
+  };
+}
+
 function getBuiltInTramireMap(): MapProject {
-  return normalizeMapProject(createBuiltInTramireMap());
+  return normalizeMapProject(patchBuiltInTramireMap(createBuiltInTramireMap()));
 }
 
 const BUILT_IN_TRAMIRE_MAP: MapProject = getBuiltInTramireMap();
@@ -120,8 +130,9 @@ export type IntermapAction =
   | { type: "SET_ACTIVE_MAP"; mapId: string }
   | { type: "CREATE_MAP"; map: MapProject }
   | { type: "DELETE_MAP"; mapId: string }
-  | { type: "UPDATE_MAP_META"; mapId: string; name: string; nameEn?: string; themeId: string }
+  | { type: "UPDATE_MAP_META"; mapId: string; name: string; nameEn?: string; themeId: string; themeMode: MapThemeMode }
   | { type: "UPDATE_MAP_IMAGE"; mapId: string; imageUrl: string }
+  | { type: "UPDATE_MARKER_SCALE"; mapId: string; markerScale: { location: number; event: number } }
   | { type: "ADD_LOCATION"; mapId: string; location: MapLocation }
   | { type: "UPDATE_LOCATION"; mapId: string; location: MapLocation }
   | { type: "DELETE_LOCATION"; mapId: string; locationId: string }
@@ -165,10 +176,24 @@ function reducer(state: IntermapState, action: IntermapAction): IntermapState {
     }
 
     case "UPDATE_MAP_META":
-      return updateMap(state, action.mapId, (m) => ({ ...m, name: action.name, nameEn: action.nameEn, themeId: action.themeId, updatedAt: Date.now() }));
+      return updateMap(state, action.mapId, (m) => ({
+        ...m,
+        name: action.name,
+        nameEn: action.nameEn,
+        themeId: action.themeId,
+        themeMode: action.themeMode,
+        updatedAt: Date.now(),
+      }));
 
     case "UPDATE_MAP_IMAGE":
       return updateMap(state, action.mapId, (m) => ({ ...m, imageUrl: action.imageUrl, updatedAt: Date.now() }));
+
+    case "UPDATE_MARKER_SCALE":
+      return updateMap(state, action.mapId, (m) => ({
+        ...m,
+        markerScale: action.markerScale,
+        updatedAt: Date.now(),
+      }));
 
     case "ADD_LOCATION":
       return updateMap(state, action.mapId, (m) => ({ ...m, locations: [...m.locations, action.location], updatedAt: Date.now() }));
@@ -350,7 +375,9 @@ function migrateCurrentState(saved: IntermapState): IntermapState {
   const savedMaps = Array.isArray(saved.maps) ? saved.maps : [];
   const maps = savedMaps.length > 0
     ? savedMaps.map((map) => {
-        const patched = map.id === TRAMIRE_MAP_ID ? { ...map, imageUrl: TRAMIRE_IMAGE_URL } : map;
+        const patched = map.id === TRAMIRE_MAP_ID
+          ? patchBuiltInTramireMap({ ...map, imageUrl: TRAMIRE_IMAGE_URL })
+          : map;
         return migrateRemovedShapeIcons(patched as MapProject);
       })
     : [getBuiltInTramireMap()];
@@ -480,7 +507,7 @@ export function IntermapProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => { saveState(state); }, [state]);
 
   const activeMap = state.maps.find((m) => m.id === state.activeMapId) ?? null;
-  const theme = activeMap ? (MAP_THEMES.find((t) => t.id === activeMap.themeId) ?? MAP_THEMES[0]!) : null;
+  const theme = activeMap ? getMapTheme(activeMap.themeId, activeMap.themeMode ?? DEFAULT_MAP_THEME_MODE) : null;
 
   return (
     <IntermapContext.Provider value={{

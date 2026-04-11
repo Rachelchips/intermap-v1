@@ -308,7 +308,7 @@ export function IntermapFilterPanel({
                             </svg>
                           )}
                         </div>
-                        <TagIconRenderer icon={val.icon} size={11} />
+                        <TagIconRenderer icon={val.icon} size={11} themeColor={themeColor} />
                         <span style={{ color: themeHeading, fontSize: 12, opacity: 0.85, lineHeight: 1.3 }}>
                           {val.label}
                         </span>

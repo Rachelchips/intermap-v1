@@ -686,94 +686,94 @@ const headers = ((m2) => function headersRouteRule(event) {
 const assets = {
   "/cmap.json": {
     "type": "application/json",
-    "etag": '"1a2d-GAcQOy6FcFrtDv581iGtiwRyOQw"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 6701,
+    "etag": '"1b48-KvaN+sX+x1BcZutd322LKp0MrG4"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 6984,
     "path": "../public/cmap.json"
   },
-  "/favicon.png": {
+  "/薯条汪.png": {
     "type": "image/png",
-    "etag": '"2f26-SUsUGQYDIuLPHRjWS/GbvdL8x8Y"',
-    "mtime": "2026-04-10T00:54:27.331Z",
-    "size": 12070,
-    "path": "../public/favicon.png"
+    "etag": '"de7b0-Pfvm18292R2jHwepu1BSUgAbaXY"',
+    "mtime": "2026-03-14T12:24:33.277Z",
+    "size": 911280,
+    "path": "../public/薯条汪.png"
   },
   "/assets/global-CpvDra7l.css": {
     "type": "text/css; charset=utf-8",
     "etag": '"1a69e-HeYakv8BtxJDpqXgPn6ggvqRxrA"',
-    "mtime": "2026-04-10T09:06:53.645Z",
+    "mtime": "2026-04-11T04:26:18.434Z",
     "size": 108190,
     "path": "../public/assets/global-CpvDra7l.css"
   },
-  "/assets/index-BOtiwwCW.js": {
+  "/assets/index-DzjSlN8E.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": '"1b5d2-M6Z/e9poUTsMADexaZWmHq9t2Co"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 112082,
-    "path": "../public/assets/index-BOtiwwCW.js"
+    "etag": '"1ed53-Mn6B1kojYK8Vv3Dl2GST0+5xxYI"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 126291,
+    "path": "../public/assets/index-DzjSlN8E.js"
   },
-  "/assets/index-BOtiwwCW.js.map": {
+  "/assets/index-DzjSlN8E.js.map": {
     "type": "application/json",
-    "etag": '"5d30b-KwRqqICzvCVp12WsAsTPzvjZRNg"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 381707,
-    "path": "../public/assets/index-BOtiwwCW.js.map"
+    "etag": '"6b375-vjDn2NrPdZzkKFp6OPPqJKAgEbk"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 439157,
+    "path": "../public/assets/index-DzjSlN8E.js.map"
   },
-  "/assets/link-DlWnNCw5.js": {
+  "/assets/link-CogEqa09.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": '"41c72-KEwAj+/wkQbSGNWQvr+boekZU/8"',
-    "mtime": "2026-04-10T09:06:53.645Z",
+    "etag": '"41c72-aZPRdjh2KB6Gw9VTv6bkgnaxDRs"',
+    "mtime": "2026-04-11T04:26:18.434Z",
     "size": 269426,
-    "path": "../public/assets/link-DlWnNCw5.js"
+    "path": "../public/assets/link-CogEqa09.js"
   },
-  "/assets/link-DlWnNCw5.js.map": {
+  "/assets/link-CogEqa09.js.map": {
     "type": "application/json",
-    "etag": '"d90ef-+yxhCJxzuilKbfS2wxP7eo77WRs"',
-    "mtime": "2026-04-10T09:06:53.646Z",
+    "etag": '"d90ef-SM41k6Xwzx3F3ouKLSX4ySqcZCE"',
+    "mtime": "2026-04-11T04:26:18.434Z",
     "size": 889071,
-    "path": "../public/assets/link-DlWnNCw5.js.map"
+    "path": "../public/assets/link-CogEqa09.js.map"
   },
-  "/assets/main-CtLKFhek.js": {
+  "/assets/main-Bs3StLSF.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": '"7065f-HwwVQ9Jr2Olg23cuX/MDOAz7+uA"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 460383,
-    "path": "../public/assets/main-CtLKFhek.js"
+    "etag": '"7100a-Jk/JLzgAueFaYyuSZ9xrg1hWxvA"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 462858,
+    "path": "../public/assets/main-Bs3StLSF.js"
   },
-  "/assets/main-CtLKFhek.js.map": {
+  "/assets/main-Bs3StLSF.js.map": {
     "type": "application/json",
-    "etag": '"95753-6CXetYrcgh16hoiMVtvtRTCER1g"',
-    "mtime": "2026-04-10T09:06:53.646Z",
+    "etag": '"95753-zM9VxyTigo2gzqol7lXSHJMfKHg"',
+    "mtime": "2026-04-11T04:26:18.435Z",
     "size": 612179,
-    "path": "../public/assets/main-CtLKFhek.js.map"
+    "path": "../public/assets/main-Bs3StLSF.js.map"
   },
-  "/assets/share-rPsEVWeZ.js": {
+  "/assets/share-nsVs95js.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": '"a81a-OAv8z/Mllg2m9eEpt9MAX364eqY"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 43034,
-    "path": "../public/assets/share-rPsEVWeZ.js"
+    "etag": '"b2ee-VbGzjt4KXheAM8rqb/p0X3rwrBU"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 45806,
+    "path": "../public/assets/share-nsVs95js.js"
   },
-  "/assets/share-rPsEVWeZ.js.map": {
+  "/assets/share-nsVs95js.js.map": {
     "type": "application/json",
-    "etag": '"22f4e-IJTIiPSpd7AkDH8l2V7O1mChf4U"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 143182,
-    "path": "../public/assets/share-rPsEVWeZ.js.map"
+    "etag": '"25849-YeT1nUmmizK9p7bEZ2wAesbiigE"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 153673,
+    "path": "../public/assets/share-nsVs95js.js.map"
   },
-  "/assets/tag-icon-renderer-CX21eF6e.js": {
+  "/assets/tag-icon-renderer-DHGBAR2_.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": '"149d-z8lPitpm+tGx0YgTKc8Sc/Ktb5k"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 5277,
-    "path": "../public/assets/tag-icon-renderer-CX21eF6e.js"
+    "etag": '"168a-c61JfLlYri0/RffE6Wrs+j+epcc"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 5770,
+    "path": "../public/assets/tag-icon-renderer-DHGBAR2_.js"
   },
-  "/assets/tag-icon-renderer-CX21eF6e.js.map": {
+  "/assets/tag-icon-renderer-DHGBAR2_.js.map": {
     "type": "application/json",
-    "etag": '"5b63-ik28GwuNAS7ilzD/g1qTxsFkBvk"',
-    "mtime": "2026-04-10T09:06:53.645Z",
-    "size": 23395,
-    "path": "../public/assets/tag-icon-renderer-CX21eF6e.js.map"
+    "etag": '"629c-T+vaweq1Er+cZCoTrNXeT2P6cVA"',
+    "mtime": "2026-04-11T04:26:18.434Z",
+    "size": 25244,
+    "path": "../public/assets/tag-icon-renderer-DHGBAR2_.js.map"
   }
 };
 function readAsset(id2) {
@@ -20729,7 +20729,7 @@ function getResponse() {
 }
 async function getStartManifest(matchedRoutes) {
   const { tsrStartManifest: tsrStartManifest2 } = await Promise.resolve().then(function() {
-    return _tanstackStartManifest_vFBmtICjS;
+    return _tanstackStartManifest_vCwbVSXTy;
   });
   const startManifest = tsrStartManifest2();
   const rootRoute = startManifest.routes[rootRouteId] = startManifest.routes[rootRouteId] || {};
@@ -21300,7 +21300,7 @@ let baseManifestPromise;
 let cachedFinalManifestPromise;
 async function loadEntries() {
   const routerEntry = await Promise.resolve().then(function() {
-    return routerCMlnZ58L;
+    return routerEkiRBOP;
   }).then((n2) => n2.r);
   const startEntry = await Promise.resolve().then(function() {
     return startHYkvq4Ni;
@@ -21735,8 +21735,8 @@ const ssrRenderer$1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   default: ssrRenderer
 });
-const tsrStartManifest = () => ({ "routes": { "__root__": { "filePath": "E:/Play/intermap/code (5)/src/routes/__root.tsx", "children": ["/", "/share", "/api/trpc/$"], "preloads": ["/assets/main-CtLKFhek.js"], "assets": [] }, "/": { "filePath": "E:/Play/intermap/code (5)/src/routes/index.tsx", "assets": [], "preloads": ["/assets/index-BOtiwwCW.js", "/assets/tag-icon-renderer-CX21eF6e.js"] }, "/share": { "filePath": "E:/Play/intermap/code (5)/src/routes/share.tsx", "assets": [], "preloads": ["/assets/share-rPsEVWeZ.js", "/assets/tag-icon-renderer-CX21eF6e.js"] }, "/api/trpc/$": { "filePath": "E:/Play/intermap/code (5)/src/routes/api/trpc.$.ts" } }, "clientEntry": "/assets/main-CtLKFhek.js" });
-const _tanstackStartManifest_vFBmtICjS = /* @__PURE__ */ Object.freeze({
+const tsrStartManifest = () => ({ "routes": { "__root__": { "filePath": "E:/Play/intermap/code (5)/src/routes/__root.tsx", "children": ["/", "/share", "/api/trpc/$"], "preloads": ["/assets/main-Bs3StLSF.js"], "assets": [] }, "/": { "filePath": "E:/Play/intermap/code (5)/src/routes/index.tsx", "assets": [], "preloads": ["/assets/index-DzjSlN8E.js", "/assets/tag-icon-renderer-DHGBAR2_.js"] }, "/share": { "filePath": "E:/Play/intermap/code (5)/src/routes/share.tsx", "assets": [], "preloads": ["/assets/share-nsVs95js.js", "/assets/tag-icon-renderer-DHGBAR2_.js"] }, "/api/trpc/$": { "filePath": "E:/Play/intermap/code (5)/src/routes/api/trpc.$.ts" } }, "clientEntry": "/assets/main-Bs3StLSF.js" });
+const _tanstackStartManifest_vCwbVSXTy = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   tsrStartManifest
 });
@@ -42412,12 +42412,12 @@ const z2 = /* @__PURE__ */ Object.freeze({
   xid,
   xor
 });
-const globalCss = "/assets/global-CpvDra7l.css";
+const globalCss = "/assets/global-D9l0SGpm.css";
 const queryClient = new QueryClient();
 const lazyServerLink = (runtime) => (ctx) => observable((observer) => {
   let sub;
   Promise.resolve().then(function() {
-    return linkB3HxvImo;
+    return linkBDjDZxJ6;
   }).then(
     ({ serverLink: serverLink2 }) => sub = serverLink2(runtime)(ctx).subscribe(observer),
     (err) => observer.error(err)
@@ -42444,16 +42444,230 @@ createTRPCOptionsProxy({
   queryClient
 });
 function TrpcProvider(props) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, "data-cid": "L5v4x65A", children: props.children });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, "data-cid": "8haOhEHI", children: props.children });
 }
+const DEFAULT_MAP_THEME_ID = "parchment";
+const DEFAULT_MAP_THEME_MODE = "dark";
 const MAP_THEMES = [
-  { id: "parchment", label: "羊皮纸", primary: "#C8A860", bg: "#1a1208", accent: "rgba(180,140,60,0.4)", heading: "#F0E0B0", muted: "#8A7050" },
-  { id: "ocean", label: "深海蓝", primary: "#60A8C8", bg: "#081420", accent: "rgba(60,120,180,0.4)", heading: "#B0D8F0", muted: "#507080" },
-  { id: "forest", label: "森林绿", primary: "#60C880", bg: "#081408", accent: "rgba(60,160,80,0.4)", heading: "#B0F0C0", muted: "#508060" },
-  { id: "ember", label: "赤焰红", primary: "#C86060", bg: "#200808", accent: "rgba(180,60,60,0.4)", heading: "#F0B0B0", muted: "#805050" },
-  { id: "dusk", label: "暮色紫", primary: "#A860C8", bg: "#140820", accent: "rgba(120,60,180,0.4)", heading: "#D8B0F0", muted: "#706080" },
-  { id: "snow", label: "冰雪白", primary: "#C8D0E8", bg: "#101418", accent: "rgba(160,170,200,0.4)", heading: "#E8EEF8", muted: "#808898" }
+  {
+    id: "parchment",
+    label: "羊皮纸",
+    primary: "#C8A860",
+    bg: "#1A1208",
+    accent: "#6E5422",
+    heading: "#F0E0B0",
+    muted: "#8A7050",
+    modes: {
+      dark: {
+        bg: "#1A1208",
+        accent: "#6E5422",
+        heading: "#F0E0B0",
+        muted: "#8A7050"
+      },
+      light: {
+        bg: "#F3E8CE",
+        accent: "#C9AC6A",
+        heading: "#4A3312",
+        muted: "#8B6A3E"
+      }
+    }
+  },
+  {
+    id: "ocean",
+    label: "深海蓝",
+    primary: "#4E86B7",
+    bg: "#0D1B26",
+    accent: "#2E5572",
+    heading: "#E2EDF5",
+    muted: "#84A2B8",
+    modes: {
+      dark: {
+        bg: "#0D1B26",
+        accent: "#2E5572",
+        heading: "#E2EDF5",
+        muted: "#84A2B8"
+      },
+      light: {
+        bg: "#EAF3F8",
+        accent: "#9EBED2",
+        heading: "#203B50",
+        muted: "#5F7C91"
+      }
+    }
+  },
+  {
+    id: "forest",
+    label: "苔林绿",
+    primary: "#6E9A63",
+    bg: "#10170F",
+    accent: "#466343",
+    heading: "#E6F0E0",
+    muted: "#8CA088",
+    modes: {
+      dark: {
+        bg: "#10170F",
+        accent: "#466343",
+        heading: "#E6F0E0",
+        muted: "#8CA088"
+      },
+      light: {
+        bg: "#EEF5EA",
+        accent: "#A7C49D",
+        heading: "#294127",
+        muted: "#667F60"
+      }
+    }
+  },
+  {
+    id: "ember",
+    label: "炉灰红",
+    primary: "#C6544B",
+    bg: "#1D100F",
+    accent: "#7F312C",
+    heading: "#F3DEDB",
+    muted: "#AE7A75",
+    modes: {
+      dark: {
+        bg: "#1D100F",
+        accent: "#7F312C",
+        heading: "#F3DEDB",
+        muted: "#AE7A75"
+      },
+      light: {
+        bg: "#FAECE8",
+        accent: "#D99A93",
+        heading: "#5D201C",
+        muted: "#8E5C58"
+      }
+    }
+  },
+  {
+    id: "snow",
+    label: "霜湖灰",
+    primary: "#8FA4B3",
+    bg: "#151A1F",
+    accent: "#4B6070",
+    heading: "#EEF4F7",
+    muted: "#8C9BA6",
+    modes: {
+      dark: {
+        bg: "#151A1F",
+        accent: "#4B6070",
+        heading: "#EEF4F7",
+        muted: "#8C9BA6"
+      },
+      light: {
+        bg: "#F2F6F8",
+        accent: "#C4D1D8",
+        heading: "#2B3B45",
+        muted: "#657782"
+      }
+    }
+  },
+  {
+    id: "blossom",
+    label: "花雾粉",
+    primary: "#CC7D9A",
+    bg: "#1E1217",
+    accent: "#7A4356",
+    heading: "#F6DFE8",
+    muted: "#A77A89",
+    modes: {
+      dark: {
+        bg: "#1E1217",
+        accent: "#7A4356",
+        heading: "#F6DFE8",
+        muted: "#A77A89"
+      },
+      light: {
+        bg: "#FCEFF3",
+        accent: "#E2B0C0",
+        heading: "#5B2438",
+        muted: "#8D5F70"
+      }
+    }
+  },
+  {
+    id: "mint",
+    label: "薄荷绿",
+    primary: "#56B79A",
+    bg: "#0D1714",
+    accent: "#2C6F60",
+    heading: "#E1F6F0",
+    muted: "#7EA69A",
+    modes: {
+      dark: {
+        bg: "#0D1714",
+        accent: "#2C6F60",
+        heading: "#E1F6F0",
+        muted: "#7EA69A"
+      },
+      light: {
+        bg: "#ECFBF6",
+        accent: "#A9DCCC",
+        heading: "#1E4F44",
+        muted: "#5D8B80"
+      }
+    }
+  },
+  {
+    id: "lemon",
+    label: "柠霜黄",
+    primary: "#C8B54E",
+    bg: "#1A180C",
+    accent: "#77691F",
+    heading: "#F5F0CF",
+    muted: "#9D9358",
+    modes: {
+      dark: {
+        bg: "#1A180C",
+        accent: "#77691F",
+        heading: "#F5F0CF",
+        muted: "#9D9358"
+      },
+      light: {
+        bg: "#FBF8E6",
+        accent: "#DCCC86",
+        heading: "#55470D",
+        muted: "#807233"
+      }
+    }
+  },
+  {
+    id: "lilac",
+    label: "浅丁香",
+    primary: "#9582C3",
+    bg: "#17131B",
+    accent: "#57487C",
+    heading: "#EEE7FA",
+    muted: "#8E83A7",
+    modes: {
+      dark: {
+        bg: "#17131B",
+        accent: "#57487C",
+        heading: "#EEE7FA",
+        muted: "#8E83A7"
+      },
+      light: {
+        bg: "#F3F0FB",
+        accent: "#C7BCE5",
+        heading: "#3D305F",
+        muted: "#6F6391"
+      }
+    }
+  }
 ];
+function resolveMapTheme(theme, mode = DEFAULT_MAP_THEME_MODE) {
+  const resolvedMode = mode === "light" ? "light" : "dark";
+  return {
+    ...theme,
+    ...theme.modes[resolvedMode]
+  };
+}
+function getMapTheme(themeId2, mode = DEFAULT_MAP_THEME_MODE) {
+  const theme = MAP_THEMES.find((item) => item.id === themeId2) ?? MAP_THEMES[0];
+  return resolveMapTheme(theme, mode);
+}
 const INITIAL_LOCATIONS = [
   { id: "illorien-spine", name: "伊洛希恩山脉", nameLatin: "The Illorien Spine", type: "natural", zone: "central_world_root_zone", zoneName: "中部 - 神树地带", faction: "none", description: "特兰米尔大洲中部纵贯南北的巨大山脉，山脊如脊骨般层叠挺立，覆盖常青林。", x: 59.1, y: 62.6 },
   { id: "aelfen-alp", name: "艾尔芬峰", nameLatin: "Aelfen Alp", type: "natural", zone: "central_world_root_zone", zoneName: "中部 - 神树地带", faction: "none", description: "伊洛希恩山脉的最高峰之一，神树所在之巅，岩壁陡峭，树根盘错，云气不散。", x: 67.3, y: 55.5 },
@@ -42501,12 +42715,13 @@ const name = "特兰米尔大洲";
 const nameEn = "Tramire Continent";
 const imageUrl = "https://static.step1.dev/30f593e11fbf22b47a0cf60b4e3696e3";
 const themeId = "parchment";
-const tagCategories = [{ "id": "type", "label": "地点类型", "isLegend": true, "isBuiltIn": true, "values": [{ "id": "city", "label": "城镇", "icon": { "kind": "shape", "shape": "square", "color": "#8B4513", "opacity": 1 } }, { "id": "natural", "label": "自然地貌", "icon": { "kind": "shape", "shape": "circle", "color": "#2D6A2D" } }, { "id": "sacred", "label": "圣地", "icon": { "kind": "shape", "shape": "circle", "color": "#6B21A8", "opacity": 1 } }, { "id": "ruin", "label": "废墟遗迹", "icon": { "kind": "shape", "shape": "circle", "color": "#5C4033", "opacity": 1, "borderColor": "#a89367" } }, { "id": "landmark", "label": "地标建筑", "icon": { "kind": "shape", "shape": "square", "color": "#1E40AF" } }] }, { "id": "faction", "label": "所属势力", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "human", "label": "人类", "icon": { "kind": "emoji", "emoji": "👑" } }, { "id": "treant", "label": "树精", "icon": { "kind": "emoji", "emoji": "🌳" } }, { "id": "elvenbranch", "label": "枝裔族", "icon": { "kind": "emoji", "emoji": "🌿" } }, { "id": "orc", "label": "兽人", "icon": { "kind": "emoji", "emoji": "⚔️" } }, { "id": "clawkin", "label": "裂爪族", "icon": { "kind": "emoji", "emoji": "🦅" } }, { "id": "none", "label": "无归属", "icon": { "kind": "emoji", "emoji": "❓️" } }] }, { "id": "zone", "label": "所属区域", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "central_world_root_zone", "label": "中部 - 神树地带", "icon": { "kind": "none" } }, { "id": "central_ancient_battlefield_zone", "label": "中部 - 古战场区", "icon": { "kind": "none" } }, { "id": "southern_aurelen_zone", "label": "南部 - 奥蕊岚", "icon": { "kind": "none" } }, { "id": "southwestern_sanlar_kingdom", "label": "西南部 - 圣岚王国", "icon": { "kind": "none" } }, { "id": "northwestern_merton_kingdom", "label": "西北部 - 梅顿王国", "icon": { "kind": "none" } }, { "id": "canal_zone_lando_duchy", "label": "运河地带 - 兰多公国", "icon": { "kind": "none" } }, { "id": "extreme_northwestern_wasteland", "label": "极西北部 - 西部荒原", "icon": { "kind": "none" } }, { "id": "northwestern_offshore_islands", "label": "西北部海面 - 铁礁群岛", "icon": { "kind": "none" } }, { "id": "lunar_creek_zone", "label": "沿神树区 - 月神溪地带", "icon": { "kind": "none" } }, { "id": "southeastern_forest_zone", "label": "东南部 - 密林地带", "icon": { "kind": "none" } }, { "id": "northeastern_marsh_zone", "label": "东北部 - 沼泽地带", "icon": { "kind": "none" } }, { "id": "eastern_coast_abandoned_zone", "label": "东部沿海 - 废弃海岸地带", "icon": { "kind": "none" } }, { "id": "forest_and_marsh_boundary_great_rift", "label": "密林和沼泽分界线 - 大裂隙", "icon": { "kind": "none" } }] }];
-const locations = [{ "id": "illorien-spine", "name": "伊洛希恩山脉", "nameEn": "The Illorien Spine", "description": "特兰米尔大洲中部纵贯南北的巨大山脉，山脊如脊骨般层叠挺立，覆盖常青林。", "x": 59.1, "y": 62.6, "tags": { "type": "natural", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-alp", "name": "艾尔芬峰", "nameEn": "Aelfen Alp", "description": "伊洛希恩山脉的最高峰之一，神树所在之巅，岩壁陡峭，树根盘错，云气不散。", "x": 67.3, "y": 55.5, "tags": { "type": "natural", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-floating-isles", "name": "艾尔芬浮空岛链", "nameEn": "The Aelfen Floating Isles", "description": "位于艾尔芬峰火山口上空的悬浮岛屿群，三大圣河的源头瀑布由此倾泻而下。", "x": 69.9, "y": 54.7, "tags": { "type": "natural", "faction": "treant", "zone": "central_world_root_zone" } }, { "id": "tree-of-illoriel", "name": "伊洛瑞尔神树", "nameEn": "The Tree of Illoriel", "description": "主干如山般粗壮，枝冠遮天蔽日，树根伸出三条河流。扎根于浮空岛链最大的主岛正中央。", "x": 68.2, "y": 58.5, "tags": { "type": "sacred", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "wulinda-ring", "name": "乌林达林环", "nameEn": "Wulinda Primeval Ring", "description": "古林密布、灵气浓郁的原始林海，树木高耸入云，遮天蔽日，是兽人与根之脉树精的原初圣地。", "x": 53.2, "y": 57.6, "tags": { "type": "natural", "faction": "orc", "zone": "central_world_root_zone" } }, { "id": "tree-sanix", "name": "叶之树撒尼克斯", "nameEn": "Tree of Sanix", "description": "封印黑巫撒尼克斯的古木，直插云霄，枝繁叶茂，生机勃勃。位于艾尔芬峰山脚下、乌林达林环的边缘地带。", "x": 59.3, "y": 44, "tags": { "type": "sacred", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-town", "name": "艾尔芬镇", "nameEn": "Aelfen", "description": "特兰米尔最热闹、最繁华的非王都聚落之一。镇中心的灵泉广场终年人潮涌动。整座城镇围绕着古老的根之树同心环状展开。", "x": 58.2, "y": 42.4, "tags": { "type": "city", "faction": "human", "zone": "central_world_root_zone" } }, { "id": "elarath", "name": "艾拉拉斯", "nameEn": "Elarath", "description": "圣岚古都，曾是魔法纪元时期文化与魔法中心，见证了禁咒魔法的施放，现为废墟遗迹。", "x": 48.6, "y": 48.2, "tags": { "type": "ruin", "faction": "none", "zone": "central_ancient_battlefield_zone" } }, { "id": "orindar", "name": "奥林达尔", "nameEn": "Orindar", "description": "梅顿古都，城墙厚重、堡垒森严，曾是军国主义与兽人部族融合的起点，如今仅余断壁残垣。", "x": 46.5, "y": 64.6, "tags": { "type": "ruin", "faction": "none", "zone": "central_ancient_battlefield_zone" } }, { "id": "aurelen-valley", "name": "奥蕊岚山谷", "nameEn": "Aurelen Valley", "description": "由三座环山包围的灵谷，泉水清澈，花藤交垂，气候四季如春。", "x": 69.8, "y": 34.2, "tags": { "type": "natural", "faction": "elvenbranch", "zone": "southern_aurelen_zone" } }, { "id": "tree-valsir", "name": "花之树瓦尔瑟尔", "nameEn": "Tree of Valsir", "description": "银干紫花，全年盛开，散发致幻孢子，封印着风/幻术黑巫瓦尔瑟尔的永恒梦境牢笼。", "x": 71.1, "y": 36.9, "tags": { "type": "sacred", "faction": "none", "zone": "southern_aurelen_zone" } }, { "id": "thalanthir", "name": "萨兰希尔", "nameEn": "Thalanthir", "description": "枝裔族都城，宛如自然幻境，建筑与山林共生，是魔法与艺术的交响之都。", "x": 69.9, "y": 37.5, "tags": { "type": "city", "faction": "elvenbranch", "zone": "southern_aurelen_zone" } }, { "id": "sanlar-river", "name": "圣岚河", "nameEn": "Sanlar River", "description": "水势平稳、清澈见底，沿岸肥沃，是圣岚文明的母亲河。发源于神树南侧悬崖，蜿蜒穿越西南平原。", "x": 45.7, "y": 41.8, "tags": { "type": "natural", "faction": "none", "zone": "southwestern_sanlar_kingdom" } }, { "id": "glass-mangrove", "name": "琉璃红树林海", "nameEn": "Crystal Mangrove Sea", "description": "植物因魔力过载而结晶化的巨型湿地，枝叶如半透明的翡翠琉璃。", "x": 30.2, "y": 23.3, "tags": { "type": "natural", "faction": "none", "zone": "southwestern_sanlar_kingdom" } }, { "id": "veyra-port", "name": "维罗港", "nameEn": "Veyra Port", "description": "圣岚王国的新都，拥有海上浮都之称的魔法重镇。城内以灰石塔楼与翠铜圆顶交错点缀，高塔林立的王宫伫立于峭壁之巅。", "x": 33.1, "y": 28.8, "tags": { "type": "city", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "sanlar-academy", "name": "圣岚魔法学院", "nameEn": "Sanlar Magic Academy", "description": "全大陆最具影响力的魔法教育中心，培养博学、优雅的术士与法师。建于维罗港城市内部。", "x": 32.2, "y": 26.1, "tags": { "type": "landmark", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "silvaran", "name": "西瓦兰港", "nameEn": "Silvaran", "description": "绿植环绕、港区高效，是圣岚最重要的外贸中转站。位于维岚运河的最南端出口，圣岚河的中游交汇处。", "x": 42.4, "y": 38.2, "tags": { "type": "city", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "merton-river", "name": "梅顿河", "nameEn": "Merton River", "description": "水流湍急，岩石嶙峋，沿岸多丘陵与矿脉。发源于神树西北侧，流经莱瑟顿后向西渗入静寂荒原地下。", "x": 37.9, "y": 64.9, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_merton_kingdom" } }, { "id": "black-sap-taiga", "name": "黑脂泰加林", "nameEn": "Black-Sap Taiga", "description": "干燥北境的黑色针叶林，树木流淌着极易燃的黑色燃油，是工业命脉。", "x": 35.4, "y": 57.1, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_merton_kingdom" } }, { "id": "lesserden", "name": "莱瑟顿", "nameEn": "Lesserden", "description": "梅顿王国的新都，分为地上工业城与地下熔炉城两层结构，有钢铁之穴的称号。", "x": 33.6, "y": 67.8, "tags": { "type": "city", "faction": "human", "zone": "northwestern_merton_kingdom" } }, { "id": "greymire", "name": "灰泽镇", "nameEn": "Greymire", "description": "靠近沼泽地带，建筑简朴坚固，是防范南部入侵的军事要镇。", "x": 41.5, "y": 63.8, "tags": { "type": "city", "faction": "human", "zone": "northwestern_merton_kingdom" } }, { "id": "veilrun-canal", "name": "维岚运河", "nameEn": "The Veilrun Canal", "description": "连接南北的商贸之脉，建于空根水道之上，河床是远古巨型气生根留下的木质外壳。", "x": 40.2, "y": 55.9, "tags": { "type": "natural", "faction": "none", "zone": "canal_zone_lando_duchy" } }, { "id": "meselia", "name": "梅瑟利亚", "nameEn": "Meselia", "description": "兰多公国的核心城邦。完全悬建在空根水道两壁探出的巨型板状真菌之上。夜间荧光孢子充当路灯，充满繁华与生机。", "x": 42.4, "y": 48.4, "tags": { "type": "city", "faction": "human", "zone": "canal_zone_lando_duchy" } }, { "id": "ashes-thorns", "name": "灰棘山脉", "nameEn": "The Ashes Thorns", "description": "山如刺背、灰黑嶙峋，火山灰终年飘洒，岩浆地缝纵横，阻挡了海风。", "x": 28.4, "y": 55.2, "tags": { "type": "natural", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "mount-seren", "name": "瑟芮恩火山", "nameEn": "Mount Seren", "description": "山腹仍有赤焰燃动，火山口已成硫磺湖泊的沉睡火山。", "x": 29.5, "y": 65.8, "tags": { "type": "natural", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "tree-seren", "name": "果之树瑟芮恩", "nameEn": "Tree of Seren", "description": "焦黑树干流淌着岩浆树脂，结出爆炸炎果，封印着火巫。生长于瑟芮恩火山顶部的硫磺湖泊正中心。", "x": 30.2, "y": 63.9, "tags": { "type": "sacred", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "varkhaz", "name": "瓦尔卡兹", "nameEn": "Varkhaz", "description": "由裂爪族建立，隐于山脉深处，地形崎岖，布满黑铁锻造工坊，是一座由力量意志筑成的山城。", "x": 26.1, "y": 58.1, "tags": { "type": "city", "faction": "clawkin", "zone": "extreme_northwestern_wasteland" } }, { "id": "iron-reef-archipelago", "name": "铁礁群岛", "nameEn": "Iron-Reef Archipelago", "description": "由无数含铁量极高的黑色岩石岛屿组成，磁场混乱，是走私犯与海盗的天然迷宫。", "x": 17.4, "y": 76.3, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_offshore_islands" } }, { "id": "lunareth", "name": "月神溪", "nameEn": "Lunareth", "description": "细细如绢的溪流，自神树之巅南麓泻下，曲折东行，在凯拉韦节点后一分为二。", "x": 64.9, "y": 67.4, "tags": { "type": "natural", "faction": "none", "zone": "lunar_creek_zone" } }, { "id": "caelave", "name": "凯拉韦", "nameEn": "Caelave", "description": "溪流绕村而过，枝裔族风格的藤蔓吊楼与石砌屋舍交错分布，是文化融合的象征。位于月神溪的中游分叉点。", "x": 69.8, "y": 64.9, "tags": { "type": "city", "faction": "elvenbranch", "zone": "lunar_creek_zone" } }, { "id": "greenveil-wood", "name": "格林威尔林地", "nameEn": "Greenveil Wood", "description": "藤蔓交错，灵花遍地的灵性密林。占据整个东南大陆的大部分区域。", "x": 77.5, "y": 62.6, "tags": { "type": "natural", "faction": "treant", "zone": "southeastern_forest_zone" } }, { "id": "moonfall-lake", "name": "落月湖", "nameEn": "Moonfall Lake", "description": "湖水如镜，常有蓝白光华沉于湖底，每逢满月湖心会显神秘光圈。", "x": 82.5, "y": 51.8, "tags": { "type": "natural", "faction": "treant", "zone": "southeastern_forest_zone" } }, { "id": "golden-mist-fens", "name": "黄金雾沼", "nameEn": "Golden Mist Fens", "description": "植被全为金黄色的湿地，水面漂浮金色落叶陷阱。", "x": 74.1, "y": 74.9, "tags": { "type": "natural", "faction": "treant", "zone": "northeastern_marsh_zone" } }, { "id": "kaedros-mire", "name": "凯德罗斯之泽", "nameEn": "Kaedros Mire", "description": "瘴气沉沉的黑沼泽，泥水中常有亡魂啼哭，是特兰米尔最为诡异之地。", "x": 74.8, "y": 78, "tags": { "type": "natural", "faction": "none", "zone": "northeastern_marsh_zone" } }, { "id": "black-tower", "name": "黑塔", "nameEn": "The Black Tower", "description": "塔身嵌满黑曜石，塔顶常年被雷霆包围，是禁忌之地。矗立于凯德罗斯之泽的正中央。", "x": 77.4, "y": 80.9, "tags": { "type": "landmark", "faction": "none", "zone": "northeastern_marsh_zone" } }, { "id": "root-bound-cliffs", "name": "盘根断崖", "nameEn": "Root-Bound Cliffs", "description": "高达数百米的灰白色木质悬崖，神树的一条巨型主根在此探入大海，海面下是沉船墓场。", "x": 90.6, "y": 74.8, "tags": { "type": "natural", "faction": "none", "zone": "eastern_coast_abandoned_zone" } }, { "id": "pale-strand", "name": "白滩", "nameEn": "The Pale Strand", "description": "没有沙子，铺满海滩的是白化的树精遗骸与神树枯枝，肃杀苍凉。", "x": 90.7, "y": 35.1, "tags": { "type": "natural", "faction": "none", "zone": "eastern_coast_abandoned_zone" } }, { "id": "rift-val-kareth", "name": "瓦尔卡雷斯裂隙", "nameEn": "The Rift of Val'Kareth", "description": "宽达数公里的无底深渊，两侧崖壁布满横跨的神树根系。呈正西-正东走向横贯东部。", "x": 80.6, "y": 69.4, "tags": { "type": "natural", "faction": "none", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "river-aetheria", "name": "以太利亚河", "nameEn": "River Aetheria", "description": "流淌着液态星光与极光的生命原液，触之即化为水晶。流淌于瓦尔卡雷斯裂隙的极深谷底。", "x": 82.7, "y": 68.9, "tags": { "type": "natural", "faction": "none", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "hanging-hives", "name": "悬巢部落", "nameEn": "Hanging Hives", "description": "流亡兽人与变异树精在崖壁根系上挖掘洞穴、搭建吊脚楼组成的垂直村落，以打捞底部的原液为生。", "x": 84.6, "y": 68.6, "tags": { "type": "city", "faction": "orc", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "loc_1775797451466_i2ot", "name": "大平原", "nameEn": "The great plain", "description": "位于梅顿与圣岚古都之间的平原，第二次双城之战的发生地。由于神树的诅咒而植被稀少、人迹罕至。", "x": 45.2, "y": 48.1, "tags": { "type": "natural", "faction": "human", "zone": "central_ancient_battlefield_zone" } }];
-const eventTagCategories = [{ "id": "event_type", "label": "历史时期", "isLegend": true, "isBuiltIn": true, "values": [{ "id": "default_event", "label": "魔法纪元（Arcane Era）", "icon": { "kind": "shape", "shape": "diamond", "color": "#C8A860", "borderColor": "#FFE066", "opacity": 0.85 } }, { "id": "val_1775794433160", "label": "震慑纪元（Era of Dreadbinding）", "icon": { "kind": "shape", "shape": "diamond", "color": "#8B4513", "opacity": 0.85, "borderColor": "#c8b292" } }, { "id": "val_1775794446614", "label": "混乱纪元（Era of the Shattered）", "icon": { "kind": "shape", "shape": "diamond", "color": "#5C4033", "opacity": 0.85, "borderColor": "#c8b29d" } }, { "id": "val_1775794458553", "label": "后魔法纪元（Post-Arcane Age）", "icon": { "kind": "shape", "shape": "diamond", "color": "#6B21A8", "opacity": 0.85, "borderColor": "#d9bbf7" } }, { "id": "val_1775809778797", "label": "神树纪元（Era of the Worldroot）", "icon": { "kind": "shape", "shape": "diamond", "color": "#eadfc8", "opacity": 1, "borderColor": "#f7f7f7" } }] }, { "id": "event_location", "label": "归属地点", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "none", "label": "无归属", "icon": { "kind": "none" } }, { "id": "illorien-spine", "label": "伊洛希恩山脉", "icon": { "kind": "none" } }, { "id": "aelfen-alp", "label": "艾尔芬峰", "icon": { "kind": "none" } }, { "id": "aelfen-floating-isles", "label": "艾尔芬浮空岛链", "icon": { "kind": "none" } }, { "id": "tree-of-illoriel", "label": "伊洛瑞尔神树", "icon": { "kind": "none" } }, { "id": "wulinda-ring", "label": "乌林达林环", "icon": { "kind": "none" } }, { "id": "tree-sanix", "label": "叶之树撒尼克斯", "icon": { "kind": "none" } }, { "id": "aelfen-town", "label": "艾尔芬镇", "icon": { "kind": "none" } }, { "id": "elarath", "label": "艾拉拉斯", "icon": { "kind": "none" } }, { "id": "orindar", "label": "奥林达尔", "icon": { "kind": "none" } }, { "id": "aurelen-valley", "label": "奥蕊岚山谷", "icon": { "kind": "none" } }, { "id": "tree-valsir", "label": "花之树瓦尔瑟尔", "icon": { "kind": "none" } }, { "id": "thalanthir", "label": "萨兰希尔", "icon": { "kind": "none" } }, { "id": "sanlar-river", "label": "圣岚河", "icon": { "kind": "none" } }, { "id": "glass-mangrove", "label": "琉璃红树林海", "icon": { "kind": "none" } }, { "id": "veyra-port", "label": "维罗港", "icon": { "kind": "none" } }, { "id": "sanlar-academy", "label": "圣岚魔法学院", "icon": { "kind": "none" } }, { "id": "silvaran", "label": "西瓦兰港", "icon": { "kind": "none" } }, { "id": "merton-river", "label": "梅顿河", "icon": { "kind": "none" } }, { "id": "black-sap-taiga", "label": "黑脂泰加林", "icon": { "kind": "none" } }, { "id": "lesserden", "label": "莱瑟顿", "icon": { "kind": "none" } }, { "id": "greymire", "label": "灰泽镇", "icon": { "kind": "none" } }, { "id": "veilrun-canal", "label": "维岚运河", "icon": { "kind": "none" } }, { "id": "meselia", "label": "梅瑟利亚", "icon": { "kind": "none" } }, { "id": "ashes-thorns", "label": "灰棘山脉", "icon": { "kind": "none" } }, { "id": "mount-seren", "label": "瑟芮恩火山", "icon": { "kind": "none" } }, { "id": "tree-seren", "label": "果之树瑟芮恩", "icon": { "kind": "none" } }, { "id": "varkhaz", "label": "瓦尔卡兹", "icon": { "kind": "none" } }, { "id": "iron-reef-archipelago", "label": "铁礁群岛", "icon": { "kind": "none" } }, { "id": "lunareth", "label": "月神溪", "icon": { "kind": "none" } }, { "id": "caelave", "label": "凯拉韦", "icon": { "kind": "none" } }, { "id": "greenveil-wood", "label": "格林威尔林地", "icon": { "kind": "none" } }, { "id": "moonfall-lake", "label": "落月湖", "icon": { "kind": "none" } }, { "id": "golden-mist-fens", "label": "黄金雾沼", "icon": { "kind": "none" } }, { "id": "kaedros-mire", "label": "凯德罗斯之泽", "icon": { "kind": "none" } }, { "id": "black-tower", "label": "黑塔", "icon": { "kind": "none" } }, { "id": "root-bound-cliffs", "label": "盘根断崖", "icon": { "kind": "none" } }, { "id": "pale-strand", "label": "白滩", "icon": { "kind": "none" } }, { "id": "rift-val-kareth", "label": "瓦尔卡雷斯裂隙", "icon": { "kind": "none" } }, { "id": "river-aetheria", "label": "以太利亚河", "icon": { "kind": "none" } }, { "id": "hanging-hives", "label": "悬巢部落", "icon": { "kind": "none" } }, { "id": "loc_1775797451466_i2ot", "label": "大平原", "icon": { "kind": "none" } }] }, { "id": "cat_1775809132917", "label": "事件类型", "isLegend": false, "isBuiltIn": false, "values": [{ "id": "none", "label": "其他", "icon": { "kind": "emoji", "emoji": "⭐" } }, { "id": "val_1775809395229", "label": "战争", "icon": { "kind": "emoji", "emoji": "⚔️" } }, { "id": "val_1775809408408", "label": "会议", "icon": { "kind": "emoji", "emoji": "📜" } }, { "id": "val_1775809424517", "label": "灾难", "icon": { "kind": "emoji", "emoji": "💀" } }, { "id": "val_1775809559120", "label": "圣事", "icon": { "kind": "emoji", "emoji": "🔆" } }] }];
-const events = /* @__PURE__ */ JSON.parse('[{"id":"evt_1775793837778_65nx","name":"艾尔芬二世第一次东征","nameEn":"The First Eastern Expedition of Aelfen II","time":{"kind":"point","value":"纪元971年"},"sortTime":{"era":"ce","year":971,"month":1,"day":1},"description":"纪元971年，圣岚的年轻国王艾尔芬二世（Aelfen II）率军沿圣岚河逆流而上，意图占领伊洛希恩山脉，却遭遇原住民树精族的激烈抵抗。面对自然魔法的神秘力量，装备冷兵器的王国军几近覆灭。艾尔芬带着残兵狼狈撤退，却也意外将魔法之火带回了人类世界。","x":51.9,"y":63.5,"tags":{"event_type":"default_event","event_location":"illorien-spine","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775794284352_kkw6","name":"艾尔芬二世第二次东征","nameEn":"The Second Eastern Expedition of Aelfen II","time":{"kind":"point","value":"纪元1050年"},"sortTime":{"era":"ce","year":1050,"month":1,"day":1},"description":"纪元1050年，110岁高龄的艾尔芬二世再度举兵东进，这一次，圣岚的魔法大军势如破竹，打得毫无戒备的树精族节节败退，最终登顶神树所在山峰。为纪念这场胜利，人们将神树之峰命名为艾尔芬峰（Aelfen Alp）。","x":65.2,"y":58.5,"tags":{"event_type":"default_event","event_location":"aelfen-alp","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775797630660_60tk","name":"第一次双城之战","nameEn":"The First Twin Cities War","time":{"kind":"range","start":"纪元680年","end":"纪元698年"},"sortTime":{"era":"ce","year":680,"month":1,"day":1},"description":"人类的好胜与野心引发两国持续数十年的征战，彼此消耗惨重，为后续的魔法引入和权力更迭埋下伏笔。","x":44.9,"y":52.2,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775797718721_wiab","name":"圣岚建国","nameEn":"Founding of Sanlar","time":{"kind":"point","value":"纪元1年"},"sortTime":{"era":"ce","year":1,"month":1,"day":1},"description":"人族在西南圣岚河中游建立农业文明，形成古国圣岚，定都艾拉拉斯。","x":48.7,"y":44.7,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"none"}},{"id":"evt_1775797925757_au6t","name":"梅顿建国","nameEn":"Founding of Merton","time":{"kind":"point","value":"纪元102年"},"sortTime":{"era":"ce","year":102,"month":1,"day":1},"description":"人族在西北梅顿河中游建立农业文明，形成古国梅顿，定都奥林达尔。","x":45,"y":62.3,"tags":{"event_type":"default_event","event_location":"orindar","cat_1775809132917":"none"}},{"id":"evt_1775798063640_97n6","name":"圣岚魔法议会成立","nameEn":"Establishment of the Sanlar Arcane Council","time":{"kind":"point","value":"纪元972年"},"sortTime":{"era":"ce","year":972,"month":1,"day":1},"description":"艾尔芬二世举全国之力发展魔法，组建由五位天才大法师（伊洛瑞尔、凯德罗斯、瑟芮恩、撒尼克斯、瓦尔瑟尔）构成的魔法议会。在这五位大法师长达八十年的共同推动下，一整套系统化、标准化的魔法体系应运而生，并迅速渗透至圣岚王国的军事、生产、医疗、教育等诸多领域。魔法的普及带来了前所未有的文明飞跃，极大增强了圣岚的国力。","x":50.3,"y":46.5,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"none"}},{"id":"evt_1775798337831_wbtd","name":"莱瑟顿一世东征","nameEn":"Eastern Expedition of Lesserden I","time":{"kind":"point","value":"纪元991年"},"sortTime":{"era":"ce","year":991,"month":1,"day":1},"description":"在南方圣岚王国大力发展魔法的同时，北境的强国梅顿亦不甘示弱。梅顿国王莱瑟顿一世率领重兵开启东征，大军穿越梅顿河进入伊洛希恩山脉寻找魔法力量。与南方不同，他们并未遇到树精，反而遭到了粗犷勇猛的兽人部落的顽强抵抗。经过三天三夜极其惨烈的血战，梅顿军队艰难取得险胜。虽然未能如圣岚一般获得自然魔法，但梅顿军发现兽人天生耐魔且肉体强悍无匹。于是，他们改变策略，将俘虏的兽人集中训练为重甲战士，组建了一支令人生畏的兽人士兵团，使梅顿的军事实质发生了蜕变。","x":49,"y":64,"tags":{"event_type":"default_event","event_location":"wulinda-ring","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798601137_gubh","name":"第二次双城之战","nameEn":"The Second Twin Cities War","time":{"kind":"range","start":"纪元1065年","end":"纪元1068年"},"sortTime":{"era":"ce","year":1065,"month":1,"day":1},"description":"随着南北两大人类王国的军事力量分别因魔法和重甲兽人兵团而达到顶峰，两国为了争夺大陆霸权爆发了全面战争。战争一方是圣岚的魔法军团与被奴役的树精协军，另一方则是梅顿的兽人战骑与冷钢步兵。最终的大决战在艾拉拉斯与奥林达尔之间的辽阔平原上展开。这场战火持续了三年之久，双方死伤无数，战局陷入僵持，难分胜负。长期的消耗战不仅严重破坏了大陆的生态与经济，也让重伤濒死的圣岚国王艾尔芬二世彻底陷入绝望与疯狂，为后续引发世纪级别的大灾难埋下了伏笔。","x":44,"y":46.5,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798659230_bb6g","name":"神树之怒","nameEn":"Wrath of the Worldroot","time":{"kind":"point","value":"纪元1068年"},"sortTime":{"era":"ce","year":1068,"month":1,"day":1},"description":"在南北双城决战陷入绝望的僵局之际，重伤濒死的艾尔芬二世彻底失去理智，强令凯德罗斯、瑟芮恩、撒尼克斯与瓦尔瑟尔四位大法师动用极度危险的禁忌神树魔法。禁咒释放瞬间，天幕暗沉，灵风倒灌，整个北方战场瞬间化为尸山血海，生灵涂炭。这场毁灭性的打击虽然让南方圣岚惨烈地取得了战争胜利，却也彻底触怒了古老的神树。作为惩罚，神树降下恐怖的诅咒，将参与施放禁咒的四位大法师化为“虚魂四王”。他们虽然获得了不死之体，却永远失去了灵魂，成为后世混乱的祸端。","x":45.9,"y":46,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775798732202_j9yi","name":"第一次封印之战","nameEn":"Battle of the First Seal","time":{"kind":"point","value":"纪元1069年"},"sortTime":{"era":"ce","year":1069,"month":1,"day":1},"description":"神树降下诅咒之后，大陆面临被虚魂怪物毁灭的危机。正义法师伊洛瑞尔从奥蕊岚山谷的隐居之地毅然挺身而出，与刚刚异化为“虚魂四王”的昔日同僚展开了空前绝后的生死斗法。在这场惊天动地的交锋中，瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫被伊洛瑞尔逐一击败，并被成功封印于神树根系的三重灵印之中。然而，最为强大且狡诈的土之法师凯德罗斯遁入了大陆东北的荒泽，在黑塔之巅继续修炼幽咒，潜伏于迷雾之中。这场战役暂时平息了神树暴走带来的灭世危机，标志着震慑纪元正式开端。","x":68.5,"y":54.4,"tags":{"event_type":"val_1775794433160","event_location":"tree-of-illoriel","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798911340_lpfm","name":"第一次魔法公约会议","nameEn":"The First Tramire Accord Conference","time":{"kind":"point","value":"纪元1070年"},"sortTime":{"era":"ce","year":1070,"month":1,"day":1},"description":"为了防止魔法再次沦为毁天灭地的战争工具并重蹈覆辙，正义法师伊洛瑞尔在平息了三位虚魂王的危机后，主动联合当时大陆上的三族首领，于奥蕊岚召开第一次魔法公约会议，共同探讨未来的和平之道。会议各方达成共识，最终制订了《特兰米尔大洲魔法公约》的初稿。该公约初步确立了魔法的教学规范、研究边界以及严格的军用限制制度，意图用律法将魔法重新关入理性的笼子。虽然公约在当时维持了五百年的表面和平，但由于虚魂王凯德罗斯仍然在逃，这把悬在大陆头顶的达摩克利斯之剑并未真正被移除。","x":71.4,"y":34.2,"tags":{"event_type":"val_1775794433160","event_location":"thalanthir","cat_1775809132917":"val_1775809408408"}},{"id":"evt_1775798984305_v8bs","name":"圣曦节之变","nameEn":"The Holy Dawn Incident","time":{"kind":"point","value":"纪元1570年"},"sortTime":{"era":"ce","year":1570,"month":1,"day":1},"description":"纪元1570年春，在象征着光明与新生的圣曦节前夜，长达五百年的和平封印被无情打破。潜伏在东北荒泽长达五个世纪的最后一位虚魂王凯德罗斯，发动了蓄谋已久的暗咒仪式。他强行抽离了神树封印根系中的庞大魔力，导致被封印的瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫王随之苏醒，并重返世间建立邪恶势力。瑟芮恩在灰棘山脉唤醒火山筑起地狱堡垒，撒尼克斯污染了艾尔芬峰的灵脉建立邪能祭坛，瓦尔瑟尔则将奥蕊岚谷地化作恐怖的黑森林。这一事件宣告了震慑纪元的终结，拉开了漫长的混乱纪元序幕。","x":66.9,"y":61.1,"tags":{"event_type":"val_1775794446614","event_location":"tree-of-illoriel","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775799061684_iqhg","name":"维岚运河工程","nameEn":"Construction of the Veilrun Canal","time":{"kind":"range","start":"纪元1760年","end":"纪元1765年"},"sortTime":{"era":"ce","year":1760,"month":1,"day":1},"description":"第二次封印之战期间，为了在战争中保持武器物资和军队的快速调配，两国联合开启了浩大的基础设施建设。连通两个新王国的维岚运河于纪元1760年破土动工，并在短短五年后的1765年宣告完工。运河的建成不仅催生了西瓦兰港和灰泽镇这两座新兴大城市，更带动了沿岸多个以运输、商业和服务业为主的城邦崛起。这些城邦吸收了大量流亡难民和混血种族，逐渐发展为独立的权力真空地带。","x":41,"y":44.3,"tags":{"event_type":"val_1775794446614","event_location":"veilrun-canal","cat_1775809132917":"none"}},{"id":"evt_1775799180748_m7zk","name":"圣岚西迁","nameEn":"Sanlar‘s Western Relocation","time":{"kind":"point","value":"纪元1580年"},"sortTime":{"era":"ce","year":1580,"month":1,"day":1},"description":"大陆动荡，圣岚被迫放弃艾拉拉斯，大举西迁，建都维罗港。","x":34.6,"y":27.2,"tags":{"event_type":"val_1775794446614","event_location":"veyra-port","cat_1775809132917":"none"}},{"id":"evt_1775799248835_5xqn","name":"梅顿西迁","nameEn":"Merton’s Western Relocation","time":{"kind":"point","value":"纪元1589年"},"sortTime":{"era":"ce","year":1589,"month":1,"day":1},"description":"大陆动荡，梅顿放弃旧都，西迁莱瑟顿，专注于武器制造与附魔工程。","x":34.6,"y":65.9,"tags":{"event_type":"val_1775794446614","event_location":"lesserden","cat_1775809132917":"none"}},{"id":"evt_1775799396626_drho","name":"第二次封印之战","nameEn":"The Second War of the Seals","time":{"kind":"range","start":"纪元1570年","end":"纪元2330年"},"sortTime":{"era":"ce","year":1570,"month":1,"day":1},"description":"这是特兰米尔历史上持续时间最长、波及范围最广的全面战争，跨越了近八百年。在伊洛瑞尔的号召下，人族、树精与兽人三族史无前例地结成大联军。在战火与流亡中，更是催生了枝裔族（人与树精混血）与裂爪族（人与兽人混血）这两支强大的新锐力量。联军在各地分头对抗虚魂四王的黑暗势力。经过艰苦卓绝的漫长奋战，伊洛瑞尔运用神树的力量，先后将撒尼克斯封印于叶之树，将瓦尔瑟尔封印于花之树，将瑟芮恩封印于果之树，为最终决战扫清了外围障碍。","x":35.9,"y":45.6,"tags":{"event_type":"val_1775794446614","event_location":"none","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775799493825_a8ae","name":"黑塔决战","nameEn":"Battle of the Black Tower","time":{"kind":"point","value":"纪元2330年"},"sortTime":{"era":"ce","year":2330,"month":1,"day":1},"description":"在成功封印三位黑巫王之后，正义法师伊洛瑞尔亲率残余的三族精锐联军，直捣最后一位虚魂王凯德罗斯的老巢——黑塔。两位同源的绝世法师在黑塔之巅展开了三天三夜的生死对决。最终，力竭的两人双双坠入充斥着黑魔法的凯德罗斯之泽，永世无归。与此同时，伊洛瑞尔所带领的整支联军也被暴走的沼泽彻底吞噬，无一人生还。虽然联军付出了全军覆没的惨烈代价，但凯德罗斯的陨落标志着漫长的“封印之战”正式结束。后人为了纪念这位牺牲的白巫，将神树正式命名为“伊洛瑞尔神树”。","x":74.8,"y":79.3,"tags":{"event_type":"val_1775794446614","event_location":"kaedros-mire","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775799583369_q3bz","name":"第一次特兰米尔会议","nameEn":"First Convention of Tramire","time":{"kind":"point","value":"纪元2331年"},"sortTime":{"era":"ce","year":2331,"month":1,"day":1},"description":"封印之战宣告结束后，伤痕累累的各族代表召开了最后一次联军会议，共同确立了战后的新世界秩序。会议正式宣告废除一切形式的军用魔法研究，并全面颁布落实了由伊洛瑞尔生前起草的《特兰米尔大洲魔法公约》。公约不仅严禁魔法用于大规模战争、取缔自然魔法与黑魔法研究，还从律法层面确立了种族平等的原则，严禁对战功赫赫的枝裔族与裂爪族进行歧视与驱逐。此次会议直接促成了战后大陆五大势力（圣岚、梅顿、兰多、枝裔族、裂爪族）的重组分立，为后魔法纪元奠定了长久的和平基石。","x":72.8,"y":35.9,"tags":{"event_type":"val_1775794458553","event_location":"thalanthir","cat_1775809132917":"val_1775809408408"}},{"id":"evt_1775799683588_pgd5","name":"兰多公国建立","nameEn":"Establishment of the Grand Duchy of Lando","time":{"kind":"point","value":"纪元2350年"},"sortTime":{"era":"ce","year":2350,"month":1,"day":1},"description":"维岚运河沿岸七个港口城邦组成兰多公国，主导运河贸易。","x":40.4,"y":48.3,"tags":{"event_type":"val_1775794458553","event_location":"meselia","cat_1775809132917":"none"}},{"id":"evt_1775799834954_sagq","name":"萨兰希尔建都","nameEn":"Founding of Thalanthir","time":{"kind":"point","value":"纪元2360年"},"sortTime":{"era":"ce","year":2360,"month":1,"day":1},"description":"新兴的枝裔族聚集到自然魔法传统悠久的奥蕊岚谷，重建家园，建都萨兰希尔。","x":74.4,"y":34.9,"tags":{"event_type":"val_1775794458553","event_location":"thalanthir","cat_1775809132917":"none"}},{"id":"evt_1775799932410_muca","name":"瓦尔卡兹立国","nameEn":"Founding of Varkhaz","time":{"kind":"point","value":"纪元2368年"},"sortTime":{"era":"ce","year":2368,"month":1,"day":1},"description":"部分对人类政权不满或仍追随黑巫力量的裂爪族在西部瓦尔卡兹山城自立为王，建都瓦尔卡兹。","x":26,"y":55.1,"tags":{"event_type":"val_1775794458553","event_location":"varkhaz","cat_1775809132917":"none"}},{"id":"evt_1775800148159_76ol","name":"第一次枝疫大流行","nameEn":"First Great Verdurge Outbreak","time":{"kind":"range","start":"纪元1066年","end":"纪元1070年"},"sortTime":{"era":"ce","year":1066,"month":1,"day":1},"description":"圣岚与梅顿全面战争期间，自然魔法的频繁使用导致神树魔力过盛、自然失衡，引发史上首次枝疫大规模爆发，从平原战场逐渐扩散至圣岚全境，首都艾拉拉斯尤为严重。感染者从吐出叶子和花瓣开始，躯体逐渐出现植物化症状，最后丧失生命，变成一棵完全的植物。后方营地与平民区陷入恐慌，进一步加剧了战争混乱。","x":50.3,"y":44.1,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775800426553_qixn","name":"第二次枝疫大流行","nameEn":"Second Great Verdurge Outbreak","time":{"kind":"range","start":"纪元2500年","end":"纪元2650年"},"sortTime":{"era":"ce","year":2500,"month":1,"day":1},"description":"神树魔力迎来过盛，引发了长达一百五十年的第二轮枝疫大流行，波及范围扩展到整个特兰米尔大陆，造成三分之一的人口减少。此后每隔一两百年，枝疫都会迎来一次大规模爆发，学者研究表明其于神树的力量周期相关。","x":48.3,"y":37.9,"tags":{"event_type":"val_1775794458553","event_location":"none","cat_1775809132917":"val_1775809424517"}}]');
+const tagCategories = [{ "id": "type", "label": "地点类型", "isLegend": true, "isBuiltIn": true, "values": [{ "id": "natural", "label": "自然地貌", "icon": { "kind": "shape", "shape": "circle", "color": "#2D6A2D" } }, { "id": "city", "label": "城镇", "icon": { "kind": "shape", "shape": "square", "color": "#8B4513", "opacity": 1 } }, { "id": "sacred", "label": "圣地", "icon": { "kind": "shape", "shape": "circle", "color": "#6B21A8", "opacity": 1 } }, { "id": "ruin", "label": "废墟遗迹", "icon": { "kind": "shape", "shape": "circle", "color": "#5C4033", "opacity": 1, "borderColor": "#a89367" } }, { "id": "landmark", "label": "地标建筑", "icon": { "kind": "shape", "shape": "square", "color": "#1E40AF" } }] }, { "id": "faction", "label": "所属势力", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "human", "label": "人类", "icon": { "kind": "emoji", "emoji": "👑" } }, { "id": "treant", "label": "树精", "icon": { "kind": "emoji", "emoji": "🌳" } }, { "id": "elvenbranch", "label": "枝裔族", "icon": { "kind": "emoji", "emoji": "🌿" } }, { "id": "orc", "label": "兽人", "icon": { "kind": "emoji", "emoji": "⚔️" } }, { "id": "clawkin", "label": "裂爪族", "icon": { "kind": "emoji", "emoji": "🦅" } }, { "id": "none", "label": "无归属", "icon": { "kind": "emoji", "emoji": "❓️" } }] }, { "id": "zone", "label": "所属区域", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "central_world_root_zone", "label": "中部 - 神树地带", "icon": { "kind": "none" } }, { "id": "central_ancient_battlefield_zone", "label": "中部 - 古战场区", "icon": { "kind": "none" } }, { "id": "southern_aurelen_zone", "label": "南部 - 奥蕊岚", "icon": { "kind": "none" } }, { "id": "southwestern_sanlar_kingdom", "label": "西南部 - 圣岚王国", "icon": { "kind": "none" } }, { "id": "northwestern_merton_kingdom", "label": "西北部 - 梅顿王国", "icon": { "kind": "none" } }, { "id": "canal_zone_lando_duchy", "label": "运河地带 - 兰多公国", "icon": { "kind": "none" } }, { "id": "extreme_northwestern_wasteland", "label": "极西北部 - 西部荒原", "icon": { "kind": "none" } }, { "id": "northwestern_offshore_islands", "label": "西北部海面 - 铁礁群岛", "icon": { "kind": "none" } }, { "id": "lunar_creek_zone", "label": "沿神树区 - 月神溪地带", "icon": { "kind": "none" } }, { "id": "southeastern_forest_zone", "label": "东南部 - 密林地带", "icon": { "kind": "none" } }, { "id": "northeastern_marsh_zone", "label": "东北部 - 沼泽地带", "icon": { "kind": "none" } }, { "id": "eastern_coast_abandoned_zone", "label": "东部沿海 - 废弃海岸地带", "icon": { "kind": "none" } }, { "id": "forest_and_marsh_boundary_great_rift", "label": "密林和沼泽分界线 - 大裂隙", "icon": { "kind": "none" } }] }];
+const locations = [{ "id": "illorien-spine", "name": "伊洛希恩山脉", "nameEn": "The Illorien Spine", "description": "特兰米尔大洲中部纵贯南北的巨大山脉，山脊如脊骨般层叠挺立，覆盖常青林。", "x": 60.7, "y": 51.7, "tags": { "type": "natural", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-alp", "name": "艾尔芬峰", "nameEn": "Aelfen Alp", "description": "伊洛希恩山脉的最高峰之一，神树所在之巅，岩壁陡峭，树根盘错，云气不散。", "x": 57.3, "y": 63.4, "tags": { "type": "natural", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-floating-isles", "name": "艾尔芬浮空岛链", "nameEn": "The Aelfen Floating Isles", "description": "位于艾尔芬峰火山口上空的悬浮岛屿群，三大圣河的源头瀑布由此倾泻而下。", "x": 58.9, "y": 66.1, "tags": { "type": "natural", "faction": "treant", "zone": "central_world_root_zone" } }, { "id": "tree-of-illoriel", "name": "伊洛瑞尔神树", "nameEn": "The Tree of Illoriel", "description": "主干如山般粗壮，枝冠遮天蔽日，树根伸出三条河流。扎根于浮空岛链最大的主岛正中央。", "x": 58.2, "y": 71.3, "tags": { "type": "sacred", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "wulinda-ring", "name": "乌林达林环", "nameEn": "Wulinda Primeval Ring", "description": "古林密布、灵气浓郁的原始林海，树木高耸入云，遮天蔽日，是兽人与根之脉树精的原初圣地。", "x": 53.2, "y": 57.6, "tags": { "type": "natural", "faction": "orc", "zone": "central_world_root_zone" } }, { "id": "tree-sanix", "name": "叶之树撒尼克斯", "nameEn": "Tree of Sanix", "description": "封印黑巫撒尼克斯的古木，直插云霄，枝繁叶茂，生机勃勃。位于艾尔芬峰山脚下、乌林达林环的边缘地带。", "x": 54.5, "y": 66.6, "tags": { "type": "sacred", "faction": "none", "zone": "central_world_root_zone" } }, { "id": "aelfen-town", "name": "艾尔芬镇", "nameEn": "Aelfen", "description": "特兰米尔最热闹、最繁华的非王都聚落之一。镇中心的灵泉广场终年人潮涌动。整座城镇围绕着古老的根之树同心环状展开。", "x": 53, "y": 67.4, "tags": { "type": "city", "faction": "human", "zone": "central_world_root_zone" } }, { "id": "elarath", "name": "艾拉拉斯", "nameEn": "Elarath", "description": "圣岚古都，曾是魔法纪元时期文化与魔法中心，见证了禁咒魔法的施放，现为废墟遗迹。", "x": 48.6, "y": 48.2, "tags": { "type": "ruin", "faction": "none", "zone": "central_ancient_battlefield_zone" } }, { "id": "orindar", "name": "奥林达尔", "nameEn": "Orindar", "description": "梅顿古都，城墙厚重、堡垒森严，曾是军国主义与兽人部族融合的起点，如今仅余断壁残垣。", "x": 46.5, "y": 64.6, "tags": { "type": "ruin", "faction": "none", "zone": "central_ancient_battlefield_zone" } }, { "id": "aurelen-valley", "name": "奥蕊岚山谷", "nameEn": "Aurelen Valley", "description": "由三座环山包围的灵谷，泉水清澈，花藤交垂，气候四季如春。", "x": 69.8, "y": 34.2, "tags": { "type": "natural", "faction": "elvenbranch", "zone": "southern_aurelen_zone" } }, { "id": "tree-valsir", "name": "花之树瓦尔瑟尔", "nameEn": "Tree of Valsir", "description": "银干紫花，全年盛开，散发致幻孢子，封印着风/幻术黑巫瓦尔瑟尔的永恒梦境牢笼。", "x": 71.1, "y": 36.9, "tags": { "type": "sacred", "faction": "none", "zone": "southern_aurelen_zone" } }, { "id": "thalanthir", "name": "萨兰希尔", "nameEn": "Thalanthir", "description": "枝裔族都城，宛如自然幻境，建筑与山林共生，是魔法与艺术的交响之都。", "x": 69.9, "y": 37.5, "tags": { "type": "city", "faction": "elvenbranch", "zone": "southern_aurelen_zone" } }, { "id": "sanlar-river", "name": "圣岚河", "nameEn": "Sanlar River", "description": "水势平稳、清澈见底，沿岸肥沃，是圣岚文明的母亲河。发源于神树南侧悬崖，蜿蜒穿越西南平原。", "x": 45.7, "y": 41.8, "tags": { "type": "natural", "faction": "none", "zone": "southwestern_sanlar_kingdom" } }, { "id": "glass-mangrove", "name": "琉璃红树林海", "nameEn": "Crystal Mangrove Sea", "description": "植物因魔力过载而结晶化的巨型湿地，枝叶如半透明的翡翠琉璃。", "x": 30.2, "y": 23.3, "tags": { "type": "natural", "faction": "none", "zone": "southwestern_sanlar_kingdom" } }, { "id": "veyra-port", "name": "维罗港", "nameEn": "Veyra Port", "description": "圣岚王国的新都，拥有海上浮都之称的魔法重镇。城内以灰石塔楼与翠铜圆顶交错点缀，高塔林立的王宫伫立于峭壁之巅。", "x": 33.1, "y": 28.8, "tags": { "type": "city", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "sanlar-academy", "name": "圣岚魔法学院", "nameEn": "Sanlar Magic Academy", "description": "全大陆最具影响力的魔法教育中心，培养博学、优雅的术士与法师。建于维罗港城市内部。", "x": 32.2, "y": 26.1, "tags": { "type": "landmark", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "silvaran", "name": "西瓦兰港", "nameEn": "Silvaran", "description": "绿植环绕、港区高效，是圣岚最重要的外贸中转站。位于维岚运河的最南端出口，圣岚河的中游交汇处。", "x": 42.4, "y": 38.2, "tags": { "type": "city", "faction": "human", "zone": "southwestern_sanlar_kingdom" } }, { "id": "merton-river", "name": "梅顿河", "nameEn": "Merton River", "description": "水流湍急，岩石嶙峋，沿岸多丘陵与矿脉。发源于神树西北侧，流经莱瑟顿后向西渗入静寂荒原地下。", "x": 37.9, "y": 64.9, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_merton_kingdom" } }, { "id": "black-sap-taiga", "name": "黑脂泰加林", "nameEn": "Black-Sap Taiga", "description": "干燥北境的黑色针叶林，树木流淌着极易燃的黑色燃油，是工业命脉。", "x": 35.4, "y": 57.1, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_merton_kingdom" } }, { "id": "lesserden", "name": "莱瑟顿", "nameEn": "Lesserden", "description": "梅顿王国的新都，分为地上工业城与地下熔炉城两层结构，有钢铁之穴的称号。", "x": 33.6, "y": 67.8, "tags": { "type": "city", "faction": "human", "zone": "northwestern_merton_kingdom" } }, { "id": "greymire", "name": "灰泽镇", "nameEn": "Greymire", "description": "靠近沼泽地带，建筑简朴坚固，是防范南部入侵的军事要镇。", "x": 41.5, "y": 63.8, "tags": { "type": "city", "faction": "human", "zone": "northwestern_merton_kingdom" } }, { "id": "veilrun-canal", "name": "维岚运河", "nameEn": "The Veilrun Canal", "description": "连接南北的商贸之脉，建于空根水道之上，河床是远古巨型气生根留下的木质外壳。", "x": 40.2, "y": 55.9, "tags": { "type": "natural", "faction": "none", "zone": "canal_zone_lando_duchy" } }, { "id": "meselia", "name": "梅瑟利亚", "nameEn": "Meselia", "description": "兰多公国的核心城邦。完全悬建在空根水道两壁探出的巨型板状真菌之上。夜间荧光孢子充当路灯，充满繁华与生机。", "x": 42.4, "y": 48.4, "tags": { "type": "city", "faction": "human", "zone": "canal_zone_lando_duchy" } }, { "id": "ashes-thorns", "name": "灰棘山脉", "nameEn": "The Ashes Thorns", "description": "山如刺背、灰黑嶙峋，火山灰终年飘洒，岩浆地缝纵横，阻挡了海风。", "x": 28.4, "y": 55.2, "tags": { "type": "natural", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "mount-seren", "name": "瑟芮恩火山", "nameEn": "Mount Seren", "description": "山腹仍有赤焰燃动，火山口已成硫磺湖泊的沉睡火山。", "x": 29.5, "y": 65.8, "tags": { "type": "natural", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "tree-seren", "name": "果之树瑟芮恩", "nameEn": "Tree of Seren", "description": "焦黑树干流淌着岩浆树脂，结出爆炸炎果，封印着火巫。生长于瑟芮恩火山顶部的硫磺湖泊正中心。", "x": 30.2, "y": 63.9, "tags": { "type": "sacred", "faction": "none", "zone": "extreme_northwestern_wasteland" } }, { "id": "varkhaz", "name": "瓦尔卡兹", "nameEn": "Varkhaz", "description": "由裂爪族建立，隐于山脉深处，地形崎岖，布满黑铁锻造工坊，是一座由力量意志筑成的山城。", "x": 26.1, "y": 58.1, "tags": { "type": "city", "faction": "clawkin", "zone": "extreme_northwestern_wasteland" } }, { "id": "iron-reef-archipelago", "name": "铁礁群岛", "nameEn": "Iron-Reef Archipelago", "description": "由无数含铁量极高的黑色岩石岛屿组成，磁场混乱，是走私犯与海盗的天然迷宫。", "x": 17.4, "y": 76.3, "tags": { "type": "natural", "faction": "none", "zone": "northwestern_offshore_islands" } }, { "id": "lunareth", "name": "月神溪", "nameEn": "Lunareth", "description": "细细如绢的溪流，自神树之巅南麓泻下，曲折东行，在凯拉韦节点后一分为二。", "x": 64.9, "y": 67.4, "tags": { "type": "natural", "faction": "none", "zone": "lunar_creek_zone" } }, { "id": "caelave", "name": "凯拉韦", "nameEn": "Caelave", "description": "溪流绕村而过，枝裔族风格的藤蔓吊楼与石砌屋舍交错分布，是文化融合的象征。位于月神溪的中游分叉点。", "x": 69.8, "y": 64.9, "tags": { "type": "city", "faction": "elvenbranch", "zone": "lunar_creek_zone" } }, { "id": "greenveil-wood", "name": "格林威尔林地", "nameEn": "Greenveil Wood", "description": "藤蔓交错，灵花遍地的灵性密林。占据整个东南大陆的大部分区域。", "x": 77.5, "y": 62.6, "tags": { "type": "natural", "faction": "treant", "zone": "southeastern_forest_zone" } }, { "id": "moonfall-lake", "name": "落月湖", "nameEn": "Moonfall Lake", "description": "湖水如镜，常有蓝白光华沉于湖底，每逢满月湖心会显神秘光圈。", "x": 82.5, "y": 51.8, "tags": { "type": "natural", "faction": "treant", "zone": "southeastern_forest_zone" } }, { "id": "golden-mist-fens", "name": "黄金雾沼", "nameEn": "Golden Mist Fens", "description": "植被全为金黄色的湿地，水面漂浮金色落叶陷阱。", "x": 74.1, "y": 74.9, "tags": { "type": "natural", "faction": "treant", "zone": "northeastern_marsh_zone" } }, { "id": "kaedros-mire", "name": "凯德罗斯之泽", "nameEn": "Kaedros Mire", "description": "瘴气沉沉的黑沼泽，泥水中常有亡魂啼哭，是特兰米尔最为诡异之地。", "x": 74.8, "y": 78, "tags": { "type": "natural", "faction": "none", "zone": "northeastern_marsh_zone" } }, { "id": "black-tower", "name": "黑塔", "nameEn": "The Black Tower", "description": "塔身嵌满黑曜石，塔顶常年被雷霆包围，是禁忌之地。矗立于凯德罗斯之泽的正中央。", "x": 77.4, "y": 80.9, "tags": { "type": "landmark", "faction": "none", "zone": "northeastern_marsh_zone" } }, { "id": "root-bound-cliffs", "name": "盘根断崖", "nameEn": "Root-Bound Cliffs", "description": "高达数百米的灰白色木质悬崖，神树的一条巨型主根在此探入大海，海面下是沉船墓场。", "x": 90.6, "y": 74.8, "tags": { "type": "natural", "faction": "none", "zone": "eastern_coast_abandoned_zone" } }, { "id": "pale-strand", "name": "白滩", "nameEn": "The Pale Strand", "description": "没有沙子，铺满海滩的是白化的树精遗骸与神树枯枝，肃杀苍凉。", "x": 90.7, "y": 35.1, "tags": { "type": "natural", "faction": "none", "zone": "eastern_coast_abandoned_zone" } }, { "id": "rift-val-kareth", "name": "瓦尔卡雷斯裂隙", "nameEn": "The Rift of Val'Kareth", "description": "宽达数公里的无底深渊，两侧崖壁布满横跨的神树根系。呈正西-正东走向横贯东部。", "x": 80.6, "y": 69.4, "tags": { "type": "natural", "faction": "none", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "river-aetheria", "name": "以太利亚河", "nameEn": "River Aetheria", "description": "流淌着液态星光与极光的生命原液，触之即化为水晶。流淌于瓦尔卡雷斯裂隙的极深谷底。", "x": 82.7, "y": 68.9, "tags": { "type": "natural", "faction": "none", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "hanging-hives", "name": "悬巢部落", "nameEn": "Hanging Hives", "description": "流亡兽人与变异树精在崖壁根系上挖掘洞穴、搭建吊脚楼组成的垂直村落，以打捞底部的原液为生。", "x": 84.6, "y": 68.6, "tags": { "type": "city", "faction": "orc", "zone": "forest_and_marsh_boundary_great_rift" } }, { "id": "loc_1775797451466_i2ot", "name": "大平原", "nameEn": "The great plain", "description": "位于梅顿与圣岚古都之间的平原，第二次双城之战的发生地。由于神树的诅咒而植被稀少、人迹罕至。", "x": 45.2, "y": 48.1, "tags": { "type": "natural", "faction": "human", "zone": "central_ancient_battlefield_zone" } }];
+const eventTagCategories = [{ "id": "event_type", "label": "历史时期", "isLegend": true, "isBuiltIn": true, "values": [{ "id": "val_1775809778797", "label": "神树纪元（Era of the Worldroot）", "icon": { "kind": "shape", "shape": "diamond", "color": "#eadfc8", "opacity": 1, "borderColor": "#f7f7f7" } }, { "id": "default_event", "label": "魔法纪元（Arcane Era）", "icon": { "kind": "shape", "shape": "diamond", "color": "#C8A860", "borderColor": "#FFE066", "opacity": 0.85 } }, { "id": "val_1775794433160", "label": "震慑纪元（Era of Dreadbinding）", "icon": { "kind": "shape", "shape": "diamond", "color": "#8B4513", "opacity": 0.85, "borderColor": "#c8b292" } }, { "id": "val_1775794446614", "label": "混乱纪元（Era of the Shattered）", "icon": { "kind": "shape", "shape": "diamond", "color": "#5C4033", "opacity": 0.85, "borderColor": "#c8b29d" } }, { "id": "val_1775794458553", "label": "后魔法纪元（Post-Arcane Age）", "icon": { "kind": "shape", "shape": "diamond", "color": "#6B21A8", "opacity": 0.85, "borderColor": "#d9bbf7" } }] }, { "id": "event_location", "label": "归属地点", "isLegend": false, "isBuiltIn": true, "values": [{ "id": "none", "label": "无归属", "icon": { "kind": "none" } }, { "id": "illorien-spine", "label": "伊洛希恩山脉", "icon": { "kind": "none" } }, { "id": "aelfen-alp", "label": "艾尔芬峰", "icon": { "kind": "none" } }, { "id": "aelfen-floating-isles", "label": "艾尔芬浮空岛链", "icon": { "kind": "none" } }, { "id": "tree-of-illoriel", "label": "伊洛瑞尔神树", "icon": { "kind": "none" } }, { "id": "wulinda-ring", "label": "乌林达林环", "icon": { "kind": "none" } }, { "id": "tree-sanix", "label": "叶之树撒尼克斯", "icon": { "kind": "none" } }, { "id": "aelfen-town", "label": "艾尔芬镇", "icon": { "kind": "none" } }, { "id": "elarath", "label": "艾拉拉斯", "icon": { "kind": "none" } }, { "id": "orindar", "label": "奥林达尔", "icon": { "kind": "none" } }, { "id": "aurelen-valley", "label": "奥蕊岚山谷", "icon": { "kind": "none" } }, { "id": "tree-valsir", "label": "花之树瓦尔瑟尔", "icon": { "kind": "none" } }, { "id": "thalanthir", "label": "萨兰希尔", "icon": { "kind": "none" } }, { "id": "sanlar-river", "label": "圣岚河", "icon": { "kind": "none" } }, { "id": "glass-mangrove", "label": "琉璃红树林海", "icon": { "kind": "none" } }, { "id": "veyra-port", "label": "维罗港", "icon": { "kind": "none" } }, { "id": "sanlar-academy", "label": "圣岚魔法学院", "icon": { "kind": "none" } }, { "id": "silvaran", "label": "西瓦兰港", "icon": { "kind": "none" } }, { "id": "merton-river", "label": "梅顿河", "icon": { "kind": "none" } }, { "id": "black-sap-taiga", "label": "黑脂泰加林", "icon": { "kind": "none" } }, { "id": "lesserden", "label": "莱瑟顿", "icon": { "kind": "none" } }, { "id": "greymire", "label": "灰泽镇", "icon": { "kind": "none" } }, { "id": "veilrun-canal", "label": "维岚运河", "icon": { "kind": "none" } }, { "id": "meselia", "label": "梅瑟利亚", "icon": { "kind": "none" } }, { "id": "ashes-thorns", "label": "灰棘山脉", "icon": { "kind": "none" } }, { "id": "mount-seren", "label": "瑟芮恩火山", "icon": { "kind": "none" } }, { "id": "tree-seren", "label": "果之树瑟芮恩", "icon": { "kind": "none" } }, { "id": "varkhaz", "label": "瓦尔卡兹", "icon": { "kind": "none" } }, { "id": "iron-reef-archipelago", "label": "铁礁群岛", "icon": { "kind": "none" } }, { "id": "lunareth", "label": "月神溪", "icon": { "kind": "none" } }, { "id": "caelave", "label": "凯拉韦", "icon": { "kind": "none" } }, { "id": "greenveil-wood", "label": "格林威尔林地", "icon": { "kind": "none" } }, { "id": "moonfall-lake", "label": "落月湖", "icon": { "kind": "none" } }, { "id": "golden-mist-fens", "label": "黄金雾沼", "icon": { "kind": "none" } }, { "id": "kaedros-mire", "label": "凯德罗斯之泽", "icon": { "kind": "none" } }, { "id": "black-tower", "label": "黑塔", "icon": { "kind": "none" } }, { "id": "root-bound-cliffs", "label": "盘根断崖", "icon": { "kind": "none" } }, { "id": "pale-strand", "label": "白滩", "icon": { "kind": "none" } }, { "id": "rift-val-kareth", "label": "瓦尔卡雷斯裂隙", "icon": { "kind": "none" } }, { "id": "river-aetheria", "label": "以太利亚河", "icon": { "kind": "none" } }, { "id": "hanging-hives", "label": "悬巢部落", "icon": { "kind": "none" } }, { "id": "loc_1775797451466_i2ot", "label": "大平原", "icon": { "kind": "none" } }] }, { "id": "cat_1775809132917", "label": "事件类型", "isLegend": false, "isBuiltIn": false, "values": [{ "id": "none", "label": "其他", "icon": { "kind": "emoji", "emoji": "⭐" } }, { "id": "val_1775809395229", "label": "战争", "icon": { "kind": "emoji", "emoji": "⚔️" } }, { "id": "val_1775809408408", "label": "会议", "icon": { "kind": "emoji", "emoji": "📜" } }, { "id": "val_1775809424517", "label": "灾难", "icon": { "kind": "emoji", "emoji": "💀" } }, { "id": "val_1775809559120", "label": "圣事", "icon": { "kind": "emoji", "emoji": "🔆" } }] }];
+const events = /* @__PURE__ */ JSON.parse('[{"id":"evt_1775793837778_65nx","name":"艾尔芬二世第一次东征","nameEn":"The First Eastern Expedition of Aelfen II","time":{"kind":"point","value":"纪元971年"},"sortTime":{"era":"ce","year":971,"month":1,"day":1},"description":"纪元971年，圣岚的年轻国王艾尔芬二世（Aelfen II）率军沿圣岚河逆流而上，意图占领伊洛希恩山脉，却遭遇原住民树精族的激烈抵抗。面对自然魔法的神秘力量，装备冷兵器的王国军几近覆灭。艾尔芬带着残兵狼狈撤退，却也意外将魔法之火带回了人类世界。","x":51.9,"y":63.5,"tags":{"event_type":"default_event","event_location":"illorien-spine","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775794284352_kkw6","name":"艾尔芬二世第二次东征","nameEn":"The Second Eastern Expedition of Aelfen II","time":{"kind":"point","value":"纪元1050年"},"sortTime":{"era":"ce","year":1050,"month":1,"day":1},"description":"纪元1050年，110岁高龄的艾尔芬二世再度举兵东进，这一次，圣岚的魔法大军势如破竹，打得毫无戒备的树精族节节败退，最终登顶神树所在山峰。为纪念这场胜利，人们将神树之峰命名为艾尔芬峰（Aelfen Alp）。","x":60,"y":63,"tags":{"event_type":"default_event","event_location":"aelfen-alp","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775797630660_60tk","name":"第一次双城之战","nameEn":"The First Twin Cities War","time":{"kind":"range","start":"纪元680年","end":"纪元698年"},"sortTime":{"era":"ce","year":680,"month":1,"day":1},"description":"人类的好胜与野心引发两国持续数十年的征战，彼此消耗惨重，为后续的魔法引入和权力更迭埋下伏笔。","x":44.9,"y":52.2,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775797718721_wiab","name":"圣岚建国","nameEn":"Founding of Sanlar","time":{"kind":"point","value":"纪元1年"},"sortTime":{"era":"ce","year":1,"month":1,"day":1},"description":"人族在西南圣岚河中游建立农业文明，形成古国圣岚，定都艾拉拉斯。","x":48.7,"y":44.7,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"none"}},{"id":"evt_1775797925757_au6t","name":"梅顿建国","nameEn":"Founding of Merton","time":{"kind":"point","value":"纪元102年"},"sortTime":{"era":"ce","year":102,"month":1,"day":1},"description":"人族在西北梅顿河中游建立农业文明，形成古国梅顿，定都奥林达尔。","x":45,"y":62.3,"tags":{"event_type":"default_event","event_location":"orindar","cat_1775809132917":"none"}},{"id":"evt_1775798063640_97n6","name":"圣岚魔法议会成立","nameEn":"Establishment of the Sanlar Arcane Council","time":{"kind":"point","value":"纪元972年"},"sortTime":{"era":"ce","year":972,"month":1,"day":1},"description":"艾尔芬二世举全国之力发展魔法，组建由五位天才大法师（伊洛瑞尔、凯德罗斯、瑟芮恩、撒尼克斯、瓦尔瑟尔）构成的魔法议会。在这五位大法师长达八十年的共同推动下，一整套系统化、标准化的魔法体系应运而生，并迅速渗透至圣岚王国的军事、生产、医疗、教育等诸多领域。魔法的普及带来了前所未有的文明飞跃，极大增强了圣岚的国力。","x":50.3,"y":46.5,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"none"}},{"id":"evt_1775798337831_wbtd","name":"莱瑟顿一世东征","nameEn":"Eastern Expedition of Lesserden I","time":{"kind":"point","value":"纪元991年"},"sortTime":{"era":"ce","year":991,"month":1,"day":1},"description":"在南方圣岚王国大力发展魔法的同时，北境的强国梅顿亦不甘示弱。梅顿国王莱瑟顿一世率领重兵开启东征，大军穿越梅顿河进入伊洛希恩山脉寻找魔法力量。与南方不同，他们并未遇到树精，反而遭到了粗犷勇猛的兽人部落的顽强抵抗。经过三天三夜极其惨烈的血战，梅顿军队艰难取得险胜。虽然未能如圣岚一般获得自然魔法，但梅顿军发现兽人天生耐魔且肉体强悍无匹。于是，他们改变策略，将俘虏的兽人集中训练为重甲战士，组建了一支令人生畏的兽人士兵团，使梅顿的军事实质发生了蜕变。","x":49,"y":64,"tags":{"event_type":"default_event","event_location":"wulinda-ring","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798601137_gubh","name":"第二次双城之战","nameEn":"The Second Twin Cities War","time":{"kind":"range","start":"纪元1065年","end":"纪元1068年"},"sortTime":{"era":"ce","year":1065,"month":1,"day":1},"description":"随着南北两大人类王国的军事力量分别因魔法和重甲兽人兵团而达到顶峰，两国为了争夺大陆霸权爆发了全面战争。战争一方是圣岚的魔法军团与被奴役的树精协军，另一方则是梅顿的兽人战骑与冷钢步兵。最终的大决战在艾拉拉斯与奥林达尔之间的辽阔平原上展开。这场战火持续了三年之久，双方死伤无数，战局陷入僵持，难分胜负。长期的消耗战不仅严重破坏了大陆的生态与经济，也让重伤濒死的圣岚国王艾尔芬二世彻底陷入绝望与疯狂，为后续引发世纪级别的大灾难埋下了伏笔。","x":44,"y":46.5,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798659230_bb6g","name":"神树之怒","nameEn":"Wrath of the Worldroot","time":{"kind":"point","value":"纪元1068年"},"sortTime":{"era":"ce","year":1068,"month":1,"day":1},"description":"在南北双城决战陷入绝望的僵局之际，重伤濒死的艾尔芬二世彻底失去理智，强令凯德罗斯、瑟芮恩、撒尼克斯与瓦尔瑟尔四位大法师动用极度危险的禁忌神树魔法。禁咒释放瞬间，天幕暗沉，灵风倒灌，整个北方战场瞬间化为尸山血海，生灵涂炭。这场毁灭性的打击虽然让南方圣岚惨烈地取得了战争胜利，却也彻底触怒了古老的神树。作为惩罚，神树降下恐怖的诅咒，将参与施放禁咒的四位大法师化为“虚魂四王”。他们虽然获得了不死之体，却永远失去了灵魂，成为后世混乱的祸端。","x":45.9,"y":46,"tags":{"event_type":"default_event","event_location":"loc_1775797451466_i2ot","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775798732202_j9yi","name":"第一次封印之战","nameEn":"Battle of the First Seal","time":{"kind":"point","value":"纪元1069年"},"sortTime":{"era":"ce","year":1069,"month":1,"day":1},"description":"神树降下诅咒之后，大陆面临被虚魂怪物毁灭的危机。正义法师伊洛瑞尔从奥蕊岚山谷的隐居之地毅然挺身而出，与刚刚异化为“虚魂四王”的昔日同僚展开了空前绝后的生死斗法。在这场惊天动地的交锋中，瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫被伊洛瑞尔逐一击败，并被成功封印于神树根系的三重灵印之中。然而，最为强大且狡诈的根系法师凯德罗斯遁入了大陆东北的荒泽，在黑塔之巅继续修炼幽咒，潜伏于迷雾之中。这场战役暂时平息了神树暴走带来的灭世危机，标志着震慑纪元正式开端。","x":59.6,"y":69.3,"tags":{"event_type":"val_1775794433160","event_location":"tree-of-illoriel","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775798911340_lpfm","name":"第一次魔法公约会议","nameEn":"The First Tramire Accord Conference","time":{"kind":"point","value":"纪元1070年"},"sortTime":{"era":"ce","year":1070,"month":1,"day":1},"description":"为了防止魔法再次沦为毁天灭地的战争工具并重蹈覆辙，正义法师伊洛瑞尔在平息了三位虚魂王的危机后，主动联合当时大陆上的三族首领，于奥蕊岚召开第一次魔法公约会议，共同探讨未来的和平之道。会议各方达成共识，最终制订了《特兰米尔大洲魔法公约》的初稿。该公约初步确立了魔法的教学规范、研究边界以及严格的军用限制制度，意图用律法将魔法重新关入理性的笼子。虽然公约在当时维持了五百年的表面和平，但由于虚魂王凯德罗斯仍然在逃，这把悬在大陆头顶的达摩克利斯之剑并未真正被移除。","x":71.4,"y":34.2,"tags":{"event_type":"val_1775794433160","event_location":"thalanthir","cat_1775809132917":"val_1775809408408"}},{"id":"evt_1775798984305_v8bs","name":"圣曦节之变","nameEn":"The Holy Dawn Incident","time":{"kind":"point","value":"纪元1570年"},"sortTime":{"era":"ce","year":1570,"month":1,"day":1},"description":"纪元1570年春，在象征着光明与新生的圣曦节前夜，长达五百年的和平封印被无情打破。潜伏在东北荒泽长达五个世纪的最后一位虚魂王凯德罗斯，发动了蓄谋已久的暗咒仪式。他强行抽离了神树封印根系中的庞大魔力，导致被封印的瑟芮恩、撒尼克斯与瓦尔瑟尔三位黑巫王随之苏醒，并重返世间建立邪恶势力。瑟芮恩在灰棘山脉唤醒火山筑起地狱堡垒，撒尼克斯污染了艾尔芬峰的灵脉建立邪能祭坛，瓦尔瑟尔则将奥蕊岚谷地化作恐怖的黑森林。这一事件宣告了震慑纪元的终结，拉开了漫长的混乱纪元序幕。","x":57.2,"y":68,"tags":{"event_type":"val_1775794446614","event_location":"tree-of-illoriel","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775799061684_iqhg","name":"维岚运河工程","nameEn":"Construction of the Veilrun Canal","time":{"kind":"range","start":"纪元1760年","end":"纪元1765年"},"sortTime":{"era":"ce","year":1760,"month":1,"day":1},"description":"第二次封印之战期间，为了在战争中保持武器物资和军队的快速调配，两国联合开启了浩大的基础设施建设。连通两个新王国的维岚运河于纪元1760年破土动工，并在短短五年后的1765年宣告完工。运河的建成不仅催生了西瓦兰港和灰泽镇这两座新兴大城市，更带动了沿岸多个以运输、商业和服务业为主的城邦崛起。这些城邦吸收了大量流亡难民和混血种族，逐渐发展为独立的权力真空地带。","x":41,"y":44.3,"tags":{"event_type":"val_1775794446614","event_location":"veilrun-canal","cat_1775809132917":"none"}},{"id":"evt_1775799180748_m7zk","name":"圣岚西迁","nameEn":"Sanlar‘s Western Relocation","time":{"kind":"point","value":"纪元1580年"},"sortTime":{"era":"ce","year":1580,"month":1,"day":1},"description":"大陆动荡，圣岚被迫放弃艾拉拉斯，大举西迁，建都维罗港。","x":34.6,"y":27.2,"tags":{"event_type":"val_1775794446614","event_location":"veyra-port","cat_1775809132917":"none"}},{"id":"evt_1775799248835_5xqn","name":"梅顿西迁","nameEn":"Merton’s Western Relocation","time":{"kind":"point","value":"纪元1589年"},"sortTime":{"era":"ce","year":1589,"month":1,"day":1},"description":"大陆动荡，梅顿放弃旧都，西迁莱瑟顿，专注于武器制造与附魔工程。","x":34.6,"y":65.9,"tags":{"event_type":"val_1775794446614","event_location":"lesserden","cat_1775809132917":"none"}},{"id":"evt_1775799396626_drho","name":"第二次封印之战","nameEn":"The Second War of the Seals","time":{"kind":"range","start":"纪元1570年","end":"纪元2330年"},"sortTime":{"era":"ce","year":1570,"month":1,"day":1},"description":"这是特兰米尔历史上持续时间最长、波及范围最广的全面战争，跨越了近八百年。在伊洛瑞尔的号召下，人族、树精与兽人三族史无前例地结成大联军。在战火与流亡中，更是催生了枝裔族（人与树精混血）与裂爪族（人与兽人混血）这两支强大的新锐力量。联军在各地分头对抗虚魂四王的黑暗势力。经过艰苦卓绝的漫长奋战，伊洛瑞尔运用神树的力量，先后将撒尼克斯封印于叶之树，将瓦尔瑟尔封印于花之树，将瑟芮恩封印于果之树，为最终决战扫清了外围障碍。","x":35.9,"y":45.6,"tags":{"event_type":"val_1775794446614","event_location":"none","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775799493825_a8ae","name":"黑塔决战","nameEn":"Battle of the Black Tower","time":{"kind":"point","value":"纪元2330年"},"sortTime":{"era":"ce","year":2330,"month":1,"day":1},"description":"在成功封印三位黑巫王之后，正义法师伊洛瑞尔亲率残余的三族精锐联军，直捣最后一位虚魂王凯德罗斯的老巢——黑塔。两位同源的绝世法师在黑塔之巅展开了三天三夜的生死对决。最终，力竭的两人双双坠入充斥着黑魔法的凯德罗斯之泽，永世无归。与此同时，伊洛瑞尔所带领的整支联军也被暴走的沼泽彻底吞噬，无一人生还。虽然联军付出了全军覆没的惨烈代价，但凯德罗斯的陨落标志着漫长的“封印之战”正式结束。后人为了纪念这位牺牲的白巫，将神树正式命名为“伊洛瑞尔神树”。","x":74.8,"y":79.3,"tags":{"event_type":"val_1775794446614","event_location":"kaedros-mire","cat_1775809132917":"val_1775809395229"}},{"id":"evt_1775799583369_q3bz","name":"第一次特兰米尔会议","nameEn":"First Convention of Tramire","time":{"kind":"point","value":"纪元2331年"},"sortTime":{"era":"ce","year":2331,"month":1,"day":1},"description":"封印之战宣告结束后，伤痕累累的各族代表召开了最后一次联军会议，共同确立了战后的新世界秩序。会议正式宣告废除一切形式的军用魔法研究，并全面颁布落实了由伊洛瑞尔生前起草的《特兰米尔大洲魔法公约》。公约不仅严禁魔法用于大规模战争、取缔自然魔法与黑魔法研究，还从律法层面确立了种族平等的原则，严禁对战功赫赫的枝裔族与裂爪族进行歧视与驱逐。此次会议直接促成了战后大陆五大势力（圣岚、梅顿、兰多、枝裔族、裂爪族）的重组分立，为后魔法纪元奠定了长久的和平基石。","x":72.8,"y":35.9,"tags":{"event_type":"val_1775794458553","event_location":"thalanthir","cat_1775809132917":"val_1775809408408"}},{"id":"evt_1775799683588_pgd5","name":"兰多公国建立","nameEn":"Establishment of the Grand Duchy of Lando","time":{"kind":"point","value":"纪元2350年"},"sortTime":{"era":"ce","year":2350,"month":1,"day":1},"description":"维岚运河沿岸七个港口城邦组成兰多公国，主导运河贸易。","x":40.4,"y":48.3,"tags":{"event_type":"val_1775794458553","event_location":"meselia","cat_1775809132917":"none"}},{"id":"evt_1775799834954_sagq","name":"萨兰希尔建都","nameEn":"Founding of Thalanthir","time":{"kind":"point","value":"纪元2360年"},"sortTime":{"era":"ce","year":2360,"month":1,"day":1},"description":"新兴的枝裔族聚集到自然魔法传统悠久的奥蕊岚谷，重建家园，建都萨兰希尔。","x":74.4,"y":34.9,"tags":{"event_type":"val_1775794458553","event_location":"thalanthir","cat_1775809132917":"none"}},{"id":"evt_1775799932410_muca","name":"瓦尔卡兹立国","nameEn":"Founding of Varkhaz","time":{"kind":"point","value":"纪元2368年"},"sortTime":{"era":"ce","year":2368,"month":1,"day":1},"description":"部分对人类政权不满或仍追随黑巫力量的裂爪族在灰棘山脉西麓自立为王，建都瓦尔卡兹。","x":26,"y":55.1,"tags":{"event_type":"val_1775794458553","event_location":"varkhaz","cat_1775809132917":"none"}},{"id":"evt_1775800148159_76ol","name":"第一次枝疫大流行","nameEn":"First Great Verdurge Outbreak","time":{"kind":"range","start":"纪元1066年","end":"纪元1070年"},"sortTime":{"era":"ce","year":1066,"month":1,"day":1},"description":"圣岚与梅顿全面战争期间，自然魔法的频繁使用导致神树魔力过盛、自然失衡，引发史上首次枝疫大规模爆发，从平原战场逐渐扩散至圣岚全境，首都艾拉拉斯尤为严重。感染者从吐出叶子和花瓣开始，躯体逐渐出现植物化症状，最后丧失生命，变成一棵完全的植物。后方营地与平民区陷入恐慌，进一步加剧了战争混乱。","x":50.3,"y":44.1,"tags":{"event_type":"default_event","event_location":"elarath","cat_1775809132917":"val_1775809424517"}},{"id":"evt_1775800426553_qixn","name":"第二次枝疫大流行","nameEn":"Second Great Verdurge Outbreak","time":{"kind":"range","start":"纪元2500年","end":"纪元2650年"},"sortTime":{"era":"ce","year":2500,"month":1,"day":1},"description":"神树魔力迎来过盛，引发了长达一百五十年的第二轮枝疫大流行，波及范围扩展到整个特兰米尔大陆，造成三分之一的人口减少。此后每隔一两百年，枝疫都会迎来一次大规模爆发，学者研究表明其与神树的力量周期相关。","x":48.3,"y":37.9,"tags":{"event_type":"val_1775794458553","event_location":"none","cat_1775809132917":"val_1775809424517"}}]');
 const createdAt = 1775793513573;
-const updatedAt = 1775809823032;
+const updatedAt = 1775872050582;
+const markerScale = { "location": 100, "event": 100 };
 const tramireMapData = {
   id,
   name,
@@ -42518,7 +42733,8 @@ const tramireMapData = {
   eventTagCategories,
   events,
   createdAt,
-  updatedAt
+  updatedAt,
+  markerScale
 };
 function createBuiltInTramireMap() {
   return structuredClone(tramireMapData);
@@ -42673,8 +42889,18 @@ function normalizeMapProject(map2) {
     ...otherEventCategories
   ]);
   const events2 = normalizeEvents(Array.isArray(map2.events) ? map2.events : [], eventTagCategories2);
+  const normalizedMarkerScale = {
+    location: Number.isFinite(map2.markerScale?.location) ? Math.max(40, Math.min(260, map2.markerScale.location)) : 100,
+    event: Number.isFinite(map2.markerScale?.event) ? Math.max(40, Math.min(260, map2.markerScale.event)) : 100
+  };
+  const validThemeIds = new Set(MAP_THEMES.map((theme) => theme.id));
+  const themeId2 = validThemeIds.has(map2.themeId) ? map2.themeId : DEFAULT_MAP_THEME_ID;
+  const themeMode = map2.themeMode === "light" ? "light" : DEFAULT_MAP_THEME_MODE;
   return {
     ...map2,
+    themeId: themeId2,
+    themeMode,
+    markerScale: normalizedMarkerScale,
     tagCategories: tagCategories2,
     locations: locations2,
     eventTagCategories: eventTagCategories2,
@@ -42700,8 +42926,16 @@ function buildInitialLocations() {
   locations: buildInitialLocations(),
   eventTagCategories: createDefaultEventTagCategories(buildInitialLocations())
 });
+function patchBuiltInTramireMap(map2) {
+  if (map2.id !== "tramire") return map2;
+  return {
+    ...map2,
+    themeId: "parchment",
+    themeMode: DEFAULT_MAP_THEME_MODE
+  };
+}
 function getBuiltInTramireMap() {
-  return normalizeMapProject(createBuiltInTramireMap());
+  return normalizeMapProject(patchBuiltInTramireMap(createBuiltInTramireMap()));
 }
 const BUILT_IN_TRAMIRE_MAP = getBuiltInTramireMap();
 const INITIAL_STATE = {
@@ -42741,12 +42975,19 @@ function reducer(state, action) {
         name: action.name,
         nameEn: action.nameEn,
         themeId: action.themeId,
+        themeMode: action.themeMode,
         updatedAt: Date.now()
       }));
     case "UPDATE_MAP_IMAGE":
       return updateMap(state, action.mapId, (m2) => ({
         ...m2,
         imageUrl: action.imageUrl,
+        updatedAt: Date.now()
+      }));
+    case "UPDATE_MARKER_SCALE":
+      return updateMap(state, action.mapId, (m2) => ({
+        ...m2,
+        markerScale: action.markerScale,
         updatedAt: Date.now()
       }));
     case "ADD_LOCATION":
@@ -42930,10 +43171,10 @@ function coerceActiveMapId(savedActiveMapId, maps) {
 function migrateCurrentState(saved) {
   const savedMaps = Array.isArray(saved.maps) ? saved.maps : [];
   const maps = savedMaps.length > 0 ? savedMaps.map((map2) => {
-    const patched = map2.id === TRAMIRE_MAP_ID ? {
+    const patched = map2.id === TRAMIRE_MAP_ID ? patchBuiltInTramireMap({
       ...map2,
       imageUrl: TRAMIRE_IMAGE_URL
-    } : map2;
+    }) : map2;
     return migrateRemovedShapeIcons(patched);
   }) : [getBuiltInTramireMap()];
   return {
@@ -43018,7 +43259,7 @@ function IntermapProvider({
     saveState(state);
   }, [state]);
   const activeMap = state.maps.find((m2) => m2.id === state.activeMapId) ?? null;
-  const theme = activeMap ? MAP_THEMES.find((t2) => t2.id === activeMap.themeId) ?? MAP_THEMES[0] : null;
+  const theme = activeMap ? getMapTheme(activeMap.themeId, activeMap.themeMode ?? DEFAULT_MAP_THEME_MODE) : null;
   return /* @__PURE__ */ jsxRuntimeExports.jsx(IntermapContext.Provider, { value: {
     state,
     dispatch,
@@ -43028,7 +43269,7 @@ function IntermapProvider({
     canRedo: redoStack.current.length > 0,
     activeMap,
     theme
-  }, "data-cid": "75FTESyj", children });
+  }, "data-cid": "yE2kr6ed", children });
 }
 function useIntermap() {
   const ctx = reactExports.useContext(IntermapContext);
@@ -43039,13 +43280,14 @@ const Route$3 = createRootRoute({
   component: RootDocument
 });
 function RootDocument() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { "data-cid": "vZyojdcp", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { "data-cid": "EnGXg14r", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("head", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { charSet: "utf-8" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Intermap — 奇幻世界地图编辑器" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "stylesheet", href: globalCss }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "icon", href: "favicon.png" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "icon", type: "image/png", href: "/薯条汪.png" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "apple-touch-icon", href: "/薯条汪.png" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(TrpcProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(IntermapProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) }) }),
@@ -43054,13 +43296,13 @@ function RootDocument() {
   ] });
 }
 const $$splitComponentImporter$1 = () => Promise.resolve().then(function() {
-  return shareBLTjmXM;
+  return shareDG1hUzpJ;
 });
 const Route$2 = createFileRoute("/share")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
 const $$splitComponentImporter = () => Promise.resolve().then(function() {
-  return indexB9JAGuHO;
+  return indexDYcmIwgJ;
 });
 const Route$1 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
@@ -43167,7 +43409,7 @@ const rootRouteChildren = {
 };
 const routeTree = Route$3._addFileChildren(rootRouteChildren)._addFileTypes();
 function NotFound() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center h-screen w-screen overflow-hidden", "data-cid": "pmvSP8dH", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-bold", children: "404 - Not Found" }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center h-screen w-screen overflow-hidden", "data-cid": "3KLIG9_f", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-bold", children: "404 - Not Found" }) });
 }
 function getRouter() {
   const router2 = createRouter({
@@ -43181,8 +43423,9 @@ const router = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   __proto__: null,
   getRouter
 }, Symbol.toStringTag, { value: "Module" }));
-const routerCMlnZ58L = /* @__PURE__ */ Object.freeze({
+const routerEkiRBOP = /* @__PURE__ */ Object.freeze({
   __proto__: null,
+  D: DEFAULT_MAP_THEME_MODE,
   E: EVENT_LOCATION_CATEGORY_ID,
   M: MAP_THEMES,
   N: NONE_TAG_VALUE_ID,
@@ -43191,6 +43434,7 @@ const routerCMlnZ58L = /* @__PURE__ */ Object.freeze({
   c: compareEventSortTime,
   d: createTRPCContext,
   f: formatEventTime,
+  g: getMapTheme,
   n: normalizeEventSortTime,
   r: router,
   u: useIntermap
@@ -43208,7 +43452,7 @@ const serverLink = unstable_localLink({
     return createTRPCContext({ headers: headers2 });
   }
 });
-const linkB3HxvImo = /* @__PURE__ */ Object.freeze({
+const linkBDjDZxJ6 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   serverLink
 });
@@ -43287,26 +43531,26 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$v = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$v);
-const __iconNode$u = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$u);
-const __iconNode$t = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-const ChevronRight = createLucideIcon("chevron-right", __iconNode$t);
-const __iconNode$s = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-const ChevronUp = createLucideIcon("chevron-up", __iconNode$s);
-const __iconNode$r = [
+const __iconNode$x = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$x);
+const __iconNode$w = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$w);
+const __iconNode$v = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+const ChevronRight = createLucideIcon("chevron-right", __iconNode$v);
+const __iconNode$u = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+const ChevronUp = createLucideIcon("chevron-up", __iconNode$u);
+const __iconNode$t = [
   ["path", { d: "M6 2v14a2 2 0 0 0 2 2h14", key: "ron5a4" }],
   ["path", { d: "M18 22V8a2 2 0 0 0-2-2H2", key: "7s9ehn" }]
 ];
-const Crop = createLucideIcon("crop", __iconNode$r);
-const __iconNode$q = [
+const Crop = createLucideIcon("crop", __iconNode$t);
+const __iconNode$s = [
   ["path", { d: "M12 15V3", key: "m9g1x1" }],
   ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
   ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
 ];
-const Download = createLucideIcon("download", __iconNode$q);
-const __iconNode$p = [
+const Download = createLucideIcon("download", __iconNode$s);
+const __iconNode$r = [
   [
     "path",
     {
@@ -43324,8 +43568,8 @@ const __iconNode$p = [
   ],
   ["path", { d: "m2 2 20 20", key: "1ooewy" }]
 ];
-const EyeOff = createLucideIcon("eye-off", __iconNode$p);
-const __iconNode$o = [
+const EyeOff = createLucideIcon("eye-off", __iconNode$r);
+const __iconNode$q = [
   [
     "path",
     {
@@ -43335,8 +43579,8 @@ const __iconNode$o = [
   ],
   ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
 ];
-const Eye = createLucideIcon("eye", __iconNode$o);
-const __iconNode$n = [
+const Eye = createLucideIcon("eye", __iconNode$q);
+const __iconNode$p = [
   [
     "path",
     {
@@ -43345,8 +43589,8 @@ const __iconNode$n = [
     }
   ]
 ];
-const Flag = createLucideIcon("flag", __iconNode$n);
-const __iconNode$m = [
+const Flag = createLucideIcon("flag", __iconNode$p);
+const __iconNode$o = [
   [
     "path",
     {
@@ -43355,8 +43599,8 @@ const __iconNode$m = [
     }
   ]
 ];
-const FolderOpen = createLucideIcon("folder-open", __iconNode$m);
-const __iconNode$l = [
+const FolderOpen = createLucideIcon("folder-open", __iconNode$o);
+const __iconNode$n = [
   [
     "path",
     {
@@ -43365,22 +43609,22 @@ const __iconNode$l = [
     }
   ]
 ];
-const Funnel = createLucideIcon("funnel", __iconNode$l);
-const __iconNode$k = [
+const Funnel = createLucideIcon("funnel", __iconNode$n);
+const __iconNode$m = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
   ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
   ["path", { d: "M2 12h20", key: "9i4pu4" }]
 ];
-const Globe = createLucideIcon("globe", __iconNode$k);
-const __iconNode$j = [
+const Globe = createLucideIcon("globe", __iconNode$m);
+const __iconNode$l = [
   ["path", { d: "M16 5h6", key: "1vod17" }],
   ["path", { d: "M19 2v6", key: "4bpg5p" }],
   ["path", { d: "M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5", key: "1ue2ih" }],
   ["path", { d: "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21", key: "1xmnt7" }],
   ["circle", { cx: "9", cy: "9", r: "2", key: "af1f0g" }]
 ];
-const ImagePlus = createLucideIcon("image-plus", __iconNode$j);
-const __iconNode$i = [
+const ImagePlus = createLucideIcon("image-plus", __iconNode$l);
+const __iconNode$k = [
   ["path", { d: "M3 5h.01", key: "18ugdj" }],
   ["path", { d: "M3 12h.01", key: "nlz23k" }],
   ["path", { d: "M3 19h.01", key: "noohij" }],
@@ -43388,8 +43632,8 @@ const __iconNode$i = [
   ["path", { d: "M8 12h13", key: "1za7za" }],
   ["path", { d: "M8 19h13", key: "m83p4d" }]
 ];
-const List = createLucideIcon("list", __iconNode$i);
-const __iconNode$h = [
+const List = createLucideIcon("list", __iconNode$k);
+const __iconNode$j = [
   [
     "path",
     {
@@ -43399,8 +43643,8 @@ const __iconNode$h = [
   ],
   ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$h);
-const __iconNode$g = [
+const MapPin = createLucideIcon("map-pin", __iconNode$j);
+const __iconNode$i = [
   [
     "path",
     {
@@ -43411,15 +43655,15 @@ const __iconNode$g = [
   ["path", { d: "M15 5.764v15", key: "1pn4in" }],
   ["path", { d: "M9 3.236v15", key: "1uimfh" }]
 ];
-const Map$1 = createLucideIcon("map", __iconNode$g);
-const __iconNode$f = [
+const Map$1 = createLucideIcon("map", __iconNode$i);
+const __iconNode$h = [
   ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
   ["path", { d: "m21 3-7 7", key: "1l2asr" }],
   ["path", { d: "m3 21 7-7", key: "tjx5ai" }],
   ["path", { d: "M9 21H3v-6", key: "wtvkvv" }]
 ];
-const Maximize2 = createLucideIcon("maximize-2", __iconNode$f);
-const __iconNode$e = [
+const Maximize2 = createLucideIcon("maximize-2", __iconNode$h);
+const __iconNode$g = [
   ["path", { d: "M13 21h8", key: "1jsn5i" }],
   [
     "path",
@@ -43429,8 +43673,8 @@ const __iconNode$e = [
     }
   ]
 ];
-const PenLine = createLucideIcon("pen-line", __iconNode$e);
-const __iconNode$d = [
+const PenLine = createLucideIcon("pen-line", __iconNode$g);
+const __iconNode$f = [
   [
     "path",
     {
@@ -43440,25 +43684,42 @@ const __iconNode$d = [
   ],
   ["path", { d: "m15 5 4 4", key: "1mk7zo" }]
 ];
-const Pencil = createLucideIcon("pencil", __iconNode$d);
-const __iconNode$c = [
+const Pencil = createLucideIcon("pencil", __iconNode$f);
+const __iconNode$e = [
   ["path", { d: "M5 12h14", key: "1ays0h" }],
   ["path", { d: "M12 5v14", key: "s699le" }]
 ];
-const Plus = createLucideIcon("plus", __iconNode$c);
-const __iconNode$b = [
+const Plus = createLucideIcon("plus", __iconNode$e);
+const __iconNode$d = [
+  ["path", { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "1357e3" }],
+  ["path", { d: "M3 3v5h5", key: "1xhq8a" }]
+];
+const RotateCcw = createLucideIcon("rotate-ccw", __iconNode$d);
+const __iconNode$c = [
   ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
   ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-const Search = createLucideIcon("search", __iconNode$b);
-const __iconNode$a = [
+const Search = createLucideIcon("search", __iconNode$c);
+const __iconNode$b = [
   ["circle", { cx: "18", cy: "5", r: "3", key: "gq8acd" }],
   ["circle", { cx: "6", cy: "12", r: "3", key: "w7nqdw" }],
   ["circle", { cx: "18", cy: "19", r: "3", key: "1xt0gg" }],
   ["line", { x1: "8.59", x2: "15.42", y1: "13.51", y2: "17.49", key: "47mynk" }],
   ["line", { x1: "15.41", x2: "8.59", y1: "6.51", y2: "10.49", key: "1n3mei" }]
 ];
-const Share2 = createLucideIcon("share-2", __iconNode$a);
+const Share2 = createLucideIcon("share-2", __iconNode$b);
+const __iconNode$a = [
+  ["path", { d: "M10 5H3", key: "1qgfaw" }],
+  ["path", { d: "M12 19H3", key: "yhmn1j" }],
+  ["path", { d: "M14 3v4", key: "1sua03" }],
+  ["path", { d: "M16 17v4", key: "1q0r14" }],
+  ["path", { d: "M21 12h-9", key: "1o4lsq" }],
+  ["path", { d: "M21 19h-5", key: "1rlt1p" }],
+  ["path", { d: "M21 5h-7", key: "1oszz2" }],
+  ["path", { d: "M8 10v4", key: "tgpxqk" }],
+  ["path", { d: "M8 12H3", key: "a7s4jb" }]
+];
+const SlidersHorizontal = createLucideIcon("sliders-horizontal", __iconNode$a);
 const __iconNode$9 = [
   [
     "path",
@@ -43555,15 +43816,27 @@ const ZoomOut = createLucideIcon("zoom-out", __iconNode);
 function TagIconRenderer({
   icon,
   size = 12,
-  borderColor
+  borderColor,
+  themeColor = "#C8A860"
 }) {
   if (icon.kind === "emoji") {
+    const defaultBackground = themeColor;
+    const baseBackground = icon.bgColor === null ? "transparent" : icon.bgColor ?? defaultBackground;
+    const background = icon.bgColor && icon.bgOpacity !== void 0 ? withAlpha(icon.bgColor, icon.bgOpacity) : baseBackground;
+    const border2 = icon.bgColor === null ? "transparent" : borderColor ?? icon.borderColor ?? lighten(icon.bgColor ?? themeColor, 0.2);
     return /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
-      fontSize: size * 1.1,
+      fontSize: size * 0.95,
       lineHeight: 1,
       display: "inline-flex",
-      alignItems: "center"
-    }, "data-cid": "pLjKM79V", children: icon.emoji });
+      alignItems: "center",
+      justifyContent: "center",
+      width: size * 1.45,
+      height: size * 1.45,
+      borderRadius: "50%",
+      background,
+      border: `1px solid ${border2}`,
+      flexShrink: 0
+    }, "data-cid": "aYWx5oCz", children: icon.emoji });
   }
   if (icon.kind === "none") {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
@@ -43574,7 +43847,7 @@ function TagIconRenderer({
       background: "rgba(150,130,100,0.35)",
       border: `1px solid rgba(150,130,100,0.4)`,
       flexShrink: 0
-    }, "data-cid": "JiMKXyZ7" });
+    }, "data-cid": "vRiPbzc_" });
   }
   const color = icon.color;
   const opacity = icon.opacity ?? 1;
@@ -43589,7 +43862,7 @@ function TagIconRenderer({
       border: `1.5px solid ${border}`,
       flexShrink: 0,
       opacity
-    }, "data-cid": "In4PlhGQ" });
+    }, "data-cid": "t-YQ_5lL" });
   }
   if (icon.shape === "square") {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
@@ -43601,7 +43874,7 @@ function TagIconRenderer({
       border: `1.5px solid ${border}`,
       flexShrink: 0,
       opacity
-    }, "data-cid": "7VqiJUez" });
+    }, "data-cid": "2BqLcN4a" });
   }
   if (icon.shape === "diamond") {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
@@ -43613,7 +43886,7 @@ function TagIconRenderer({
       transform: "rotate(45deg)",
       flexShrink: 0,
       opacity
-    }, "data-cid": "PrG3nqbn" });
+    }, "data-cid": "5HCP6I5D" });
   }
   return null;
 }
@@ -43626,6 +43899,16 @@ function lighten(hex2, amount) {
     const lg = Math.min(255, Math.round(g + (255 - g) * amount));
     const lb = Math.min(255, Math.round(b2 + (255 - b2) * amount));
     return `rgb(${lr},${lg},${lb})`;
+  } catch {
+    return hex2;
+  }
+}
+function withAlpha(hex2, alpha) {
+  try {
+    const r = parseInt(hex2.slice(1, 3), 16);
+    const g = parseInt(hex2.slice(3, 5), 16);
+    const b2 = parseInt(hex2.slice(5, 7), 16);
+    return `rgba(${r},${g},${b2},${alpha})`;
   } catch {
     return hex2;
   }
@@ -43674,8 +43957,10 @@ function matchesTagFilter$1(entity, categories, filterMap) {
 }
 function Marker$1({
   entity,
+  theme,
   legendCategory,
   isSelected,
+  scalePercent = 100,
   onClick,
   onDoubleClick,
   badgeCount,
@@ -43686,7 +43971,8 @@ function Marker$1({
   const icon = tagValue?.icon ?? {
     kind: "none"
   };
-  const size = isSelected ? 22 : 15;
+  const sizeFactor = Math.max(0.4, scalePercent / 100);
+  const size = (isSelected ? 22 : 15) * sizeFactor;
   const isShape = icon.kind === "shape";
   const shapeIcon = isShape ? icon : null;
   const shape = shapeIcon?.shape ?? "circle";
@@ -43706,6 +43992,13 @@ function Marker$1({
   const glowColor = customBorderColor ?? baseColor;
   const borderRadius = shape === "square" ? 3 : shape === "diamond" ? 0 : size / 2;
   const transform2 = shape === "diamond" ? "translate(-50%, -50%) rotate(45deg)" : "translate(-50%, -50%)";
+  const emojiIcon = icon.kind === "emoji" ? icon : null;
+  const emojiOpacity = emojiIcon?.bgOpacity ?? 1;
+  const emojiBgColor = emojiIcon?.bgColor === null ? "transparent" : emojiIcon?.bgColor ? hexToRgba(emojiIcon.bgColor, emojiOpacity) : theme.primary;
+  const emojiBorderColor = emojiIcon?.bgColor === null ? "transparent" : emojiIcon?.borderColor ?? emojiIcon?.bgColor ?? theme.primary;
+  const markerBackground = isShape ? background : emojiBgColor;
+  const markerBorder = isShape ? activeBorder : isSelected ? "#ffffff" : emojiBorderColor;
+  const markerShadow = isShape ? isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}` : customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : "0 1px 5px rgba(0,0,0,0.8)" : isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${emojiBorderColor}` : "0 1px 5px rgba(0,0,0,0.55)";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { style: {
     position: "absolute",
     left: `${entity.x}%`,
@@ -43714,10 +44007,10 @@ function Marker$1({
     width: size,
     height: size,
     borderRadius,
-    backgroundColor: background,
-    border: `${isSelected ? 2.5 : 1.5}px solid ${activeBorder}`,
+    backgroundColor: markerBackground,
+    border: `${isSelected ? 2.5 : 1.5}px solid ${markerBorder}`,
     cursor: "pointer",
-    boxShadow: isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}` : customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : "0 1px 5px rgba(0,0,0,0.8)",
+    boxShadow: markerShadow,
     zIndex: isSelected ? baseZIndex + 10 : baseZIndex,
     display: "flex",
     alignItems: "center",
@@ -43732,7 +44025,7 @@ function Marker$1({
   }, onDoubleClick: onDoubleClick ? (e) => {
     e.stopPropagation();
     onDoubleClick();
-  } : void 0, "aria-label": entity.name, "data-cid": "ibFeQdm_", children: [
+  } : void 0, "aria-label": entity.name, "data-cid": "P6SWwAiY", children: [
     icon.kind === "emoji" && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
       fontSize: size * 0.65,
       lineHeight: 1
@@ -43772,12 +44065,27 @@ function managerChip(color, active) {
     transition: "all 0.15s"
   };
 }
+function topBarStyle$1(theme) {
+  const isLight = theme.bg === theme.modes.light.bg;
+  return {
+    padding: "8px 14px",
+    background: isLight ? theme.bg : `${theme.bg}F2`,
+    borderBottom: `1px solid ${theme.accent}`,
+    boxShadow: isLight ? `0 1px 0 ${theme.accent}55` : "0 8px 20px rgba(0,0,0,0.18)",
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    flexShrink: 0,
+    minHeight: 44
+  };
+}
 function ShareLocationManagerPanel({
   theme,
   locations: locations2,
   categories,
   onClose,
-  onSelectLocation
+  onSelectLocation,
+  onVisibleLocationsChange
 }) {
   const [search, setSearch] = reactExports.useState("");
   const [tagFilter, setTagFilter] = reactExports.useState({});
@@ -43849,6 +44157,9 @@ function ShareLocationManagerPanel({
     }
     return groups;
   }, [categories, filteredLocations, groupByTagId]);
+  reactExports.useEffect(() => {
+    onVisibleLocationsChange?.(groupedLocations.flatMap((group) => group.items));
+  }, [groupedLocations, onVisibleLocationsChange]);
   const toggleTagFilter = (categoryId, valueId) => {
     setTagFilter((prev) => {
       const next = new Set(prev[categoryId] ?? []);
@@ -43883,7 +44194,7 @@ function ShareLocationManagerPanel({
     backdropFilter: "blur(8px)",
     fontFamily: "Georgia, serif",
     overflow: "hidden"
-  }, "data-cid": "_wHptFJm", children: [
+  }, "data-cid": "i8vXzC4z", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "12px 14px 10px",
       borderBottom: `1px solid ${theme.accent}`,
@@ -43918,14 +44229,6 @@ function ShareLocationManagerPanel({
           padding: 4,
           marginLeft: 2
         }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 16 }) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
-        display: "flex",
-        gap: 6,
-        marginBottom: 8
-      }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("expanded"), style: managerChip(theme.primary, displayMode === "expanded"), children: "浜嬩欢灞曞紑鏄剧ず" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("collapsed"), style: managerChip(theme.primary, displayMode === "collapsed"), children: "浜嬩欢鏀剁缉鏄剧ず" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         display: "flex",
@@ -43987,7 +44290,7 @@ function ShareLocationManagerPanel({
       const isCollapsed = collapsedCats.has(category.id);
       const activeCategoryFilter = tagFilter[category.id];
       const hasActiveFilter = activeCategoryFilter && activeCategoryFilter.size > 0;
-      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "GTlBzi0f", children: [
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "BIYL5S8M", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onClick: () => toggleCatCollapse(category.id), style: {
           padding: "6px 14px",
           display: "flex",
@@ -44044,8 +44347,8 @@ function ShareLocationManagerPanel({
             background: isOn ? `${theme.primary}22` : "transparent",
             color: isOn ? theme.primary : theme.muted,
             transition: "all 0.15s"
-          }, "data-cid": "-hK2x1zV", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 9 }),
+          }, "data-cid": "5tdkkTGf", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 9, themeColor: theme.primary }),
             value.label
           ] }, value.id);
         }) })
@@ -44072,7 +44375,7 @@ function ShareLocationManagerPanel({
         top: 0,
         zIndex: 1
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: group.icon, size: 10 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: group.icon, size: 10, themeColor: theme.primary }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
           fontSize: 11,
           color: theme.heading,
@@ -44095,10 +44398,10 @@ function ShareLocationManagerPanel({
           cursor: "pointer",
           borderBottom: `1px solid ${theme.accent}33`,
           transition: "background 0.1s"
-        }, "data-cid": "7XxonNuL", children: [
+        }, "data-cid": "LPYAMOD9", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             flexShrink: 0
-          }, children: tagValue ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagValue.icon, size: 12 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+          }, children: tagValue ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagValue.icon, size: 12, themeColor: theme.primary }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             width: 10,
             height: 10,
             borderRadius: "50%",
@@ -44140,8 +44443,9 @@ function ShareEventManagerPanel({
   categories,
   onClose,
   onSelectEvent,
-  displayMode: displayMode2,
-  onDisplayModeChange: onDisplayModeChange2
+  displayMode,
+  onDisplayModeChange,
+  onVisibleEventsChange
 }) {
   const [search, setSearch] = reactExports.useState("");
   const [tagFilter, setTagFilter] = reactExports.useState({});
@@ -44182,6 +44486,9 @@ function ShareEventManagerPanel({
     }
     return next.map((item) => item.eventItem);
   }, [categories, events2, search, sortOrder, tagFilter]);
+  reactExports.useEffect(() => {
+    onVisibleEventsChange?.(filteredEvents);
+  }, [filteredEvents, onVisibleEventsChange]);
   const toggleTagFilter = (categoryId, valueId) => {
     setTagFilter((prev) => {
       const next = new Set(prev[categoryId] ?? []);
@@ -44216,7 +44523,7 @@ function ShareEventManagerPanel({
     backdropFilter: "blur(8px)",
     fontFamily: "Georgia, serif",
     overflow: "hidden"
-  }, "data-cid": "ISKOZlwB", children: [
+  }, "data-cid": "0CGkahPO", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "12px 14px 10px",
       borderBottom: `1px solid ${theme.accent}`,
@@ -44251,6 +44558,14 @@ function ShareEventManagerPanel({
           padding: 4,
           marginLeft: 2
         }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 16 }) })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        display: "flex",
+        gap: 6,
+        marginBottom: 8
+      }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("expanded"), style: managerChip(theme.primary, displayMode === "expanded"), children: "事件展开显示" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("collapsed"), style: managerChip(theme.primary, displayMode === "collapsed"), children: "事件收缩显示" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         display: "flex",
@@ -44307,7 +44622,7 @@ function ShareEventManagerPanel({
       const isCollapsed = collapsedCats.has(category.id);
       const activeCategoryFilter = tagFilter[category.id];
       const hasActiveFilter = activeCategoryFilter && activeCategoryFilter.size > 0;
-      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "vRJnQwgQ", children: [
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "o6LDWlWn", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onClick: () => toggleCatCollapse(category.id), style: {
           padding: "6px 14px",
           display: "flex",
@@ -44364,8 +44679,8 @@ function ShareEventManagerPanel({
             background: isOn ? `${theme.primary}22` : "transparent",
             color: isOn ? theme.primary : theme.muted,
             transition: "all 0.15s"
-          }, "data-cid": "WPtISv08", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 9 }),
+          }, "data-cid": "C_O5wnQy", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 9, themeColor: theme.primary }),
             value.label
           ] }, value.id);
         }) })
@@ -44392,10 +44707,10 @@ function ShareEventManagerPanel({
         cursor: "pointer",
         borderBottom: `1px solid ${theme.accent}33`,
         transition: "background 0.1s"
-      }, "data-cid": "aJ6G4rS7", children: [
+      }, "data-cid": "Zr2DYvDx", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           flexShrink: 0
-        }, children: tagValue ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagValue.icon, size: 12 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        }, children: tagValue ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagValue.icon, size: 12, themeColor: theme.primary }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           width: 10,
           height: 10,
           borderRadius: "50%",
@@ -44457,7 +44772,7 @@ function LegendCard$1({
     boxShadow: "0 8px 18px rgba(0,0,0,0.28)",
     overflow: "hidden",
     pointerEvents: "auto"
-  }, "data-cid": "hA4pZq4K", children: [
+  }, "data-cid": "2LC8MZBb", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onMouseDown, style: {
       display: "flex",
       alignItems: "center",
@@ -44507,7 +44822,7 @@ function LegendCard$1({
         gap: 6,
         marginBottom: 3
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10, themeColor: theme.primary }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
           color: theme.heading,
           opacity: 0.8
@@ -44522,7 +44837,11 @@ function ReadOnlyDetailPanel({
   theme,
   onClose,
   headerMeta,
-  extraSection
+  extraSection,
+  onPrevious,
+  onNext,
+  canGoPrevious = false,
+  canGoNext = false
 }) {
   const divider = /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
     height: 1,
@@ -44545,12 +44864,32 @@ function ReadOnlyDetailPanel({
     backdropFilter: "blur(8px)",
     overflow: "hidden",
     fontFamily: "Georgia, serif"
-  }, "data-cid": "HpbZR4jp", children: [
+  }, "data-cid": "JEePGmx5", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "14px 16px 12px",
       flexShrink: 0,
-      paddingRight: 36
+      paddingRight: 96
     }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onPrevious, disabled: !canGoPrevious, style: {
+        position: "absolute",
+        top: 10,
+        right: 58,
+        background: "none",
+        border: "none",
+        color: canGoPrevious ? theme.muted : `${theme.muted}66`,
+        cursor: canGoPrevious ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↑" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onNext, disabled: !canGoNext, style: {
+        position: "absolute",
+        top: 10,
+        right: 34,
+        background: "none",
+        border: "none",
+        color: canGoNext ? theme.muted : `${theme.muted}66`,
+        cursor: canGoNext ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↓" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
         position: "absolute",
         top: 10,
@@ -44603,8 +44942,8 @@ function ReadOnlyDetailPanel({
           borderRadius: 20,
           padding: "2px 8px",
           border: `1px solid ${category.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}`
-        }, "data-cid": "BmC9eUEM", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10 }),
+        }, "data-cid": "VzFa7rtU", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10, themeColor: theme.primary }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
             fontSize: 11,
             color: category.isLegend ? theme.primary : theme.muted
@@ -44615,11 +44954,16 @@ function ReadOnlyDetailPanel({
     entity.imageUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       flexShrink: 0,
       overflow: "hidden",
-      maxHeight: 180
+      maxHeight: 220,
+      background: "rgba(0,0,0,0.22)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
     }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: entity.imageUrl, alt: entity.name, style: {
       width: "100%",
-      maxHeight: 180,
-      objectFit: "cover",
+      height: "auto",
+      maxHeight: 220,
+      objectFit: "contain",
       display: "block"
     } }) }),
     divider,
@@ -44666,7 +45010,11 @@ function ReadOnlyLocationDetailPanel({
   onClose,
   relatedEvents,
   eventLegendCategory,
-  onSelectEvent
+  onSelectEvent,
+  onPrevious,
+  onNext,
+  canGoPrevious = false,
+  canGoNext = false
 }) {
   const divider = /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
     height: 1,
@@ -44689,12 +45037,32 @@ function ReadOnlyLocationDetailPanel({
     backdropFilter: "blur(8px)",
     overflow: "hidden",
     fontFamily: "Georgia, serif"
-  }, "data-cid": "eOkUu6cf", children: [
+  }, "data-cid": "2-n5SYJ4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "14px 16px 12px",
       flexShrink: 0,
-      paddingRight: 36
+      paddingRight: 96
     }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onPrevious, disabled: !canGoPrevious, style: {
+        position: "absolute",
+        top: 10,
+        right: 58,
+        background: "none",
+        border: "none",
+        color: canGoPrevious ? theme.muted : `${theme.muted}66`,
+        cursor: canGoPrevious ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↑" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onNext, disabled: !canGoNext, style: {
+        position: "absolute",
+        top: 10,
+        right: 34,
+        background: "none",
+        border: "none",
+        color: canGoNext ? theme.muted : `${theme.muted}66`,
+        cursor: canGoNext ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↓" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
         position: "absolute",
         top: 10,
@@ -44732,8 +45100,8 @@ function ReadOnlyLocationDetailPanel({
           borderRadius: 20,
           padding: "2px 8px",
           border: `1px solid ${category.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}`
-        }, "data-cid": "dFTeiRIk", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10 }),
+        }, "data-cid": "8k8VsKUQ", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10, themeColor: theme.primary }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
             fontSize: 11,
             color: category.isLegend ? theme.primary : theme.muted
@@ -44744,11 +45112,16 @@ function ReadOnlyLocationDetailPanel({
     location.imageUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       flexShrink: 0,
       overflow: "hidden",
-      maxHeight: 180
+      maxHeight: 220,
+      background: "rgba(0,0,0,0.22)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
     }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: location.imageUrl, alt: location.name, style: {
       width: "100%",
-      maxHeight: 180,
-      objectFit: "cover",
+      height: "auto",
+      maxHeight: 220,
+      objectFit: "contain",
       display: "block"
     } }) }),
     divider,
@@ -44863,7 +45236,7 @@ function ShareTagManagerPanel({
     backdropFilter: "blur(8px)",
     fontFamily: "Georgia, serif",
     overflow: "hidden"
-  }, "data-cid": "6c2XCg4i", children: [
+  }, "data-cid": "EWyp9elo", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "12px 14px 10px",
       borderBottom: `1px solid ${theme.accent}`,
@@ -44918,7 +45291,7 @@ function ShareTagManagerPanel({
       const isExpanded = expanded[category.id] ?? true;
       return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         borderBottom: `1px solid ${theme.accent}33`
-      }, "data-cid": "5R1-o-1I", children: [
+      }, "data-cid": "LtrbpRTh", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onClick: () => setExpanded((prev) => ({
           ...prev,
           [category.id]: !isExpanded
@@ -44976,7 +45349,7 @@ function ShareTagManagerPanel({
             alignItems: "center",
             gap: 8
           }, children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 11 }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 11, themeColor: theme.primary }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
               color: theme.heading,
               fontSize: 12,
@@ -45093,7 +45466,7 @@ function ShareFilterPanel({
       flexDirection: "column",
       overflowY: "auto",
       fontFamily: "Georgia, serif"
-    }, "data-cid": "t3iviQFS", children: [
+    }, "data-cid": "lrckXgxg", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         padding: "12px 16px 10px",
         borderBottom: `1px solid ${theme.accent}44`,
@@ -45152,7 +45525,7 @@ function ShareFilterPanel({
         return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
           borderBottom: `1px solid ${theme.accent}22`,
           flexShrink: 0
-        }, "data-cid": "TIjP5Qhm", children: [
+        }, "data-cid": "OZWlQcR7", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
             display: "flex",
             alignItems: "center",
@@ -45213,7 +45586,7 @@ function ShareFilterPanel({
                 cursor: "pointer",
                 opacity: checked ? 1 : 0.42,
                 transition: "opacity 0.15s"
-              }, "data-cid": "h0rsLSOG", children: [
+              }, "data-cid": "v-nyoIHV", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
                   width: 13,
                   height: 13,
@@ -45225,7 +45598,7 @@ function ShareFilterPanel({
                   alignItems: "center",
                   justifyContent: "center"
                 }, children: checked && /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { width: "8", height: "8", viewBox: "0 0 8 8", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M1 4l2 2 4-4", stroke: theme.primary, strokeWidth: "1.5", fill: "none", strokeLinecap: "round" }) }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 11 }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 11, themeColor: theme.primary }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
                   color: theme.heading,
                   fontSize: 12,
@@ -45306,13 +45679,15 @@ function decodeMapFromHash() {
 }
 function ShareMapView() {
   const [map2, setMap] = reactExports.useState(() => decodeMapFromHash());
-  const theme = map2 ? MAP_THEMES.find((item) => item.id === map2.themeId) ?? MAP_THEMES[0] : MAP_THEMES[0];
+  const theme = getMapTheme(map2?.themeId, map2?.themeMode);
   const [panelRoute, setPanelRoute] = reactExports.useState(null);
   const [tagManagerOpen, setTagManagerOpen] = reactExports.useState(false);
   const [tagManagerTab, setTagManagerTab] = reactExports.useState("locations");
   const [eventDisplayMode, setEventDisplayMode] = reactExports.useState("expanded");
   const [expandedEventLocationId, setExpandedEventLocationId] = reactExports.useState(null);
   const [temporaryFocusedEventId, setTemporaryFocusedEventId] = reactExports.useState(null);
+  const [visibleLocationManagerIds, setVisibleLocationManagerIds] = reactExports.useState([]);
+  const [visibleEventManagerIds, setVisibleEventManagerIds] = reactExports.useState([]);
   const [view, setView] = reactExports.useState({
     scale: 1,
     translateX: 0,
@@ -45396,6 +45771,16 @@ function ShareMapView() {
     eventCountByLocation.set(locationId, (eventCountByLocation.get(locationId) ?? 0) + 1);
   });
   const relatedEvents = selectedLocation ? map2?.events.filter((eventItem) => getEventLocationId$1(eventItem) === selectedLocation.id) ?? [] : [];
+  const locationManagerIndex = currentLocationDetail?.backTo === "location-manager" ? visibleLocationManagerIds.indexOf(currentLocationDetail.locationId) : -1;
+  const previousLocationId = locationManagerIndex > 0 ? visibleLocationManagerIds[locationManagerIndex - 1] ?? null : null;
+  const nextLocationId = locationManagerIndex >= 0 && locationManagerIndex < visibleLocationManagerIds.length - 1 ? visibleLocationManagerIds[locationManagerIndex + 1] ?? null : null;
+  const eventManagerIndex = currentEventDetail?.backTo === "event-manager" ? visibleEventManagerIds.indexOf(currentEventDetail.eventId) : -1;
+  const previousEventId = eventManagerIndex > 0 ? visibleEventManagerIds[eventManagerIndex - 1] ?? null : null;
+  const nextEventId = eventManagerIndex >= 0 && eventManagerIndex < visibleEventManagerIds.length - 1 ? visibleEventManagerIds[eventManagerIndex + 1] ?? null : null;
+  const markerScale2 = {
+    location: map2?.markerScale?.location ?? 100,
+    event: map2?.markerScale?.event ?? 100
+  };
   const zoomBy = reactExports.useCallback((delta, originX, originY) => {
     setView((prev) => {
       const container = containerRef.current;
@@ -45691,9 +46076,9 @@ function ShareMapView() {
         left: legendPanels[key].position.x,
         top: legendPanels[key].position.y,
         zIndex: 40
-      }, "data-cid": "ZFMOUA5E", children: card }, key);
+      }, "data-cid": "20i7sIrN", children: card }, key);
     }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { "data-cid": "USXu1buj", children: card }, key);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { "data-cid": "NeBOjDMP", children: card }, key);
   };
   if (!map2) {
     return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
@@ -45707,7 +46092,7 @@ function ShareMapView() {
       fontFamily: "Georgia, serif",
       flexDirection: "column",
       gap: 12
-    }, "data-cid": "NhvI2KGF", children: [
+    }, "data-cid": "GQqqs-8o", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         fontSize: 32
       }, children: "🗺️" }),
@@ -45729,17 +46114,8 @@ function ShareMapView() {
     background: theme.bg,
     fontFamily: "Georgia, serif",
     touchAction: "none"
-  }, "data-cid": "FypE8jzB", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
-      padding: "8px 14px",
-      background: "rgba(0,0,0,0.5)",
-      borderBottom: `1px solid ${theme.accent}`,
-      display: "flex",
-      alignItems: "center",
-      gap: 10,
-      flexShrink: 0,
-      minHeight: 44
-    }, children: [
+  }, "data-cid": "rsnFYU5Z", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: topBarStyle$1(theme), children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         fontSize: 15,
         fontWeight: "bold",
@@ -45783,7 +46159,7 @@ function ShareMapView() {
         });
       }, style: managerChip(theme.primary, tagManagerOpen), children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(Tags, { size: 12 }),
-        " 鏍囩绠＄悊"
+        " 标签管理"
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => {
         setTagManagerOpen(false);
@@ -45904,17 +46280,19 @@ function ShareMapView() {
           backgroundSize: "40px 40px",
           pointerEvents: "none"
         } }),
-        visibleLocations.map((location) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker$1, { entity: location, legendCategory: locationLegendCategory, isSelected: selectedLocation?.id === location.id, onClick: () => {
+        visibleLocations.map((location) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker$1, { entity: location, theme, legendCategory: locationLegendCategory, isSelected: selectedLocation?.id === location.id, scalePercent: markerScale2.location, onClick: () => {
           openLocationDetail(location.id, null);
         }, onDoubleClick: () => toggleCollapsedEventsForLocation(location.id), badgeCount: eventDisplayMode === "collapsed" ? eventCountByLocation.get(location.id) : void 0, baseZIndex: 10 }, location.id)),
-        visibleEvents.map((eventItem) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker$1, { entity: eventItem, legendCategory: eventLegendCategory, isSelected: selectedEvent?.id === eventItem.id, onClick: () => {
+        visibleEvents.map((eventItem) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker$1, { entity: eventItem, theme, legendCategory: eventLegendCategory, isSelected: selectedEvent?.id === eventItem.id, scalePercent: markerScale2.event, onClick: () => {
           openEventDetail(eventItem.id, null);
         }, baseZIndex: 30 }, eventItem.id))
       ] }) }) }),
-      panelRoute?.kind === "location-manager" && /* @__PURE__ */ jsxRuntimeExports.jsx(ShareLocationManagerPanel, { theme, locations: map2.locations, categories: map2.tagCategories, onClose: () => setPanelRoute(null), onSelectLocation: (location) => {
+      (panelRoute?.kind === "location-manager" || currentLocationDetail?.backTo === "location-manager") && /* @__PURE__ */ jsxRuntimeExports.jsx(ShareLocationManagerPanel, { theme, locations: map2.locations, categories: map2.tagCategories, onClose: () => setPanelRoute(null), onSelectLocation: (location) => {
         openLocationDetail(location.id, "location-manager");
+      }, onVisibleLocationsChange: (locations2) => {
+        setVisibleLocationManagerIds(locations2.map((location) => location.id));
       } }),
-      panelRoute?.kind === "event-manager" && /* @__PURE__ */ jsxRuntimeExports.jsx(ShareEventManagerPanel, { theme, events: map2.events, categories: map2.eventTagCategories, onClose: () => setPanelRoute(null), onSelectEvent: (eventItem) => {
+      (panelRoute?.kind === "event-manager" || currentEventDetail?.backTo === "event-manager") && /* @__PURE__ */ jsxRuntimeExports.jsx(ShareEventManagerPanel, { theme, events: map2.events, categories: map2.eventTagCategories, onClose: () => setPanelRoute(null), onSelectEvent: (eventItem) => {
         openEventDetail(eventItem.id, "event-manager");
       }, displayMode: eventDisplayMode, onDisplayModeChange: (mode) => {
         setEventDisplayMode(mode);
@@ -45922,15 +46300,17 @@ function ShareMapView() {
           setTemporaryFocusedEventId(null);
           setExpandedEventLocationId(null);
         }
+      }, onVisibleEventsChange: (events2) => {
+        setVisibleEventManagerIds(events2.map((eventItem) => eventItem.id));
       } }),
       tagManagerOpen && /* @__PURE__ */ jsxRuntimeExports.jsx(ShareTagManagerPanel, { theme, locationCategories: map2.tagCategories, eventCategories: map2.eventTagCategories, activeTab: tagManagerTab, onTabChange: setTagManagerTab, onClose: () => setTagManagerOpen(false), onSetLocationLegend: setLocationLegendCategory, onSetEventLegend: setEventLegendCategory }),
-      selectedLocation && /* @__PURE__ */ jsxRuntimeExports.jsx(ReadOnlyLocationDetailPanel, { location: selectedLocation, categories: map2.tagCategories, theme, onClose: closePanel, relatedEvents, eventLegendCategory, onSelectEvent: handleLocationEventClick }),
-      selectedEvent && /* @__PURE__ */ jsxRuntimeExports.jsx(ReadOnlyDetailPanel, { entity: selectedEvent, categories: map2.eventTagCategories, theme, onClose: closePanel, headerMeta: formatEventTime(selectedEvent.time) })
+      selectedLocation && /* @__PURE__ */ jsxRuntimeExports.jsx(ReadOnlyLocationDetailPanel, { location: selectedLocation, categories: map2.tagCategories, theme, onClose: closePanel, relatedEvents, eventLegendCategory, onSelectEvent: handleLocationEventClick, onPrevious: previousLocationId ? () => openLocationDetail(previousLocationId, "location-manager") : void 0, onNext: nextLocationId ? () => openLocationDetail(nextLocationId, "location-manager") : void 0, canGoPrevious: Boolean(previousLocationId), canGoNext: Boolean(nextLocationId) }),
+      selectedEvent && /* @__PURE__ */ jsxRuntimeExports.jsx(ReadOnlyDetailPanel, { entity: selectedEvent, categories: map2.eventTagCategories, theme, onClose: closePanel, headerMeta: formatEventTime(selectedEvent.time), onPrevious: previousEventId ? () => openEventDetail(previousEventId, "event-manager") : void 0, onNext: nextEventId ? () => openEventDetail(nextEventId, "event-manager") : void 0, canGoPrevious: Boolean(previousEventId), canGoNext: Boolean(nextEventId) })
     ] })
   ] });
 }
 const SplitComponent$1 = ShareMapView;
-const shareBLTjmXM = /* @__PURE__ */ Object.freeze({
+const shareDG1hUzpJ = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   component: SplitComponent$1
 });
@@ -45945,6 +46325,13 @@ function MapSidebar({
   } = useIntermap();
   const [hovered, setHovered] = reactExports.useState(null);
   const importInputRef = reactExports.useRef(null);
+  const shellTheme = getMapTheme(activeMap?.themeId, activeMap?.themeMode);
+  const isLightShell = shellTheme.bg === shellTheme.modes.light.bg;
+  const sidebarBg = isLightShell ? shellTheme.bg : `${shellTheme.bg}F2`;
+  const sidebarBorder = shellTheme.accent;
+  const tooltipBg = isLightShell ? "#FFFFFF" : `${shellTheme.bg}F7`;
+  const tooltipShadow = isLightShell ? "0 6px 18px rgba(80,60,30,0.12)" : "0 2px 12px rgba(0,0,0,0.6)";
+  const chromeMuted = isLightShell ? shellTheme.muted : "rgba(180,140,60,0.7)";
   const handleImportFile = (e) => {
     const file2 = e.target.files?.[0];
     if (!file2) return;
@@ -45978,8 +46365,8 @@ function MapSidebar({
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     width: 56,
     height: "100%",
-    background: "rgba(10,8,4,0.95)",
-    borderRight: "1px solid rgba(180,140,60,0.2)",
+    background: sidebarBg,
+    borderRight: `1px solid ${sidebarBorder}`,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -45990,36 +46377,36 @@ function MapSidebar({
     zIndex: 50,
     overflowY: "auto",
     overflowX: "visible"
-  }, "data-cid": "zL6udgwg", children: [
+  }, "data-cid": "gNyfBMCj", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       width: 36,
       height: 36,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "rgba(180,140,60,0.7)",
+      color: chromeMuted,
       marginBottom: 6
     }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { size: 20 }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       width: 28,
       height: 1,
-      background: "rgba(180,140,60,0.2)",
+      background: `${shellTheme.accent}AA`,
       flexShrink: 0
     } }),
     state.maps.map((map2) => {
-      const theme = MAP_THEMES.find((t2) => t2.id === map2.themeId) ?? MAP_THEMES[0];
+      const theme = getMapTheme(map2.themeId, map2.themeMode);
       const isActive = map2.id === activeMap?.id;
       const isHovered = hovered === map2.id;
       return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         position: "relative",
         flexShrink: 0
-      }, "data-cid": "x7eREEdn", children: [
+      }, "data-cid": "oNbFii8b", children: [
         isHovered && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
           position: "absolute",
           left: 46,
           top: "50%",
           transform: "translateY(-50%)",
-          background: "rgba(10,8,4,0.95)",
+          background: tooltipBg,
           border: `1px solid ${theme.accent}`,
           borderRadius: 6,
           padding: "4px 10px",
@@ -46028,7 +46415,7 @@ function MapSidebar({
           fontSize: 12,
           pointerEvents: "none",
           zIndex: 100,
-          boxShadow: "0 2px 12px rgba(0,0,0,0.6)"
+          boxShadow: tooltipShadow
         }, children: [
           map2.name,
           map2.nameEn && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
@@ -46047,14 +46434,14 @@ function MapSidebar({
           width: 38,
           height: 38,
           borderRadius: "50%",
-          border: isActive ? `2.5px solid ${theme.primary}` : "2px solid rgba(180,140,60,0.25)",
-          background: isActive ? `${theme.accent}` : "rgba(30,24,12,0.8)",
+          border: isActive ? `2.5px solid ${theme.primary}` : `2px solid ${shellTheme.accent}`,
+          background: isActive ? `${theme.accent}` : isLightShell ? "rgba(255,255,255,0.82)" : "rgba(30,24,12,0.8)",
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           transition: "all 0.2s",
-          boxShadow: isActive ? `0 0 10px ${theme.primary}66` : "none",
+          boxShadow: isActive ? `0 0 10px ${theme.primary}44` : isLightShell ? "0 2px 6px rgba(80,60,30,0.08)" : "none",
           overflow: "hidden",
           padding: 0
         }, children: map2.imageUrl ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: map2.imageUrl, alt: map2.name, style: {
@@ -46063,7 +46450,7 @@ function MapSidebar({
           objectFit: "cover",
           opacity: isActive ? 1 : 0.6
         } }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Map$1, { size: 16, style: {
-          color: isActive ? theme.primary : "rgba(180,140,60,0.5)"
+          color: isActive ? theme.primary : shellTheme.muted
         } }) })
       ] }, map2.id);
     }),
@@ -46077,13 +46464,13 @@ function MapSidebar({
       width: 38,
       height: 38,
       borderRadius: "50%",
-      border: "1.5px dashed rgba(180,140,60,0.3)",
+      border: `1.5px dashed ${shellTheme.accent}`,
       background: "transparent",
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "rgba(180,140,60,0.5)",
+      color: shellTheme.muted,
       transition: "all 0.2s",
       position: "relative",
       flexShrink: 0
@@ -46094,28 +46481,29 @@ function MapSidebar({
         left: 46,
         top: "50%",
         transform: "translateY(-50%)",
-        background: "rgba(10,8,4,0.95)",
-        border: "1px solid rgba(180,140,60,0.3)",
+        background: tooltipBg,
+        border: `1px solid ${shellTheme.accent}`,
         borderRadius: 6,
         padding: "4px 10px",
         whiteSpace: "nowrap",
-        color: "rgba(220,190,100,0.9)",
+        color: shellTheme.heading,
         fontSize: 12,
         pointerEvents: "none",
-        zIndex: 100
+        zIndex: 100,
+        boxShadow: tooltipShadow
       }, children: "导入地图 JSON" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: onCreateNew, title: "新建地图", onMouseEnter: () => setHovered("__new__"), onMouseLeave: () => setHovered(null), style: {
       width: 38,
       height: 38,
       borderRadius: "50%",
-      border: "1.5px dashed rgba(180,140,60,0.4)",
+      border: `1.5px dashed ${shellTheme.accent}`,
       background: "transparent",
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "rgba(180,140,60,0.6)",
+      color: shellTheme.primary,
       transition: "all 0.2s",
       position: "relative",
       flexShrink: 0
@@ -46126,15 +46514,16 @@ function MapSidebar({
         left: 46,
         top: "50%",
         transform: "translateY(-50%)",
-        background: "rgba(10,8,4,0.95)",
-        border: "1px solid rgba(180,140,60,0.3)",
+        background: tooltipBg,
+        border: `1px solid ${shellTheme.accent}`,
         borderRadius: 6,
         padding: "4px 10px",
         whiteSpace: "nowrap",
-        color: "rgba(220,190,100,0.9)",
+        color: shellTheme.heading,
         fontSize: 12,
         pointerEvents: "none",
-        zIndex: 100
+        zIndex: 100,
+        boxShadow: tooltipShadow
       }, children: "新建地图" })
     ] })
   ] });
@@ -46176,6 +46565,13 @@ const DEFAULT_TAG_CATEGORIES = [{
   isBuiltIn: true,
   values: []
 }];
+const APPEARANCE_OPTIONS$1 = [{
+  value: "dark",
+  label: "深色背景"
+}, {
+  value: "light",
+  label: "浅色背景"
+}];
 function NewMapDialog({
   onClose,
   onCreate
@@ -46185,8 +46581,10 @@ function NewMapDialog({
   const [imageUrl2, setImageUrl] = reactExports.useState("");
   const [imagePreview, setImagePreview] = reactExports.useState("");
   const [themeId2, setThemeId] = reactExports.useState("parchment");
+  const [themeMode, setThemeMode] = reactExports.useState(DEFAULT_MAP_THEME_MODE);
   const [imageTab, setImageTab] = reactExports.useState("url");
   const fileRef = reactExports.useRef(null);
+  const selectedTheme = getMapTheme(themeId2, themeMode);
   const handleFileChange = (e) => {
     const file2 = e.target.files?.[0];
     if (!file2) return;
@@ -46204,13 +46602,13 @@ function NewMapDialog({
   };
   const handleCreate = () => {
     if (!name2.trim()) return;
-    MAP_THEMES.find((t2) => t2.id === themeId2) ?? MAP_THEMES[0];
     const newMap = {
       id: `map_${Date.now()}`,
       name: name2.trim(),
       nameEn: nameEn2.trim() || void 0,
       imageUrl: imageUrl2,
       themeId: themeId2,
+      themeMode,
       tagCategories: DEFAULT_TAG_CATEGORIES,
       locations: [],
       eventTagCategories: createDefaultEventTagCategories([]),
@@ -46220,28 +46618,11 @@ function NewMapDialog({
     };
     onCreate(newMap);
   };
-  const selectedTheme = MAP_THEMES.find((t2) => t2.id === themeId2) ?? MAP_THEMES[0];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-    position: "fixed",
-    inset: 0,
-    zIndex: 200,
-    background: "rgba(0,0,0,0.75)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16
-  }, onClick: (e) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: overlayStyle$1, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "-IaLPK-n", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
-    width: "100%",
-    maxWidth: 480,
-    background: "#1a1208",
-    border: "1px solid rgba(180,140,60,0.4)",
-    borderRadius: 12,
-    padding: "20px 24px",
-    color: "#E8DCC8",
-    fontFamily: "Georgia, serif",
-    boxShadow: "0 8px 40px rgba(0,0,0,0.7)"
+  }, "data-cid": "QGF65HWF", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+    ...dialogStyle$1(selectedTheme),
+    color: selectedTheme.heading
   }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       display: "flex",
@@ -46252,137 +46633,104 @@ function NewMapDialog({
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         fontSize: 18,
         fontWeight: "bold",
-        color: "#F0E0B0"
+        color: selectedTheme.heading
       }, children: "新建地图" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
-        background: "none",
-        border: "none",
-        color: "#A89060",
-        cursor: "pointer",
-        padding: 4
-      }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 18 }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: iconButtonStyle$1(selectedTheme), children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 18 }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 14
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 5
-      }, children: "地图名称（必填）" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: name2, onChange: (e) => setName(e.target.value), placeholder: "输入地图名称...", maxLength: 40, style: inputStyle$1 })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle$1(selectedTheme), children: "地图名称（必填）" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: name2, onChange: (e) => setName(e.target.value), placeholder: "输入地图名称...", maxLength: 40, style: inputStyle$1(selectedTheme) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 14
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 5
-      }, children: "English Name（可选）" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: nameEn2, onChange: (e) => setNameEn(e.target.value), placeholder: "Optional English name...", maxLength: 60, style: inputStyle$1 })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle$1(selectedTheme), children: "English Name（可选）" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: nameEn2, onChange: (e) => setNameEn(e.target.value), placeholder: "Optional English name...", maxLength: 60, style: inputStyle$1(selectedTheme) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 16
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 6
-      }, children: "底图" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle$1(selectedTheme), children: "底图" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         display: "flex",
         gap: 6,
         marginBottom: 8
-      }, children: ["url", "upload"].map((tab) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setImageTab(tab), style: {
-        padding: "4px 12px",
-        borderRadius: 6,
-        border: `1px solid ${imageTab === tab ? "rgba(180,140,60,0.6)" : "rgba(180,140,60,0.2)"}`,
-        background: imageTab === tab ? "rgba(180,140,60,0.15)" : "transparent",
-        color: imageTab === tab ? "#C8A860" : "#7A6040",
-        cursor: "pointer",
-        fontSize: 12
-      }, children: tab === "url" ? "输入 URL" : "上传图片" }, tab)) }),
-      imageTab === "url" ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: imageUrl2.startsWith("data:") ? "" : imageUrl2, onChange: (e) => handleUrlChange(e.target.value), placeholder: "https://...", style: inputStyle$1 }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      }, children: ["url", "upload"].map((tab) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setImageTab(tab), style: segmentedButtonStyle$1(selectedTheme, imageTab === tab), children: tab === "url" ? "输入 URL" : "上传图片" }, tab)) }),
+      imageTab === "url" ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: imageUrl2.startsWith("data:") ? "" : imageUrl2, onChange: (e) => handleUrlChange(e.target.value), placeholder: "https://...", style: inputStyle$1(selectedTheme) }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("input", { ref: fileRef, type: "file", accept: "image/*", onChange: handleFileChange, style: {
           display: "none"
         } }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => fileRef.current?.click(), style: {
-          width: "100%",
-          padding: "10px",
-          border: "1.5px dashed rgba(180,140,60,0.35)",
-          borderRadius: 6,
-          background: "transparent",
-          color: "#8A7050",
-          cursor: "pointer",
-          fontSize: 13,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 6
-        }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => fileRef.current?.click(), style: uploadButtonStyle$1(selectedTheme), children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(Upload, { size: 14 }),
-          imageUrl2 && imageUrl2.startsWith("data:") ? "已选择图片 ✓" : "点击选择图片"
+          imageUrl2 && imageUrl2.startsWith("data:") ? "已选择图片" : "点击选择图片"
         ] })
       ] }),
       imagePreview && /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: imagePreview, alt: "preview", style: {
         marginTop: 8,
         width: "100%",
-        height: 80,
+        height: 84,
         objectFit: "cover",
-        borderRadius: 6,
-        opacity: 0.7
+        borderRadius: 8,
+        border: `1px solid ${selectedTheme.accent}`,
+        opacity: 0.85
       } })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+      marginBottom: 16
+    }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle$1(selectedTheme), children: "背景风格" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        display: "flex",
+        gap: 8
+      }, children: APPEARANCE_OPTIONS$1.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setThemeMode(option.value), style: segmentedButtonStyle$1(selectedTheme, themeMode === option.value), children: option.label }, option.value)) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 20
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 8
-      }, children: "主题风格" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle$1(selectedTheme), children: "主题风格" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         display: "flex",
         gap: 8,
         flexWrap: "wrap"
-      }, children: MAP_THEMES.map((t2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setThemeId(t2.id), title: t2.label, style: {
-        width: 36,
-        height: 36,
-        borderRadius: "50%",
-        border: themeId2 === t2.id ? `3px solid ${t2.primary}` : "2px solid rgba(180,140,60,0.2)",
-        background: t2.bg,
-        cursor: "pointer",
-        position: "relative",
-        boxShadow: themeId2 === t2.id ? `0 0 8px ${t2.primary}88` : "none",
-        transition: "all 0.15s",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
-          width: 16,
-          height: 16,
+      }, children: MAP_THEMES.map((themeOption) => {
+        const previewTheme = getMapTheme(themeOption.id, themeMode);
+        const isActive = themeId2 === themeOption.id;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setThemeId(themeOption.id), title: themeOption.label, style: {
+          width: 42,
+          height: 42,
           borderRadius: "50%",
-          background: t2.primary,
-          display: "block"
-        } }),
-        themeId2 === t2.id && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-          position: "absolute",
-          bottom: -16,
-          left: "50%",
-          transform: "translateX(-50%)",
-          fontSize: 9,
-          color: t2.primary,
-          whiteSpace: "nowrap"
-        }, children: t2.label })
-      ] }, t2.id)) }),
+          border: isActive ? `3px solid ${previewTheme.primary}` : `2px solid ${previewTheme.accent}`,
+          background: previewTheme.bg,
+          cursor: "pointer",
+          position: "relative",
+          boxShadow: isActive ? `0 0 0 3px ${previewTheme.primary}22` : "none",
+          transition: "all 0.15s",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }, "data-cid": "OJ2xyQo8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+            width: 17,
+            height: 17,
+            borderRadius: "50%",
+            background: previewTheme.primary,
+            display: "block"
+          } }),
+          isActive && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+            position: "absolute",
+            bottom: -18,
+            left: "50%",
+            transform: "translateX(-50%)",
+            fontSize: 9,
+            color: previewTheme.primary,
+            whiteSpace: "nowrap"
+          }, children: previewTheme.label })
+        ] }, themeOption.id);
+      }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-        height: 18
+        height: 20
       } })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: handleCreate, disabled: !name2.trim(), style: {
@@ -46399,26 +46747,103 @@ function NewMapDialog({
       alignItems: "center",
       justifyContent: "center",
       gap: 6,
-      opacity: name2.trim() ? 1 : 0.5,
-      transition: "all 0.2s"
+      opacity: name2.trim() ? 1 : 0.5
     }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { size: 15 }),
       "创建地图"
     ] })
   ] }) });
 }
-const inputStyle$1 = {
-  width: "100%",
-  padding: "8px 10px",
-  background: "rgba(255,255,255,0.05)",
-  border: "1px solid rgba(180,140,60,0.3)",
-  borderRadius: 6,
-  color: "#E8DCC8",
-  fontSize: 13,
-  outline: "none",
-  fontFamily: "Georgia, serif",
-  boxSizing: "border-box"
+const overlayStyle$1 = {
+  position: "fixed",
+  inset: 0,
+  zIndex: 200,
+  background: "rgba(0,0,0,0.72)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 16
 };
+function dialogStyle$1(theme) {
+  return {
+    width: "100%",
+    maxWidth: 500,
+    background: theme.bg,
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 14,
+    padding: "20px 24px",
+    fontFamily: "Georgia, serif",
+    boxShadow: "0 10px 40px rgba(0,0,0,0.45)"
+  };
+}
+function labelStyle$1(theme) {
+  return {
+    fontSize: 12,
+    color: theme.muted,
+    display: "block",
+    marginBottom: 6
+  };
+}
+function inputStyle$1(theme) {
+  const isLightMode = theme.bg === theme.modes.light.bg;
+  return {
+    width: "100%",
+    padding: "8px 10px",
+    background: isLightMode ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.05)",
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 8,
+    color: theme.heading,
+    fontSize: 13,
+    outline: "none",
+    fontFamily: "Georgia, serif",
+    boxSizing: "border-box"
+  };
+}
+function segmentedButtonStyle$1(theme, active) {
+  return {
+    padding: "6px 12px",
+    borderRadius: 7,
+    border: `1px solid ${active ? theme.primary : theme.accent}`,
+    background: active ? `${theme.primary}22` : "transparent",
+    color: active ? theme.primary : theme.muted,
+    cursor: "pointer",
+    fontSize: 12,
+    fontFamily: "Georgia, serif"
+  };
+}
+function uploadButtonStyle$1(theme) {
+  return {
+    width: "100%",
+    padding: "10px",
+    border: `1.5px dashed ${theme.accent}`,
+    borderRadius: 8,
+    background: "transparent",
+    color: theme.muted,
+    cursor: "pointer",
+    fontSize: 13,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    fontFamily: "Georgia, serif"
+  };
+}
+function iconButtonStyle$1(theme) {
+  return {
+    background: "none",
+    border: "none",
+    color: theme.muted,
+    cursor: "pointer",
+    padding: 4
+  };
+}
+const APPEARANCE_OPTIONS = [{
+  value: "dark",
+  label: "深色背景"
+}, {
+  value: "light",
+  label: "浅色背景"
+}];
 function MapSettingsDialog({
   map: map2,
   onClose,
@@ -46428,13 +46853,15 @@ function MapSettingsDialog({
     dispatch
   } = useIntermap();
   const [name2, setName] = reactExports.useState(map2.name);
-  const [confirmDelete, setConfirmDelete] = reactExports.useState(false);
   const [nameEn2, setNameEn] = reactExports.useState(map2.nameEn ?? "");
   const [imageUrl2, setImageUrl] = reactExports.useState(map2.imageUrl);
   const [imagePreview, setImagePreview] = reactExports.useState(map2.imageUrl);
   const [themeId2, setThemeId] = reactExports.useState(map2.themeId);
+  const [themeMode, setThemeMode] = reactExports.useState(map2.themeMode ?? DEFAULT_MAP_THEME_MODE);
   const [imageTab, setImageTab] = reactExports.useState("url");
+  const [confirmDelete, setConfirmDelete] = reactExports.useState(false);
   const fileRef = reactExports.useRef(null);
+  const selectedTheme = getMapTheme(themeId2, themeMode);
   const handleFileChange = (e) => {
     const file2 = e.target.files?.[0];
     if (!file2) return;
@@ -46457,7 +46884,8 @@ function MapSettingsDialog({
       mapId: map2.id,
       name: name2.trim(),
       nameEn: nameEn2.trim() || void 0,
-      themeId: themeId2
+      themeId: themeId2,
+      themeMode
     });
     if (imageUrl2 !== map2.imageUrl) {
       dispatch({
@@ -46468,28 +46896,11 @@ function MapSettingsDialog({
     }
     onClose();
   };
-  const selectedTheme = MAP_THEMES.find((t2) => t2.id === themeId2) ?? MAP_THEMES[0];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-    position: "fixed",
-    inset: 0,
-    zIndex: 200,
-    background: "rgba(0,0,0,0.75)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 16
-  }, onClick: (e) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: overlayStyle, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "kFv_5c3m", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
-    width: "100%",
-    maxWidth: 480,
-    background: "#1a1208",
-    border: "1px solid rgba(180,140,60,0.4)",
-    borderRadius: 12,
-    padding: "20px 24px",
-    color: "#E8DCC8",
-    fontFamily: "Georgia, serif",
-    boxShadow: "0 8px 40px rgba(0,0,0,0.7)"
+  }, "data-cid": "SBWFRVwr", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+    ...dialogStyle(selectedTheme),
+    color: selectedTheme.heading
   }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       display: "flex",
@@ -46500,137 +46911,104 @@ function MapSettingsDialog({
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         fontSize: 18,
         fontWeight: "bold",
-        color: "#F0E0B0"
+        color: selectedTheme.heading
       }, children: "地图设置" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
-        background: "none",
-        border: "none",
-        color: "#A89060",
-        cursor: "pointer",
-        padding: 4
-      }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 18 }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: iconButtonStyle(selectedTheme), children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 18 }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 14
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 5
-      }, children: "地图名称（必填）" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: name2, onChange: (e) => setName(e.target.value), placeholder: "输入地图名称...", maxLength: 40, style: inputStyle })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle(selectedTheme), children: "地图名称（必填）" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: name2, onChange: (e) => setName(e.target.value), placeholder: "输入地图名称...", maxLength: 40, style: inputStyle(selectedTheme) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 14
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 5
-      }, children: "English Name（可选）" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: nameEn2, onChange: (e) => setNameEn(e.target.value), placeholder: "Optional English name...", maxLength: 60, style: inputStyle })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle(selectedTheme), children: "English Name（可选）" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: nameEn2, onChange: (e) => setNameEn(e.target.value), placeholder: "Optional English name...", maxLength: 60, style: inputStyle(selectedTheme) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 16
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 6
-      }, children: "底图" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle(selectedTheme), children: "底图" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         display: "flex",
         gap: 6,
         marginBottom: 8
-      }, children: ["url", "upload"].map((tab) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setImageTab(tab), style: {
-        padding: "4px 12px",
-        borderRadius: 6,
-        border: `1px solid ${imageTab === tab ? "rgba(180,140,60,0.6)" : "rgba(180,140,60,0.2)"}`,
-        background: imageTab === tab ? "rgba(180,140,60,0.15)" : "transparent",
-        color: imageTab === tab ? "#C8A860" : "#7A6040",
-        cursor: "pointer",
-        fontSize: 12
-      }, children: tab === "url" ? "输入 URL" : "上传图片" }, tab)) }),
-      imageTab === "url" ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: imageUrl2.startsWith("data:") ? "" : imageUrl2, onChange: (e) => handleUrlChange(e.target.value), placeholder: "https://...", style: inputStyle }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      }, children: ["url", "upload"].map((tab) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setImageTab(tab), style: segmentedButtonStyle(selectedTheme, imageTab === tab), children: tab === "url" ? "输入 URL" : "上传图片" }, tab)) }),
+      imageTab === "url" ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: imageUrl2.startsWith("data:") ? "" : imageUrl2, onChange: (e) => handleUrlChange(e.target.value), placeholder: "https://...", style: inputStyle(selectedTheme) }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("input", { ref: fileRef, type: "file", accept: "image/*", onChange: handleFileChange, style: {
           display: "none"
         } }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => fileRef.current?.click(), style: {
-          width: "100%",
-          padding: "10px",
-          border: "1.5px dashed rgba(180,140,60,0.35)",
-          borderRadius: 6,
-          background: "transparent",
-          color: "#8A7050",
-          cursor: "pointer",
-          fontSize: 13,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 6
-        }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => fileRef.current?.click(), style: uploadButtonStyle(selectedTheme), children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(Upload, { size: 14 }),
-          imageUrl2 && imageUrl2.startsWith("data:") ? "已选择图片 ✓" : "点击选择图片"
+          imageUrl2 && imageUrl2.startsWith("data:") ? "已选择图片" : "点击选择图片"
         ] })
       ] }),
       imagePreview && /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: imagePreview, alt: "preview", style: {
         marginTop: 8,
         width: "100%",
-        height: 80,
+        height: 84,
         objectFit: "cover",
-        borderRadius: 6,
-        opacity: 0.7
+        borderRadius: 8,
+        border: `1px solid ${selectedTheme.accent}`,
+        opacity: 0.85
       }, onError: () => setImagePreview("") })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+      marginBottom: 16
+    }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle(selectedTheme), children: "背景风格" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        display: "flex",
+        gap: 8
+      }, children: APPEARANCE_OPTIONS.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setThemeMode(option.value), style: segmentedButtonStyle(selectedTheme, themeMode === option.value), children: option.label }, option.value)) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 20
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
-        fontSize: 12,
-        color: "#8A7050",
-        display: "block",
-        marginBottom: 8
-      }, children: "主题风格" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: labelStyle(selectedTheme), children: "主题风格" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         display: "flex",
         gap: 8,
         flexWrap: "wrap"
-      }, children: MAP_THEMES.map((t2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setThemeId(t2.id), title: t2.label, style: {
-        width: 36,
-        height: 36,
-        borderRadius: "50%",
-        border: themeId2 === t2.id ? `3px solid ${t2.primary}` : "2px solid rgba(180,140,60,0.2)",
-        background: t2.bg,
-        cursor: "pointer",
-        position: "relative",
-        boxShadow: themeId2 === t2.id ? `0 0 8px ${t2.primary}88` : "none",
-        transition: "all 0.15s",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
-          width: 16,
-          height: 16,
+      }, children: MAP_THEMES.map((themeOption) => {
+        const previewTheme = getMapTheme(themeOption.id, themeMode);
+        const isActive = themeId2 === themeOption.id;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setThemeId(themeOption.id), title: themeOption.label, style: {
+          width: 42,
+          height: 42,
           borderRadius: "50%",
-          background: t2.primary,
-          display: "block"
-        } }),
-        themeId2 === t2.id && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-          position: "absolute",
-          bottom: -16,
-          left: "50%",
-          transform: "translateX(-50%)",
-          fontSize: 9,
-          color: t2.primary,
-          whiteSpace: "nowrap"
-        }, children: t2.label })
-      ] }, t2.id)) }),
+          border: isActive ? `3px solid ${previewTheme.primary}` : `2px solid ${previewTheme.accent}`,
+          background: previewTheme.bg,
+          cursor: "pointer",
+          position: "relative",
+          boxShadow: isActive ? `0 0 0 3px ${previewTheme.primary}22` : "none",
+          transition: "all 0.15s",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }, "data-cid": "iwBYjw2d", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+            width: 17,
+            height: 17,
+            borderRadius: "50%",
+            background: previewTheme.primary,
+            display: "block"
+          } }),
+          isActive && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+            position: "absolute",
+            bottom: -18,
+            left: "50%",
+            transform: "translateX(-50%)",
+            fontSize: 9,
+            color: previewTheme.primary,
+            whiteSpace: "nowrap"
+          }, children: previewTheme.label })
+        ] }, themeOption.id);
+      }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
-        height: 18
+        height: 20
       } })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: handleSave, disabled: !name2.trim(), style: {
@@ -46647,33 +47025,18 @@ function MapSettingsDialog({
       alignItems: "center",
       justifyContent: "center",
       gap: 6,
-      opacity: name2.trim() ? 1 : 0.5,
-      transition: "all 0.2s"
+      opacity: name2.trim() ? 1 : 0.5
     }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { size: 15 }),
       "保存设置"
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       height: 1,
-      background: "rgba(180,140,60,0.15)",
-      margin: "16px 0 12px"
+      background: selectedTheme.accent,
+      margin: "16px 0 12px",
+      opacity: 0.45
     } }),
-    !confirmDelete ? /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setConfirmDelete(true), style: {
-      width: "100%",
-      padding: "8px",
-      borderRadius: 8,
-      border: "1px solid rgba(180,60,60,0.35)",
-      background: "rgba(180,60,60,0.08)",
-      color: "#C86060",
-      cursor: "pointer",
-      fontSize: 13,
-      fontFamily: "Georgia, serif",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: 6,
-      transition: "all 0.2s"
-    }, children: [
+    !confirmDelete ? /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setConfirmDelete(true), style: deleteButtonStyle, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { size: 13 }),
       "删除这张地图"
     ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
@@ -46686,32 +47049,23 @@ function MapSettingsDialog({
         fontSize: 12,
         color: "#E88080",
         marginBottom: 10,
-        textAlign: "center"
+        textAlign: "center",
+        lineHeight: 1.65
       }, children: [
-        "确定要删除「",
+        "确定要删除“",
         map2.name,
-        "」吗？",
+        "”吗？",
         /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
-          opacity: 0.7,
+          opacity: 0.78,
           fontSize: 11
-        }, children: "地图及其所有地点数据将永久删除，无法恢复。" })
+        }, children: "地图及其所有地点、事件数据都会被永久删除，无法恢复。" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         display: "flex",
         gap: 8
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setConfirmDelete(false), style: {
-          flex: 1,
-          padding: "7px",
-          borderRadius: 6,
-          border: "1px solid rgba(180,140,60,0.3)",
-          background: "transparent",
-          color: "#A89060",
-          cursor: "pointer",
-          fontSize: 12,
-          fontFamily: "Georgia, serif"
-        }, children: "取消" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setConfirmDelete(false), style: cancelDeleteButtonStyle(selectedTheme), children: "取消" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => {
           dispatch({
             type: "DELETE_MAP",
@@ -46719,37 +47073,150 @@ function MapSettingsDialog({
           });
           onDeleted?.();
           onClose();
-        }, style: {
-          flex: 1,
-          padding: "7px",
-          borderRadius: 6,
-          border: "1px solid rgba(180,60,60,0.6)",
-          background: "rgba(180,60,60,0.2)",
-          color: "#E88080",
-          cursor: "pointer",
-          fontSize: 12,
-          fontFamily: "Georgia, serif",
-          fontWeight: "bold"
-        }, children: "确认删除" })
+        }, style: confirmDeleteButtonStyle, children: "确认删除" })
       ] })
     ] })
   ] }) });
 }
-const inputStyle = {
+const overlayStyle = {
+  position: "fixed",
+  inset: 0,
+  zIndex: 200,
+  background: "rgba(0,0,0,0.72)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 16
+};
+function dialogStyle(theme) {
+  return {
+    width: "100%",
+    maxWidth: 500,
+    background: theme.bg,
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 14,
+    padding: "20px 24px",
+    fontFamily: "Georgia, serif",
+    boxShadow: "0 10px 40px rgba(0,0,0,0.45)"
+  };
+}
+function labelStyle(theme) {
+  return {
+    fontSize: 12,
+    color: theme.muted,
+    display: "block",
+    marginBottom: 6
+  };
+}
+function inputStyle(theme) {
+  const isLightMode = theme.bg === theme.modes.light.bg;
+  return {
+    width: "100%",
+    padding: "8px 10px",
+    background: isLightMode ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.05)",
+    border: `1px solid ${theme.accent}`,
+    borderRadius: 8,
+    color: theme.heading,
+    fontSize: 13,
+    outline: "none",
+    fontFamily: "Georgia, serif",
+    boxSizing: "border-box"
+  };
+}
+function segmentedButtonStyle(theme, active) {
+  return {
+    padding: "6px 12px",
+    borderRadius: 7,
+    border: `1px solid ${active ? theme.primary : theme.accent}`,
+    background: active ? `${theme.primary}22` : "transparent",
+    color: active ? theme.primary : theme.muted,
+    cursor: "pointer",
+    fontSize: 12,
+    fontFamily: "Georgia, serif"
+  };
+}
+function uploadButtonStyle(theme) {
+  return {
+    width: "100%",
+    padding: "10px",
+    border: `1.5px dashed ${theme.accent}`,
+    borderRadius: 8,
+    background: "transparent",
+    color: theme.muted,
+    cursor: "pointer",
+    fontSize: 13,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    fontFamily: "Georgia, serif"
+  };
+}
+function iconButtonStyle(theme) {
+  return {
+    background: "none",
+    border: "none",
+    color: theme.muted,
+    cursor: "pointer",
+    padding: 4
+  };
+}
+const deleteButtonStyle = {
   width: "100%",
-  padding: "8px 10px",
-  background: "rgba(255,255,255,0.05)",
-  border: "1px solid rgba(180,140,60,0.3)",
-  borderRadius: 6,
-  color: "#E8DCC8",
+  padding: "8px",
+  borderRadius: 8,
+  border: "1px solid rgba(180,60,60,0.35)",
+  background: "rgba(180,60,60,0.08)",
+  color: "#C86060",
+  cursor: "pointer",
   fontSize: 13,
-  outline: "none",
   fontFamily: "Georgia, serif",
-  boxSizing: "border-box"
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 6
+};
+function cancelDeleteButtonStyle(theme) {
+  return {
+    flex: 1,
+    padding: "7px",
+    borderRadius: 6,
+    border: `1px solid ${theme.accent}`,
+    background: "transparent",
+    color: theme.muted,
+    cursor: "pointer",
+    fontSize: 12,
+    fontFamily: "Georgia, serif"
+  };
+}
+const confirmDeleteButtonStyle = {
+  flex: 1,
+  padding: "7px",
+  borderRadius: 6,
+  border: "1px solid rgba(180,60,60,0.6)",
+  background: "rgba(180,60,60,0.2)",
+  color: "#E88080",
+  cursor: "pointer",
+  fontSize: 12,
+  fontFamily: "Georgia, serif",
+  fontWeight: "bold"
 };
 const PREVIEW_W = 480;
 const PREVIEW_H = 320;
 const MIN_SIZE = 20;
+const RATIO_OPTIONS = [{
+  id: "16:9",
+  label: "16:9",
+  value: 16 / 9
+}, {
+  id: "4:3",
+  label: "4:3",
+  value: 4 / 3
+}, {
+  id: "1:1",
+  label: "1:1",
+  value: 1
+}];
 const HANDLE_ANCHORS = {
   tl: [0, 0],
   tc: [0.5, 0],
@@ -46772,6 +47239,22 @@ function normalizeRect(r) {
     y: y2,
     w: Math.abs(r.w),
     h: Math.abs(r.h)
+  };
+}
+function fitRectToAspect(bounds, aspect) {
+  const maxW = bounds.w;
+  const maxH = bounds.h;
+  let w3 = maxW;
+  let h2 = w3 / aspect;
+  if (h2 > maxH) {
+    h2 = maxH;
+    w3 = h2 * aspect;
+  }
+  return {
+    x: bounds.x + (maxW - w3) / 2,
+    y: bounds.y + (maxH - h2) / 2,
+    w: w3,
+    h: h2
   };
 }
 function ImageCropModal({
@@ -46800,6 +47283,7 @@ function ImageCropModal({
     w: PREVIEW_W - 40,
     h: PREVIEW_H - 40
   });
+  const [aspect, setAspect] = reactExports.useState(RATIO_OPTIONS[0].value);
   const previewRef = reactExports.useRef(null);
   const canvasRef = reactExports.useRef(null);
   const dragging = reactExports.useRef(null);
@@ -46825,15 +47309,15 @@ function ImageCropModal({
         w: rw,
         h: rh
       });
-      setCrop({
+      setCrop(fitRectToAspect({
         x: rx,
         y: ry,
         w: rw,
         h: rh
-      });
+      }, aspect));
     };
     img.src = src;
-  }, [src]);
+  }, [src, aspect]);
   const getPreviewCoords = reactExports.useCallback((e) => {
     const el = previewRef.current;
     if (!el) return {
@@ -46848,7 +47332,7 @@ function ImageCropModal({
   }, []);
   const hitTestHandle = reactExports.useCallback((px, py, c2) => {
     const norm2 = normalizeRect(c2);
-    const handles2 = ["tl", "tc", "tr", "ml", "mr", "bl", "bc", "br"];
+    const handles2 = ["tl", "tr", "bl", "br"];
     for (const h2 of handles2) {
       const [ax, ay] = HANDLE_ANCHORS[h2];
       const hx = norm2.x + ax * norm2.w;
@@ -46921,30 +47405,35 @@ function ImageCropModal({
         };
       }
       const handle = dragging.current?.handle ?? "br";
-      if (handle === "tl" || handle === "ml" || handle === "bl") {
-        const newX = clamp(sc.x + dx, imgX, sc.x + sc.w - MIN_SIZE);
-        w3 = sc.x + sc.w - newX;
-        x3 = newX;
+      const anchoredRight = handle === "tl" || handle === "bl";
+      const anchoredBottom = handle === "tl" || handle === "tr";
+      const baseX = anchoredRight ? sc.x + sc.w : sc.x;
+      const baseY = anchoredBottom ? sc.y + sc.h : sc.y;
+      let intendedW = sc.w + (anchoredRight ? -dx : dx);
+      let intendedH = sc.h + (anchoredBottom ? -dy : dy);
+      intendedW = Math.max(MIN_SIZE, intendedW);
+      intendedH = Math.max(MIN_SIZE, intendedH);
+      if (Math.abs(intendedW / aspect - intendedH) > 1e-3) {
+        if (Math.abs(dx) >= Math.abs(dy)) intendedH = intendedW / aspect;
+        else intendedW = intendedH * aspect;
       }
-      if (handle === "tr" || handle === "mr" || handle === "br") {
-        w3 = clamp(sc.w + dx, MIN_SIZE, imgX + imgW - sc.x);
-      }
-      if (handle === "tl" || handle === "tc" || handle === "tr") {
-        const newY = clamp(sc.y + dy, imgY, sc.y + sc.h - MIN_SIZE);
-        h2 = sc.y + sc.h - newY;
-        y2 = newY;
-      }
-      if (handle === "bl" || handle === "bc" || handle === "br") {
-        h2 = clamp(sc.h + dy, MIN_SIZE, imgY + imgH - sc.y);
-      }
-      return {
+      const maxWByBounds = anchoredRight ? baseX - imgX : imgX + imgW - baseX;
+      const maxHByBounds = anchoredBottom ? baseY - imgY : imgY + imgH - baseY;
+      let scale = 1;
+      if (intendedW > maxWByBounds) scale = Math.min(scale, maxWByBounds / intendedW);
+      if (intendedH > maxHByBounds) scale = Math.min(scale, maxHByBounds / intendedH);
+      w3 = intendedW * scale;
+      h2 = intendedH * scale;
+      x3 = anchoredRight ? baseX - w3 : baseX;
+      y2 = anchoredBottom ? baseY - h2 : baseY;
+      return normalizeRect({
         x: x3,
         y: y2,
         w: w3,
         h: h2
-      };
+      });
     });
-  }, [getPreviewCoords, imgRect]);
+  }, [aspect, getPreviewCoords, imgRect]);
   const handleMouseUp = reactExports.useCallback(() => {
     dragging.current = null;
   }, []);
@@ -46979,7 +47468,7 @@ function ImageCropModal({
     img.src = src;
   }, [crop, imgRect, naturalSize, onCrop, src]);
   const norm = normalizeRect(crop);
-  const handles = ["tl", "tc", "tr", "ml", "mr", "bl", "bc", "br"];
+  const handles = ["tl", "tr", "bl", "br"];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
     position: "fixed",
     inset: 0,
@@ -46991,7 +47480,7 @@ function ImageCropModal({
     padding: 16
   }, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "fwjut9mW", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+  }, "data-cid": "pdW1FoTj", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     background: themeBg,
     border: `1px solid ${themeColor}66`,
     borderRadius: 14,
@@ -47032,7 +47521,28 @@ function ImageCropModal({
       color: themeMuted,
       marginBottom: 12,
       opacity: 0.8
-    }, children: "拖拽选框来选择保留区域，也可拖动边角和边缘调整大小" }),
+    }, children: "选择固定比例裁剪；可拖动选框移动，或拖动四角调整大小。" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+      display: "flex",
+      gap: 6,
+      marginBottom: 10,
+      flexWrap: "wrap"
+    }, children: RATIO_OPTIONS.map((option) => {
+      const active = Math.abs(aspect - option.value) < 1e-4;
+      return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => {
+        setAspect(option.value);
+        setCrop(fitRectToAspect(imgRect, option.value));
+      }, style: {
+        padding: "4px 10px",
+        borderRadius: 999,
+        border: `1px solid ${active ? themeColor : themeAccent}`,
+        background: active ? `${themeColor}22` : "transparent",
+        color: active ? themeHeading : themeMuted,
+        fontSize: 11,
+        cursor: "pointer",
+        fontFamily: "Georgia, serif"
+      }, "data-cid": "dzx6LOyU", children: option.label }, option.id);
+    }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: previewRef, style: {
       position: "relative",
       width: PREVIEW_W,
@@ -47106,7 +47616,7 @@ function ImageCropModal({
           transform: "translate(-50%, -50%)",
           pointerEvents: "none",
           zIndex: 2
-        }, "data-cid": "N-CiFBXQ" }, h2);
+        }, "data-cid": "32JEFt4o" }, h2);
       })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
@@ -47129,6 +47639,24 @@ function ImageCropModal({
       gap: 10,
       marginTop: 16
     }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setCrop(fitRectToAspect(imgRect, aspect)), style: {
+        flex: 1.1,
+        padding: "9px",
+        borderRadius: 8,
+        border: `1px solid ${themeAccent}`,
+        background: "transparent",
+        color: themeMuted,
+        cursor: "pointer",
+        fontSize: 13,
+        fontFamily: "Georgia, serif",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 6
+      }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(RotateCcw, { size: 13 }),
+        " 恢复选框"
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
         flex: 1,
         padding: "9px",
@@ -47181,6 +47709,7 @@ function LocationEditor({
   const [nameEn2, setNameEn] = reactExports.useState(existing?.nameEn ?? "");
   const [description, setDescription] = reactExports.useState(existing?.description ?? "");
   const [imageUrl2, setImageUrl] = reactExports.useState(existing?.imageUrl);
+  const [originalImageUrl, setOriginalImageUrl] = reactExports.useState(existing?.imageUrl);
   const [cropOpen, setCropOpen] = reactExports.useState(false);
   const [x3, setX] = reactExports.useState(existing?.x ?? Math.round(30 + Math.random() * 40));
   const [y2, setY] = reactExports.useState(existing?.y ?? Math.round(30 + Math.random() * 40));
@@ -47192,7 +47721,10 @@ function LocationEditor({
     const reader = new FileReader();
     reader.onload = (evt) => {
       const result = evt.target?.result;
-      if (typeof result === "string") setImageUrl(result);
+      if (typeof result === "string") {
+        setImageUrl(result);
+        setOriginalImageUrl(result);
+      }
     };
     reader.readAsDataURL(file2);
     e.target.value = "";
@@ -47235,7 +47767,7 @@ function LocationEditor({
     overflowY: "auto"
   }, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "fwmcNf8_", children: [
+  }, "data-cid": "N3tT84EK", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       width: "100%",
       maxWidth: 460,
@@ -47310,7 +47842,25 @@ function LocationEditor({
               /* @__PURE__ */ jsxRuntimeExports.jsx(Crop, { size: 12 }),
               " 裁剪"
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setImageUrl(void 0), title: "移除配图", style: {
+            originalImageUrl && imageUrl2 !== originalImageUrl && /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setImageUrl(originalImageUrl), title: "恢复原图", style: {
+              background: "rgba(0,0,0,0.65)",
+              border: `1px solid ${themeAccent}`,
+              borderRadius: 6,
+              color: "#E8DCC8",
+              cursor: "pointer",
+              padding: "3px 6px",
+              display: "flex",
+              alignItems: "center",
+              gap: 4,
+              fontSize: 11
+            }, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(RotateCcw, { size: 12 }),
+              " 恢复"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => {
+              setImageUrl(void 0);
+              setOriginalImageUrl(void 0);
+            }, title: "移除配图", style: {
               background: "rgba(0,0,0,0.65)",
               border: `1px solid ${themeAccent}`,
               borderRadius: 6,
@@ -47427,8 +47977,8 @@ function LocationEditor({
             alignItems: "center",
             gap: 5,
             transition: "all 0.15s"
-          }, "data-cid": "oLnMAEGN", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 10 }),
+          }, "data-cid": "-8jJWp_X", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 10, themeColor }),
             val.label
           ] }, val.id);
         }),
@@ -47473,7 +48023,7 @@ function Field$1({
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     marginBottom: 14
-  }, "data-cid": "rw6Wmq5b", children: [
+  }, "data-cid": "z_vMaM1_", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("label", { style: {
       fontSize: 12,
       color: muted,
@@ -47515,19 +48065,9 @@ function buildEventSortTime(enabled, era, year, month, day) {
 function digitsOnly(value) {
   return value.replace(/[^\d]/g, "");
 }
-function parseSortTimeText(text) {
-  const normalized = text.trim().replace(/\s+/g, "");
-  if (!normalized) return void 0;
-  const match = normalized.match(/^(?:(公元前|公元后|前|后|BCE|BC|CE|AD))?(\d{1,6})年(\d{1,2})月(\d{1,2})日$/i);
-  if (!match) return void 0;
-  const eraToken = (match[1] ?? "").toLowerCase();
-  const era = eraToken === "公元前" || eraToken === "前" || eraToken === "bce" || eraToken === "bc" ? "bce" : "ce";
-  return normalizeEventSortTime({
-    era,
-    year: Number(match[2]),
-    month: Number(match[3]),
-    day: Number(match[4])
-  });
+function formatSortTimeText(sortTime) {
+  const eraLabel = sortTime.era === "bce" ? "公元前" : "公元后";
+  return `${eraLabel}${sortTime.year}年${sortTime.month}月${sortTime.day}日`;
 }
 function EventEditor({
   existing,
@@ -47558,6 +48098,7 @@ function EventEditor({
   const [timeEnd, setTimeEnd] = reactExports.useState(existing?.time?.kind === "range" ? existing.time.end : "");
   const [description, setDescription] = reactExports.useState(existing?.description ?? "");
   const [imageUrl2, setImageUrl] = reactExports.useState(existing?.imageUrl);
+  const [originalImageUrl, setOriginalImageUrl] = reactExports.useState(existing?.imageUrl);
   const [cropOpen, setCropOpen] = reactExports.useState(false);
   const [x3, setX] = reactExports.useState(existing?.x ?? Math.round(30 + Math.random() * 40));
   const [y2, setY] = reactExports.useState(existing?.y ?? Math.round(30 + Math.random() * 40));
@@ -47566,9 +48107,7 @@ function EventEditor({
   const eventTime = buildEventTime(timeMode, timePoint, timeStart, timeEnd);
   const eventSortTime = buildEventSortTime(hasSortTime, sortEra, sortYear, sortMonth, sortDay);
   const sortTimeValid = !hasSortTime || Boolean(eventSortTime);
-  const fillSource = timeMode === "point" ? timePoint : timeStart;
-  const fillCandidate = parseSortTimeText(fillSource);
-  const canFillSortTime = hasSortTime && Boolean(fillCandidate);
+  const canFillSortTime = hasSortTime && Boolean(eventSortTime);
   const canSave = Boolean(name2.trim() && eventTime && sortTimeValid);
   const handleImageUpload = (e) => {
     const file2 = e.target.files?.[0];
@@ -47576,17 +48115,22 @@ function EventEditor({
     const reader = new FileReader();
     reader.onload = (evt) => {
       const result = evt.target?.result;
-      if (typeof result === "string") setImageUrl(result);
+      if (typeof result === "string") {
+        setImageUrl(result);
+        setOriginalImageUrl(result);
+      }
     };
     reader.readAsDataURL(file2);
     e.target.value = "";
   };
   const handleFillSortTime = () => {
-    if (!fillCandidate || !hasSortTime) return;
-    setSortEra(fillCandidate.era);
-    setSortYear(String(fillCandidate.year));
-    setSortMonth(String(fillCandidate.month));
-    setSortDay(String(fillCandidate.day));
+    if (!eventSortTime || !hasSortTime) return;
+    const filledText = formatSortTimeText(eventSortTime);
+    if (timeMode === "point") {
+      setTimePoint(filledText);
+      return;
+    }
+    setTimeStart(filledText);
   };
   const handleSave = () => {
     if (!name2.trim() || !eventTime || hasSortTime && !eventSortTime) return;
@@ -47628,7 +48172,7 @@ function EventEditor({
     overflowY: "auto"
   }, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "6Ljfkhyv", children: [
+  }, "data-cid": "9hvJ3mcg", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       width: "100%",
       maxWidth: 500,
@@ -47696,7 +48240,7 @@ function EventEditor({
             label: "公元后"
           }].map((option) => {
             const isSelected = sortEra === option.id;
-            return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setSortEra(option.id), style: pillButton(isSelected, themeColor, themeHeading, themeMuted, themeAccent), "data-cid": "cr-KDAm7", children: option.label }, option.id);
+            return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setSortEra(option.id), style: pillButton(isSelected, themeColor, themeHeading, themeMuted, themeAccent), "data-cid": "LwcpQIDX", children: option.label }, option.id);
           }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
             display: "flex",
@@ -47717,7 +48261,7 @@ function EventEditor({
           opacity: 0.75
         }, children: "不填写排序时间时，事件在时间排序下会自动排到最后。" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(Field, { label: "显示时间（必填）", muted: themeMuted, action: /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: handleFillSortTime, disabled: !canFillSortTime, title: hasSortTime ? "支持从“公元前/后xx年xx月xx日”自动填充排序时间" : "当前已选择无排序时间", style: {
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(Field, { label: "显示时间（必填）", muted: themeMuted, action: /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: handleFillSortTime, disabled: !canFillSortTime, title: hasSortTime ? "将排序时间填充到显示时间（时间段填充开始时间）" : "当前已选择无排序时间", style: {
         ...fillButtonStyle(themeColor, themeHeading, themeMuted, canFillSortTime),
         opacity: canFillSortTime ? 1 : 0.45,
         cursor: canFillSortTime ? "pointer" : "not-allowed"
@@ -47737,7 +48281,7 @@ function EventEditor({
           label: "时间段"
         }].map((option) => {
           const isSelected = timeMode === option.id;
-          return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTimeMode(option.id), style: pillButton(isSelected, themeColor, themeHeading, themeMuted, themeAccent), "data-cid": "MFSgef2a", children: option.label }, option.id);
+          return /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTimeMode(option.id), style: pillButton(isSelected, themeColor, themeHeading, themeMuted, themeAccent), "data-cid": "NQz4wD-G", children: option.label }, option.id);
         }) }),
         timeMode === "point" ? /* @__PURE__ */ jsxRuntimeExports.jsx("input", { value: timePoint, onChange: (e) => setTimePoint(e.target.value), placeholder: "例如：公元后682年3月4日", maxLength: 50, style: inputStyle2 }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
           display: "flex",
@@ -47763,7 +48307,7 @@ function EventEditor({
           fontSize: 11,
           color: themeMuted,
           opacity: 0.75
-        }, children: "一键填充会读取当前显示时间；时间段模式下只读取开始时间。支持格式：公元前/后xx年xx月xx日。" })
+        }, children: "一键填充会把当前排序时间写入显示时间；时间段模式下写入开始时间，之后可继续手动修改。" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: `简介（${description.length}/250）`, muted: themeMuted, children: /* @__PURE__ */ jsxRuntimeExports.jsx("textarea", { value: description, onChange: (e) => setDescription(e.target.value.slice(0, 250)), placeholder: "描述这个事件...", rows: 3, style: {
         ...inputStyle2,
@@ -47794,7 +48338,14 @@ function EventEditor({
               /* @__PURE__ */ jsxRuntimeExports.jsx(Crop, { size: 12 }),
               " 裁剪"
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setImageUrl(void 0), title: "移除配图", style: imageActionButton(themeAccent), children: [
+            originalImageUrl && imageUrl2 !== originalImageUrl && /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setImageUrl(originalImageUrl), title: "恢复原图", style: imageActionButton(themeAccent), children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(RotateCcw, { size: 12 }),
+              " 恢复"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => {
+              setImageUrl(void 0);
+              setOriginalImageUrl(void 0);
+            }, title: "移除配图", style: imageActionButton(themeAccent), children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { size: 12 }),
               " 移除"
             ] })
@@ -47900,8 +48451,8 @@ function EventEditor({
             alignItems: "center",
             gap: 5,
             transition: "all 0.15s"
-          }, "data-cid": "B-Glk__L", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 10 }),
+          }, "data-cid": "XWuiLaR4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 10, themeColor }),
             val.label
           ] }, val.id);
         }),
@@ -47947,7 +48498,7 @@ function Field({
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     marginBottom: 14
-  }, "data-cid": "uLYoPnG9", children: [
+  }, "data-cid": "H8TZ_-UF", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       display: "flex",
       alignItems: "center",
@@ -47974,7 +48525,7 @@ function NumberInput({
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     flex: 1
-  }, "data-cid": "Dp8ElAwv", children: [
+  }, "data-cid": "MCHQNBZm", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       fontSize: 11,
       color: "#8A7050",
@@ -48027,6 +48578,53 @@ function imageActionButton(themeAccent) {
 }
 const SHAPES = ["circle", "square", "diamond"];
 const PRESET_COLORS = ["#C8A860", "#8B4513", "#2D6A2D", "#6B21A8", "#5C4033", "#1E40AF", "#C86060", "#60C880", "#60A8C8", "#A860C8", "#F87171", "#FB923C", "#4ADE80", "#FBBF24", "#E879F9"];
+function reorderValues(values, fromIndex, toIndex) {
+  if (fromIndex === toIndex || fromIndex < 0 || toIndex < 0 || fromIndex >= values.length || toIndex >= values.length) {
+    return values;
+  }
+  const next = [...values];
+  const [moved] = next.splice(fromIndex, 1);
+  if (!moved) return values;
+  next.splice(toIndex, 0, moved);
+  return next;
+}
+function clampUnitOpacity(value) {
+  if (!Number.isFinite(value)) return 1;
+  return Math.max(0, Math.min(1, value ?? 1));
+}
+function buildBatchStyledIcon(sourceIcon, currentIcon, themeColor) {
+  if (sourceIcon.kind === "emoji") {
+    const defaultEmoji = currentIcon.kind === "emoji" ? currentIcon.emoji : "⭐";
+    if (sourceIcon.bgColor === void 0) {
+      return {
+        kind: "emoji",
+        emoji: defaultEmoji,
+        bgColor: void 0,
+        bgOpacity: 1,
+        borderColor: void 0
+      };
+    }
+    if (sourceIcon.bgColor === null) {
+      return {
+        kind: "emoji",
+        emoji: defaultEmoji,
+        bgColor: null,
+        bgOpacity: 1,
+        borderColor: void 0
+      };
+    }
+    const opacity = clampUnitOpacity(sourceIcon.bgOpacity);
+    const borderColor = sourceIcon.borderColor;
+    return {
+      kind: "emoji",
+      emoji: defaultEmoji,
+      bgColor: sourceIcon.bgColor,
+      bgOpacity: opacity,
+      borderColor
+    };
+  }
+  return currentIcon;
+}
 function IconPicker({
   icon,
   onChange,
@@ -48035,12 +48633,34 @@ function IconPicker({
   const [emojiInput, setEmojiInput] = reactExports.useState(icon.kind === "emoji" ? icon.emoji : "");
   const [colorInput, setColorInput] = reactExports.useState(icon.kind === "shape" ? icon.color : "#C8A860");
   const [opacity, setOpacity] = reactExports.useState(icon.kind === "shape" ? icon.opacity ?? 1 : 1);
+  const [emojiBgInput, setEmojiBgInput] = reactExports.useState(icon.kind === "emoji" && typeof icon.bgColor === "string" ? icon.bgColor : "#C8A860");
+  const [emojiBgOpacity, setEmojiBgOpacity] = reactExports.useState(icon.kind === "emoji" ? icon.bgOpacity ?? 1 : 1);
+  const [emojiBorderColor, setEmojiBorderColor] = reactExports.useState(icon.kind === "emoji" ? icon.borderColor : void 0);
+  const [emojiBorderColorInput, setEmojiBorderColorInput] = reactExports.useState(icon.kind === "emoji" && icon.borderColor ? icon.borderColor : "#FFD700");
   const [borderColor, setBorderColor] = reactExports.useState(icon.kind === "shape" ? icon.borderColor : void 0);
   const [borderColorInput, setBorderColorInput] = reactExports.useState(icon.kind === "shape" && icon.borderColor ? icon.borderColor : "#FFD700");
+  const [emojiBgChoice, setEmojiBgChoice] = reactExports.useState(icon.kind === "emoji" ? icon.bgColor : void 0);
   const kind = icon.kind;
+  reactExports.useEffect(() => {
+    setEmojiBgInput(icon.kind === "emoji" && typeof icon.bgColor === "string" ? icon.bgColor : "#C8A860");
+    setEmojiBgOpacity(icon.kind === "emoji" ? icon.bgOpacity ?? 1 : 1);
+    setEmojiBgChoice(icon.kind === "emoji" ? icon.bgColor : void 0);
+    setEmojiBorderColor(icon.kind === "emoji" ? icon.borderColor : void 0);
+    setEmojiBorderColorInput(icon.kind === "emoji" && icon.borderColor ? icon.borderColor : "#FFD700");
+  }, [icon]);
+  reactExports.useEffect(() => {
+    if (icon.kind !== "emoji") return;
+    if (icon.bgColor === emojiBgChoice && (icon.bgOpacity ?? 1) === emojiBgOpacity && icon.borderColor === emojiBorderColor) return;
+    onChange({
+      ...icon,
+      bgColor: emojiBgChoice,
+      bgOpacity: emojiBgOpacity,
+      borderColor: emojiBorderColor
+    });
+  }, [emojiBgChoice, emojiBgOpacity, emojiBorderColor, icon, onChange]);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     marginTop: 8
-  }, "data-cid": "GB-ypSna", children: [
+  }, "data-cid": "WgODleNf", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       display: "flex",
       gap: 6,
@@ -48094,7 +48714,7 @@ function IconPicker({
         kind: "shape",
         shape,
         color: colorInput
-      }, size: 14 }) }, shape)) }),
+      }, size: 14, themeColor }) }, shape)) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         display: "flex",
         gap: 5,
@@ -48295,7 +48915,10 @@ function IconPicker({
         setEmojiInput(e.target.value);
         if (e.target.value) onChange({
           kind: "emoji",
-          emoji: e.target.value
+          emoji: e.target.value,
+          bgColor: emojiBgChoice,
+          bgOpacity: emojiBgOpacity,
+          borderColor: emojiBorderColor
         });
       }, placeholder: "粘贴或输入 emoji…", maxLength: 4, style: {
         width: 80,
@@ -48316,7 +48939,10 @@ function IconPicker({
         setEmojiInput(emoji2);
         onChange({
           kind: "emoji",
-          emoji: emoji2
+          emoji: emoji2,
+          bgColor: emojiBgChoice,
+          bgOpacity: emojiBgOpacity,
+          borderColor: emojiBorderColor
         });
       }, style: {
         width: 28,
@@ -48327,6 +48953,167 @@ function IconPicker({
         background: "rgba(255,255,255,0.04)",
         cursor: "pointer"
       }, children: emoji2 }, emoji2)) })
+    ] }),
+    kind === "emoji" && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+      marginTop: 10,
+      paddingTop: 10,
+      borderTop: "1px solid rgba(180,140,60,0.15)"
+    }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        fontSize: 11,
+        color: "#8A7050",
+        marginBottom: 8
+      }, children: "底色" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        display: "flex",
+        gap: 6,
+        flexWrap: "wrap",
+        marginBottom: 8
+      }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setEmojiBgChoice(void 0), style: {
+          padding: "3px 10px",
+          borderRadius: 6,
+          fontSize: 11,
+          cursor: "pointer",
+          border: `1px solid ${emojiBgChoice === void 0 ? themeColor : "rgba(180,140,60,0.25)"}`,
+          background: emojiBgChoice === void 0 ? `${themeColor}22` : "transparent",
+          color: emojiBgChoice === void 0 ? themeColor : "#9A8060"
+        }, children: "默认" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setEmojiBgChoice(null), style: {
+          padding: "3px 10px",
+          borderRadius: 6,
+          fontSize: 11,
+          cursor: "pointer",
+          border: `1px solid ${emojiBgChoice === null ? themeColor : "rgba(180,140,60,0.25)"}`,
+          background: emojiBgChoice === null ? `${themeColor}22` : "transparent",
+          color: emojiBgChoice === null ? themeColor : "#9A8060"
+        }, children: "透明" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        display: "flex",
+        gap: 5,
+        flexWrap: "wrap",
+        marginBottom: 8
+      }, children: PRESET_COLORS.map((color) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => {
+        setEmojiBgInput(color);
+        setEmojiBgChoice(color);
+      }, style: {
+        width: 20,
+        height: 20,
+        borderRadius: "50%",
+        background: color,
+        border: `2px solid ${emojiBgChoice === color ? "#fff" : "transparent"}`,
+        cursor: "pointer",
+        padding: 0
+      } }, `emoji-bg-${color}`)) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 6
+      }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+          fontSize: 11,
+          color: "#8A7050"
+        }, children: "自定义底色：" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "color", value: emojiBgInput, onChange: (e) => {
+          setEmojiBgInput(e.target.value);
+          setEmojiBgChoice(e.target.value);
+        }, style: {
+          width: 28,
+          height: 22,
+          border: "none",
+          background: "none",
+          cursor: "pointer",
+          padding: 0
+        } }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+          fontSize: 11,
+          color: "#8A7050"
+        }, children: "透明度：" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "range", min: 0.1, max: 1, step: 0.05, value: emojiBgOpacity, onChange: (e) => setEmojiBgOpacity(parseFloat(e.target.value)), style: {
+          flex: 1,
+          accentColor: themeColor
+        } }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { style: {
+          fontSize: 11,
+          color: "#9A8060",
+          width: 28
+        }, children: [
+          Math.round(emojiBgOpacity * 100),
+          "%"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 6,
+        marginTop: 8,
+        marginBottom: 8
+      }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+          fontSize: 11,
+          color: "#8A7050",
+          minWidth: 40
+        }, children: "外边框：" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setEmojiBorderColor(void 0), style: {
+          padding: "3px 10px",
+          borderRadius: 6,
+          fontSize: 11,
+          cursor: "pointer",
+          border: `1px solid ${emojiBorderColor === void 0 ? themeColor : "rgba(180,140,60,0.25)"}`,
+          background: emojiBorderColor === void 0 ? `${themeColor}22` : "transparent",
+          color: emojiBorderColor === void 0 ? themeColor : "#9A8060"
+        }, children: "默认" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setEmojiBorderColor(emojiBorderColorInput), style: {
+          padding: "3px 10px",
+          borderRadius: 6,
+          fontSize: 11,
+          cursor: "pointer",
+          border: `1px solid ${emojiBorderColor !== void 0 ? themeColor : "rgba(180,140,60,0.25)"}`,
+          background: emojiBorderColor !== void 0 ? `${themeColor}22` : "transparent",
+          color: emojiBorderColor !== void 0 ? themeColor : "#9A8060"
+        }, children: "自定义" })
+      ] }),
+      emojiBorderColor !== void 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 6,
+        marginBottom: 8
+      }, children: [
+        ["#FFD700", "#FFE066", "#FFFFFF", "#A0E0FF", "#80FF80", "#FF8888", "#D8B4FE"].map((color) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => {
+          setEmojiBorderColorInput(color);
+          setEmojiBorderColor(color);
+        }, style: {
+          width: 20,
+          height: 20,
+          borderRadius: "50%",
+          background: color,
+          border: `2px solid ${emojiBorderColorInput === color ? "#fff" : "transparent"}`,
+          cursor: "pointer",
+          padding: 0,
+          boxShadow: `0 0 4px ${color}88`
+        } }, `emoji-border-${color}`)),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "color", value: emojiBorderColorInput, onChange: (e) => {
+          setEmojiBorderColorInput(e.target.value);
+          setEmojiBorderColor(e.target.value);
+        }, style: {
+          width: 28,
+          height: 22,
+          border: "none",
+          background: "none",
+          cursor: "pointer",
+          padding: 0
+        } })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        display: "flex",
+        alignItems: "center",
+        gap: 6
+      }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: {
+        kind: "emoji",
+        emoji: emojiInput || "⭐",
+        bgColor: emojiBgChoice
+      }, size: 16, themeColor }) })
     ] })
   ] });
 }
@@ -48334,12 +49121,14 @@ function ValueEditor({
   value,
   categoryId,
   mapId,
+  categoryValues,
   entities,
   themeColor,
   themeHeading,
   targetMode,
   onClose,
-  lockLabel
+  lockLabel,
+  onApplyIconToCategory
 }) {
   const {
     dispatch
@@ -48412,7 +49201,7 @@ function ValueEditor({
   }, [assignedIds, categoryId, dispatch, entities, icon, label, lockLabel, mapId, onClose, selected, targetMode, value]);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     padding: "12px 0"
-  }, "data-cid": "XPlCakki", children: [
+  }, "data-cid": "RONM6bH3", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       display: "flex",
       alignItems: "center",
@@ -48462,7 +49251,22 @@ function ValueEditor({
         display: "block",
         marginBottom: 4
       }, children: "图标" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(IconPicker, { icon, onChange: setIcon, themeColor })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(IconPicker, { icon, onChange: setIcon, themeColor }),
+      icon.kind === "emoji" && /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => onApplyIconToCategory(icon), style: {
+        marginTop: 10,
+        width: "100%",
+        padding: "7px 10px",
+        borderRadius: 7,
+        border: `1px solid ${themeColor}66`,
+        background: `${themeColor}14`,
+        color: themeHeading,
+        cursor: "pointer",
+        fontSize: 12
+      }, children: [
+        "将当前样式一键应用到本标签全部 ",
+        categoryValues.length,
+        " 个小分类"
+      ] })
     ] }),
     entities.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       marginBottom: 12
@@ -48496,7 +49300,7 @@ function ValueEditor({
           cursor: "pointer",
           opacity: checked ? 1 : 0.5,
           borderBottom: "1px solid rgba(180,140,60,0.1)"
-        }, "data-cid": "FOvsSWUh", children: [
+        }, "data-cid": "zEzoZKhh", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             width: 12,
             height: 12,
@@ -48558,12 +49362,19 @@ function TagManager({
   const [newValueName, setNewValueName] = reactExports.useState("");
   const [editingCatLabel, setEditingCatLabel] = reactExports.useState(null);
   const [catLabelInput, setCatLabelInput] = reactExports.useState("");
+  const [draggingValueId, setDraggingValueId] = reactExports.useState(null);
+  const [dragOverValueId, setDragOverValueId] = reactExports.useState(null);
+  const [dragOverPosition, setDragOverPosition] = reactExports.useState("below");
   reactExports.useEffect(() => {
     setSelectedCatIds({
       locations: activeMap?.tagCategories[0]?.id ?? null,
       events: activeMap?.eventTagCategories[0]?.id ?? null
     });
   }, [activeMap?.id]);
+  reactExports.useEffect(() => {
+    setDraggingValueId(null);
+    setDragOverValueId(null);
+  }, [mode, selectedCatIds.locations, selectedCatIds.events]);
   if (!activeMap) return null;
   const cats = mode === "locations" ? activeMap.tagCategories : activeMap.eventTagCategories;
   const entities = mode === "locations" ? activeMap.locations : activeMap.events;
@@ -48781,6 +49592,75 @@ function TagManager({
       });
     }
   };
+  const handleApplyIconToCategory = (sourceIcon) => {
+    if (!selectedCat) return;
+    const nextValues = selectedCat.values.map((tagValue) => ({
+      ...tagValue,
+      icon: buildBatchStyledIcon(sourceIcon, tagValue.icon)
+    }));
+    if (mode === "locations") {
+      dispatch({
+        type: "UPDATE_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: {
+          ...selectedCat,
+          values: nextValues
+        }
+      });
+    } else {
+      dispatch({
+        type: "UPDATE_EVENT_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: {
+          ...selectedCat,
+          values: nextValues
+        }
+      });
+    }
+  };
+  const clearDragState = () => {
+    setDraggingValueId(null);
+    setDragOverValueId(null);
+  };
+  const handleDropValue = (targetId, position) => {
+    if (!selectedCat || !draggingValueId || draggingValueId === targetId) {
+      clearDragState();
+      return;
+    }
+    const fromIndex = selectedCat.values.findIndex((value) => value.id === draggingValueId);
+    const targetIndex = selectedCat.values.findIndex((value) => value.id === targetId);
+    if (fromIndex < 0 || targetIndex < 0) {
+      clearDragState();
+      return;
+    }
+    const insertIndexRaw = position === "above" ? targetIndex : targetIndex + 1;
+    const insertIndex = fromIndex < insertIndexRaw ? insertIndexRaw - 1 : insertIndexRaw;
+    const nextValues = reorderValues(selectedCat.values, fromIndex, insertIndex);
+    if (nextValues === selectedCat.values) {
+      clearDragState();
+      return;
+    }
+    if (mode === "locations") {
+      dispatch({
+        type: "UPDATE_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: {
+          ...selectedCat,
+          values: nextValues
+        }
+      });
+    } else {
+      dispatch({
+        type: "UPDATE_EVENT_TAG_CATEGORY",
+        mapId: activeMap.id,
+        category: {
+          ...selectedCat,
+          values: nextValues
+        }
+      });
+    }
+    clearDragState();
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
     position: "fixed",
     inset: 0,
@@ -48792,7 +49672,7 @@ function TagManager({
     padding: 16
   }, onClick: (e) => {
     if (e.target === e.currentTarget) onClose();
-  }, "data-cid": "2b9JLiAy", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+  }, "data-cid": "-jAlMtqB", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     width: "100%",
     maxWidth: 720,
     background: themeBg,
@@ -48893,7 +49773,7 @@ function TagManager({
             display: "flex",
             alignItems: "center",
             gap: 6
-          }, "data-cid": "tzSwqaMK", children: [
+          }, "data-cid": "sAekUcht", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
               flex: 1,
               minWidth: 0
@@ -49069,7 +49949,7 @@ function TagManager({
           flex: 1,
           overflowY: "auto",
           padding: "0 16px"
-        }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ValueEditor, { value: editingValue, categoryId: selectedCat.id, mapId: activeMap.id, entities, themeColor, themeHeading, targetMode: mode, lockLabel: mode === "events" && selectedCat.id === EVENT_LOCATION_CATEGORY_ID && editingValue.id !== NONE_TAG_VALUE_ID, onClose: () => setEditingValueId(null) }) }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+        }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ValueEditor, { value: editingValue, categoryId: selectedCat.id, mapId: activeMap.id, categoryValues: selectedCat.values, entities, themeColor, themeHeading, targetMode: mode, lockLabel: mode === "events" && selectedCat.id === EVENT_LOCATION_CATEGORY_ID && editingValue.id !== NONE_TAG_VALUE_ID, onApplyIconToCategory: handleApplyIconToCategory, onClose: () => setEditingValueId(null) }) }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
           flex: 1,
           overflowY: "auto"
         }, children: [
@@ -49077,14 +49957,38 @@ function TagManager({
             const assignmentCount = entities.filter((entity) => entity.tags[selectedCat.id] === value.id).length;
             const lockedValue = mode === "events" && selectedCat.id === EVENT_LOCATION_CATEGORY_ID;
             const canDelete = !lockedValue && value.id !== NONE_TAG_VALUE_ID && assignmentCount === 0;
-            return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+            const showTopDropLine = draggingValueId && dragOverValueId === value.id && dragOverPosition === "above";
+            const showBottomDropLine = draggingValueId && dragOverValueId === value.id && dragOverPosition === "below";
+            return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { draggable: !lockedValue, onDragStart: (event) => {
+              if (lockedValue) return;
+              setDraggingValueId(value.id);
+              event.dataTransfer.effectAllowed = "move";
+              event.dataTransfer.setData("text/plain", value.id);
+            }, onDragOver: (event) => {
+              if (!draggingValueId || draggingValueId === value.id) return;
+              event.preventDefault();
+              const rect = event.currentTarget.getBoundingClientRect();
+              const position = event.clientY < rect.top + rect.height / 2 ? "above" : "below";
+              setDragOverValueId(value.id);
+              setDragOverPosition(position);
+              event.dataTransfer.dropEffect = "move";
+            }, onDrop: (event) => {
+              event.preventDefault();
+              const rect = event.currentTarget.getBoundingClientRect();
+              const position = event.clientY < rect.top + rect.height / 2 ? "above" : "below";
+              handleDropValue(value.id, position);
+            }, onDragEnd: clearDragState, style: {
               padding: "8px 16px",
               borderBottom: `1px solid ${themeAccent}22`,
+              borderTop: showTopDropLine ? `2px solid ${themeColor}` : void 0,
+              boxShadow: showBottomDropLine ? `inset 0 -2px 0 ${themeColor}` : void 0,
               display: "flex",
               alignItems: "center",
-              gap: 8
-            }, "data-cid": "PWF3I0l9", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 14 }),
+              gap: 8,
+              cursor: lockedValue ? "default" : "grab",
+              opacity: draggingValueId === value.id ? 0.45 : 1
+            }, "data-cid": "LpBVU_B2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 14, themeColor }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
                 flex: 1,
                 fontSize: 13,
@@ -49300,7 +50204,7 @@ function IntermapFilterPanel({
       flexDirection: "column",
       overflowY: "auto",
       fontFamily: "Georgia, serif"
-    }, "data-cid": "f3Pv1_J9", children: [
+    }, "data-cid": "fb3vS4ow", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         padding: "12px 16px 10px",
         borderBottom: `1px solid ${borderColor}44`,
@@ -49357,7 +50261,7 @@ function IntermapFilterPanel({
         return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
           borderBottom: `1px solid ${borderColor}22`,
           flexShrink: 0
-        }, "data-cid": "iSdw-D26", children: [
+        }, "data-cid": "s7RmZ6wR", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
             display: "flex",
             alignItems: "center",
@@ -49418,7 +50322,7 @@ function IntermapFilterPanel({
                 cursor: "pointer",
                 opacity: checked ? 1 : 0.42,
                 transition: "opacity 0.15s"
-              }, "data-cid": "N8Fe-FLg", children: [
+              }, "data-cid": "_8stzVF3", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
                   width: 13,
                   height: 13,
@@ -49430,7 +50334,7 @@ function IntermapFilterPanel({
                   alignItems: "center",
                   justifyContent: "center"
                 }, children: checked && /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { width: "8", height: "8", viewBox: "0 0 8 8", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M1 4l2 2 4-4", stroke: themeColor, strokeWidth: "1.5", fill: "none", strokeLinecap: "round" }) }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 11 }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 11, themeColor }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
                   color: themeHeading,
                   fontSize: 12,
@@ -49520,7 +50424,7 @@ function CountBadge({
     justifyContent: "center",
     whiteSpace: "nowrap",
     boxShadow: "0 1px 4px rgba(0,0,0,0.35)"
-  }, "data-cid": "bVBzYKJA", children: [
+  }, "data-cid": "moXxaUQA", children: [
     value,
     label
   ] });
@@ -49529,7 +50433,8 @@ function LocationManagerPanel({
   theme,
   onClose,
   onSelectLocation,
-  onAddLocation
+  onAddLocation,
+  onVisibleLocationsChange
 }) {
   const {
     activeMap,
@@ -49610,6 +50515,9 @@ function LocationManagerPanel({
     }
     return groups;
   }, [cats, filteredLocations, groupByTagId]);
+  reactExports.useEffect(() => {
+    onVisibleLocationsChange?.(groupedLocations.flatMap((group) => group.items));
+  }, [groupedLocations, onVisibleLocationsChange]);
   const toggleTagFilter = (catId, valueId) => {
     setTagFilter((prev) => {
       const cur = new Set(prev[catId] ?? []);
@@ -49669,7 +50577,7 @@ function LocationManagerPanel({
     backdropFilter: "blur(8px)",
     fontFamily: "Georgia, serif",
     overflow: "hidden"
-  }, "data-cid": "y49S4y81", children: [
+  }, "data-cid": "mOEAhFAW", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "12px 14px 10px",
       borderBottom: `1px solid ${accent}`,
@@ -49787,7 +50695,7 @@ function LocationManagerPanel({
       const isCollapsed = collapsedCats.has(cat.id);
       const activeCatFilter = tagFilter[cat.id];
       const hasActiveFilter = activeCatFilter && activeCatFilter.size > 0;
-      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "9em4s7Dl", children: [
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "Rggnv7Bu", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onClick: () => toggleCatCollapse(cat.id), style: {
           padding: "6px 14px",
           display: "flex",
@@ -49845,8 +50753,8 @@ function LocationManagerPanel({
               background: isOn ? `${p2}22` : "transparent",
               color: isOn ? p2 : muted,
               transition: "all 0.15s"
-            }, "data-cid": "5b65ZFd0", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 9 }),
+            }, "data-cid": "Y3Lu8wi4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 9, themeColor: p2 }),
               val.label
             ] }, val.id);
           }),
@@ -49879,7 +50787,7 @@ function LocationManagerPanel({
         top: 0,
         zIndex: 1
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: group.icon, size: 10 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: group.icon, size: 10, themeColor: p2 }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
           fontSize: 11,
           color: heading,
@@ -49908,7 +50816,7 @@ function LocationManagerPanel({
           borderBottom: `1px solid ${accent}33`,
           background: isChecked ? `${p2}10` : "transparent",
           transition: "background 0.1s"
-        }, "data-cid": "AJW1qMvl", children: [
+        }, "data-cid": "azSgtNWw", children: [
           batchMode && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             width: 14,
             height: 14,
@@ -49922,7 +50830,7 @@ function LocationManagerPanel({
           }, children: isChecked && /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { size: 9, color: p2 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             flexShrink: 0
-          }, children: tagVal ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagVal.icon, size: 12 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+          }, children: tagVal ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagVal.icon, size: 12, themeColor: p2 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
             width: 10,
             height: 10,
             borderRadius: "50%",
@@ -50007,8 +50915,9 @@ function EventManagerPanel({
   onClose,
   onSelectEvent,
   onAddEvent,
-  displayMode: displayMode2,
-  onDisplayModeChange: onDisplayModeChange2
+  displayMode,
+  onDisplayModeChange,
+  onVisibleEventsChange
 }) {
   const {
     activeMap,
@@ -50058,6 +50967,9 @@ function EventManagerPanel({
     }
     return next.map((item) => item.eventItem);
   }, [cats, events2, search, sortOrder, tagFilter]);
+  reactExports.useEffect(() => {
+    onVisibleEventsChange?.(filteredEvents);
+  }, [filteredEvents, onVisibleEventsChange]);
   const toggleTagFilter = (catId, valueId) => {
     setTagFilter((prev) => {
       const cur = new Set(prev[catId] ?? []);
@@ -50117,7 +51029,7 @@ function EventManagerPanel({
     backdropFilter: "blur(8px)",
     fontFamily: "Georgia, serif",
     overflow: "hidden"
-  }, "data-cid": "lBEYG3Ar", children: [
+  }, "data-cid": "hefs2-mt", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "12px 14px 10px",
       borderBottom: `1px solid ${accent}`,
@@ -50174,8 +51086,8 @@ function EventManagerPanel({
         display: "flex",
         gap: 6
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange2("expanded"), style: chip(p2, displayMode2 === "expanded"), children: "事件展开显示" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange2("collapsed"), style: chip(p2, displayMode2 === "collapsed"), children: "事件收缩显示" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("expanded"), style: chip(p2, displayMode === "expanded"), children: "事件展开显示" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => onDisplayModeChange("collapsed"), style: chip(p2, displayMode === "collapsed"), children: "事件收缩显示" })
       ] })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
@@ -50238,7 +51150,7 @@ function EventManagerPanel({
       const isCollapsed = collapsedCats.has(cat.id);
       const activeCatFilter = tagFilter[cat.id];
       const hasActiveFilter = activeCatFilter && activeCatFilter.size > 0;
-      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "HMp4w8mh", children: [
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { "data-cid": "YeBVg_2l", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onClick: () => toggleCatCollapse(cat.id), style: {
           padding: "6px 14px",
           display: "flex",
@@ -50296,8 +51208,8 @@ function EventManagerPanel({
               background: isOn ? `${p2}22` : "transparent",
               color: isOn ? p2 : muted,
               transition: "all 0.15s"
-            }, "data-cid": "JFhzlLwt", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 9 }),
+            }, "data-cid": "4Y6-ZMfG", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: val.icon, size: 9, themeColor: p2 }),
               val.label
             ] }, val.id);
           }),
@@ -50336,7 +51248,7 @@ function EventManagerPanel({
         borderBottom: `1px solid ${accent}33`,
         background: isChecked ? `${p2}10` : "transparent",
         transition: "background 0.1s"
-      }, "data-cid": "r6aTxwGD", children: [
+      }, "data-cid": "kmKyThl6", children: [
         batchMode && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           width: 14,
           height: 14,
@@ -50350,7 +51262,7 @@ function EventManagerPanel({
         }, children: isChecked && /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { size: 9, color: p2 }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           flexShrink: 0
-        }, children: tagVal ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagVal.icon, size: 12 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+        }, children: tagVal ? /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: tagVal.icon, size: 12, themeColor: p2 }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           width: 10,
           height: 10,
           borderRadius: "50%",
@@ -50468,9 +51380,11 @@ function matchesTagFilter(entity, categories, filterMap) {
 }
 function Marker({
   entity,
+  theme,
   legendCategory,
   isSelected,
   isRepositioning,
+  scalePercent = 100,
   onClick,
   onDoubleClick,
   badgeCount,
@@ -50481,7 +51395,8 @@ function Marker({
   const icon = tagValue?.icon ?? {
     kind: "none"
   };
-  const size = isSelected ? 22 : 15;
+  const sizeFactor = Math.max(0.4, scalePercent / 100);
+  const size = (isSelected ? 22 : 15) * sizeFactor;
   const isShape = icon.kind === "shape";
   const shapeIcon = isShape ? icon : null;
   const shape = shapeIcon?.shape ?? "circle";
@@ -50501,6 +51416,13 @@ function Marker({
   const glowColor = customBorderColor ?? baseColor;
   const borderRadius = shape === "square" ? 3 : shape === "diamond" ? 0 : size / 2;
   const transform2 = shape === "diamond" ? "translate(-50%, -50%) rotate(45deg)" : "translate(-50%, -50%)";
+  const emojiIcon = icon.kind === "emoji" ? icon : null;
+  const emojiOpacity = emojiIcon?.bgOpacity ?? 1;
+  const emojiBgColor = emojiIcon?.bgColor === null ? "transparent" : emojiIcon?.bgColor ? hexToRgba(emojiIcon.bgColor, emojiOpacity) : theme.primary;
+  const emojiBorderColor = emojiIcon?.bgColor === null ? "transparent" : emojiIcon?.borderColor ?? emojiIcon?.bgColor ?? theme.primary;
+  const markerBackground = isShape ? bgColor : emojiBgColor;
+  const markerBorder = isShape ? activeBorder : isSelected ? "#ffffff" : emojiBorderColor;
+  const markerShadow = isShape ? isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}` : customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : `0 1px 5px rgba(0,0,0,0.8)` : isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${emojiBorderColor}` : "0 1px 5px rgba(0,0,0,0.55)";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { style: {
     position: "absolute",
     left: `${entity.x}%`,
@@ -50509,10 +51431,10 @@ function Marker({
     width: size,
     height: size,
     borderRadius,
-    backgroundColor: bgColor,
-    border: `${isSelected ? 2.5 : 1.5}px solid ${activeBorder}`,
+    backgroundColor: markerBackground,
+    border: `${isSelected ? 2.5 : 1.5}px solid ${markerBorder}`,
     cursor: isRepositioning ? "crosshair" : "pointer",
-    boxShadow: isSelected ? `0 0 0 3px rgba(255,255,255,0.6), 0 0 12px ${glowColor}` : customBorderColor ? `0 0 6px ${customBorderColor}88, 0 1px 4px rgba(0,0,0,0.7)` : `0 1px 5px rgba(0,0,0,0.8)`,
+    boxShadow: markerShadow,
     zIndex: isSelected ? baseZIndex + 10 : baseZIndex,
     display: "flex",
     alignItems: "center",
@@ -50528,7 +51450,7 @@ function Marker({
   }, onDoubleClick: onDoubleClick ? (e) => {
     e.stopPropagation();
     onDoubleClick();
-  } : void 0, "aria-label": entity.name, "data-cid": "GC73UEG5", children: [
+  } : void 0, "aria-label": entity.name, "data-cid": "qT_7fwiK", children: [
     icon.kind === "emoji" && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
       fontSize: size * 0.65,
       lineHeight: 1
@@ -50569,7 +51491,7 @@ function SelectionHint({
     zIndex: 50,
     pointerEvents: "none",
     whiteSpace: "nowrap"
-  }, "data-cid": "nsxYA6UR", children: "点击地图上的新位置来移动" });
+  }, "data-cid": "S6dpTTs0", children: "点击地图上的新位置来移动" });
 }
 function LegendCard({
   title,
@@ -50590,7 +51512,7 @@ function LegendCard({
     boxShadow: "0 8px 18px rgba(0,0,0,0.28)",
     overflow: "hidden",
     pointerEvents: "auto"
-  }, "data-cid": "5UME-HFn", children: [
+  }, "data-cid": "aysMR8U6", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { onMouseDown, style: {
       display: "flex",
       alignItems: "center",
@@ -50640,7 +51562,7 @@ function LegendCard({
         gap: 6,
         marginBottom: 3
       }, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10, themeColor: theme.primary }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
           color: theme.heading,
           opacity: 0.8
@@ -50665,11 +51587,45 @@ function detailButtonStyle(color) {
     transition: "all 0.15s"
   };
 }
+function scaleTinyButton(theme) {
+  return {
+    height: 22,
+    padding: "0 7px",
+    borderRadius: 6,
+    border: `1px solid ${theme.accent}`,
+    background: `${theme.primary}14`,
+    color: theme.primary,
+    cursor: "pointer",
+    fontSize: 11,
+    fontFamily: "Georgia, serif",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  };
+}
+function topBarStyle(theme) {
+  const isLight = theme.bg === theme.modes.light.bg;
+  return {
+    padding: "8px 14px",
+    background: isLight ? theme.bg : `${theme.bg}F2`,
+    borderBottom: `1px solid ${theme.accent}`,
+    boxShadow: isLight ? `0 1px 0 ${theme.accent}55` : "0 8px 20px rgba(0,0,0,0.18)",
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    flexShrink: 0,
+    minHeight: 44
+  };
+}
 function EntityDetailPanel({
   entity,
   categories,
   theme,
   onClose,
+  onPrevious,
+  onNext,
+  canGoPrevious,
+  canGoNext,
   onEdit,
   onDelete,
   onReposition,
@@ -50700,12 +51656,32 @@ function EntityDetailPanel({
     backdropFilter: "blur(8px)",
     overflow: "hidden",
     fontFamily: "Georgia, serif"
-  }, "data-cid": "4glym6yP", children: [
+  }, "data-cid": "4kPlDX5R", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
       padding: "14px 16px 12px",
       flexShrink: 0,
-      paddingRight: 36
+      paddingRight: 96
     }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onPrevious, disabled: !canGoPrevious, style: {
+        position: "absolute",
+        top: 10,
+        right: 58,
+        background: "none",
+        border: "none",
+        color: canGoPrevious ? theme.muted : `${theme.muted}66`,
+        cursor: canGoPrevious ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↑" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onNext, disabled: !canGoNext, style: {
+        position: "absolute",
+        top: 10,
+        right: 34,
+        background: "none",
+        border: "none",
+        color: canGoNext ? theme.muted : `${theme.muted}66`,
+        cursor: canGoNext ? "pointer" : "not-allowed",
+        padding: 4
+      }, children: "↓" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: onClose, style: {
         position: "absolute",
         top: 10,
@@ -50758,8 +51734,8 @@ function EntityDetailPanel({
           borderRadius: 20,
           padding: "2px 8px",
           border: `1px solid ${cat.isLegend ? `${theme.primary}44` : "rgba(255,255,255,0.1)"}`
-        }, "data-cid": "YtgqoT1e", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10 }),
+        }, "data-cid": "Pvc7_ZsH", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: value.icon, size: 10, themeColor: theme.primary }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
             fontSize: 11,
             color: cat.isLegend ? theme.primary : theme.muted
@@ -50770,11 +51746,16 @@ function EntityDetailPanel({
     entity.imageUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
       flexShrink: 0,
       overflow: "hidden",
-      maxHeight: 180
+      maxHeight: 220,
+      background: "rgba(0,0,0,0.22)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
     }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: entity.imageUrl, alt: entity.name, style: {
       width: "100%",
-      maxHeight: 180,
-      objectFit: "cover",
+      height: "auto",
+      maxHeight: 220,
+      objectFit: "contain",
       display: "block"
     } }) }),
     divider,
@@ -50864,6 +51845,8 @@ function IntermapMapView() {
   const [eventEditorOpen, setEventEditorOpen] = reactExports.useState(false);
   const [editingLocation, setEditingLocation] = reactExports.useState(void 0);
   const [editingEvent, setEditingEvent] = reactExports.useState(void 0);
+  const [visibleLocationManagerIds, setVisibleLocationManagerIds] = reactExports.useState([]);
+  const [visibleEventManagerIds, setVisibleEventManagerIds] = reactExports.useState([]);
   const [eventDisplayMode, setEventDisplayMode] = reactExports.useState("expanded");
   const [expandedEventLocationId, setExpandedEventLocationId] = reactExports.useState(null);
   const [temporaryFocusedEventId, setTemporaryFocusedEventId] = reactExports.useState(null);
@@ -50878,6 +51861,11 @@ function IntermapMapView() {
       collapsed: false
     }
   });
+  const [iconScale, setIconScale] = reactExports.useState({
+    location: activeMap?.markerScale?.location ?? 100,
+    event: activeMap?.markerScale?.event ?? 100
+  });
+  const [iconScalePanelOpen, setIconScalePanelOpen] = reactExports.useState(false);
   const mapAreaRef = reactExports.useRef(null);
   const containerRef = reactExports.useRef(null);
   const mapRef = reactExports.useRef(null);
@@ -50936,6 +51924,8 @@ function IntermapMapView() {
     setEventEditorOpen(false);
     setEditingLocation(void 0);
     setEditingEvent(void 0);
+    setVisibleLocationManagerIds([]);
+    setVisibleEventManagerIds([]);
     setEventDisplayMode("expanded");
     setExpandedEventLocationId(null);
     setTemporaryFocusedEventId(null);
@@ -50950,7 +51940,25 @@ function IntermapMapView() {
         collapsed: false
       }
     });
+    setIconScale({
+      location: activeMap.markerScale?.location ?? 100,
+      event: activeMap.markerScale?.event ?? 100
+    });
   }, [activeMap?.id]);
+  reactExports.useEffect(() => {
+    if (!activeMap) return;
+    const currentLocationScale = activeMap.markerScale?.location ?? 100;
+    const currentEventScale = activeMap.markerScale?.event ?? 100;
+    if (currentLocationScale === iconScale.location && currentEventScale === iconScale.event) return;
+    dispatch({
+      type: "UPDATE_MARKER_SCALE",
+      mapId: activeMap.id,
+      markerScale: {
+        location: iconScale.location,
+        event: iconScale.event
+      }
+    });
+  }, [activeMap, dispatch, iconScale.event, iconScale.location]);
   const locationCatSignature = activeMap?.tagCategories.map((cat) => `${cat.id}:${cat.values.map((value) => value.id).join(",")}`).join("|") ?? "";
   const eventCatSignature = activeMap?.eventTagCategories.map((cat) => `${cat.id}:${cat.values.map((value) => value.id).join(",")}`).join("|") ?? "";
   reactExports.useEffect(() => {
@@ -51066,7 +52074,7 @@ function IntermapMapView() {
       color: "#8A7050",
       fontFamily: "Georgia, serif",
       fontSize: 16
-    }, "data-cid": "3pwuUHCg", children: "请从左侧选择或创建一个地图" });
+    }, "data-cid": "LaRV0FE7", children: "请从左侧选择或创建一个地图" });
   }
   const locationLegendCategory = getLegendCategory(activeMap.tagCategories);
   const eventLegendCategory = getLegendCategory(activeMap.eventTagCategories);
@@ -51340,7 +52348,14 @@ function IntermapMapView() {
     });
   }, []);
   const handleExport = reactExports.useCallback(() => {
-    const json2 = JSON.stringify(activeMap, null, 2);
+    const mapForExport = {
+      ...activeMap,
+      markerScale: {
+        location: iconScale.location,
+        event: iconScale.event
+      }
+    };
+    const json2 = JSON.stringify(mapForExport, null, 2);
     const blob = new Blob([json2], {
       type: "application/json"
     });
@@ -51352,7 +52367,7 @@ function IntermapMapView() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url2);
-  }, [activeMap]);
+  }, [activeMap, iconScale.event, iconScale.location]);
   const handleShare = reactExports.useCallback(async () => {
     if (isSharing) return;
     setIsSharing(true);
@@ -51391,6 +52406,10 @@ function IntermapMapView() {
       }));
       const mapForShare = {
         ...activeMap,
+        markerScale: {
+          location: iconScale.location,
+          event: iconScale.event
+        },
         locations: compressedLocations,
         events: compressedEvents
       };
@@ -51398,7 +52417,7 @@ function IntermapMapView() {
       const encoded = btoa(unescape(encodeURIComponent(json2)));
       const url2 = `${window.location.origin}/share#data=${encoded}`;
       const hasImages = activeMap.locations.some((item) => !!item.imageUrl) || activeMap.events.some((item) => !!item.imageUrl);
-      const imageNote = hasImages ? "\n\n配图已自动压缩以缩小链接大小（本地存储的原图不受影响）。" : "";
+      const imageNote = hasImages ? "\n\n地点/事件配图已自动压缩以缩小链接大小（本地存储的原图不受影响）。" : "";
       navigator.clipboard.writeText(url2).then(() => {
         alert(`分享链接已复制到剪贴板！
 
@@ -51411,8 +52430,14 @@ function IntermapMapView() {
     } finally {
       setIsSharing(false);
     }
-  }, [activeMap, compressImage, isSharing]);
+  }, [activeMap, compressImage, iconScale.event, iconScale.location, isSharing]);
   const relatedEvents = selectedLocation ? activeMap.events.filter((eventItem) => getEventLocationId(eventItem) === selectedLocation.id) : [];
+  const locationManagerIndex = currentLocationDetail?.backTo === "location-manager" && selectedLocation ? visibleLocationManagerIds.indexOf(selectedLocation.id) : -1;
+  const previousLocationId = locationManagerIndex > 0 ? visibleLocationManagerIds[locationManagerIndex - 1] ?? null : null;
+  const nextLocationId = locationManagerIndex >= 0 && locationManagerIndex < visibleLocationManagerIds.length - 1 ? visibleLocationManagerIds[locationManagerIndex + 1] ?? null : null;
+  const eventManagerIndex = currentEventDetail?.backTo === "event-manager" && selectedEvent ? visibleEventManagerIds.indexOf(selectedEvent.id) : -1;
+  const previousEventId = eventManagerIndex > 0 ? visibleEventManagerIds[eventManagerIndex - 1] ?? null : null;
+  const nextEventId = eventManagerIndex >= 0 && eventManagerIndex < visibleEventManagerIds.length - 1 ? visibleEventManagerIds[eventManagerIndex + 1] ?? null : null;
   const renderLegend = (key, title, category) => {
     const card = /* @__PURE__ */ jsxRuntimeExports.jsx(LegendCard, { title, category, theme, collapsed: legendPanels[key].collapsed, onToggleCollapse: () => {
       setLegendPanels((prev) => ({
@@ -51431,9 +52456,9 @@ function IntermapMapView() {
         left: legendPanels[key].position.x,
         top: legendPanels[key].position.y,
         zIndex: 40
-      }, "data-cid": "WVvNfGX_", children: card }, key);
+      }, "data-cid": "y5auEtIt", children: card }, key);
     }
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { "data-cid": "Q-I8euzB", children: card }, key);
+    return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { "data-cid": "pQyGUx0U", children: card }, key);
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
     flex: 1,
@@ -51443,17 +52468,8 @@ function IntermapMapView() {
     background: theme.bg,
     position: "relative",
     touchAction: "none"
-  }, "data-cid": "oHuG_7vz", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
-      padding: "8px 14px",
-      background: "rgba(0,0,0,0.5)",
-      borderBottom: `1px solid ${theme.accent}`,
-      display: "flex",
-      alignItems: "center",
-      gap: 10,
-      flexShrink: 0,
-      minHeight: 44
-    }, children: [
+  }, "data-cid": "ZdwLkXBZ", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: topBarStyle(theme), children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
         fontSize: 15,
         fontWeight: "bold",
@@ -51581,7 +52597,7 @@ function IntermapMapView() {
       position: "relative",
       overflow: "hidden"
     }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         position: "absolute",
         top: 12,
         left: 44,
@@ -51589,39 +52605,142 @@ function IntermapMapView() {
         display: "flex",
         flexDirection: "column",
         gap: 4
-      }, children: [{
-        icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomIn, { size: 14 }),
-        fn: () => zoomBy(1.3),
-        title: "放大"
-      }, {
-        icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomOut, { size: 14 }),
-        fn: () => zoomBy(1 / 1.3),
-        title: "缩小"
-      }, {
-        icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Maximize2, { size: 14 }),
-        fn: () => setView({
-          scale: 1,
-          translateX: 0,
-          translateY: 0
-        }),
-        title: "重置"
-      }].map(({
-        icon,
-        fn: fn2,
-        title
-      }) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: fn2, title, style: {
-        width: 34,
-        height: 34,
-        background: `${theme.bg}DD`,
-        border: `1px solid ${theme.accent}`,
-        borderRadius: 6,
-        color: theme.primary,
-        cursor: "pointer",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        touchAction: "manipulation"
-      }, children: icon }, title)) }),
+      }, children: [
+        [{
+          icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomIn, { size: 14 }),
+          fn: () => zoomBy(1.3),
+          title: "放大"
+        }, {
+          icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomOut, { size: 14 }),
+          fn: () => zoomBy(1 / 1.3),
+          title: "缩小"
+        }, {
+          icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Maximize2, { size: 14 }),
+          fn: () => setView({
+            scale: 1,
+            translateX: 0,
+            translateY: 0
+          }),
+          title: "重置"
+        }].map(({
+          icon,
+          fn: fn2,
+          title
+        }) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: fn2, title, style: {
+          width: 34,
+          height: 34,
+          background: `${theme.bg}DD`,
+          border: `1px solid ${theme.accent}`,
+          borderRadius: 6,
+          color: theme.primary,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          touchAction: "manipulation"
+        }, children: icon }, title)),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setIconScalePanelOpen((prev) => !prev), title: "图标大小设置", style: {
+          width: 34,
+          height: 34,
+          background: `${theme.bg}DD`,
+          border: `1px solid ${theme.accent}`,
+          borderRadius: 6,
+          color: theme.primary,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          touchAction: "manipulation"
+        }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(SlidersHorizontal, { size: 14 }) }),
+        iconScalePanelOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
+          width: 248,
+          marginTop: 4,
+          background: `${theme.bg}F2`,
+          border: `1px solid ${theme.accent}`,
+          borderRadius: 8,
+          padding: "10px 10px 8px",
+          boxShadow: "0 8px 18px rgba(0,0,0,0.35)"
+        }, children: [{
+          key: "location",
+          label: "地点图标",
+          icon: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 11 })
+        }, {
+          key: "event",
+          label: "事件图标",
+          icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Flag, { size: 11 })
+        }].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+          marginBottom: item.key === "event" ? 0 : 10
+        }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            marginBottom: 6
+          }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+              color: theme.primary,
+              display: "flex",
+              alignItems: "center"
+            }, children: item.icon }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+              fontSize: 11,
+              color: theme.heading,
+              flex: 1
+            }, children: item.label }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setIconScale((prev) => ({
+              ...prev,
+              [item.key]: Math.max(40, prev[item.key] - 5)
+            })), style: scaleTinyButton(theme), title: "缩小", children: "-" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setIconScale((prev) => ({
+              ...prev,
+              [item.key]: Math.min(260, prev[item.key] + 5)
+            })), style: scaleTinyButton(theme), title: "放大", children: "+" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setIconScale((prev) => ({
+              ...prev,
+              [item.key]: 100
+            })), style: scaleTinyButton(theme), title: "还原", children: "还原" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
+            display: "flex",
+            alignItems: "center",
+            gap: 8
+          }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "range", min: 40, max: 260, step: 1, value: iconScale[item.key], onChange: (e) => {
+              const next = Number(e.target.value);
+              setIconScale((prev) => ({
+                ...prev,
+                [item.key]: next
+              }));
+            }, style: {
+              flex: 1,
+              accentColor: theme.primary
+            } }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "number", min: 40, max: 260, value: iconScale[item.key], onChange: (e) => {
+              const value = Number(e.target.value);
+              if (Number.isNaN(value)) return;
+              const next = Math.max(40, Math.min(260, value));
+              setIconScale((prev) => ({
+                ...prev,
+                [item.key]: next
+              }));
+            }, style: {
+              width: 60,
+              padding: "3px 6px",
+              background: "rgba(255,255,255,0.05)",
+              border: `1px solid ${theme.accent}`,
+              borderRadius: 6,
+              color: theme.heading,
+              fontSize: 11,
+              outline: "none",
+              fontFamily: "Georgia, serif"
+            } }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: {
+              color: theme.muted,
+              fontSize: 11
+            }, children: "%" })
+          ] })
+        ] }, item.key)) })
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: {
         position: "absolute",
         bottom: 12,
@@ -51690,22 +52809,22 @@ function IntermapMapView() {
             opacity: 0.4
           }, children: imgError ? "请检查图片链接是否正确" : "双击左侧地图图标可设置底图" })
         ] }),
-        visibleLocations.map((location) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker, { entity: location, legendCategory: locationLegendCategory, isSelected: selectedLocation?.id === location.id, isRepositioning: !!repositioning, badgeCount: eventDisplayMode === "collapsed" ? eventCountByLocation.get(location.id) : void 0, onClick: () => openLocationDetail(location.id, null), onDoubleClick: () => toggleCollapsedEventsForLocation(location.id) }, location.id)),
-        visibleEvents.map((eventItem) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker, { entity: eventItem, legendCategory: eventLegendCategory, isSelected: selectedEvent?.id === eventItem.id, isRepositioning: !!repositioning, baseZIndex: 20, onClick: () => openEventDetail(eventItem.id, null) }, eventItem.id))
+        visibleLocations.map((location) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker, { entity: location, theme, legendCategory: locationLegendCategory, isSelected: selectedLocation?.id === location.id, isRepositioning: !!repositioning, scalePercent: iconScale.location, badgeCount: eventDisplayMode === "collapsed" ? eventCountByLocation.get(location.id) : void 0, onClick: () => openLocationDetail(location.id, null), onDoubleClick: () => toggleCollapsedEventsForLocation(location.id) }, location.id)),
+        visibleEvents.map((eventItem) => /* @__PURE__ */ jsxRuntimeExports.jsx(Marker, { entity: eventItem, theme, legendCategory: eventLegendCategory, isSelected: selectedEvent?.id === eventItem.id, isRepositioning: !!repositioning, scalePercent: iconScale.event, baseZIndex: 20, onClick: () => openEventDetail(eventItem.id, null) }, eventItem.id))
       ] }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(IntermapFilterPanel, { filter, onFilterChange: setFilter, visibleLocationCount: visibleLocations.length, totalLocationCount: activeMap.locations.length, visibleEventCount: visibleEvents.length, totalEventCount: activeMap.events.length, themeColor: theme.primary, themeHeading: theme.heading, themeBg: theme.bg, themeAccent: theme.accent, themeMuted: theme.muted }),
-      panelRoute?.kind === "location-manager" && /* @__PURE__ */ jsxRuntimeExports.jsx(LocationManagerPanel, { theme, onClose: () => setPanelRoute(null), onSelectLocation: (location) => openLocationDetail(location.id, "location-manager"), onAddLocation: () => {
+      (panelRoute?.kind === "location-manager" || currentLocationDetail?.backTo === "location-manager") && /* @__PURE__ */ jsxRuntimeExports.jsx(LocationManagerPanel, { theme, onClose: () => setPanelRoute(null), onSelectLocation: (location) => openLocationDetail(location.id, "location-manager"), onAddLocation: () => {
         setEditingLocation(void 0);
         setLocationEditorOpen(true);
-      } }),
-      panelRoute?.kind === "event-manager" && /* @__PURE__ */ jsxRuntimeExports.jsx(EventManagerPanel, { theme, onClose: () => setPanelRoute(null), onSelectEvent: (eventItem) => openEventDetail(eventItem.id, "event-manager"), onAddEvent: () => {
+      }, onVisibleLocationsChange: (locations2) => setVisibleLocationManagerIds(locations2.map((location) => location.id)) }),
+      (panelRoute?.kind === "event-manager" || currentEventDetail?.backTo === "event-manager") && /* @__PURE__ */ jsxRuntimeExports.jsx(EventManagerPanel, { theme, onClose: () => setPanelRoute(null), onSelectEvent: (eventItem) => openEventDetail(eventItem.id, "event-manager"), onAddEvent: () => {
         setEditingEvent(void 0);
         setEventEditorOpen(true);
       }, displayMode: eventDisplayMode, onDisplayModeChange: (mode) => {
         setEventDisplayMode(mode);
         if (mode === "expanded") setTemporaryFocusedEventId(null);
-      } }),
-      selectedLocation && currentLocationDetail && /* @__PURE__ */ jsxRuntimeExports.jsx(EntityDetailPanel, { entity: selectedLocation, categories: activeMap.tagCategories, theme, onClose: closePanel, onEdit: () => {
+      }, onVisibleEventsChange: (events2) => setVisibleEventManagerIds(events2.map((eventItem) => eventItem.id)) }),
+      selectedLocation && currentLocationDetail && /* @__PURE__ */ jsxRuntimeExports.jsx(EntityDetailPanel, { entity: selectedLocation, categories: activeMap.tagCategories, theme, onClose: closePanel, onPrevious: previousLocationId ? () => openLocationDetail(previousLocationId, "location-manager") : void 0, onNext: nextLocationId ? () => openLocationDetail(nextLocationId, "location-manager") : void 0, canGoPrevious: !!previousLocationId, canGoNext: !!nextLocationId, onEdit: () => {
         setEditingLocation(selectedLocation);
         setLocationEditorOpen(true);
       }, onDelete: () => {
@@ -51749,7 +52868,7 @@ function IntermapMapView() {
         }, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(TagIconRenderer, { icon: eventLegendCategory?.values.find((value) => value.id === eventItem.tags[eventLegendCategory?.id ?? ""])?.icon ?? {
             kind: "none"
-          }, size: 10 }),
+          }, size: 10, themeColor: theme.primary }),
           eventItem.name
         ] }, eventItem.id)) }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: {
           fontSize: 12,
@@ -51757,7 +52876,7 @@ function IntermapMapView() {
           opacity: 0.6
         }, children: "暂无所属事件" })
       ] }) }),
-      selectedEvent && currentEventDetail && /* @__PURE__ */ jsxRuntimeExports.jsx(EntityDetailPanel, { entity: selectedEvent, categories: activeMap.eventTagCategories, theme, onClose: closePanel, onEdit: () => {
+      selectedEvent && currentEventDetail && /* @__PURE__ */ jsxRuntimeExports.jsx(EntityDetailPanel, { entity: selectedEvent, categories: activeMap.eventTagCategories, theme, onClose: closePanel, onPrevious: previousEventId ? () => openEventDetail(previousEventId, "event-manager") : void 0, onNext: nextEventId ? () => openEventDetail(nextEventId, "event-manager") : void 0, canGoPrevious: !!previousEventId, canGoNext: !!nextEventId, onEdit: () => {
         setEditingEvent(selectedEvent);
         setEventEditorOpen(true);
       }, onDelete: () => {
@@ -51838,7 +52957,7 @@ function IntermapApp() {
     background: "#0e0b06",
     fontFamily: "Georgia, 'Times New Roman', serif",
     touchAction: "none"
-  }, "data-cid": "4YZIHaG6", children: [
+  }, "data-cid": "-GOgn-cc", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(MapSidebar, { onCreateNew: () => setShowNewMapDialog(true), onEditMap: (mapId) => setEditingMapId(mapId) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(IntermapMapView, {}),
     showNewMapDialog && /* @__PURE__ */ jsxRuntimeExports.jsx(NewMapDialog, { onClose: () => setShowNewMapDialog(false), onCreate: handleCreate }),
@@ -51846,7 +52965,7 @@ function IntermapApp() {
   ] });
 }
 const SplitComponent = IntermapApp;
-const indexB9JAGuHO = /* @__PURE__ */ Object.freeze({
+const indexDYcmIwgJ = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   component: SplitComponent
 });

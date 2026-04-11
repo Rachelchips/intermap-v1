@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Check, ChevronDown, ChevronRight, MapPin, Plus, Search, Trash2, X } from "lucide-react";
 import { useIntermap } from "../store/intermap-store";
 import { TagIconRenderer } from "./tag-icon-renderer";
@@ -9,6 +9,7 @@ interface LocationManagerPanelProps {
   onClose: () => void;
   onSelectLocation: (loc: MapLocation) => void;
   onAddLocation: () => void;
+  onVisibleLocationsChange?: (locations: MapLocation[]) => void;
 }
 
 interface LocationGroup {
@@ -23,6 +24,7 @@ export function LocationManagerPanel({
   onClose,
   onSelectLocation,
   onAddLocation,
+  onVisibleLocationsChange,
 }: LocationManagerPanelProps) {
   const { activeMap, dispatch } = useIntermap();
   const [search, setSearch] = useState("");
@@ -111,6 +113,10 @@ export function LocationManagerPanel({
 
     return groups;
   }, [cats, filteredLocations, groupByTagId]);
+
+  useEffect(() => {
+    onVisibleLocationsChange?.(groupedLocations.flatMap((group) => group.items));
+  }, [groupedLocations, onVisibleLocationsChange]);
 
   const toggleTagFilter = (catId: string, valueId: string) => {
     setTagFilter((prev) => {
@@ -351,7 +357,7 @@ export function LocationManagerPanel({
                             transition: "all 0.15s",
                           }}
                         >
-                          <TagIconRenderer icon={val.icon} size={9} />
+                          <TagIconRenderer icon={val.icon} size={9} themeColor={p} />
                           {val.label}
                         </button>
                       );
@@ -397,7 +403,7 @@ export function LocationManagerPanel({
                     zIndex: 1,
                   }}
                 >
-                  <TagIconRenderer icon={group.icon} size={10} />
+                  <TagIconRenderer icon={group.icon} size={10} themeColor={p} />
                   <span style={{ fontSize: 11, color: heading, flex: 1, opacity: 0.9 }}>{group.label}</span>
                   <span style={{ fontSize: 10, color: muted }}>{group.items.length}</span>
                 </div>
@@ -447,7 +453,7 @@ export function LocationManagerPanel({
 
                     <div style={{ flexShrink: 0 }}>
                       {tagVal ? (
-                        <TagIconRenderer icon={tagVal.icon} size={12} />
+                        <TagIconRenderer icon={tagVal.icon} size={12} themeColor={p} />
                       ) : (
                         <div
                           style={{

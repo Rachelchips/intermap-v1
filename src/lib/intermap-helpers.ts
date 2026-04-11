@@ -1,3 +1,8 @@
+import {
+  DEFAULT_MAP_THEME_ID,
+  DEFAULT_MAP_THEME_MODE,
+  MAP_THEMES,
+} from "../client/types/intermap-types";
 import type { EventSortTime, EventTime, MapEvent, MapLocation, MapProject, TagCategory, TagValue } from "../client/types/intermap-types";
 
 export const NONE_TAG_VALUE_ID = "none";
@@ -208,9 +213,14 @@ export function normalizeMapProject(map: MapProject): MapProject {
     location: Number.isFinite(map.markerScale?.location) ? Math.max(40, Math.min(260, map.markerScale!.location)) : 100,
     event: Number.isFinite(map.markerScale?.event) ? Math.max(40, Math.min(260, map.markerScale!.event)) : 100,
   };
+  const validThemeIds = new Set(MAP_THEMES.map((theme) => theme.id));
+  const themeId = validThemeIds.has(map.themeId) ? map.themeId : DEFAULT_MAP_THEME_ID;
+  const themeMode = map.themeMode === "light" ? "light" : DEFAULT_MAP_THEME_MODE;
 
   return {
     ...map,
+    themeId,
+    themeMode,
     markerScale: normalizedMarkerScale,
     tagCategories,
     locations,

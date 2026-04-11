@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Check, ChevronDown, ChevronRight, Flag, Plus, Search, Trash2, X } from "lucide-react";
 import { compareEventSortTime, formatEventTime, normalizeEventSortTime } from "@/lib/intermap-helpers";
 import { useIntermap } from "../store/intermap-store";
@@ -12,6 +12,7 @@ interface EventManagerPanelProps {
   onAddEvent: () => void;
   displayMode: "expanded" | "collapsed";
   onDisplayModeChange: (mode: "expanded" | "collapsed") => void;
+  onVisibleEventsChange?: (events: MapEvent[]) => void;
 }
 
 type SortOrder = "default" | "time-asc" | "time-desc";
@@ -23,6 +24,7 @@ export function EventManagerPanel({
   onAddEvent,
   displayMode,
   onDisplayModeChange,
+  onVisibleEventsChange,
 }: EventManagerPanelProps) {
   const { activeMap, dispatch } = useIntermap();
   const [search, setSearch] = useState("");
@@ -75,6 +77,10 @@ export function EventManagerPanel({
 
     return next.map((item) => item.eventItem);
   }, [cats, events, search, sortOrder, tagFilter]);
+
+  useEffect(() => {
+    onVisibleEventsChange?.(filteredEvents);
+  }, [filteredEvents, onVisibleEventsChange]);
 
   const toggleTagFilter = (catId: string, valueId: string) => {
     setTagFilter((prev) => {
@@ -315,7 +321,7 @@ export function EventManagerPanel({
                             transition: "all 0.15s",
                           }}
                         >
-                          <TagIconRenderer icon={val.icon} size={9} />
+                          <TagIconRenderer icon={val.icon} size={9} themeColor={p} />
                           {val.label}
                         </button>
                       );
@@ -391,7 +397,7 @@ export function EventManagerPanel({
 
                 <div style={{ flexShrink: 0 }}>
                   {tagVal ? (
-                    <TagIconRenderer icon={tagVal.icon} size={12} />
+                    <TagIconRenderer icon={tagVal.icon} size={12} themeColor={p} />
                   ) : (
                     <div
                       style={{

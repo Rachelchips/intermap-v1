@@ -2,6 +2,8 @@ node_modules/
 .tanstack/
 tsconfig.tsbuildinfo
 
+dist/
+
 .DS_Store
 Thumbs.db
 
